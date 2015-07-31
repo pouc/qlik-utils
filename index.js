@@ -38,8 +38,8 @@ function generateXrfkey(size, chars) {
 
 /**
  * Makes a request on a Qlik Sense API endpoint defined in the options object, posting the params object
- * @param {Object} params
- * @param {Object} options
+ * @param {Object} params the parameters to post to the API endpoint
+ * @param {Object} options the options to connect to the API endpoint
  * @returns {Promise}
  */
 function request(params, options) {
@@ -93,8 +93,8 @@ function request(params, options) {
 
 /**
  * Generates a ticket on Qlik Sense QRS Api
- * @param {Object} params
- * @param {Object} options
+ * @param {Object} params the ticket parameters 
+ * @param {Object} options the options to connect to the ticket API endpoint
  * @returns {Promise}
  */
 function getTicket(params, options) {
