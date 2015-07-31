@@ -63,6 +63,9 @@ function request(params, options) {
 	
 };
 
-module.exports = {
-	request: request
+if (typeof module !== 'undefined') {
+	module.exports = {
+		request: request
+	}
 }
+
