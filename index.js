@@ -13,9 +13,9 @@ var fs = require('fs');
  * @param {*=} c
  * @returns {*}
  */
- function ifnotundef(a, b, c) {
-	 return (typeof c == 'undefined') ? ((typeof a != 'undefined' && a != null) ? a : b) : ((typeof a != 'undefined' && a != null) ? b : c);
- }
+function ifnotundef(a, b, c) {
+    return (typeof c == 'undefined') ? ((typeof a != 'undefined' && a != null) ? a : b) : ((typeof a != 'undefined' && a != null) ? b : c);
+}
 
 /**
  * Generates a random Xrf key of a given size within a set of given chars
@@ -24,16 +24,16 @@ var fs = require('fs');
  * @returns {string}
  */
 function generateXrfkey(size, chars) {
-	size = size || 16;
-	chars = chars || 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789';
+    size = size || 16;
+    chars = chars || 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789';
 
-	var rnd = crypto.randomBytes(size), value = new Array(size), len = chars.length;
+    var rnd = crypto.randomBytes(size), value = new Array(size), len = chars.length;
 
-	for (var i = 0; i < size; i++) {
-		value[i] = chars[rnd[i] % len]
-	}
+    for (var i = 0; i < size; i++) {
+        value[i] = chars[rnd[i] % len]
+    }
 
-	return value.join('');
+    return value.join('');
 }
 
 /**
@@ -44,26 +44,26 @@ function generateXrfkey(size, chars) {
  */
 function request(params, options) {
 
-	var xrfkey = generateXrfkey();
-	var restUri = url.parse(options.restUri);
-	
-	var settings = {
+    var xrfkey = generateXrfkey();
+    var restUri = url.parse(options.restUri);
+
+    var settings = {
         protocol: restUri.protocol,
-		host: restUri.hostname,
-		port: restUri.port,
-		path: restUri.pathname + '?' + ifnotundef(restUri.query, restUri.query + '&', '') + 'xrfkey=' + xrfkey,
-		method: ifnotundef(options.method, 'POST'),
-		headers: {
-			'X-Qlik-Xrfkey': xrfkey,
-			'Content-Type': 'application/json'
-		},
-		pfx: ifnotundef(options.pfx, null),
-		passphrase: ifnotundef(options.passPhrase, null),
-		rejectUnauthorized: false,
-		agent: false
-	};
-	
-	return new Promise(function(resolve, reject) {
+        host: restUri.hostname,
+        port: restUri.port,
+        path: restUri.pathname + '?' + ifnotundef(restUri.query, restUri.query + '&', '') + 'xrfkey=' + xrfkey,
+        method: ifnotundef(options.method, 'POST'),
+        headers: {
+            'X-Qlik-Xrfkey': xrfkey,
+            'Content-Type': 'application/json'
+        },
+        pfx: ifnotundef(options.pfx, null),
+        passphrase: ifnotundef(options.passPhrase, null),
+        rejectUnauthorized: false,
+        agent: false
+    };
+
+    return new Promise(function(resolve, reject) {
 
         if(settings.protocol != 'https:') reject('https is needed to make API call');
         else {
@@ -86,9 +86,9 @@ function request(params, options) {
             });
 
         }
-		
-	});
-	
+
+    });
+
 };
 
 /**
@@ -101,19 +101,18 @@ function getTicket(params, options) {
 
     var hostUri = url.parse(options.hostUri);
 
-    var options = {
-        restUri: hostUri.protocol + '//' + hostUri.host + ':' + hostUri.port + '/qps/ticket',
+    var ticketOptions = {
+        restUri: hostUri.protocol + '//' + hostUri.host + '/qps/ticket',
         method: 'POST',
         pfx: options.pfx,
         passPhrase: options.passPhrase
     };
 
-    return request(params, options);
+    return request(params, ticketOptions);
 
 }
 
 module.exports = {
-    request: request
+    request: request,
+    getTicket: getTicket
 }
-
-
