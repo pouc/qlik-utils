@@ -1,0 +1,12 @@
+{
+  "name": "qlik-utils",
+  "version": "1.0.0",
+  "description": "a set of utility functions to deal with Qlik APIs",
+  "main": "index.js",
+  "author": "pouc <pouc@pouc.fr> (https://github.com/pouc)",
+  "license": "MIT",
+  "repository": {
+	  "type": "git",
+	  "url": "https://github.com/EvanHahn/startInterval.git"
+	}
+}
