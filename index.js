@@ -2,6 +2,7 @@ var https = require('https');
 var crypto = require('crypto');
 var url = require('url');
 var fs = require('fs');
+var basic = require('basic-auth');
 
 /**
  * Two parameters mode
@@ -112,7 +113,35 @@ function getTicket(params, options) {
 
 }
 
+/**
+ * Simple basic auth middleware for use with Express 4.x.
+ *
+ * @example
+ * app.use('/api-requiring-auth', utils.basicAuth([{user: 'username', pass: 'password'}]));
+ *
+ * @param   {string}   username Expected username
+ * @param   {string}   password Expected password
+ * @returns {function} Express 4 middleware requiring the given credentials
+ */
+function basicAuth(users) {
+    return function(req, res, next) {
+        var user = basic(req);
+
+        if(
+            !user || users.filter(function(item) {
+                return item.user == user && item.pass == pass;
+            }).length == 0
+        ) {
+            res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+            return res.send(401);
+        }
+
+        next();
+    };
+};
+
 module.exports = {
     request: request,
-    getTicket: getTicket
+    getTicket: getTicket,
+    basicAuth: basicAuth
 }
