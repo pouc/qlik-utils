@@ -174,7 +174,7 @@ function addToWhiteList(ip, options) {
 
     var restUri = url.parse(options.restUri);
 
-    return utils.request(null, {
+    return request(null, {
         restUri: restUri.protocol + '//' + restUri.host + '/qrs/proxyservice/local',
         method: 'GET',
         pfx: options.pfx,
@@ -185,7 +185,7 @@ function addToWhiteList(ip, options) {
 
         var vpsettings = settings.settings.virtualProxies[0];
 
-        return utils.request(null, {
+        return request(null, {
             restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + vpsettings.id,
             method: 'GET',
             pfx: options.pfx,
@@ -211,7 +211,7 @@ function addToWhiteList(ip, options) {
 
         settings.modifiedDate = newDate.toISOString();
 
-        return utils.request(settings, {
+        return request(settings, {
             restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + settings.id,
             method: 'PUT',
             pfx: options.pfx,
