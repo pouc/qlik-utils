@@ -48,17 +48,24 @@ function request(params, options) {
     var xrfkey = generateXrfkey();
     var restUri = url.parse(options.restUri);
 
+    var headers = {
+        'X-Qlik-Xrfkey': xrfkey,
+        'Content-Type': 'application/json'
+    };
+
+    if(typeof options.directory != 'undefined' || typeof options.user != 'undefined')
+        headers['X-Qlik-User'] = 'UserDirectory= ' + ifnotundef(options.directory, '.') + '; UserId= ' + ifnotundef(options.user, 'qlikservice');
+
+    if(typeof options.session != 'undefined')
+        headers['Cookie'] = options.session;
+
     var settings = {
         protocol: restUri.protocol,
         host: restUri.hostname,
         port: restUri.port,
         path: restUri.pathname + '?' + ifnotundef(restUri.query, restUri.query + '&', '') + 'xrfkey=' + xrfkey,
         method: ifnotundef(options.method, 'POST'),
-        headers: {
-            'X-Qlik-User' : 'UserDirectory= ' + ifnotundef(options.directory, '.') + '; UserId= ' + ifnotundef(options.user, 'qlikservice'),
-            'X-Qlik-Xrfkey': xrfkey,
-            'Content-Type': 'application/json'
-        },
+        headers: headers,
         pfx: ifnotundef(options.pfx, null),
         passphrase: ifnotundef(options.passPhrase, null),
         rejectUnauthorized: false,
@@ -118,6 +125,42 @@ function getTicket(params, options) {
 
     return request(params, ticketOptions);
 
+}
+
+/**
+ * Opens a session on the Qlik Sense Hub with the given ticket and returns the session cookie
+ * @param {Object} ticket the generated ticket
+ * @param {Object} options parsed url of the Qlik Sense Hub
+ * @returns {Promise}
+ */
+function openSession(ticket, options) {
+
+    var p = new Promise(function(resolve, reject) {
+
+        var settings = {
+            host: options.hostname,
+            port: options.port,
+            path: options.pathname + '?' + ifnotundef(options.query, options.query + '&', '') + 'qlikTicket=' + ticket.Ticket,
+            method: 'GET',
+            rejectUnauthorized: false,
+            agent: false
+        };
+
+        var prot = (options.protocol == 'https:') ? https : http;
+
+        var req = prot.request(settings, function (response) {
+            response.on('data', function (d) {
+                var cookies = response.headers['set-cookie'];
+                resolve(cookies[0]);
+            });
+        });
+        req.on('error', function(e) {
+            reject(e);
+        });
+        req.end();
+    });
+
+    return p;
 }
 
 /**
