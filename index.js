@@ -119,8 +119,7 @@ function getTicket(params, options) {
  * @example
  * app.use('/api-requiring-auth', utils.basicAuth([{user: 'username', pass: 'password'}]));
  *
- * @param   {string}   username Expected username
- * @param   {string}   password Expected password
+ * @param   {Object}   username list of usernames & passwords
  * @returns {function} Express 4 middleware requiring the given credentials
  */
 function basicAuth(users) {
@@ -129,13 +128,14 @@ function basicAuth(users) {
 
         if(
             !user || users.filter(function(item) {
-                return item.user == user && item.pass == pass;
+                return item.user == user.name && item.pass == user.pass;
             }).length == 0
         ) {
             res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
             return res.send(401);
         }
 
+        req.authUser = user.name;
         next();
     };
 };

@@ -9,5 +9,8 @@
     "type": "git",
     "url": "https://github.com/pouc/qlik-utils.git"
   },
-  "bugs": "https://github.com/pouc/qlik-utils/issues"
+  "bugs": "https://github.com/pouc/qlik-utils/issues",
+  "dependencies": {
+    "basic-auth": "^1.0.3"
+  }
 }
