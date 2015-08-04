@@ -72,10 +72,13 @@ function request(params, options) {
 
             var apireq = https.request(settings, function (apires) {
 
+                var body = "";
                 apires.on('data', function (d) {
+                    body += d.toString()
+                });
 
-                    resolve(JSON.parse(d.toString()));
-
+                apires.on('end', function (d) {
+                    resolve(JSON.parse(body));
                 });
 
             });
