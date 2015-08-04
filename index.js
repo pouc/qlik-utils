@@ -193,5 +193,6 @@ function basicAuth(users) {
 module.exports = {
     request: request,
     getTicket: getTicket,
+    openSession: openSession,
     basicAuth: basicAuth
 }
