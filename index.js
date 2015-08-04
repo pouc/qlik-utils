@@ -196,29 +196,35 @@ function addToWhiteList(ip, options) {
 
     }).then(function(settings) {
 
-        settings.websocketCrossOriginWhiteList.push(ip);
+        if(settings.websocketCrossOriginWhiteList.indexOf(ip) == -1) {
 
-        var currDate = new Date();
-        var oldDate = new Date(settings.modifiedDate);
-        var newDate;
+            settings.websocketCrossOriginWhiteList.push(ip);
 
-        if(currDate > oldDate) {
-            newDate = currDate;
+            var currDate = new Date();
+            var oldDate = new Date(settings.modifiedDate);
+            var newDate;
+
+            if (currDate > oldDate) {
+                newDate = currDate;
+            } else {
+                newDate = oldDate;
+                newDate.setSeconds(newDate.getSeconds() + 1);
+            }
+
+            settings.modifiedDate = newDate.toISOString();
+
+            return request(settings, {
+                restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + settings.id,
+                method: 'PUT',
+                pfx: options.pfx,
+                passPhrase: options.passPhrase,
+                UserId: options.UserId,
+                UserDirectory: options.UserDirectory
+            });
+
         } else {
-            newDate = oldDate;
-            newDate.setSeconds(newDate.getSeconds() + 1);
+            return 'already in whitelist!'
         }
-
-        settings.modifiedDate = newDate.toISOString();
-
-        return request(settings, {
-            restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + settings.id,
-            method: 'PUT',
-            pfx: options.pfx,
-            passPhrase: options.passPhrase,
-            UserId: options.UserId,
-            UserDirectory: options.UserDirectory
-        });
 
     })
 
