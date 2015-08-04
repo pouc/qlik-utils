@@ -55,6 +55,7 @@ function request(params, options) {
         path: restUri.pathname + '?' + ifnotundef(restUri.query, restUri.query + '&', '') + 'xrfkey=' + xrfkey,
         method: ifnotundef(options.method, 'POST'),
         headers: {
+            'X-Qlik-User' : 'UserDirectory= ' + ifnotundef(options.directory, '.') + '; UserId= ' + ifnotundef(options.user, 'qlikservice'),
             'X-Qlik-Xrfkey': xrfkey,
             'Content-Type': 'application/json'
         },
@@ -79,7 +80,10 @@ function request(params, options) {
 
             });
 
-            apireq.write(JSON.stringify(params));
+            if(params) {
+                apireq.write(JSON.stringify(params));
+            }
+
             apireq.end();
 
             apireq.on('error', function (e) {
