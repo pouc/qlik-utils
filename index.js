@@ -53,8 +53,8 @@ function request(params, options) {
         'Content-Type': 'application/json'
     };
 
-    if(typeof options.directory != 'undefined' || typeof options.user != 'undefined')
-        headers['X-Qlik-User'] = 'UserDirectory= ' + ifnotundef(options.directory, '.') + '; UserId= ' + ifnotundef(options.user, 'qlikservice');
+    if(typeof options.UserDirectory != 'undefined' || typeof options.UserId != 'undefined')
+        headers['X-Qlik-User'] = 'UserDirectory= ' + ifnotundef(options.UserDirectory, '.') + '; UserId= ' + ifnotundef(options.UserId, 'qlikservice');
 
     if(typeof options.session != 'undefined')
         headers['Cookie'] = options.session;
@@ -108,16 +108,16 @@ function request(params, options) {
 
 /**
  * Generates a ticket on Qlik Sense QRS Api
- * @param {Object} params the ticket parameters 
+ * @param {Object} params the ticket parameters
  * @param {Object} options the options to connect to the ticket API endpoint
  * @returns {Promise}
  */
 function getTicket(params, options) {
 
-    var hostUri = url.parse(options.hostUri);
+    var restUri = url.parse(options.restUri);
 
     var ticketOptions = {
-        restUri: hostUri.protocol + '//' + hostUri.host + '/qps/ticket',
+        restUri: restUri.protocol + '//' + restUri.host + '/qps/ticket',
         method: 'POST',
         pfx: options.pfx,
         passPhrase: options.passPhrase
@@ -163,6 +163,68 @@ function openSession(ticket, options) {
     return p;
 }
 
+
+/**
+ * Adds the given ip address to the websocket whitelist of the given virtual proxy
+ * @param  {string} ip the ip to add
+ * @param  {Object} options the endpoint to add the ip to
+ * @returns {Promise}
+ */
+function addToWhiteList(ip, options) {
+
+    var restUri = url.parse(options.restUri);
+
+    return utils.request(null, {
+        restUri: restUri.protocol + '//' + restUri.host + '/qrs/proxyservice/local',
+        method: 'GET',
+        pfx: options.pfx,
+        passPhrase: options.passPhrase,
+        UserId: options.UserId,
+        UserDirectory: options.UserDirectory
+    }).then(function(settings) {
+
+        var vpsettings = settings.settings.virtualProxies[0];
+
+        return utils.request(null, {
+            restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + vpsettings.id,
+            method: 'GET',
+            pfx: options.pfx,
+            passPhrase: options.passPhrase,
+            UserId: options.UserId,
+            UserDirectory: options.UserDirectory
+        })
+
+    }).then(function(settings) {
+
+        settings.websocketCrossOriginWhiteList.push(ip);
+
+        var currDate = new Date();
+        var oldDate = new Date(settings.modifiedDate);
+        var newDate;
+
+        if(currDate > oldDate) {
+            newDate = currDate;
+        } else {
+            newDate = oldDate;
+            newDate.setSeconds(newDate.getSeconds() + 1);
+        }
+
+        settings.modifiedDate = newDate.toISOString();
+
+        return utils.request(settings, {
+            restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + settings.id,
+            method: 'PUT',
+            pfx: options.pfx,
+            passPhrase: options.passPhrase,
+            UserId: options.UserId,
+            UserDirectory: options.UserDirectory
+        });
+
+    })
+
+}
+
+
 /**
  * Simple basic auth middleware for use with Express 4.x.
  *
@@ -194,5 +256,6 @@ module.exports = {
     request: request,
     getTicket: getTicket,
     openSession: openSession,
+    addToWhiteList: addToWhiteList,
     basicAuth: basicAuth
 }
