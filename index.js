@@ -9,6 +9,13 @@ var basic = require('basic-auth');
  *  If a is undefined, return b else a
  * Three parameters mode
  *  If a is undefined, return c else b
+ *
+ * @example
+ * var myHost = ifnotundef(options.host, options.hostname);
+ *
+ * @example
+ * var myHost = ifnotundef(options.host, options.hostname, 'localhost');
+ *
  * @param {*} a
  * @param {*} b
  * @param {*=} c
@@ -20,6 +27,10 @@ function ifnotundef(a, b, c) {
 
 /**
  * Generates a random Xrf key of a given size within a set of given chars
+ *
+ * @example
+ * var xrf = generateXrfkey(8);
+ *
  * @param {integer=} [size=16]
  * @param {string=} [chars=abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789]
  * @returns {string}
@@ -39,6 +50,20 @@ function generateXrfkey(size, chars) {
 
 /**
  * Makes a request on a Qlik Sense API endpoint defined in the options object, posting the params object
+ *
+ * @example
+ * request({
+ *      'UserId': 'qlikservice',
+ *      'UserDirectory': '2008R2-0',
+ *      'Attributes': []
+ * }, {
+ *      restUri: 'https://10.76.224.72:4243/qps/ticket',
+ *      pfx: pfx,
+ *      passPhrase: ''
+ * }).then(function(retVal) {
+ *      console.log(retVal);
+ * });
+ *
  * @param {Object} params the parameters to post to the API endpoint
  * @param {Object} options the options to connect to the API endpoint
  * @returns {Promise}
@@ -108,6 +133,20 @@ function request(params, options) {
 
 /**
  * Generates a ticket on Qlik Sense QRS Api
+ *
+ * @example
+ * getTicket({
+ *      'UserId': 'qlikservice',
+ *      'UserDirectory': '2008R2-0',
+ *      'Attributes': []
+ * }, {
+ *      restUri: 'https://10.76.224.72:4243',
+ *      pfx: pfx,
+ *      passPhrase: ''
+ * }).then(function(retVal) {
+ *      console.log(retVal);
+ * });
+ *
  * @param {Object} params the ticket parameters
  * @param {Object} options the options to connect to the ticket API endpoint
  * @returns {Promise}
@@ -129,6 +168,18 @@ function getTicket(params, options) {
 
 /**
  * Opens a session on the Qlik Sense Hub with the given ticket and returns the session cookie
+ *
+ * @example
+ * openSession({
+ *      UserDirectory: '2008R2-0',
+ *      UserId: 'qlikservice',
+ *      Attributes: [],
+ *      Ticket: 'QzSPXzBmJKjhucPF',
+ *      TargetUri: null
+ * }, url.parse('https://localhost/hub')).then(function(retVal) {
+ *      console.log(retVal);
+ * });
+ *
  * @param {Object} ticket the generated ticket
  * @param {Object} options parsed url of the Qlik Sense Hub
  * @returns {Promise}
@@ -166,6 +217,24 @@ function openSession(ticket, options) {
 
 /**
  * Adds the given ip address to the websocket whitelist of the given virtual proxy
+ *
+ * @example
+ * readFile('./client.pfx').then(function(certif) {
+ *
+ *      return utils.addToWhiteList('10.76.224.72', {
+ *          restUri: 'https://10.76.224.72:4242',
+ *          pfx: certif,
+ *          passPhrase: '',
+ *          UserId: 'qlikservice',
+ *          UserDirectory: '2008R2-0'
+ *      });
+ *
+ * }).then(function(ret) {
+ *      console.log(ret);
+ * }, function(ret) {
+ *      console.log(ret);
+ * });
+ *
  * @param  {string} ip the ip to add
  * @param  {Object} options the endpoint to add the ip to
  * @returns {Promise}
@@ -259,6 +328,7 @@ function basicAuth(users) {
 };
 
 module.exports = {
+    ifnotundef: ifnotundef,
     request: request,
     getTicket: getTicket,
     openSession: openSession,
