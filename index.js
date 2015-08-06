@@ -119,6 +119,14 @@ function request(params, options) {
 
             });
 
+            if(typeof options.timeout != 'undefined')
+                apireq.on('socket', function (socket) {
+                    socket.setTimeout(options.timeout);
+                    socket.on('timeout', function() {
+                        apireq.abort();
+                    });
+                });
+
             if(params) {
                 apireq.write(JSON.stringify(params));
             }
@@ -248,12 +256,15 @@ function addToWhiteList(ip, options) {
     var restUri = url.parse(options.restUri);
 
     return request(null, {
+
         restUri: restUri.protocol + '//' + restUri.host + '/qrs/proxyservice/local',
         method: 'GET',
         pfx: options.pfx,
         passPhrase: options.passPhrase,
         UserId: options.UserId,
-        UserDirectory: options.UserDirectory
+        UserDirectory: options.UserDirectory,
+        timeout: options.timeout
+
     }).then(function(settings) {
 
         var vpsettings = settings.settings.virtualProxies[0];
@@ -264,7 +275,9 @@ function addToWhiteList(ip, options) {
             pfx: options.pfx,
             passPhrase: options.passPhrase,
             UserId: options.UserId,
-            UserDirectory: options.UserDirectory
+            UserDirectory: options.UserDirectory,
+            timeout: options.timeout
+
         })
 
     }).then(function(settings) {
@@ -292,7 +305,9 @@ function addToWhiteList(ip, options) {
                 pfx: options.pfx,
                 passPhrase: options.passPhrase,
                 UserId: options.UserId,
-                UserDirectory: options.UserDirectory
+                UserDirectory: options.UserDirectory,
+                timeout: options.timeout
+
             });
 
         } else {
