@@ -121,7 +121,7 @@ function request(params, options) {
 
             if(typeof options.timeout != 'undefined')
                 apireq.on('socket', function (socket) {
-                    socket.setTimeout(options.timeout);
+                    socket.setTimeout(parseInt(options.timeout));
                     socket.on('timeout', function() {
                         apireq.abort();
                     });
