@@ -110,7 +110,11 @@ function request(params, options) {
                 });
 
                 apires.on('end', function (d) {
-                    resolve(JSON.parse(body));
+                    try {
+                        resolve(JSON.parse(body));
+                    } catch(err) {
+                        reject({err: err, body: body});
+                    }
                 });
 
             });
