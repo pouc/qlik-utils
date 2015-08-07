@@ -9,25 +9,27 @@ module.exports = function(grunt) {
                 dest: 'README.md'
             }
         },
-        gitcommit: {
-            task: {
-                options: {
-                    allowEmpty: true,
-                    message: 'Commit'
-                },
-                files: {
-                    src: ['*.js']
-                }
+        bump: {
+            options: {
+                push: true,
+                pushTo: 'origin'
+            }
+
+        },
+        shell: {
+            publish: {
+                command: "npm publish"
             }
         }
     });
 
     grunt.loadNpmTasks("grunt-jsdoc-to-markdown");
-    grunt.loadNpmTasks('grunt-git');
+    grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-shell');
 
-    grunt.registerTask('default', [])
-    grunt.registerTask('generate doc', 'jsdoc2md')
-    grunt.registerTask('commit github', 'gitcommit')
+    grunt.registerTask("release", "Release a new version, push it and publish it", function() {
+        grunt.task.run("bump-only:patch", "jsdoc2md", "bump-commit", "shell:publish");
+    });
 
 };
 
