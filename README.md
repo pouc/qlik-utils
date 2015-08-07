@@ -45,7 +45,9 @@ Three parameters mode
 A set of utility functions / classes for simplifying the call to Qlik Sense APIs
 
 **Example**  
-```jsvar utils = require("qlik-utils");```
+```js
+var utils = require("qlik-utils");
+```
 <a name="Task"></a>
 ## Task
 This class enables you to handle tasks asynchronously. It relies on Q promises.
