@@ -3,6 +3,8 @@ var crypto = require('crypto');
 var url = require('url');
 var fs = require('fs');
 var basic = require('basic-auth');
+var uuid = require('node-uuid');
+var Q = require('q');
 
 /**
  * Two parameters mode
@@ -97,49 +99,49 @@ function request(params, options) {
         agent: false
     };
 
-    return new Promise(function(resolve, reject) {
+    var requestDef = Q.defer();
 
-        if(settings.protocol != 'https:') reject('https is needed to make API call');
-        else {
+    if(settings.protocol != 'https:') requestDef.reject('https is needed to make API call');
+    else {
 
-            var apireq = https.request(settings, function (apires) {
+        var apireq = https.request(settings, function (apires) {
 
-                var body = "";
-                apires.on('data', function (d) {
-                    body += d.toString()
-                });
-
-                apires.on('end', function (d) {
-                    try {
-                        resolve(JSON.parse(body));
-                    } catch(err) {
-                        reject({err: err, body: body});
-                    }
-                });
-
+            var body = "";
+            apires.on('data', function (d) {
+                body += d.toString()
             });
 
-            if(typeof options.timeout != 'undefined')
-                apireq.on('socket', function (socket) {
-                    socket.setTimeout(parseInt(options.timeout));
-                    socket.on('timeout', function() {
-                        apireq.abort();
-                    });
-                });
-
-            if(params) {
-                apireq.write(JSON.stringify(params));
-            }
-
-            apireq.end();
-
-            apireq.on('error', function (e) {
-                reject(e);
+            apires.on('end', function (d) {
+                try {
+                    requestDef.resolve(JSON.parse(body));
+                } catch(err) {
+                    requestDef.reject({err: err, body: body});
+                }
             });
 
+        });
+
+        if(typeof options.timeout != 'undefined')
+            apireq.on('socket', function (socket) {
+                socket.setTimeout(parseInt(options.timeout));
+                socket.on('timeout', function() {
+                    apireq.abort();
+                });
+            });
+
+        if(params) {
+            apireq.write(JSON.stringify(params));
         }
 
-    });
+        apireq.end();
+
+        apireq.on('error', function (e) {
+            requestDef.reject(e);
+        });
+
+    }
+
+    return requestDef.promise;
 
 };
 
@@ -198,32 +200,34 @@ function getTicket(params, options) {
  */
 function openSession(ticket, options) {
 
-    var p = new Promise(function(resolve, reject) {
+    var requestDef = Q.defer();
 
-        var settings = {
-            host: options.hostname,
-            port: options.port,
-            path: options.pathname + '?' + ifnotundef(options.query, options.query + '&', '') + 'qlikTicket=' + ticket.Ticket,
-            method: 'GET',
-            rejectUnauthorized: false,
-            agent: false
-        };
+    var settings = {
+        host: options.hostname,
+        port: options.port,
+        path: options.pathname + '?' + ifnotundef(options.query, options.query + '&', '') + 'qlikTicket=' + ticket.Ticket,
+        method: 'GET',
+        rejectUnauthorized: false,
+        agent: false
+    };
 
-        var prot = (options.protocol == 'https:') ? https : http;
+    var prot = (options.protocol == 'https:') ? https : http;
 
-        var req = prot.request(settings, function (response) {
-            response.on('data', function (d) {
-                var cookies = response.headers['set-cookie'];
-                resolve(cookies[0]);
-            });
+    var req = prot.request(settings, function (response) {
+        response.on('data', function (d) {
+            var cookies = response.headers['set-cookie'];
+            requestDef.resolve(cookies[0]);
         });
-        req.on('error', function(e) {
-            reject(e);
-        });
-        req.end();
     });
 
-    return p;
+    req.on('error', function(e) {
+        requestDef.reject(e);
+    });
+
+    req.end();
+
+    return requestDef.promise;
+
 }
 
 
@@ -346,11 +350,59 @@ function basicAuth(users) {
     };
 };
 
+
+function task() {
+
+    var _this = this;
+
+    _this.guid = uuid.v1();
+    changeStatus('waiting');
+
+    // Private methods
+
+    var changeStatus = function(status, val) {
+        _this.status = status;
+        _this.modifiedDate = new Date();
+        _this.val = val;
+
+        var listenDef = _this.listenDef;
+
+        var newlistenDef = Q.defer();
+        _this.listen = newlistenDef.promise;
+
+        if(typeof listenDef != 'undefined') {
+            listenDef.resolve(this);
+        }
+
+    };
+
+    // Public methods
+
+    this.start = function() {
+        _this.startedDate = new Date();
+        this.running();
+    };
+
+    this.running = function(val) {
+        changeStatus('running', val);
+    };
+
+    this.done = function(val) {
+        changeStatus('done', val);
+    };
+
+    this.failed = function(val) {
+        changeStatus('failed', val);
+    };
+
+}
+
 module.exports = {
     ifnotundef: ifnotundef,
     request: request,
     getTicket: getTicket,
     openSession: openSession,
     addToWhiteList: addToWhiteList,
-    basicAuth: basicAuth
+    basicAuth: basicAuth,
+    task: task
 }

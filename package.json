@@ -11,6 +11,8 @@
   },
   "bugs": "https://github.com/pouc/qlik-utils/issues",
   "dependencies": {
-    "basic-auth": "^1.0.3"
+    "basic-auth": "^1.0.3",
+    "node-uuid": "^1.4.3",
+    "q": "^1.4.1"
   }
 }
