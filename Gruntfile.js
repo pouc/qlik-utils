@@ -17,8 +17,11 @@ module.exports = function(grunt) {
 
         },
         shell: {
+            commit:{
+                command: 'git commit'
+            },
             publish: {
-                command: "npm publish"
+                command: 'npm publish'
             }
         }
     });
@@ -28,7 +31,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
 
     grunt.registerTask("release", "Release a new version, push it and publish it", function() {
-        grunt.task.run("bump-only:patch", "jsdoc2md", "bump-commit", "shell:publish");
+        grunt.task.run("bump-only:patch", "jsdoc2md", "shell:publish");
     });
 
 };
