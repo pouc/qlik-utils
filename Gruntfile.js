@@ -17,9 +17,6 @@ module.exports = function(grunt) {
 
         },
         shell: {
-            commit:{
-                command: 'git commit'
-            },
             publish: {
                 command: 'npm publish'
             }
