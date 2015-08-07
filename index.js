@@ -451,5 +451,6 @@ module.exports = {
     openSession: openSession,
     addToWhiteList: addToWhiteList,
     basicAuth: basicAuth,
-    task: task
+    task: task,
+    setTimeout2Promise: setTimeout2Promise
 }
