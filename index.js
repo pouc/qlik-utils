@@ -1,3 +1,9 @@
+/**
+ * @file A set of utility functions / classes for simplifying the call to Qlik Sense APIs
+ * @author Loïc Formont
+ */
+
+
 var https = require('https');
 var crypto = require('crypto');
 var url = require('url');
@@ -490,6 +496,15 @@ function setTimeout2Promise(timeout) {
 }
 
 
+/**
+ * A set of utility functions / classes for simplifying the call to Qlik Sense APIs
+ * @module qlik-utils
+ * @typicalname utils
+ * @example
+ * ```js
+ * var utils = require("qlik-utils");
+ * ```
+ */
 module.exports = {
     ifnotundef: ifnotundef,
     request: request,

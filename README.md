@@ -1,3 +1,9 @@
+## Modules
+<dl>
+<dt><a href="#module_qlik-utils">qlik-utils</a></dt>
+<dd><p>A set of utility functions / classes for simplifying the call to Qlik Sense APIs</p>
+</dd>
+</dl>
 ## Classes
 <dl>
 <dt><a href="#Task">Task</a></dt>
@@ -34,6 +40,12 @@ Three parameters mode
 <dd><p>Equivalent to setTimeout but returns a promise instead</p>
 </dd>
 </dl>
+<a name="module_qlik-utils"></a>
+## qlik-utils
+A set of utility functions / classes for simplifying the call to Qlik Sense APIs
+
+**Example**  
+```jsvar utils = require("qlik-utils");```
 <a name="Task"></a>
 ## Task
 This class enables you to handle tasks asynchronously. It relies on Q promises.
