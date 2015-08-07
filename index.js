@@ -354,27 +354,35 @@ function basicAuth(users) {
 function task() {
 
     var _this = this;
-
-    _this.guid = uuid.v1();
-    changeStatus('waiting');
+    var listenDef;
 
     // Private methods
 
     var changeStatus = function(status, val) {
+
+        console.log(status, val)
+
         _this.status = status;
         _this.modifiedDate = new Date();
         _this.val = val;
 
-        var listenDef = _this.listenDef;
+        var oldListenDef = listenDef;
 
-        var newlistenDef = Q.defer();
-        _this.listen = newlistenDef.promise;
+        if(_this.status == 'waiting' || _this.status == 'running') {
+            listenDef = Q.defer();
+            _this.listen = listenDef.promise;
+        }
 
-        if(typeof listenDef != 'undefined') {
-            listenDef.resolve(this);
+        if(typeof oldListenDef != 'undefined') {
+            oldListenDef.resolve(_this);
         }
 
     };
+
+    // constructor
+
+    _this.guid = uuid.v1();
+    changeStatus('waiting');
 
     // Public methods
 
@@ -396,6 +404,26 @@ function task() {
     };
 
 }
+
+task.all = function(tasks) {
+
+    var tasksListeners = [], keys = [];
+    for (var key in tasks) {
+        if (tasks.hasOwnProperty(key)) {
+            keys.push(key);
+            tasksListeners.push(tasks[key].listen);
+        }
+    }
+
+    return Q.all(tasksListeners).then(function(ret) {
+        var retVal = {};
+        ret.forEach(function(item, index) {
+            retVal[keys[index]] = item;
+        })
+        return retVal;
+    });
+}
+
 
 module.exports = {
     ifnotundef: ifnotundef,
