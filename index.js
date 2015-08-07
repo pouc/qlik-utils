@@ -351,6 +351,9 @@ function basicAuth(users) {
 };
 
 
+/**
+ * Task class
+ */
 function task() {
 
     var _this = this;
@@ -359,8 +362,6 @@ function task() {
     // Private methods
 
     var changeStatus = function(status, val) {
-
-        console.log(status, val)
 
         _this.status = status;
         _this.modifiedDate = new Date();
@@ -422,6 +423,24 @@ task.all = function(tasks) {
         })
         return retVal;
     });
+}
+
+
+/**
+ * Equivalent to setTimeout but returns a promise instead
+ * @param timeout the timeout in ms
+ * @returns {Promise}
+ */
+function setTimeout2Promise(timeout) {
+
+    var timeoutDef = Q.defer();
+
+    setTimeout(function() {
+        timeoutDef.resolve();
+    }, timeout);
+
+    return timeoutDef.promise;
+
 }
 
 
