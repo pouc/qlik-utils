@@ -163,8 +163,14 @@ Creates a new task.
 **Kind**: inner typedef of <code>[qlik-utils](#module_qlik-utils)</code>  
 **Properties**
 
-| Name | Type | Description |
-| --- | --- | --- |
-| UserDirectory | <code>string</code> | the user directory of the Qlik Sense user that will make the API call |
-| UserId | <code>string</code> | the user id of the Qlik Sense user that will make the API call |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| UserDirectory | <code>string</code> | <code>&quot;.&quot;</code> | the user directory of the Qlik Sense user that will make the API call |
+| UserId | <code>string</code> | <code>&quot;qlikservice&quot;</code> | the user id of the Qlik Sense user that will make the API call |
+| session | <code>string</code> |  | the cookie of a valid Qlik Sense session |
+| restUri | <code>string</code> |  | an URI to a valid Qlik Sense endpoint |
+| method | <code>string</code> | <code>&quot;POST&quot;</code> | the method of the HTTP request (GET/PUT/POST/DELETE) |
+| pfx | <code>buffer</code> |  | the Qlik Sense pfx certificate (not required if a session is set) |
+| passphrase | <code>string</code> |  | the Qlik Sense certificate's passphrase (not required if a session is set) |
+| timeout | <code>int</code> |  | the timeout of the HTTP request |
 

@@ -64,13 +64,19 @@ exports.generateXrfkey = function(size, chars) {
     }
 
     return value.join('');
-}
+};
 
 /**
  * @typedef options
  * @type {Object}
- * @property {string=} UserDirectory the user directory of the Qlik Sense user that will make the API call
- * @property {string=} UserId the user id of the Qlik Sense user that will make the API call
+ * @property {string} [UserDirectory=.] the user directory of the Qlik Sense user that will make the API call
+ * @property {string} [UserId=qlikservice] the user id of the Qlik Sense user that will make the API call
+ * @property {string} [session] the cookie of a valid Qlik Sense session
+ * @property {string} restUri an URI to a valid Qlik Sense endpoint
+ * @property {string} [method=POST] the method of the HTTP request (GET/PUT/POST/DELETE)
+ * @property {buffer} [pfx] the Qlik Sense pfx certificate (not required if a session is set)
+ * @property {string} [passphrase] the Qlik Sense certificate's passphrase (not required if a session is set)
+ * @property {int} [timeout] the timeout of the HTTP request
  */
 
 /**
