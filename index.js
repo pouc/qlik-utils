@@ -30,10 +30,10 @@ module.exports = exports;
  *  If a is undefined, return c else b
  *
  * @example
- * var myHost = ifnotundef(options.host, options.hostname);
+ * var myHost = utils.ifnotundef(options.host, options.hostname);
  *
  * @example
- * var myHost = ifnotundef(options.host, options.hostname, 'localhost');
+ * var myHost = utils.ifnotundef(options.host, options.hostname, 'localhost');
  *
  * @param {*} a
  * @param {*} b
@@ -48,7 +48,7 @@ exports.ifnotundef = function(a, b, c) {
  * Generates a random Xrf key of a given size within a set of given chars
  *
  * @example
- * var xrf = generateXrfkey(8);
+ * var xrf = utils.generateXrfkey(8);
  *
  * @param {int=} [size=16]
  * @param {string=} [chars=abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789]
@@ -103,7 +103,7 @@ exports.generateXrfkey = function(size, chars) {
  * Makes a request on a Qlik Sense API endpoint defined in the options object, posting the params object
  *
  * @example
- * request({
+ * utils.request({
  *      'UserId': 'qlikservice',
  *      'UserDirectory': '2008R2-0',
  *      'Attributes': []
@@ -121,7 +121,7 @@ exports.generateXrfkey = function(size, chars) {
  */
 exports.request = function(params, options) {
 
-    var xrfkey = generateXrfkey();
+    var xrfkey = exports.generateXrfkey();
     var restUri = url.parse(options.restUri);
 
     var headers = {
@@ -130,7 +130,7 @@ exports.request = function(params, options) {
     };
 
     if(typeof options.UserDirectory != 'undefined' || typeof options.UserId != 'undefined')
-        headers['X-Qlik-User'] = 'UserDirectory= ' + ifnotundef(options.UserDirectory, '.') + '; UserId= ' + ifnotundef(options.UserId, 'qlikservice');
+        headers['X-Qlik-User'] = 'UserDirectory= ' + exports.ifnotundef(options.UserDirectory, '.') + '; UserId= ' + exports.ifnotundef(options.UserId, 'qlikservice');
 
     if(typeof options.session != 'undefined')
         headers['Cookie'] = options.session;
@@ -139,11 +139,11 @@ exports.request = function(params, options) {
         protocol: restUri.protocol,
         host: restUri.hostname,
         port: restUri.port,
-        path: restUri.pathname + '?' + ifnotundef(restUri.query, restUri.query + '&', '') + 'xrfkey=' + xrfkey,
-        method: ifnotundef(options.method, 'POST'),
+        path: restUri.pathname + '?' + exports.ifnotundef(restUri.query, restUri.query + '&', '') + 'xrfkey=' + xrfkey,
+        method: exports.ifnotundef(options.method, 'POST'),
         headers: headers,
-        pfx: ifnotundef(options.pfx, null),
-        passphrase: ifnotundef(options.passPhrase, null),
+        pfx: exports.ifnotundef(options.pfx, null),
+        passphrase: exports.ifnotundef(options.passPhrase, null),
         rejectUnauthorized: false,
         agent: false
     };
@@ -198,7 +198,7 @@ exports.request = function(params, options) {
  * Generates a ticket on Qlik Sense QRS Api
  *
  * @example
- * getTicket({
+ * utils.getTicket({
  *      'UserId': 'qlikservice',
  *      'UserDirectory': '2008R2-0',
  *      'Attributes': []
@@ -223,7 +223,7 @@ exports.getTicket = function(params, options) {
         method: 'POST'
     });
 
-    return request(params, ticketOptions);
+    return exports.request(params, ticketOptions);
 
 };
 
@@ -231,7 +231,7 @@ exports.getTicket = function(params, options) {
  * Opens a session on the Qlik Sense Hub with the given ticket and returns the session cookie
  *
  * @example
- * openSession({
+ * utils.openSession({
  *      UserDirectory: '2008R2-0',
  *      UserId: 'qlikservice',
  *      Attributes: [],
@@ -253,7 +253,7 @@ exports.openSession = function(ticket, hostUri) {
     var settings = {
         host: restUri.hostname,
         port: restUri.port,
-        path: restUri.pathname + '?' + ifnotundef(restUri.query, restUri.query + '&', '') + 'qlikTicket=' + ticket.Ticket,
+        path: restUri.pathname + '?' + exports.ifnotundef(restUri.query, restUri.query + '&', '') + 'qlikTicket=' + ticket.Ticket,
         method: 'GET',
         rejectUnauthorized: false,
         agent: false
@@ -307,21 +307,29 @@ exports.addToWhiteList = function(ip, options) {
 
     var restUri = url.parse(options.restUri);
 
-    return request(null,
-        extend.cloneextend(options, {
+    return Q().then(function() {
+
+        var options2 = extend.cloneextend(options, {
             restUri: restUri.protocol + '//' + restUri.host + '/qrs/proxyservice/local',
             method: 'GET'
-        })
-    ).then(function(settings) {
+        });
+
+        options2.pfx = options.pfx;
+
+        return exports.request(null, options2)
+
+    }).then(function(settings) {
 
         var vpsettings = settings.settings.virtualProxies[0];
 
-        return request(null,
-            extend.cloneextend(options, {
-                restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + vpsettings.id,
-                method: 'GET'
-            })
-        );
+        var options2 = extend.cloneextend(options, {
+            restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + vpsettings.id,
+            method: 'GET'
+        });
+
+        options2.pfx = options.pfx;
+
+        return exports.request(null, options2);
 
     }).then(function(settings) {
 
@@ -342,12 +350,14 @@ exports.addToWhiteList = function(ip, options) {
 
             settings.modifiedDate = newDate.toISOString();
 
-            return request(settings,
-                extend.cloneextend(options, {
-                    restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + settings.id,
-                    method: 'PUT'
-                })
-            );
+            var options2 = extend.cloneextend(options, {
+                restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + settings.id,
+                method: 'PUT'
+            });
+
+            options2.pfx = options.pfx;
+
+            return exports.request(settings, options2);
 
         } else {
             return 'already in whitelist!'
@@ -505,7 +515,7 @@ exports.task.all = function(tasks) {
  * Equivalent to setTimeout but returns a promise instead
  *
  * @example
- * setTimeout2Promise(1000).then(function() {
+ * utils.setTimeout2Promise(1000).then(function() {
  *      console.log('hi');
  * });
  *
@@ -523,5 +533,3 @@ exports.setTimeout2Promise = function(timeout) {
     return timeoutDef.promise;
 
 }
-
-

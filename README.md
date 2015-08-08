@@ -41,11 +41,11 @@ Two parameters mode If a is undefined, return b else aThree parameters mode I
 
 **Example**  
 ```js
-var myHost = ifnotundef(options.host, options.hostname);
+var myHost = utils.ifnotundef(options.host, options.hostname);
 ```
 **Example**  
 ```js
-var myHost = ifnotundef(options.host, options.hostname, 'localhost');
+var myHost = utils.ifnotundef(options.host, options.hostname, 'localhost');
 ```
 <a name="module_qlik-utils.generateXrfkey"></a>
 ### utils.generateXrfkey([size], [chars]) ⇒ <code>string</code>
@@ -60,7 +60,7 @@ Generates a random Xrf key of a given size within a set of given chars
 
 **Example**  
 ```js
-var xrf = generateXrfkey(8);
+var xrf = utils.generateXrfkey(8);
 ```
 <a name="module_qlik-utils.request"></a>
 ### utils.request([params], options) ⇒ <code>Promise.&lt;\*&gt;</code>
@@ -76,7 +76,7 @@ Makes a request on a Qlik Sense API endpoint defined in the options object, post
 
 **Example**  
 ```js
-request({     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}, {     restUri: 'https://10.76.224.72:4243/qps/ticket',     pfx: pfx,     passPhrase: ''}).then(function(retVal) {     console.log(retVal);});
+utils.request({     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}, {     restUri: 'https://10.76.224.72:4243/qps/ticket',     pfx: pfx,     passPhrase: ''}).then(function(retVal) {     console.log(retVal);});
 ```
 <a name="module_qlik-utils.getTicket"></a>
 ### utils.getTicket(params, options) ⇒ <code>Promise.&lt;ticket&gt;</code>
@@ -92,7 +92,7 @@ Generates a ticket on Qlik Sense QRS Api
 
 **Example**  
 ```js
-getTicket({     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}, {     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''}).then(function(retVal) {     console.log(retVal);});
+utils.getTicket({     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}, {     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''}).then(function(retVal) {     console.log(retVal);});
 ```
 <a name="module_qlik-utils.openSession"></a>
 ### utils.openSession(ticket, hostUri) ⇒ <code>Promise.&lt;string&gt;</code>
@@ -108,7 +108,7 @@ Opens a session on the Qlik Sense Hub with the given ticket and returns the sess
 
 **Example**  
 ```js
-openSession({     UserDirectory: '2008R2-0',     UserId: 'qlikservice',     Attributes: [],     Ticket: 'QzSPXzBmJKjhucPF',     TargetUri: null}, 'https://localhost/hub').then(function(retVal) {     console.log(retVal);});
+utils.openSession({     UserDirectory: '2008R2-0',     UserId: 'qlikservice',     Attributes: [],     Ticket: 'QzSPXzBmJKjhucPF',     TargetUri: null}, 'https://localhost/hub').then(function(retVal) {     console.log(retVal);});
 ```
 <a name="module_qlik-utils.addToWhiteList"></a>
 ### utils.addToWhiteList(ip, options) ⇒ <code>Promise.&lt;Object&gt;</code>
@@ -153,7 +153,7 @@ Equivalent to setTimeout but returns a promise instead
 
 **Example**  
 ```js
-setTimeout2Promise(1000).then(function() {     console.log('hi');});
+utils.setTimeout2Promise(1000).then(function() {     console.log('hi');});
 ```
 <a name="module_qlik-utils..Task"></a>
 ### utils~Task
