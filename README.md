@@ -2,9 +2,9 @@
 ## qlik-utils
 A set of utility functions / classes for simplifying the call to Qlik Sense APIs
 
-**Author:** Lo�c Formont  
+**Author:** Loic Formont  
 **License**: MIT Licensed  
-**Copyright**: Copyright (C) 2015 Lo�c Formont  
+**Copyright**: Copyright (C) 2015 Loic Formont  
 **Example**  
 ```js
 var utils = require("qlik-utils");

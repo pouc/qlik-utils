@@ -12,8 +12,8 @@ var exports = {};
  * A set of utility functions / classes for simplifying the call to Qlik Sense APIs
  * @module qlik-utils
  * @typicalname utils
- * @author Loïc Formont
- * @copyright Copyright (C) 2015 Loïc Formont
+ * @author Loic Formont
+ * @copyright Copyright (C) 2015 Loic Formont
  * @license MIT Licensed
  *
  * @example
