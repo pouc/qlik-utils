@@ -5,6 +5,7 @@ var fs = require('fs');
 var basic = require('basic-auth');
 var uuid = require('node-uuid');
 var Q = require('q');
+var extend = require('cloneextend');
 
 var exports = {};
 
@@ -80,6 +81,25 @@ exports.generateXrfkey = function(size, chars) {
  */
 
 /**
+ * @typedef ticketParams
+ * @type {Object}
+ * @property {string} UserId the user id to generate a ticket for
+ * @property {string} UserDirectory the user directory of the user to generate a ticket for
+ * @property {string[]} Attributes the user attributes
+ */
+
+/**
+ * @typedef ticket
+ * @type {Object}
+ * @property {string} UserId the user id of the generated ticket
+ * @property {string} UserDirectory the user directory of generated ticket
+ * @property {string[]} Attributes the user attributes
+ * @property {string} Ticket the ticket
+ * @property {string} TargetUri the target uri
+ *
+ */
+
+/**
  * Makes a request on a Qlik Sense API endpoint defined in the options object, posting the params object
  *
  * @example
@@ -95,9 +115,9 @@ exports.generateXrfkey = function(size, chars) {
  *      console.log(retVal);
  * });
  *
- * @param {Object} params the parameters to post to the API endpoint
+ * @param {Object=} [params] the parameters to post to the API endpoint
  * @param {options} options the options to connect to the API endpoint
- * @returns {Promise}
+ * @returns {Promise<*>} a promise resolving to the response to the request
  */
 exports.request = function(params, options) {
 
@@ -190,24 +210,22 @@ exports.request = function(params, options) {
  *      console.log(retVal);
  * });
  *
- * @param {Object} params the ticket parameters
- * @param {Object} options the options to connect to the ticket API endpoint
- * @returns {Promise}
+ * @param {ticketParams} params the ticket parameters
+ * @param {options} options the options to connect to the ticket API endpoint
+ * @returns {Promise<ticket>} resolving to the generated ticket
  */
 exports.getTicket = function(params, options) {
 
     var restUri = url.parse(options.restUri);
 
-    var ticketOptions = {
+    var ticketOptions = extend.cloneextend(options, {
         restUri: restUri.protocol + '//' + restUri.host + '/qps/ticket',
-        method: 'POST',
-        pfx: options.pfx,
-        passPhrase: options.passPhrase
-    };
+        method: 'POST'
+    });
 
     return request(params, ticketOptions);
 
-}
+};
 
 /**
  * Opens a session on the Qlik Sense Hub with the given ticket and returns the session cookie
@@ -223,9 +241,9 @@ exports.getTicket = function(params, options) {
  *      console.log(retVal);
  * });
  *
- * @param {Object} ticket the generated ticket
- * @param {Object} options parsed url of the Qlik Sense Hub
- * @returns {Promise}
+ * @param {ticket} ticket the generated ticket
+ * @param {options} options parsed url of the Qlik Sense Hub
+ * @returns {Promise<string>} a promise resolving to the session cookie
  */
 exports.openSession = function(ticket, options) {
 
@@ -281,8 +299,8 @@ exports.openSession = function(ticket, options) {
  * });
  *
  * @param  {string} ip the ip to add
- * @param  {Object} options the endpoint to add the ip to
- * @returns {Promise}
+ * @param  {options} options the endpoint to add the ip to
+ * @returns {Promise<Object>} a promise resolving to the virtual proxy configuration when successfull
  */
 exports.addToWhiteList = function(ip, options) {
 
