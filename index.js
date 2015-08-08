@@ -1,9 +1,3 @@
-/**
- * @file A set of utility functions / classes for simplifying the call to Qlik Sense APIs
- * @author Loïc Formont
- */
-
-
 var https = require('https');
 var crypto = require('crypto');
 var url = require('url');
@@ -11,6 +5,22 @@ var fs = require('fs');
 var basic = require('basic-auth');
 var uuid = require('node-uuid');
 var Q = require('q');
+
+var exports = {};
+
+/**
+ * A set of utility functions / classes for simplifying the call to Qlik Sense APIs
+ * @module qlik-utils
+ * @typicalname utils
+ * @author Loïc Formont
+ * @copyright Copyright (C) 2015 Loïc Formont
+ * @license MIT Licensed
+ *
+ * @example
+ * var utils = require("qlik-utils");
+ *
+ */
+module.exports = exports;
 
 /**
  * Two parameters mode
@@ -29,7 +39,7 @@ var Q = require('q');
  * @param {*=} c
  * @returns {*}
  */
-function ifnotundef(a, b, c) {
+exports.ifnotundef = function(a, b, c) {
     return (typeof c == 'undefined') ? ((typeof a != 'undefined' && a != null) ? a : b) : ((typeof a != 'undefined' && a != null) ? b : c);
 }
 
@@ -39,11 +49,11 @@ function ifnotundef(a, b, c) {
  * @example
  * var xrf = generateXrfkey(8);
  *
- * @param {integer=} [size=16]
+ * @param {int=} [size=16]
  * @param {string=} [chars=abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789]
  * @returns {string}
  */
-function generateXrfkey(size, chars) {
+exports.generateXrfkey = function(size, chars) {
     size = size || 16;
     chars = chars || 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789';
 
@@ -76,7 +86,7 @@ function generateXrfkey(size, chars) {
  * @param {Object} options the options to connect to the API endpoint
  * @returns {Promise}
  */
-function request(params, options) {
+exports.request = function(params, options) {
 
     var xrfkey = generateXrfkey();
     var restUri = url.parse(options.restUri);
@@ -171,7 +181,7 @@ function request(params, options) {
  * @param {Object} options the options to connect to the ticket API endpoint
  * @returns {Promise}
  */
-function getTicket(params, options) {
+exports.getTicket = function(params, options) {
 
     var restUri = url.parse(options.restUri);
 
@@ -204,7 +214,7 @@ function getTicket(params, options) {
  * @param {Object} options parsed url of the Qlik Sense Hub
  * @returns {Promise}
  */
-function openSession(ticket, options) {
+exports.openSession = function(ticket, options) {
 
     var requestDef = Q.defer();
 
@@ -261,7 +271,7 @@ function openSession(ticket, options) {
  * @param  {Object} options the endpoint to add the ip to
  * @returns {Promise}
  */
-function addToWhiteList(ip, options) {
+exports.addToWhiteList = function(ip, options) {
 
     var restUri = url.parse(options.restUri);
 
@@ -338,7 +348,7 @@ function addToWhiteList(ip, options) {
  * @param   {Object}   users list of usernames & passwords
  * @returns {function} Express 4 middleware requiring the given credentials
  */
-function basicAuth(users) {
+exports.basicAuth = function(users) {
     return function(req, res, next) {
         var user = basic(req);
 
@@ -362,7 +372,7 @@ function basicAuth(users) {
  * @class Task
  * @classdesc This class enables you to handle tasks asynchronously. It relies on Q promises.
  */
-function task() {
+exports.task = function() {
 
     var _this = this;
     var listenDef;
@@ -452,7 +462,7 @@ function task() {
  * @param {Object.<string, Task>} tasks An object listing tasks with their name
  * @returns {Promise} A promise that resolves when all the tasks are resolved
  */
-task.all = function(tasks) {
+exports.task.all = function(tasks) {
 
     var tasksListeners = [], keys = [];
     for (var key in tasks) {
@@ -483,7 +493,7 @@ task.all = function(tasks) {
  * @param timeout the timeout in ms
  * @returns {Promise}
  */
-function setTimeout2Promise(timeout) {
+exports.setTimeout2Promise = function(timeout) {
 
     var timeoutDef = Q.defer();
 
@@ -496,22 +506,3 @@ function setTimeout2Promise(timeout) {
 }
 
 
-/**
- * A set of utility functions / classes for simplifying the call to Qlik Sense APIs
- * @module qlik-utils
- * @typicalname utils
- *
- * @example
- * var utils = require("qlik-utils");
- *
- */
-module.exports = {
-    ifnotundef: ifnotundef,
-    request: request,
-    getTicket: getTicket,
-    openSession: openSession,
-    addToWhiteList: addToWhiteList,
-    basicAuth: basicAuth,
-    task: task,
-    setTimeout2Promise: setTimeout2Promise
-}
