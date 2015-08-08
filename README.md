@@ -16,7 +16,7 @@ var utils = require("qlik-utils");
     * [.generateXrfkey([size], [chars])](#module_qlik-utils.generateXrfkey) ⇒ <code>string</code>
     * [.request([params], options)](#module_qlik-utils.request) ⇒ <code>Promise.&lt;\*&gt;</code>
     * [.getTicket(params, options)](#module_qlik-utils.getTicket) ⇒ <code>Promise.&lt;ticket&gt;</code>
-    * [.openSession(ticket, options)](#module_qlik-utils.openSession) ⇒ <code>Promise.&lt;string&gt;</code>
+    * [.openSession(ticket, hostUri)](#module_qlik-utils.openSession) ⇒ <code>Promise.&lt;string&gt;</code>
     * [.addToWhiteList(ip, options)](#module_qlik-utils.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
     * [.basicAuth(users)](#module_qlik-utils.basicAuth) ⇒ <code>function</code>
     * [.setTimeout2Promise(timeout)](#module_qlik-utils.setTimeout2Promise) ⇒ <code>Promise</code>
@@ -95,7 +95,7 @@ Generates a ticket on Qlik Sense QRS Api
 getTicket({     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}, {     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''}).then(function(retVal) {     console.log(retVal);});
 ```
 <a name="module_qlik-utils.openSession"></a>
-### utils.openSession(ticket, options) ⇒ <code>Promise.&lt;string&gt;</code>
+### utils.openSession(ticket, hostUri) ⇒ <code>Promise.&lt;string&gt;</code>
 Opens a session on the Qlik Sense Hub with the given ticket and returns the session cookie
 
 **Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
@@ -104,11 +104,11 @@ Opens a session on the Qlik Sense Hub with the given ticket and returns the sess
 | Param | Type | Description |
 | --- | --- | --- |
 | ticket | <code>ticket</code> | the generated ticket |
-| options | <code>options</code> | parsed url of the Qlik Sense Hub |
+| hostUri | <code>string</code> | the URI of the Qlik Sense host (Hub or preferably QMC) to open a session on |
 
 **Example**  
 ```js
-openSession({     UserDirectory: '2008R2-0',     UserId: 'qlikservice',     Attributes: [],     Ticket: 'QzSPXzBmJKjhucPF',     TargetUri: null}, url.parse('https://localhost/hub')).then(function(retVal) {     console.log(retVal);});
+openSession({     UserDirectory: '2008R2-0',     UserId: 'qlikservice',     Attributes: [],     Ticket: 'QzSPXzBmJKjhucPF',     TargetUri: null}, 'https://localhost/hub').then(function(retVal) {     console.log(retVal);});
 ```
 <a name="module_qlik-utils.addToWhiteList"></a>
 ### utils.addToWhiteList(ip, options) ⇒ <code>Promise.&lt;Object&gt;</code>

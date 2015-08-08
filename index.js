@@ -237,28 +237,29 @@ exports.getTicket = function(params, options) {
  *      Attributes: [],
  *      Ticket: 'QzSPXzBmJKjhucPF',
  *      TargetUri: null
- * }, url.parse('https://localhost/hub')).then(function(retVal) {
+ * }, 'https://localhost/hub').then(function(retVal) {
  *      console.log(retVal);
  * });
  *
  * @param {ticket} ticket the generated ticket
- * @param {options} options parsed url of the Qlik Sense Hub
+ * @param {string} hostUri the URI of the Qlik Sense host (Hub or preferably QMC) to open a session on
  * @returns {Promise<string>} a promise resolving to the session cookie
  */
-exports.openSession = function(ticket, options) {
+exports.openSession = function(ticket, hostUri) {
 
     var requestDef = Q.defer();
+    var restUri = url.parse(hostUri);
 
     var settings = {
-        host: options.hostname,
-        port: options.port,
-        path: options.pathname + '?' + ifnotundef(options.query, options.query + '&', '') + 'qlikTicket=' + ticket.Ticket,
+        host: restUri.hostname,
+        port: restUri.port,
+        path: restUri.pathname + '?' + ifnotundef(restUri.query, restUri.query + '&', '') + 'qlikTicket=' + ticket.Ticket,
         method: 'GET',
         rejectUnauthorized: false,
         agent: false
     };
 
-    var prot = (options.protocol == 'https:') ? https : http;
+    var prot = (restUri.protocol == 'https:') ? https : http;
 
     var req = prot.request(settings, function (response) {
         response.on('data', function (d) {
@@ -306,30 +307,21 @@ exports.addToWhiteList = function(ip, options) {
 
     var restUri = url.parse(options.restUri);
 
-    return request(null, {
-
-        restUri: restUri.protocol + '//' + restUri.host + '/qrs/proxyservice/local',
-        method: 'GET',
-        pfx: options.pfx,
-        passPhrase: options.passPhrase,
-        UserId: options.UserId,
-        UserDirectory: options.UserDirectory,
-        timeout: options.timeout
-
-    }).then(function(settings) {
+    return request(null,
+        extend.cloneextend(options, {
+            restUri: restUri.protocol + '//' + restUri.host + '/qrs/proxyservice/local',
+            method: 'GET'
+        })
+    ).then(function(settings) {
 
         var vpsettings = settings.settings.virtualProxies[0];
 
-        return request(null, {
-            restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + vpsettings.id,
-            method: 'GET',
-            pfx: options.pfx,
-            passPhrase: options.passPhrase,
-            UserId: options.UserId,
-            UserDirectory: options.UserDirectory,
-            timeout: options.timeout
-
-        })
+        return request(null,
+            extend.cloneextend(options, {
+                restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + vpsettings.id,
+                method: 'GET'
+            })
+        );
 
     }).then(function(settings) {
 
@@ -350,16 +342,12 @@ exports.addToWhiteList = function(ip, options) {
 
             settings.modifiedDate = newDate.toISOString();
 
-            return request(settings, {
-                restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + settings.id,
-                method: 'PUT',
-                pfx: options.pfx,
-                passPhrase: options.passPhrase,
-                UserId: options.UserId,
-                UserDirectory: options.UserDirectory,
-                timeout: options.timeout
-
-            });
+            return request(settings,
+                extend.cloneextend(options, {
+                    restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + settings.id,
+                    method: 'PUT'
+                })
+            );
 
         } else {
             return 'already in whitelist!'
