@@ -23,6 +23,7 @@ var utils = require("qlik-utils");
   * _inner_
     * [~Task](#module_qlik-utils..Task)
       * [new Task()](#new_module_qlik-utils..Task_new)
+    * [~options](#module_qlik-utils..options) : <code>Object</code>
 
 <a name="module_qlik-utils.ifnotundef"></a>
 ### utils.ifnotundef(a, b, [c]) ⇒ <code>\*</code>
@@ -68,7 +69,7 @@ Makes a request on a Qlik Sense API endpoint defined in the options object, post
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>Object</code> | the parameters to post to the API endpoint |
-| options | <code>Object</code> | the options to connect to the API endpoint |
+| options | <code>options</code> | the options to connect to the API endpoint |
 
 **Example**  
 ```js
@@ -156,4 +157,14 @@ This class enables you to handle tasks asynchronously. It relies on Q promises.
 <a name="new_module_qlik-utils..Task_new"></a>
 #### new Task()
 Creates a new task.
+
+<a name="module_qlik-utils..options"></a>
+### utils~options : <code>Object</code>
+**Kind**: inner typedef of <code>[qlik-utils](#module_qlik-utils)</code>  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| UserDirectory | <code>string</code> | the user directory of the Qlik Sense user that will make the API call |
+| UserId | <code>string</code> | the user id of the Qlik Sense user that will make the API call |
 

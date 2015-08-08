@@ -67,6 +67,13 @@ exports.generateXrfkey = function(size, chars) {
 }
 
 /**
+ * @typedef options
+ * @type {Object}
+ * @property {string=} UserDirectory the user directory of the Qlik Sense user that will make the API call
+ * @property {string=} UserId the user id of the Qlik Sense user that will make the API call
+ */
+
+/**
  * Makes a request on a Qlik Sense API endpoint defined in the options object, posting the params object
  *
  * @example
@@ -83,7 +90,7 @@ exports.generateXrfkey = function(size, chars) {
  * });
  *
  * @param {Object} params the parameters to post to the API endpoint
- * @param {Object} options the options to connect to the API endpoint
+ * @param {options} options the options to connect to the API endpoint
  * @returns {Promise}
  */
 exports.request = function(params, options) {
