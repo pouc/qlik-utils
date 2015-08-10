@@ -14,11 +14,13 @@ var utils = require("qlik-utils");
   * _static_
     * [.ifnotundef(a, b, [c])](#module_qlik-utils.ifnotundef) ⇒ <code>\*</code>
     * [.generateXrfkey([size], [chars])](#module_qlik-utils.generateXrfkey) ⇒ <code>string</code>
-    * [.request([params], options)](#module_qlik-utils.request) ⇒ <code>Promise.&lt;\*&gt;</code>
+    * [.request(options, [params])](#module_qlik-utils.request) ⇒ <code>Promise.&lt;\*&gt;</code>
     * [.getTicket(params, options)](#module_qlik-utils.getTicket) ⇒ <code>Promise.&lt;ticket&gt;</code>
     * [.openSession(ticket, hostUri)](#module_qlik-utils.openSession) ⇒ <code>Promise.&lt;string&gt;</code>
     * [.addToWhiteList(ip, options)](#module_qlik-utils.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.loop(func, param, retry, retryTimeout, task)](#module_qlik-utils.loop)
     * [.basicAuth(users)](#module_qlik-utils.basicAuth) ⇒ <code>function</code>
+    * [.removeIf(array, callback)](#module_qlik-utils.removeIf)
     * [.setTimeout2Promise(timeout)](#module_qlik-utils.setTimeout2Promise) ⇒ <code>Promise</code>
   * _inner_
     * [~Task](#module_qlik-utils..Task)
@@ -63,7 +65,7 @@ Generates a random Xrf key of a given size within a set of given chars
 var xrf = utils.generateXrfkey(8);
 ```
 <a name="module_qlik-utils.request"></a>
-### utils.request([params], options) ⇒ <code>Promise.&lt;\*&gt;</code>
+### utils.request(options, [params]) ⇒ <code>Promise.&lt;\*&gt;</code>
 Makes a request on a Qlik Sense API endpoint defined in the options object, posting the params object
 
 **Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
@@ -71,12 +73,12 @@ Makes a request on a Qlik Sense API endpoint defined in the options object, post
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [params] | <code>Object</code> | the parameters to post to the API endpoint |
 | options | <code>options</code> | the options to connect to the API endpoint |
+| [params] | <code>Object</code> | the parameters to post to the API endpoint |
 
 **Example**  
 ```js
-utils.request({     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}, {     restUri: 'https://10.76.224.72:4243/qps/ticket',     pfx: pfx,     passPhrase: ''}).then(function(retVal) {     console.log(retVal);});
+utils.request({     restUri: 'https://10.76.224.72:4243/qps/ticket',     pfx: pfx,     passPhrase: ''}, {     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}).then(function(retVal) {     console.log(retVal);});
 ```
 <a name="module_qlik-utils.getTicket"></a>
 ### utils.getTicket(params, options) ⇒ <code>Promise.&lt;ticket&gt;</code>
@@ -92,7 +94,7 @@ Generates a ticket on Qlik Sense QRS Api
 
 **Example**  
 ```js
-utils.getTicket({     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}, {     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''}).then(function(retVal) {     console.log(retVal);});
+utils.getTicket({     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''}, {     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}).then(function(retVal) {     console.log(retVal);});
 ```
 <a name="module_qlik-utils.openSession"></a>
 ### utils.openSession(ticket, hostUri) ⇒ <code>Promise.&lt;string&gt;</code>
@@ -126,6 +128,24 @@ Adds the given ip address to the websocket whitelist of the given virtual proxy
 ```js
 readFile('./client.pfx').then(function(certif) {     return utils.addToWhiteList('10.76.224.72', {         restUri: 'https://10.76.224.72:4242',         pfx: certif,         passPhrase: '',         UserId: 'qlikservice',         UserDirectory: '2008R2-0'     });}).then(function(ret) {     console.log(ret);}, function(ret) {     console.log(ret);});
 ```
+<a name="module_qlik-utils.loop"></a>
+### utils.loop(func, param, retry, retryTimeout, task)
+Loops until func finishes successfully
+
+**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| func | <code>function</code> | the function to start (must return a promise) |
+| param | <code>\*</code> | the parameters to pass to the function (as an array) |
+| retry | <code>int</code> | the number of times to retry |
+| retryTimeout | <code>int</code> | the delay to wait before restarting the function after a failure |
+| task | <code>Task</code> | the task object to update when required |
+
+**Example**  
+```js
+utils.loop(     utils.addToWhiteList,     [         '10.76.224.72',         {             restUri: 'https://10.76.224.72:4242',             pfx: certif,             passPhrase: '',             UserId: 'qlikservice',             UserDirectory: '2008R2-0'         }     ],     30,     2000,     task);
+```
 <a name="module_qlik-utils.basicAuth"></a>
 ### utils.basicAuth(users) ⇒ <code>function</code>
 Simple basic auth middleware for use with Express 4.x.
@@ -141,6 +161,17 @@ Simple basic auth middleware for use with Express 4.x.
 ```js
 app.use('/api-requiring-auth', utils.basicAuth([{user: 'username', pass: 'password'}]));
 ```
+<a name="module_qlik-utils.removeIf"></a>
+### utils.removeIf(array, callback)
+Remove object from an array on condition
+
+**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
+
+| Param |
+| --- |
+| array | 
+| callback | 
+
 <a name="module_qlik-utils.setTimeout2Promise"></a>
 ### utils.setTimeout2Promise(timeout) ⇒ <code>Promise</code>
 Equivalent to setTimeout but returns a promise instead
@@ -157,7 +188,7 @@ utils.setTimeout2Promise(1000).then(function() {     console.log('hi');});
 ```
 <a name="module_qlik-utils..Task"></a>
 ### utils~Task
-This class enables you to handle tasks asynchronously. It relies on Q promises.
+This class enables you to handle tasks asynchronously.
 
 **Kind**: inner class of <code>[qlik-utils](#module_qlik-utils)</code>  
 <a name="new_module_qlik-utils..Task_new"></a>

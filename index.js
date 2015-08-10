@@ -1,3 +1,4 @@
+var http = require('http');
 var https = require('https');
 var crypto = require('crypto');
 var url = require('url');
@@ -6,6 +7,7 @@ var basic = require('basic-auth');
 var uuid = require('node-uuid');
 var Q = require('q');
 var extend = require('cloneextend');
+var qsocks = require('qsocks');
 
 var exports = {};
 
@@ -41,7 +43,9 @@ module.exports = exports;
  * @returns {*}
  */
 exports.ifnotundef = function(a, b, c) {
-    return (typeof c == 'undefined') ? ((typeof a != 'undefined' && a != null) ? a : b) : ((typeof a != 'undefined' && a != null) ? b : c);
+    return (arguments.length <= 2) ?
+        ((typeof a != 'undefined' && a != null) ? a : b) :
+        ((typeof a != 'undefined' && a != null) ? b : c);
 }
 
 /**
@@ -104,22 +108,22 @@ exports.generateXrfkey = function(size, chars) {
  *
  * @example
  * utils.request({
- *      'UserId': 'qlikservice',
- *      'UserDirectory': '2008R2-0',
- *      'Attributes': []
- * }, {
  *      restUri: 'https://10.76.224.72:4243/qps/ticket',
  *      pfx: pfx,
  *      passPhrase: ''
+ * }, {
+ *      'UserId': 'qlikservice',
+ *      'UserDirectory': '2008R2-0',
+ *      'Attributes': []
  * }).then(function(retVal) {
  *      console.log(retVal);
  * });
  *
- * @param {Object=} [params] the parameters to post to the API endpoint
  * @param {options} options the options to connect to the API endpoint
+ * @param {Object=} [params] the parameters to post to the API endpoint
  * @returns {Promise<*>} a promise resolving to the response to the request
  */
-exports.request = function(params, options) {
+exports.request = function(options, params) {
 
     var xrfkey = exports.generateXrfkey();
     var restUri = url.parse(options.restUri);
@@ -142,18 +146,22 @@ exports.request = function(params, options) {
         path: restUri.pathname + '?' + exports.ifnotundef(restUri.query, restUri.query + '&', '') + 'xrfkey=' + xrfkey,
         method: exports.ifnotundef(options.method, 'POST'),
         headers: headers,
-        pfx: exports.ifnotundef(options.pfx, null),
-        passphrase: exports.ifnotundef(options.passPhrase, null),
         rejectUnauthorized: false,
         agent: false
     };
 
+    if(typeof options.pfx != 'undefined') settings.pfx = options.pfx;
+    if(typeof options.passPhrase != 'undefined') settings.passPhrase = options.passPhrase;
+
     var requestDef = Q.defer();
 
-    if(settings.protocol != 'https:') requestDef.reject('https is needed to make API call');
+    if(settings.protocol == 'http:' && typeof options.pfx != 'undefined') requestDef.reject('https is needed to make API call with certificate');
+    else if(settings.protocol != 'https:' && settings.protocol != 'http:') requestDef.reject('http/https is needed to make API call');
     else {
 
-        var apireq = https.request(settings, function (apires) {
+        var prot = (settings.protocol == 'https:') ? https : http;
+
+        var apireq = prot.request(settings, function (apires) {
 
             var body = "";
             apires.on('data', function (d) {
@@ -199,13 +207,13 @@ exports.request = function(params, options) {
  *
  * @example
  * utils.getTicket({
- *      'UserId': 'qlikservice',
- *      'UserDirectory': '2008R2-0',
- *      'Attributes': []
- * }, {
  *      restUri: 'https://10.76.224.72:4243',
  *      pfx: pfx,
  *      passPhrase: ''
+ * }, {
+ *      'UserId': 'qlikservice',
+ *      'UserDirectory': '2008R2-0',
+ *      'Attributes': []
  * }).then(function(retVal) {
  *      console.log(retVal);
  * });
@@ -214,7 +222,7 @@ exports.request = function(params, options) {
  * @param {options} options the options to connect to the ticket API endpoint
  * @returns {Promise<ticket>} resolving to the generated ticket
  */
-exports.getTicket = function(params, options) {
+exports.getTicket = function(options, params) {
 
     var restUri = url.parse(options.restUri);
 
@@ -223,7 +231,22 @@ exports.getTicket = function(params, options) {
         method: 'POST'
     });
 
-    return exports.request(params, ticketOptions);
+    ticketOptions.pfx = options.pfx;
+
+    return exports.request(ticketOptions, params);
+
+};
+
+exports.disconnectUser = function(options, params) {
+
+    var restUri = url.parse(options.restUri);
+
+    var ticketOptions = extend.cloneextend(options, {
+        restUri: restUri.protocol + '//' + restUri.host + '/qps/ticket',
+        method: 'POST'
+    });
+
+    return exports.request(ticketOptions, params);
 
 };
 
@@ -316,7 +339,7 @@ exports.addToWhiteList = function(ip, options) {
 
         options2.pfx = options.pfx;
 
-        return exports.request(null, options2)
+        return exports.request(options2)
 
     }).then(function(settings) {
 
@@ -329,7 +352,7 @@ exports.addToWhiteList = function(ip, options) {
 
         options2.pfx = options.pfx;
 
-        return exports.request(null, options2);
+        return exports.request(options2);
 
     }).then(function(settings) {
 
@@ -357,7 +380,7 @@ exports.addToWhiteList = function(ip, options) {
 
             options2.pfx = options.pfx;
 
-            return exports.request(settings, options2);
+            return exports.request(options2, settings);
 
         } else {
             return 'already in whitelist!'
@@ -365,7 +388,61 @@ exports.addToWhiteList = function(ip, options) {
 
     })
 
-}
+};
+
+
+/**
+ * Loops until func finishes successfully
+ *
+ * @example
+ * utils.loop(
+ *      utils.addToWhiteList,
+ *      [
+ *          '10.76.224.72',
+ *          {
+ *              restUri: 'https://10.76.224.72:4242',
+ *              pfx: certif,
+ *              passPhrase: '',
+ *              UserId: 'qlikservice',
+ *              UserDirectory: '2008R2-0'
+ *          }
+ *      ],
+ *      30,
+ *      2000,
+ *      task
+ * );
+ *
+ * @param {Function} func the function to start (must return a promise)
+ * @param {*} param the parameters to pass to the function (as an array)
+ * @param {int} retry the number of times to retry
+ * @param {int} retryTimeout the delay to wait before restarting the function after a failure
+ * @param {Task} task the task object to update when required
+ */
+exports.loop = function(func, param, retry, retryTimeout, task) {
+
+    func
+        .apply(this, param)
+        .then(task.done)
+        .fail(function (ret) {
+
+            if(retry == 1) {
+
+                task.failed(ret);
+                return Q.reject(ret);
+
+            } else {
+
+                return utils.setTimeout2Promise(retryTimeout).then(function () {
+
+                    task.running(ret);
+                    loop(func, param, retry - 1, retryTimeout, task);
+
+                });
+            }
+
+        });
+
+};
 
 
 /**
@@ -397,33 +474,61 @@ exports.basicAuth = function(users) {
 
 
 /**
+ * Remove object from an array on condition
+ * @param array
+ * @param callback
+ */
+exports.removeIf = function(array, callback) {
+    var i = 0;
+    while (i < array.length) {
+        if (callback(array[i], i)) {
+            array.splice(i, 1);
+        }
+        else {
+            ++i;
+        }
+    }
+};
+
+
+/**
  * Creates a new task.
  * @class Task
- * @classdesc This class enables you to handle tasks asynchronously. It relies on Q promises.
+ * @classdesc This class enables you to handle tasks asynchronously.
  */
 exports.task = function() {
 
     var _this = this;
-    var listenDef;
+    var listenDef, listen;
+    var bound = [];
 
     // Private methods
 
-    var changeStatus = function(status, val) {
+    var notifyBound = function() {
+        listen.then(function(task) {
+            var retVal = [];
+            bound.forEach(function(item) {
+                retVal.push(item.func(_this));
+            });
+            return Q.all(retVal);
+        });
+    }
+;
+    var changeStatus = function(status, val, detail) {
 
         _this.status = status;
         _this.modifiedDate = new Date();
         _this.val = val;
+        _this.detail = detail;
 
-        var oldListenDef = listenDef;
+        var retVal = [];
+        bound.forEach(function(item) {
+            retVal.push(item.func(_this));
+        });
 
-        if(_this.status == 'waiting' || _this.status == 'running') {
-            listenDef = Q.defer();
-            _this.listen = listenDef.promise;
-        }
+        exports.removeIf(bound, function(item) { return item.mode == 'once'; });
 
-        if(typeof oldListenDef != 'undefined') {
-            oldListenDef.resolve(_this);
-        }
+        return Q.all(retVal);
 
     };
 
@@ -442,7 +547,7 @@ exports.task = function() {
      */
     this.start = function() {
         _this.startedDate = new Date();
-        this.running();
+        return this.running();
     };
 
     /**
@@ -453,9 +558,42 @@ exports.task = function() {
      * @function
      *
      * @param {*} val the progress value
+     * @param {*=} detail additional details to push into the progress value
      */
-    this.running = function(val) {
-        changeStatus('running', val);
+    this.running = function(val, detail) {
+        return changeStatus('running', val, detail);
+    };
+
+    /**
+     *
+     * @param func
+     */
+    this.once = function(func) {
+        if(bound.filter(function(item) { return item.func == func }).length == 0) {
+            bound.push({ func: func, mode: 'once' });
+        }
+
+        if(_this.status == 'done' || _this.status == 'failed') func(_this);
+    };
+
+    /**
+     *
+     * @param func
+     */
+    this.bind = function(func) {
+        if(bound.filter(function(item) { return item.func == func }).length == 0) {
+            bound.push({ func: func, mode: 'bind' });
+        }
+
+        if(_this.status == 'done' || _this.status == 'failed') func(_this);
+    };
+
+    /**
+     *
+     * @param func
+     */
+    this.unbind = function(func) {
+        exports.removeIf(bound, function(item) { return item.func == func; });
     };
 
     /**
@@ -465,9 +603,10 @@ exports.task = function() {
      * @function
      *
      * @param {*} val the progress value
+     * @param {*=} detail additional details to push into the progress value
      */
-    this.done = function(val) {
-        changeStatus('done', val);
+    this.done = function(val, detail) {
+        return changeStatus('done', val, detail);
     };
 
     /**
@@ -477,12 +616,13 @@ exports.task = function() {
      * @function
      *
      * @param {*} val the progress value
+     * @param {*=} detail additional details to push into the progress value
      */
-    this.failed = function(val) {
-        changeStatus('failed', val);
+    this.failed = function(val, detail) {
+        return changeStatus('failed', val, detail);
     };
 
-}
+};
 
 /**
  * Similar to the promise.all function but with tasks
@@ -505,10 +645,10 @@ exports.task.all = function(tasks) {
         var retVal = {};
         ret.forEach(function(item, index) {
             retVal[keys[index]] = item;
-        })
+        });
         return retVal;
     });
-}
+};
 
 
 /**
@@ -532,4 +672,162 @@ exports.setTimeout2Promise = function(timeout) {
 
     return timeoutDef.promise;
 
-}
+};
+
+
+
+
+
+exports.dynamicAppClone = function(ticket, hostUri, appName, scriptMarker, scriptReplace, publishStreamId, task) {
+
+    var wsConfig = {
+        host: 'localhost/app',
+        isSecure: true,
+        origin: 'http://localhost',
+        rejectUnauthorized: false,
+        headers: {
+            "Content-Type": "application/json"
+        },
+        ticket: ticket.Ticket
+    };
+
+    Q().then(function() {
+        return qsocks.Connect(wsConfig);
+    }).then(function (wsGlobal) {
+
+        task.running('info', 'Socket connected');
+
+        return Q.all(
+            wsGlobal,
+            wsGlobal.getDocList()
+        );
+
+    }).then(function(reply) {
+
+        var wsGlobal = reply[0];
+        var docList = reply[1];
+
+        task.running('info', 'Got document List');
+
+        var arrayFound = docList.filter(function(item) {
+            return item.qDocName == templateAppName;
+        });
+
+        if(arrayFound[0] && arrayFound[0].qDocId)
+
+            return Q.all(
+                wsGlobal,
+                docList.arrayFound[0].qDocId
+            );
+
+        else
+            Q.reject('Template not found');
+
+    }).then(function(reply) {
+
+        var wsGlobal = reply[0];
+        var templateId = reply[1];
+
+        task.running('info', 'Template found');
+
+        return Q.all(
+            wsGlobal,
+            utils.request(
+                'https://localhost:4242/qrs/app/' + templateId + '/copy?name=' + templateAppName + ' ' + scriptReplace
+            )
+        );
+
+    }).then(function (reply) {
+
+        var wsGlobal = reply[0];
+        var clonedApp = reply[1];
+
+        task.running('info', 'Application cloned from template');
+
+        return Q.All(
+            wsGlobal,
+            wsGlobal.openDoc(clonedApp.id)
+        );
+
+    }).then(function(reply) {
+
+        var wsGlobal = reply[0];
+        var clonedApp = reply[1];
+
+        task.running('info', 'Application opened');
+
+        return Q.All(
+            wsGlobal,
+            Q().then(function() {
+                return clonedApp.getScript();
+            }).then(function (result) {
+                task.running('info', 'Application script extracted');
+                return clonedApp.setScript(result.replace(scriptMarker, scriptReplace))
+            }).then(function (result) {
+                return clonedApp;
+            })
+        );
+
+    }).then(function(reply) {
+
+        var wsGlobal = reply[0];
+        var clonedApp = reply[1];
+
+        task.running('info', 'Application script replaced');
+
+        var timer = setInterval (function () {
+            wsGlobal.getProgress(0).then(function(result) {
+                if(result.qPersistentProgress) {
+                    var rePattern = new RegExp(/Text << fields ([0-9,]+) Lines fetched/g);
+                    var match = rePattern.exec(result.qPersistentProgress);
+                    while (match != null) {
+                        task.running('reload', match[1] + ' rows fetched...');
+                        match = rePattern.exec(result.qPersistentProgress);
+                    }
+                }
+            })
+        }, 1000);
+
+        return Q.all(
+            wsGlobal,
+            clonedApp.doReload().then(function(result) {
+                if (result.qReturn) {
+                    timer.cancel();
+                    task.running('info', 'Application reloaded');
+                    return clonedApp.doSave().then(function (result) {
+                        return clonedApp;
+                    });
+                } else {
+                    return Q.reject('Application not reloaded');
+                }
+            })
+        );
+
+    }).then(function(reply) {
+
+        var wsGlobal = reply[0];
+        var clonedApp = reply[1];
+
+        task.running('info', 'Application saved');
+
+        return Q.all(
+            clonedApp.publish(streamId).then(function(result) {
+                return clonedApp;
+            })
+        );
+
+    }).then(function(doc) {
+
+        task.running('info', 'Application published');
+
+        return query('https://localhost:4243/qps/user/WINDOWS2012/QlikService', null, 'DELETE');
+
+    }).then(function(result) {
+        res.redirect(externalProxyUri + '/sense/app/' + newDocId);
+    }, function(err) {
+        task.failed(err);
+    });
+
+};
+
+
