@@ -705,7 +705,17 @@ exports.setTimeout2Promise = function(timeout) {
  * Duplicates a template app, updates its script, reloads it and publishes it
  *
  * @example
+ *
+ * var task = new utils.task();
+ * task.start();
+ *
+ * task.bind(function(task) {
+ *      console.log(task.val, task.detail);
+ * });
+ *
  * readFile(testQlikSensePfx).then(function(pfx) {
+ *
+ *      task.running('info', 'certificate loaded...');
  *
  *      return utils.dynamicAppClone({
  *              restUri: 'http://10.20.30.40',
@@ -715,8 +725,8 @@ exports.setTimeout2Promise = function(timeout) {
  *          },
  *          '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',
  *          '%Replace me!%',
- *          randomLoop,
- *          /Text << fields ([0-9,]+) Lines fetched/g,
+ *          'Employees.qvd',
+ *          /(.*) << (.*) ([0-9,]+) Lines fetched/g,
  *          'aaec8d41-5201-43ab-809f-3063750dfafd',
  *          task
  *      );
@@ -892,7 +902,7 @@ exports.dynamicAppClone = function(options, templateAppId, scriptMarker, scriptR
                     var rePattern = new RegExp(scriptRegex);
                     var match = rePattern.exec(result.qPersistentProgress);
                     while (match != null) {
-                        task.running('reload', match[1]);
+                        task.running('reload', match);
                         match = rePattern.exec(result.qPersistentProgress);
                     }
                 }

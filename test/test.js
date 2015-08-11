@@ -537,7 +537,7 @@ describe('dynamicAppClone...', function() {
                 '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',
                 '%Replace me!%',
                 randomLoop,
-                /Text << fields ([0-9,]+) Lines fetched/g,
+                /(.*) << (.*) ([0-9,]+) Lines fetched/g,
                 'aaec8d41-5201-43ab-809f-3063750dfafd',
                 task
             );
