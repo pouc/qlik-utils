@@ -515,7 +515,9 @@ describe('dynamicAppClone...', function() {
         var task = new utils.task();
         task.start();
 
-        task.bind(cb);
+        task.bind(function(task) {
+            cb(task.val, task.detail);
+        });
 
         task.bind(function(task) {
             if(task.val == 'redirect') {
@@ -527,15 +529,10 @@ describe('dynamicAppClone...', function() {
 
             return utils.dynamicAppClone(
                 {
-                    restUri: testQlikSenseIp,
+                    restUri: 'http://' + testQlikSenseIp,
                     pfx: pfx,
                     'UserId': 'qlikservice',
                     'UserDirectory': '2008R2-0'
-                },
-                {
-                    'UserId': 'qlikservice',
-                    'UserDirectory': '2008R2-0',
-                    'Attributes': []
                 },
                 '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',
                 '%Replace me!%',

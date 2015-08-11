@@ -43,9 +43,11 @@ module.exports = exports;
  * @returns {*}
  */
 exports.ifnotundef = function(a, b, c) {
+
     return (arguments.length <= 2) ?
-        ((typeof a != 'undefined' && a != null) ? a : b) :
-        ((typeof a != 'undefined' && a != null) ? b : c);
+        ((typeof a != 'undefined' && a != null) ? a : b) :  // 2 arguments mode: return b if a is undefined else return a
+        ((typeof a != 'undefined' && a != null) ? b : c);   // 3 arguments mode: return c if a is undefined else return b
+
 }
 
 /**
@@ -62,7 +64,9 @@ exports.generateXrfkey = function(size, chars) {
     size = size || 16;
     chars = chars || 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789';
 
-    var rnd = crypto.randomBytes(size), value = new Array(size), len = chars.length;
+    var rnd = crypto.randomBytes(size)
+    var value = new Array(size)
+    var len = chars.length;
 
     for (var i = 0; i < size; i++) {
         value[i] = chars[rnd[i] % len]
@@ -180,6 +184,7 @@ exports.request = function(options, params) {
 
         });
 
+        // Event for timeout handling
         apireq.on('socket', function (socket) {
             socket.setTimeout(parseInt(timeout));
             socket.on('timeout', function() {
@@ -233,19 +238,6 @@ exports.getTicket = function(options, params) {
     });
 
     ticketOptions.pfx = options.pfx;
-
-    return exports.request(ticketOptions, params);
-
-};
-
-exports.disconnectUser = function(options, params) {
-
-    var restUri = url.parse(options.restUri);
-
-    var ticketOptions = extend.cloneextend(options, {
-        restUri: restUri.protocol + '//' + restUri.host + '/qps/ticket',
-        method: 'POST'
-    });
 
     return exports.request(ticketOptions, params);
 
@@ -353,6 +345,8 @@ exports.addToWhiteList = function(ip, options) {
 
     return Q().then(function() {
 
+        // Get proxy configuration
+
         var options2 = extend.cloneextend(options, {
             restUri: restUri.protocol + '//' + restUri.host + '/qrs/proxyservice/local',
             method: 'GET'
@@ -363,6 +357,8 @@ exports.addToWhiteList = function(ip, options) {
         return exports.request(options2)
 
     }).then(function(settings) {
+
+        // Get virtual proxy configuration
 
         var vpsettings = settings.settings.virtualProxies[0];
 
@@ -377,7 +373,13 @@ exports.addToWhiteList = function(ip, options) {
 
     }).then(function(settings) {
 
+        // If IP not already in whitelist
+
         if(settings.websocketCrossOriginWhiteList.indexOf(ip) == -1) {
+
+            // Add it and push new config
+            // The mechanism with dates below makes sure that there is no desync between
+            // the client and the Qlik Sense server
 
             settings.websocketCrossOriginWhiteList.push(ip);
 
@@ -404,6 +406,9 @@ exports.addToWhiteList = function(ip, options) {
             return exports.request(options2, settings);
 
         } else {
+
+            // Else just return the VP config
+
             return settings;
         }
 
@@ -703,14 +708,10 @@ exports.setTimeout2Promise = function(timeout) {
  * readFile(testQlikSensePfx).then(function(pfx) {
  *
  *      return utils.dynamicAppClone({
- *              restUri: testQlikSenseIp,
+ *              restUri: 'http://10.20.30.40',
  *              pfx: pfx,
  *              'UserId': 'qlikservice',
  *              'UserDirectory': '2008R2-0'
- *          }, {
- *              'UserId': 'qlikservice',
- *              'UserDirectory': '2008R2-0',
- *              'Attributes': []
  *          },
  *          '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',
  *          '%Replace me!%',
@@ -723,7 +724,6 @@ exports.setTimeout2Promise = function(timeout) {
  * });
  *
  * @param {options} options Uri to the Qlik Sense endpoint
- * @param {ticketParams} ticketParam parameters of the ticket to generate
  * @param {string} templateAppId id of the template application
  * @param {string} scriptMarker marker to be found in the script and replaced during the duplication
  * @param {string} scriptReplace replace value of the marker above
@@ -732,30 +732,42 @@ exports.setTimeout2Promise = function(timeout) {
  * @param {Task} task task that will trace the cloning progress
  * @returns {Promise}
  */
-exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) {
+exports.dynamicAppClone = function(options, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) {
+
+    var restUri = url.parse(options.restUri);
 
     task.running('info', 'Starting!');
 
     return Q().then(function() {
 
+        // Generate a ticket
+
         return exports.getTicket({
-            restUri: 'https://' + options.restUri + ':4243',
+            restUri: 'https://' + restUri.hostname + ':4243',
             pfx: options.pfx,
             passPhrase: ''
-        }, ticketParam);
+        }, {
+            UserId: options.UserId,
+            UserDirectory: options.UserDirectory,
+            Attributes: []
+        });
 
     }).then(function(ticket) {
 
+        // Open a session
+
         task.running('info', 'Ticket generated');
 
-        return exports.openSession(ticket, 'https://' + options.restUri + '/qmc/').fail(console.log);
+        return exports.openSession(ticket, 'https://' + restUri.hostname + '/qmc/').fail(console.log);
 
     }).then(function(session) {
+
+        // Connect the web socket using the session cookie
 
         task.running('info', 'Session opened');
 
         var wsConfig = {
-            host: options.restUri,
+            host: restUri.hostname,
             isSecure: true,
             origin: 'http://localhost',
             rejectUnauthorized: false,
@@ -769,6 +781,8 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
 
     }).then(function (wsGlobal) {
 
+        // Get document list
+
         task.running('info', 'Socket connected');
 
         return Q.all([
@@ -777,6 +791,8 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
         ]);
 
     }).then(function(reply) {
+
+        // Find template within the list
 
         var wsGlobal = reply[0];
         var docList = reply[1];
@@ -800,6 +816,8 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
 
     }).then(function(reply) {
 
+        // Clone app
+
         var wsGlobal = reply[0];
         var templateId = reply[1];
         var templateName = reply[2];
@@ -809,7 +827,7 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
         return Q.all([
             wsGlobal,
             exports.request({
-                restUri: 'https://' + options.restUri + ':4242/qrs/app/' + templateId + '/copy?name=' + templateName + ' ' + scriptReplace,
+                restUri: 'https://' + restUri.hostname + ':4242/qrs/app/' + templateId + '/copy?name=' + templateName + ' ' + scriptReplace,
                 pfx: options.pfx,
                 passPhrase: '',
                 UserId: options.UserId,
@@ -818,6 +836,8 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
         ]);
 
     }).then(function (reply) {
+
+        // Open cloned app
 
         var wsGlobal = reply[0];
         var clonedApp = reply[1];
@@ -831,6 +851,8 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
         ]);
 
     }).then(function(reply) {
+
+        // Replace the script marker by the replace value
 
         var wsGlobal = reply[0];
         var clonedAppId = reply[1];
@@ -856,6 +878,8 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
 
     }).then(function(reply) {
 
+        // Reload and monitor reload progress
+
         var wsGlobal = reply[0];
         var clonedAppId = reply[1];
         var clonedApp = reply[2];
@@ -868,7 +892,7 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
                     var rePattern = new RegExp(scriptRegex);
                     var match = rePattern.exec(result.qPersistentProgress);
                     while (match != null) {
-                        task.running('reload', match[1] + ' rows fetched...');
+                        task.running('reload', match[1]);
                         match = rePattern.exec(result.qPersistentProgress);
                     }
                 }
@@ -893,6 +917,8 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
 
     }).then(function(reply) {
 
+        // Publish app in the given stream
+
         var wsGlobal = reply[0];
         var clonedAppId = reply[1];
         var clonedApp = reply[2];
@@ -909,6 +935,8 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
 
     }).then(function(reply) {
 
+        // Advise with new app id
+
         var wsGlobal = reply[0];
         var clonedAppId = reply[1];
         var clonedApp = reply[2];
@@ -917,7 +945,7 @@ exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMa
         task.running('redirect', clonedAppId);
 
     }, function(err) {
-        task.failed(err);
+        task.failed('error', err);
     });
 
 };
