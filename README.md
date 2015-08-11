@@ -22,6 +22,7 @@ var utils = require("qlik-utils");
     * [.basicAuth(users)](#module_qlik-utils.basicAuth) ⇒ <code>function</code>
     * [.removeIf(array, callback)](#module_qlik-utils.removeIf)
     * [.setTimeout2Promise(timeout)](#module_qlik-utils.setTimeout2Promise) ⇒ <code>Promise</code>
+    * [.dynamicAppClone(options, ticketParam, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task)](#module_qlik-utils.dynamicAppClone) ⇒ <code>\*</code>
   * _inner_
     * [~Task](#module_qlik-utils..Task)
       * [new Task()](#new_module_qlik-utils..Task_new)
@@ -114,7 +115,7 @@ utils.openSession({     UserDirectory: '2008R2-0',     UserId: 'qlikservice',
 ```
 <a name="module_qlik-utils.addToWhiteList"></a>
 ### utils.addToWhiteList(ip, options) ⇒ <code>Promise.&lt;Object&gt;</code>
-Adds the given ip address to the websocket whitelist of the given virtual proxy
+Adds the given ip address to the websocket whitelist of the given virtual proxy.Be careful: this restarts the proxy. The restart can take 1-2 seconds. All subsequent APIcalls within this restart will fail miserably with various random & useless error messages.
 
 **Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the virtual proxy configuration when successfull  
@@ -185,6 +186,27 @@ Equivalent to setTimeout but returns a promise instead
 **Example**  
 ```js
 utils.setTimeout2Promise(1000).then(function() {     console.log('hi');});
+```
+<a name="module_qlik-utils.dynamicAppClone"></a>
+### utils.dynamicAppClone(options, ticketParam, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) ⇒ <code>\*</code>
+Duplicates a template app, updates its script, reloads it and publishes it
+
+**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>options</code> | Uri to the Qlik Sense endpoint |
+| ticketParam | <code>ticketParams</code> | parameters of the ticket to generate |
+| templateAppId | <code>string</code> | id of the template application |
+| scriptMarker | <code>string</code> | marker to be found in the script and replaced during the duplication |
+| scriptReplace | <code>string</code> | replace value of the marker above |
+| scriptRegex | <code>RegExp</code> | regex to track in the script trace |
+| publishStreamId | <code>string</code> | id of the stream to publish into |
+| task | <code>Task</code> | task that will trace the cloning progress |
+
+**Example**  
+```js
+readFile(testQlikSensePfx).then(function(pfx) {     return utils.dynamicAppClone({             restUri: testQlikSenseIp,             pfx: pfx,             'UserId': 'qlikservice',             'UserDirectory': '2008R2-0'         }, {             'UserId': 'qlikservice',             'UserDirectory': '2008R2-0',             'Attributes': []         },         '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',         '%Replace me!%',         randomLoop,         /Text << fields ([0-9,]+) Lines fetched/g,         'aaec8d41-5201-43ab-809f-3063750dfafd',         task     );});
 ```
 <a name="module_qlik-utils..Task"></a>
 ### utils~Task

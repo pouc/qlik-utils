@@ -15,7 +15,7 @@ var fs = require('fs');
 var promise = require('promise');
 
 
-var testQlikSenseIp = '10.76.224.48';
+var testQlikSenseIp = '10.76.224.68';
 var testQlikSensePfx = __dirname + '/client.pfx';
 
 
@@ -181,6 +181,10 @@ describe('request...', function() {
 
 describe('getTicket...', function() {
 
+    it('should be defined', function() {
+        expect(utils.getTicket).to.not.be.undefined;
+    });
+
     var pfx = readFile(testQlikSensePfx);
 
     it('should find certificate pfx file', function(done) {
@@ -205,6 +209,41 @@ describe('getTicket...', function() {
     });
 
 });
+
+describe('openSession...', function() {
+
+    it('should be defined', function() {
+        expect(utils.openSession).to.not.be.undefined;
+    });
+
+    var pfx = readFile(testQlikSensePfx);
+
+    it('should find certificate pfx file', function(done) {
+        expect(pfx).to.be.fulfilled.notify(done);
+    });
+
+    it('should open session', function(done) {
+
+        Q.all([
+            pfx.then(function(pfx) {
+                return utils.getTicket({
+                    restUri: 'https://' + testQlikSenseIp + ':4243',
+                    pfx: pfx,
+                    passPhrase: ''
+                }, {
+                    'UserId': 'qlikservice',
+                    'UserDirectory': '2008R2-0',
+                    'Attributes': []
+                });
+            }).then(function(ticket) {
+                return utils.openSession(ticket, 'https://' + testQlikSenseIp + '/qmc/')
+            }).should.eventually.match(/X-Qlik-Session=[a-f0-9\-]{36};/)
+        ]).should.notify(done);
+
+    });
+
+});
+
 
 describe('Task...', function() {
 
@@ -321,12 +360,15 @@ describe('Task...', function() {
 
 });
 
-
 function randomInt (low, high) {
     return Math.floor(Math.random() * (high - low) + low);
 }
 
 describe('addToWhiteList...', function() {
+
+    it('should be defined', function() {
+        expect(utils.addToWhiteList).to.not.be.undefined;
+    });
 
     var pfx = readFile(testQlikSensePfx);
 
@@ -335,25 +377,181 @@ describe('addToWhiteList...', function() {
     });
 
     it('should add to whitelist', function(done) {
+        this.timeout(15000);
 
         var randomIp = util.format('10.0.%s.%s', randomInt(0, 254), randomInt(0, 254));
 
-        var wswl = pfx.then(function(pfx) {
-            return utils.addToWhiteList(randomIp, {
-                restUri: 'https://' + testQlikSenseIp + ':4242',
-                pfx: pfx,
-                passPhrase: '',
-                UserId: 'qlikservice',
-                UserDirectory: '2008R2-0'
-            });
+        Q.all([
+            pfx.then(function(pfx) {
+                return utils.addToWhiteList(randomIp, {
+                    restUri: 'https://' + testQlikSenseIp + ':4242',
+                    pfx: pfx,
+                    passPhrase: '',
+                    UserId: 'qlikservice',
+                    UserDirectory: '2008R2-0'
+                });
+            }).should.eventually.have.property("websocketCrossOriginWhiteList").to.include(randomIp)
+        ]).then(function() {
+            return utils.setTimeout2Promise(5000);
+        }).should.notify(done)
+
+    });
+
+});
+
+describe('loop...', function() {
+
+    it('should be defined', function() {
+        expect(utils.loop).to.not.be.undefined;
+    });
+
+    var pfx = readFile(testQlikSensePfx);
+
+    it('should find certificate pfx file', function(done) {
+        expect(pfx).to.be.fulfilled.notify(done);
+    });
+
+    function fake(status) {
+        if(status.success) return Q.resolve();
+        else return Q.reject();
+    }
+
+    var randomLoop = randomInt(3, 10);
+    it(util.format('should loop %s times on failing function', randomLoop), function(done) {
+        this.timeout(randomLoop * 2 * 1000);
+
+        var task = new utils.task();
+        task.start();
+
+        var cb = sinon.spy();
+        task.bind(cb);
+
+        pfx.then(function(pfx) {
+            utils.loop(fake, [ { success: false } ], randomLoop, 1000, task)
         });
 
-        Q.all([
-            wswl.should.eventually.have.property("websocketCrossOriginWhiteList"),
-            wswl.then(function(val) {
-                return val.websocketCrossOriginWhiteList.should.include(randomIp)
-            })
-        ]).should.notify(done)
+        task.bind(function() {
+            if(task.status == 'failed') {
+                check(done, function() {
+                    expect(cb).to.have.been.callCount(randomLoop);
+                })
+            }
+        });
+
     });
+
+    it('should loop only once on succeding function', function(done) {
+
+        var task = new utils.task();
+        task.start();
+
+        var cb = sinon.spy();
+        task.bind(cb);
+
+        pfx.then(function(pfx) {
+            utils.loop(fake, [ { success: true } ], 10, 1000, task)
+        });
+
+        task.bind(function() {
+            if(task.status == 'done') {
+                check(done, function() {
+                    expect(cb).to.have.been.calledOnce;
+                })
+            }
+        });
+    });
+
+    randomLoop = randomInt(3, 10);
+    it(util.format('should loop %s times and resolve', randomLoop), function(done) {
+        this.timeout(10 * 2 * 1000);
+
+        var task = new utils.task();
+        task.start();
+
+        var randomLoopTarget = randomLoop;
+
+        var status = { success: false };
+
+        var cb = sinon.spy();
+        task.bind(function() {
+            if(randomLoop-- <= 0) status.success = true;
+            cb();
+        });
+
+        pfx.then(function(pfx) {
+            utils.loop(fake, [ status ], 15, 1000, task)
+        });
+
+        task.bind(function() {
+            if(task.status == 'done') {
+                check(done, function() {
+                    expect(cb).to.have.been.callCount(randomLoopTarget + 2);
+                })
+            }
+        });
+    });
+
+});
+
+describe('dynamicAppClone...', function() {
+
+    it('should be defined', function() {
+        expect(utils.dynamicAppClone).to.not.be.undefined;
+    });
+
+    var pfx = readFile(testQlikSensePfx);
+
+    it('should find certificate pfx file', function(done) {
+        expect(pfx).to.be.fulfilled.notify(done);
+    });
+
+    var randomLoop = randomInt(3, 10);
+    it('should clone app', function(done) {
+        this.timeout(10000);
+
+        var cb = sinon.spy();
+        var cbr = sinon.spy();
+
+        var task = new utils.task();
+        task.start();
+
+        task.bind(cb);
+
+        task.bind(function(task) {
+            if(task.val == 'redirect') {
+                cbr(task.detail)
+            }
+        });
+
+        pfx.then(function(pfx) {
+
+            return utils.dynamicAppClone(
+                {
+                    restUri: testQlikSenseIp,
+                    pfx: pfx,
+                    'UserId': 'qlikservice',
+                    'UserDirectory': '2008R2-0'
+                },
+                {
+                    'UserId': 'qlikservice',
+                    'UserDirectory': '2008R2-0',
+                    'Attributes': []
+                },
+                '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',
+                '%Replace me!%',
+                randomLoop,
+                /Text << fields ([0-9,]+) Lines fetched/g,
+                'aaec8d41-5201-43ab-809f-3063750dfafd',
+                task
+            );
+
+        }).then(function() {
+            check(done, function() {
+                expect(cb).to.have.been.callCount(15);
+                expect(cbr).to.have.been.calledOnce.calledWithMatch(/^[a-f0-9\-]{36}$/);
+            })
+        })
+    });
+
 
 });

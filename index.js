@@ -139,6 +139,8 @@ exports.request = function(options, params) {
     if(typeof options.session != 'undefined')
         headers['Cookie'] = options.session;
 
+    var timeout = exports.ifnotundef(options.timeout, 10000);
+
     var settings = {
         protocol: restUri.protocol,
         host: restUri.hostname,
@@ -178,13 +180,12 @@ exports.request = function(options, params) {
 
         });
 
-        if(typeof options.timeout != 'undefined')
-            apireq.on('socket', function (socket) {
-                socket.setTimeout(parseInt(options.timeout));
-                socket.on('timeout', function() {
-                    apireq.abort();
-                });
+        apireq.on('socket', function (socket) {
+            socket.setTimeout(parseInt(timeout));
+            socket.on('timeout', function() {
+                apireq.abort();
             });
+        });
 
         if(params) {
             apireq.write(JSON.stringify(params));
@@ -285,13 +286,31 @@ exports.openSession = function(ticket, hostUri) {
     var prot = (restUri.protocol == 'https:') ? https : http;
 
     var req = prot.request(settings, function (response) {
+
+        var body = "";
+        response.on('data', function (d) {
+            body += d.toString()
+        });
+
+        response.on('end', function (d) {
+
+        });
+
         response.on('data', function (d) {
             var cookies = response.headers['set-cookie'];
             requestDef.resolve(cookies[0]);
         });
     });
 
+    req.on('socket', function (socket) {
+        socket.setTimeout(10000);
+        socket.on('timeout', function() {
+            req.abort();
+        });
+    });
+
     req.on('error', function(e) {
+        console.log('ERROR!!', e)
         requestDef.reject(e);
     });
 
@@ -303,7 +322,9 @@ exports.openSession = function(ticket, hostUri) {
 
 
 /**
- * Adds the given ip address to the websocket whitelist of the given virtual proxy
+ * Adds the given ip address to the websocket whitelist of the given virtual proxy.
+ * Be careful: this restarts the proxy. The restart can take 1-2 seconds. All subsequent API
+ * calls within this restart will fail miserably with various random & useless error messages.
  *
  * @example
  * readFile('./client.pfx').then(function(certif) {
@@ -383,7 +404,7 @@ exports.addToWhiteList = function(ip, options) {
             return exports.request(options2, settings);
 
         } else {
-            return 'already in whitelist!'
+            return settings;
         }
 
     })
@@ -432,10 +453,10 @@ exports.loop = function(func, param, retry, retryTimeout, task) {
 
             } else {
 
-                return utils.setTimeout2Promise(retryTimeout).then(function () {
+                return exports.setTimeout2Promise(retryTimeout).then(function () {
 
                     task.running(ret);
-                    loop(func, param, retry - 1, retryTimeout, task);
+                    exports.loop(func, param, retry - 1, retryTimeout, task);
 
                 });
             }
@@ -675,32 +696,85 @@ exports.setTimeout2Promise = function(timeout) {
 };
 
 
+/**
+ * Duplicates a template app, updates its script, reloads it and publishes it
+ *
+ * @example
+ * readFile(testQlikSensePfx).then(function(pfx) {
+ *
+ *      return utils.dynamicAppClone({
+ *              restUri: testQlikSenseIp,
+ *              pfx: pfx,
+ *              'UserId': 'qlikservice',
+ *              'UserDirectory': '2008R2-0'
+ *          }, {
+ *              'UserId': 'qlikservice',
+ *              'UserDirectory': '2008R2-0',
+ *              'Attributes': []
+ *          },
+ *          '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',
+ *          '%Replace me!%',
+ *          randomLoop,
+ *          /Text << fields ([0-9,]+) Lines fetched/g,
+ *          'aaec8d41-5201-43ab-809f-3063750dfafd',
+ *          task
+ *      );
+ *
+ * });
+ *
+ * @param {options} options Uri to the Qlik Sense endpoint
+ * @param {ticketParams} ticketParam parameters of the ticket to generate
+ * @param {string} templateAppId id of the template application
+ * @param {string} scriptMarker marker to be found in the script and replaced during the duplication
+ * @param {string} scriptReplace replace value of the marker above
+ * @param {RegExp} scriptRegex regex to track in the script trace
+ * @param {string} publishStreamId id of the stream to publish into
+ * @param {Task} task task that will trace the cloning progress
+ * @returns {*}
+ */
+exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) {
 
+    task.running('info', 'Starting!');
 
+    return Q().then(function() {
 
-exports.dynamicAppClone = function(ticket, hostUri, appName, scriptMarker, scriptReplace, publishStreamId, task) {
+        return exports.getTicket({
+            restUri: 'https://' + options.restUri + ':4243',
+            pfx: options.pfx,
+            passPhrase: ''
+        }, ticketParam);
 
-    var wsConfig = {
-        host: 'localhost/app',
-        isSecure: true,
-        origin: 'http://localhost',
-        rejectUnauthorized: false,
-        headers: {
-            "Content-Type": "application/json"
-        },
-        ticket: ticket.Ticket
-    };
+    }).then(function(ticket) {
 
-    Q().then(function() {
+        task.running('info', 'Ticket generated');
+
+        return exports.openSession(ticket, 'https://' + options.restUri + '/qmc/').fail(console.log);
+
+    }).then(function(session) {
+
+        task.running('info', 'Session opened');
+
+        var wsConfig = {
+            host: options.restUri,
+            isSecure: true,
+            origin: 'http://localhost',
+            rejectUnauthorized: false,
+            headers: {
+                "Content-Type": "application/json",
+                "Cookie": session
+            }
+        };
+
         return qsocks.Connect(wsConfig);
+
     }).then(function (wsGlobal) {
 
         task.running('info', 'Socket connected');
 
-        return Q.all(
+        return Q.all([
             wsGlobal,
-            wsGlobal.getDocList()
-        );
+            wsGlobal.getDocList().then(function(item) {return item;}, console.log)
+        ]);
 
     }).then(function(reply) {
 
@@ -710,15 +784,16 @@ exports.dynamicAppClone = function(ticket, hostUri, appName, scriptMarker, scrip
         task.running('info', 'Got document List');
 
         var arrayFound = docList.filter(function(item) {
-            return item.qDocName == templateAppName;
+            return item.qDocId == templateAppId;
         });
 
-        if(arrayFound[0] && arrayFound[0].qDocId)
+        if(arrayFound[0].qDocId == templateAppId)
 
-            return Q.all(
+            return Q.all([
                 wsGlobal,
-                docList.arrayFound[0].qDocId
-            );
+                arrayFound[0].qDocId,
+                arrayFound[0].qDocName
+            ]);
 
         else
             Q.reject('Template not found');
@@ -727,15 +802,20 @@ exports.dynamicAppClone = function(ticket, hostUri, appName, scriptMarker, scrip
 
         var wsGlobal = reply[0];
         var templateId = reply[1];
+        var templateName = reply[2];
 
         task.running('info', 'Template found');
 
-        return Q.all(
+        return Q.all([
             wsGlobal,
-            utils.request(
-                'https://localhost:4242/qrs/app/' + templateId + '/copy?name=' + templateAppName + ' ' + scriptReplace
-            )
-        );
+            exports.request({
+                restUri: 'https://' + options.restUri + ':4242/qrs/app/' + templateId + '/copy?name=' + templateName + ' ' + scriptReplace,
+                pfx: options.pfx,
+                passPhrase: '',
+                UserId: options.UserId,
+                UserDirectory: options.UserDirectory
+            })
+        ]);
 
     }).then(function (reply) {
 
@@ -744,41 +824,48 @@ exports.dynamicAppClone = function(ticket, hostUri, appName, scriptMarker, scrip
 
         task.running('info', 'Application cloned from template');
 
-        return Q.All(
+        return Q.all([
             wsGlobal,
+            clonedApp.id,
             wsGlobal.openDoc(clonedApp.id)
-        );
+        ]);
 
     }).then(function(reply) {
 
         var wsGlobal = reply[0];
-        var clonedApp = reply[1];
+        var clonedAppId = reply[1];
+        var clonedApp = reply[2];
 
         task.running('info', 'Application opened');
 
-        return Q.All(
+        return Q.all([
             wsGlobal,
+            clonedAppId,
             Q().then(function() {
                 return clonedApp.getScript();
             }).then(function (result) {
                 task.running('info', 'Application script extracted');
-                return clonedApp.setScript(result.replace(scriptMarker, scriptReplace))
+                return clonedApp.setScript(result.replace(scriptMarker, scriptReplace));
+            }).then(function (result) {
+                task.running('info', 'Application script replaced');
+                return clonedApp.doSave();
             }).then(function (result) {
                 return clonedApp;
             })
-        );
+        ]);
 
     }).then(function(reply) {
 
         var wsGlobal = reply[0];
-        var clonedApp = reply[1];
+        var clonedAppId = reply[1];
+        var clonedApp = reply[2];
 
-        task.running('info', 'Application script replaced');
+        task.running('info', 'Application saved');
 
         var timer = setInterval (function () {
             wsGlobal.getProgress(0).then(function(result) {
                 if(result.qPersistentProgress) {
-                    var rePattern = new RegExp(/Text << fields ([0-9,]+) Lines fetched/g);
+                    var rePattern = new RegExp(scriptRegex);
                     var match = rePattern.exec(result.qPersistentProgress);
                     while (match != null) {
                         task.running('reload', match[1] + ' rows fetched...');
@@ -788,11 +875,12 @@ exports.dynamicAppClone = function(ticket, hostUri, appName, scriptMarker, scrip
             })
         }, 1000);
 
-        return Q.all(
+        return Q.all([
             wsGlobal,
+            clonedAppId,
             clonedApp.doReload().then(function(result) {
-                if (result.qReturn) {
-                    timer.cancel();
+                if (result) {
+                    clearInterval(timer);
                     task.running('info', 'Application reloaded');
                     return clonedApp.doSave().then(function (result) {
                         return clonedApp;
@@ -801,29 +889,33 @@ exports.dynamicAppClone = function(ticket, hostUri, appName, scriptMarker, scrip
                     return Q.reject('Application not reloaded');
                 }
             })
-        );
+        ]);
 
     }).then(function(reply) {
 
         var wsGlobal = reply[0];
-        var clonedApp = reply[1];
+        var clonedAppId = reply[1];
+        var clonedApp = reply[2];
 
         task.running('info', 'Application saved');
 
-        return Q.all(
-            clonedApp.publish(streamId).then(function(result) {
+        return Q.all([
+            wsGlobal,
+            clonedAppId,
+            clonedApp.publish(publishStreamId).then(function(result) {
                 return clonedApp;
             })
-        );
+        ]);
 
-    }).then(function(doc) {
+    }).then(function(reply) {
+
+        var wsGlobal = reply[0];
+        var clonedAppId = reply[1];
+        var clonedApp = reply[2];
 
         task.running('info', 'Application published');
+        task.running('redirect', clonedAppId);
 
-        return query('https://localhost:4243/qps/user/WINDOWS2012/QlikService', null, 'DELETE');
-
-    }).then(function(result) {
-        res.redirect(externalProxyUri + '/sense/app/' + newDocId);
     }, function(err) {
         task.failed(err);
     });
