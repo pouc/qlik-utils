@@ -22,7 +22,7 @@ var utils = require("qlik-utils");
     * [.basicAuth(users)](#module_qlik-utils.basicAuth) ⇒ <code>function</code>
     * [.removeIf(array, callback)](#module_qlik-utils.removeIf)
     * [.setTimeout2Promise(timeout)](#module_qlik-utils.setTimeout2Promise) ⇒ <code>Promise</code>
-    * [.dynamicAppClone(options, ticketParam, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task)](#module_qlik-utils.dynamicAppClone) ⇒ <code>\*</code>
+    * [.dynamicAppClone(options, ticketParam, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task)](#module_qlik-utils.dynamicAppClone) ⇒ <code>Promise</code>
   * _inner_
     * [~Task](#module_qlik-utils..Task)
       * [new Task()](#new_module_qlik-utils..Task_new)
@@ -188,7 +188,7 @@ Equivalent to setTimeout but returns a promise instead
 utils.setTimeout2Promise(1000).then(function() {     console.log('hi');});
 ```
 <a name="module_qlik-utils.dynamicAppClone"></a>
-### utils.dynamicAppClone(options, ticketParam, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) ⇒ <code>\*</code>
+### utils.dynamicAppClone(options, ticketParam, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) ⇒ <code>Promise</code>
 Duplicates a template app, updates its script, reloads it and publishes it
 
 **Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  

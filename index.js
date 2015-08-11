@@ -730,7 +730,7 @@ exports.setTimeout2Promise = function(timeout) {
  * @param {RegExp} scriptRegex regex to track in the script trace
  * @param {string} publishStreamId id of the stream to publish into
  * @param {Task} task task that will trace the cloning progress
- * @returns {*}
+ * @returns {Promise}
  */
 exports.dynamicAppClone = function(options, ticketParam, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) {
 
