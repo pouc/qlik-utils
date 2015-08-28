@@ -11,11 +11,17 @@
   },
   "bugs": "https://github.com/pouc/qlik-utils/issues",
   "dependencies": {
+    "adm-zip": "^0.4.7",
     "basic-auth": "^1.0.3",
     "cloneextend": "0.0.3",
+    "deep-diff": "^0.3.2",
+    "extend": "^3.0.0",
+    "mkdirp": "^0.5.1",
     "node-uuid": "^1.4.3",
     "q": "^1.4.1",
-    "qsocks": "0.0.22"
+    "qsocks": "0.0.22",
+    "rimraf": "^2.4.2",
+    "temp": "^0.8.3"
   },
   "devDependencies": {
     "chai": "^3.2.0",

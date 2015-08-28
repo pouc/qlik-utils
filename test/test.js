@@ -13,7 +13,8 @@ var util = require('util');
 var Q = require('Q');
 var fs = require('fs');
 var promise = require('promise');
-
+var mkdirp = promise.denodeify(require('mkdirp'));
+var rmdir = promise.denodeify(require('rimraf'));
 
 var testQlikSenseIp = '10.76.224.68';
 var testQlikSensePfx = __dirname + '/client.pfx';
@@ -243,7 +244,6 @@ describe('openSession...', function() {
     });
 
 });
-
 
 describe('Task...', function() {
 
@@ -550,5 +550,122 @@ describe('dynamicAppClone...', function() {
         })
     });
 
+
+});
+
+var readdir = promise.denodeify(fs.readdir);
+
+var testConfig;
+
+describe('Config object...', function() {
+
+    testConfig = new utils.Config.json('test');
+
+    it('should have a name', function() {
+        expect(testConfig.name).to.not.be.undefined;
+        expect(testConfig.name).to.equal('test');
+    });
+
+    it('should have an empty config', function() {
+        expect(testConfig.config).to.not.be.null;
+        expect(typeof testConfig.config).to.equal('object');
+        expect(Object.keys(testConfig.config).length).to.equal(0);
+    });
+
+    it('should have an empty old config', function() {
+        expect(testConfig.oldConfig).to.not.be.null;
+        expect(typeof testConfig.oldConfig).to.equal('object');
+        expect(Object.keys(testConfig.oldConfig).length).to.equal(0);
+    });
+
+    it('should have a not null load function', function() {
+        expect(testConfig.load).to.not.be.null;
+        expect(typeof testConfig.load).to.equal('function');
+    });
+
+    it('should have a not null loadOld function', function() {
+        expect(testConfig.loadOld).to.not.be.null;
+        expect(typeof testConfig.loadOld).to.equal('function');
+    });
+
+    it('should have a not null store function', function() {
+        expect(testConfig.store).to.not.be.null;
+        expect(typeof testConfig.store).to.equal('function');
+    });
+
+    it('should have a not null storeOld function', function() {
+        expect(testConfig.storeOld).to.not.be.null;
+        expect(typeof testConfig.storeOld).to.equal('function');
+    });
+
+    it('should have a not null get function', function() {
+        expect(testConfig.get).to.not.be.null;
+        expect(typeof testConfig.get).to.equal('function');
+    });
+
+    it('should have a not null set function', function() {
+        expect(testConfig.set).to.not.be.null;
+        expect(typeof testConfig.set).to.equal('function');
+    });
+
+    it('should have a not null init function', function() {
+        expect(testConfig.init).to.not.be.null;
+        expect(typeof testConfig.init).to.equal('function');
+    });
+
+    it('should have a not null clean function', function() {
+        expect(testConfig.clean).to.not.be.null;
+        expect(typeof testConfig.clean).to.equal('function');
+    });
+
+});
+
+describe('Config \'test\' directory', function() {
+
+    var step;
+
+    it('should be empty', function(done) {
+
+        step = readdir(__dirname + '/../storage/test');
+        expect(step).to.be.rejected.notify(done);
+
+    });
+
+    describe('init', function() {
+
+        it('should end', function(done) {
+
+            step = step.then(undefined, function() {
+                return testConfig.init();
+            });
+
+            expect(step).to.be.fulfilled.notify(done);
+
+        });
+
+        it('should have created the default test directory', function(done) {
+
+            step = step.then(function() {
+                return readdir(__dirname + '/../storage/test');
+            }).then(function(files) {
+                check(done, function() {
+                    expect(Array.isArray(files)).to.be.true;
+                    expect(files.length).to.equal(2);
+                    expect(files).to.include('config.json');
+                    expect(files).to.include('config.old.json');
+                })
+            });
+
+        });
+
+        it('should remove created directories & files', function(done) {
+
+            step = step.then(function() {
+                return rmdir(__dirname + '/../storage');
+            }).then(done);
+
+        })
+
+    });
 
 });

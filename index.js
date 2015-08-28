@@ -6,8 +6,13 @@ var fs = require('fs');
 var basic = require('basic-auth');
 var uuid = require('node-uuid');
 var Q = require('q');
-var extend = require('cloneextend');
 var qsocks = require('qsocks');
+var Zip = require('adm-zip');
+var Deep = require('deep-diff')
+var extend = require('extend');
+var Promise = require('promise');
+var temp = require("temp").track();
+var mkdirp = Promise.denodeify(require('mkdirp'));
 
 var exports = {};
 
@@ -24,56 +29,6 @@ var exports = {};
  *
  */
 module.exports = exports;
-
-/**
- * Two parameters mode
- *  If a is undefined, return b else a
- * Three parameters mode
- *  If a is undefined, return c else b
- *
- * @example
- * var myHost = utils.ifnotundef(options.host, options.hostname);
- *
- * @example
- * var myHost = utils.ifnotundef(options.host, options.hostname, 'localhost');
- *
- * @param {*} a
- * @param {*} b
- * @param {*=} c
- * @returns {*}
- */
-exports.ifnotundef = function(a, b, c) {
-
-    return (arguments.length <= 2) ?
-        ((typeof a != 'undefined' && a != null) ? a : b) :  // 2 arguments mode: return b if a is undefined else return a
-        ((typeof a != 'undefined' && a != null) ? b : c);   // 3 arguments mode: return c if a is undefined else return b
-
-}
-
-/**
- * Generates a random Xrf key of a given size within a set of given chars
- *
- * @example
- * var xrf = utils.generateXrfkey(8);
- *
- * @param {int=} [size=16]
- * @param {string=} [chars=abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789]
- * @returns {string}
- */
-exports.generateXrfkey = function(size, chars) {
-    size = size || 16;
-    chars = chars || 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789';
-
-    var rnd = crypto.randomBytes(size)
-    var value = new Array(size)
-    var len = chars.length;
-
-    for (var i = 0; i < size; i++) {
-        value[i] = chars[rnd[i] % len]
-    }
-
-    return value.join('');
-};
 
 /**
  * @typedef options
@@ -106,6 +61,56 @@ exports.generateXrfkey = function(size, chars) {
  * @property {string} TargetUri the target uri
  *
  */
+
+/**
+ * Two parameters mode
+ *  If a is undefined, return b else a
+ * Three parameters mode
+ *  If a is undefined, return c else b
+ *
+ * @example
+ * var myHost = utils.ifnotundef(options.host, options.hostname);
+ *
+ * @example
+ * var myHost = utils.ifnotundef(options.host, options.hostname, 'localhost');
+ *
+ * @param {*} a
+ * @param {*} b
+ * @param {*=} c
+ * @returns {*}
+ */
+exports.ifnotundef = function(a, b, c) {
+
+    return (arguments.length <= 2) ?
+        ((typeof a != 'undefined' && a != null) ? a : b) :  // 2 arguments mode: return b if a is undefined else return a
+        ((typeof a != 'undefined' && a != null) ? b : c);   // 3 arguments mode: return c if a is undefined else return b
+
+};
+
+/**
+ * Generates a random Xrf key of a given size within a set of given chars
+ *
+ * @example
+ * var xrf = utils.generateXrfkey(8);
+ *
+ * @param {int=} [size=16]
+ * @param {string=} [chars=abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789]
+ * @returns {string}
+ */
+exports.generateXrfkey = function(size, chars) {
+    size = size || 16;
+    chars = chars || 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789';
+
+    var rnd = crypto.randomBytes(size)
+    var value = new Array(size)
+    var len = chars.length;
+
+    for (var i = 0; i < size; i++) {
+        value[i] = chars[rnd[i] % len]
+    }
+
+    return value.join('');
+};
 
 /**
  * Makes a request on a Qlik Sense API endpoint defined in the options object, posting the params object
@@ -232,7 +237,7 @@ exports.getTicket = function(options, params) {
 
     var restUri = url.parse(options.restUri);
 
-    var ticketOptions = extend.cloneextend(options, {
+    var ticketOptions = extend(true, {}, options, {
         restUri: restUri.protocol + '//' + restUri.host + '/qps/ticket',
         method: 'POST'
     });
@@ -347,7 +352,7 @@ exports.addToWhiteList = function(ip, options) {
 
         // Get proxy configuration
 
-        var options2 = extend.cloneextend(options, {
+        var options2 = extend(true, {}, options, {
             restUri: restUri.protocol + '//' + restUri.host + '/qrs/proxyservice/local',
             method: 'GET'
         });
@@ -362,7 +367,7 @@ exports.addToWhiteList = function(ip, options) {
 
         var vpsettings = settings.settings.virtualProxies[0];
 
-        var options2 = extend.cloneextend(options, {
+        var options2 = extend(true, {}, options, {
             restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + vpsettings.id,
             method: 'GET'
         });
@@ -396,7 +401,7 @@ exports.addToWhiteList = function(ip, options) {
 
             settings.modifiedDate = newDate.toISOString();
 
-            var options2 = extend.cloneextend(options, {
+            var options2 = extend(true, {}, options, {
                 restUri: restUri.protocol + '//' + restUri.host + '/qrs/virtualproxyconfig/' + settings.id,
                 method: 'PUT'
             });
@@ -960,4 +965,287 @@ exports.dynamicAppClone = function(options, templateAppId, scriptMarker, scriptR
 
 };
 
+var read = Promise.denodeify(fs.readFile);
+var readdir = Promise.denodeify(fs.readdir);
+var write = Promise.denodeify(fs.writeFile);
+var unlink = Promise.denodeify(fs.unlink);
+var mkdir = Promise.denodeify(fs.mkdir);
+
+exports.Config = {};
+
+exports.Config.json = function(name, dir) {
+    var that = this;
+
+    that.name = name;
+    that.dir = exports.ifnotundef(dir, __dirname + '/storage/');
+
+    that.config = {};
+    that.oldConfig = {};
+
+    that.load = function() {
+
+        return read(that.dir + that.name + '/config.json', 'utf8')
+            .then(function (str) {
+
+                that.config = JSON.parse(str);
+                return that.loadOld();
+
+            }, function() {
+
+                var ret = [];
+
+                ret.push(that.store(true));
+                ret.push(that.storeOld());
+
+                return Q.all(ret);
+
+            });
+
+    };
+
+    that.loadOld = function() {
+
+        return read(that.dir + that.name + '/config.old.json', 'utf8')
+            .then(function (str) {
+                that.oldConfig = extend(true, {}, that.config);
+            }, function() {
+                return that.storeOld()
+            });
+
+    };
+
+    that.store = function(force) {
+
+        var differences = Deep.diff(that.config, that.oldConfig);
+
+        var ret = [];
+        if(differences) {
+            var timestamp = (new Date()).toISOString().replace(/[^0-9]/g, "");
+            ret.push(write(that.dir + that.name + '/config.diff.' + timestamp + '.json', JSON.stringify(differences)))
+            that.oldConfig = extend(true, {}, that.config);
+        }
+
+        if(force || differences) {
+            ret.push(write(that.dir + that.name + '/config.json', JSON.stringify(that.config)))
+        }
+
+        return Q.all(ret);
+
+    };
+
+    that.storeOld = function() {
+        return write(that.dir + that.name + '/config.old.json', JSON.stringify(that.oldConfig));
+    };
+
+    that.getRootValues = function() {
+        return Object.keys(that.config)
+    };
+
+    that.get = function(root) {
+        if(typeof that.config[root] != 'undefined') {
+            var config = extend(true, {}, that.config[root]); // JSON.parse(JSON.stringify(that.config[root]));
+            return Q().resolve(config);
+        } else {
+            return Q().reject(util.format('%s does not exist!', root))
+        }
+    };
+
+    that.set = function(root, conf, user) {
+
+        var config = extend(true, {}, conf); // JSON.parse(JSON.stringify(conf));
+        var differences = Deep.diff(that.config[root], config);
+
+        var ret = [];
+        if(differences) {
+            that.config[root] = config;
+
+            var newDate = new Date();
+
+            that.config[root].__modif_date = newDate;
+            that.config[root].__modif_user = user;
+
+            conf.__modif_date = newDate;
+            conf.__modif_user = user;
+
+            ret.push(that.store());
+        }
+
+        return Q.all(ret);
+    };
+
+    that.remove = function(root, user) {
+
+        var ret = [];
+        if(typeof that.config[root] != "undefined") {
+            delete that.config[root];
+
+            ret.push(that.store());
+        }
+
+        return Q.all(ret);
+    };
+
+    that.init = function() {
+
+        return mkdirp(that.dir + that.name)
+            .then(function() {
+                return that.load();
+            }, function(err) {
+                return that.load();
+            }).then(function() {
+                return that;
+            })
+
+    };
+
+    that.clean = function() {
+        return readdir(that.dir + that.name)
+            .then(function(files) {
+
+                var maxTimeStamp = -1;
+                var diffFilesToZip = [];
+
+                files.forEach(function(item) {
+                    var match = /config\.diff\.([0-9]+)\.json$/.exec(item);
+                    if(match) {
+                        diffFilesToZip.push(item);
+                        var num = parseInt(match[1]);
+                        if(num > maxTimeStamp) maxTimeStamp = num;
+                    }
+                });
+
+                var toDo = [];
+                if(diffFilesToZip.length > 10) {
+                    var zip = new Zip();
+
+                    zip.addLocalFile(that.dir + that.name + '/config.old.json');
+                    zip.addLocalFile(that.dir + that.name + '/config.json');
+
+                    toDo.push(unlink(that.dir + that.name + '/config.old.json')
+                            .then(function() {
+                                return that.storeOld();
+                            })
+                    );
+
+                    var toDel = [];
+                    diffFilesToZip.forEach(function(item) {
+                        zip.addLocalFile(that.dir + that.name + '/' + item);
+                        toDel.push(unlink(that.dir + that.name + '/' + item));
+                    });
+
+
+                    zip.writeZip(that.dir + that.name + '/config.' + maxTimeStamp + '.zip');
+
+                    toDo = toDo.concat(toDel)
+                }
+
+                return Q.all(toDo);
+            })
+    }
+
+};
+
+exports.Config.copyFile = function(source, target, cb) {
+    var cbCalled = false;
+
+    var rd = fs.createReadStream(source);
+
+    rd.on("error", function(err) {
+        done(err);
+    });
+
+    var wr = fs.createWriteStream(target);
+    wr.on("error", function(err) {
+        done(err);
+    });
+
+    wr.on("close", function(ex) {
+        done();
+    });
+
+    rd.pipe(wr);
+
+    function done(err) {
+        if (!cbCalled) {
+            cb(err);
+            cbCalled = true;
+        }
+    }
+};
+
+exports.Config.file = function(name, dir) {
+    var that = this;
+
+    that.name = name;
+    that.dir = exports.ifnotundef(dir, __dirname + '/storage/');
+
+    that.init = function() {
+
+        var retDef = Q.defer();
+
+        mkdir(__dirname + '/storage/' + that.name)
+            .then(function() {
+                retDef.resolve(name);
+            }, function() {
+                retDef.reject(name);
+            });
+
+        return retDef.promise;
+
+    };
+
+    that.store = function(path, name) {
+
+        var retDef = Q.defer();
+
+        exports.Config.copyFile(path, that.dir + that.name + '/' + name, function(error) {
+            if(error) retDef.reject(error);
+            else retDef.resolve(name);
+        });
+
+        return retDef.promise;
+
+    }
+};
+
+exports.Config.snapshot = function(name, dir) {
+    var that = this;
+
+    that.name = name;
+    that.file = new exports.Config.file(name, dir);
+
+    that.init = function() {
+        return that.file.init();
+    };
+
+    that.store = function(data, name) {
+
+        var retDef = Q.defer();
+
+        var rdata = data.replace(/^data:image\/\w+;base64,/, "");
+        var buf = new Buffer(rdata, 'base64');
+
+        temp.open('qlikutils', function(err, info) {
+            if (!err) {
+
+                fs.write(info.fd, buf);
+
+                fs.close(info.fd, function(err) {
+                    if(!err) {
+                        that.file.store(info.path, name).then(function() {
+                            retDef.resolve(name);
+                        }, function(err) {
+                            retDef.reject(err);
+                        })
+                    } else
+                        retDef.reject(err);
+                });
+
+            } else
+                retDef.reject(err);
+        });
+
+        return retDef.promise;
+    }
+};
 
