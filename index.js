@@ -96,7 +96,7 @@ exports.Array = {
     /**
      * Cuts an array in chunks of predefined size
      *
-     * @param {Array} array An array to cut in chunks
+     * @param {Array} array an array to cut in chunks
      * @param {int} n the chunk size
      * @returns {Array.<Array>} An array of chunks
      */
@@ -105,6 +105,22 @@ exports.Array = {
             (p[i/n|0] = p[i/n|0] || []).push(cur);
             return p;
         },[]);
+    },
+
+    /**
+     * Remove object from an array on condition
+     *
+     * @param {Array} array an array to remove stuff from
+     * @param {Function} callback the function containing the condition
+     */
+    removeIf: function(array, callback) {
+        var i = 0;
+        while (i < array.length) if (callback(array[i], i)) {
+            array.splice(i, 1);
+        }
+        else {
+            ++i;
+        }
     }
 
 };
@@ -582,24 +598,6 @@ exports.basicAuth = function(users) {
 
 
 /**
- * Remove object from an array on condition
- * @param array
- * @param callback
- */
-exports.removeIf = function(array, callback) {
-    var i = 0;
-    while (i < array.length) {
-        if (callback(array[i], i)) {
-            array.splice(i, 1);
-        }
-        else {
-            ++i;
-        }
-    }
-};
-
-
-/**
  * Creates a new task.
  * @class Task
  * @classdesc This class enables you to handle tasks asynchronously.
@@ -634,7 +632,7 @@ exports.task = function() {
             retVal.push(item.func(_this));
         });
 
-        exports.removeIf(bound, function(item) { return item.mode == 'once'; });
+        exports.Array.removeIf(bound, function(item) { return item.mode == 'once'; });
 
         return Q.all(retVal);
 
@@ -701,7 +699,7 @@ exports.task = function() {
      * @param func
      */
     this.unbind = function(func) {
-        exports.removeIf(bound, function(item) { return item.func == func; });
+        exports.Array.removeIf(bound, function(item) { return item.func == func; });
     };
 
     /**

@@ -14,6 +14,7 @@ var utils = require("qlik-utils");
   * _static_
     * [.Array](#module_qlik-utils.Array) : <code>object</code>
       * [.chunk(array, n)](#module_qlik-utils.Array.chunk) ⇒ <code>Array.&lt;Array&gt;</code>
+      * [.removeIf(array, callback)](#module_qlik-utils.Array.removeIf)
     * [.Object](#module_qlik-utils.Object) : <code>object</code>
       * [.map(obj, f)](#module_qlik-utils.Object.map) ⇒ <code>Object</code>
       * [.keys(obj)](#module_qlik-utils.Object.keys) ⇒ <code>Array</code>
@@ -26,7 +27,6 @@ var utils = require("qlik-utils");
     * [.addToWhiteList(ip, options)](#module_qlik-utils.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
     * [.loop(func, param, retry, retryTimeout, task)](#module_qlik-utils.loop)
     * [.basicAuth(users)](#module_qlik-utils.basicAuth) ⇒ <code>function</code>
-    * [.removeIf(array, callback)](#module_qlik-utils.removeIf)
     * [.setTimeout2Promise(timeout)](#module_qlik-utils.setTimeout2Promise) ⇒ <code>Promise</code>
     * [.dynamicAppClone(options, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task)](#module_qlik-utils.dynamicAppClone) ⇒ <code>Promise</code>
   * _inner_
@@ -41,6 +41,11 @@ var utils = require("qlik-utils");
 Wrapper for helper functions for arrays.
 
 **Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
+
+  * [.Array](#module_qlik-utils.Array) : <code>object</code>
+    * [.chunk(array, n)](#module_qlik-utils.Array.chunk) ⇒ <code>Array.&lt;Array&gt;</code>
+    * [.removeIf(array, callback)](#module_qlik-utils.Array.removeIf)
+
 <a name="module_qlik-utils.Array.chunk"></a>
 #### Array.chunk(array, n) ⇒ <code>Array.&lt;Array&gt;</code>
 Cuts an array in chunks of predefined size
@@ -50,8 +55,19 @@ Cuts an array in chunks of predefined size
 
 | Param | Type | Description |
 | --- | --- | --- |
-| array | <code>Array</code> | An array to cut in chunks |
+| array | <code>Array</code> | an array to cut in chunks |
 | n | <code>int</code> | the chunk size |
+
+<a name="module_qlik-utils.Array.removeIf"></a>
+#### Array.removeIf(array, callback)
+Remove object from an array on condition
+
+**Kind**: static method of <code>[Array](#module_qlik-utils.Array)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | an array to remove stuff from |
+| callback | <code>function</code> | the function containing the condition |
 
 <a name="module_qlik-utils.Object"></a>
 ### utils.Object : <code>object</code>
@@ -230,17 +246,6 @@ Simple basic auth middleware for use with Express 4.x.
 ```js
 app.use('/api-requiring-auth', utils.basicAuth([{user: 'username', pass: 'password'}]));
 ```
-<a name="module_qlik-utils.removeIf"></a>
-### utils.removeIf(array, callback)
-Remove object from an array on condition
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
-
-| Param |
-| --- |
-| array | 
-| callback | 
-
 <a name="module_qlik-utils.setTimeout2Promise"></a>
 ### utils.setTimeout2Promise(timeout) ⇒ <code>Promise</code>
 Equivalent to setTimeout but returns a promise instead
