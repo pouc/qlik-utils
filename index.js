@@ -10,9 +10,8 @@ var qsocks = require('qsocks');
 var Zip = require('adm-zip');
 var Deep = require('deep-diff')
 var extend = require('extend');
-var Promise = require('promise');
 var temp = require("temp").track();
-var mkdirp = Promise.denodeify(require('mkdirp'));
+var mkdirp = Q.denodeify(require('mkdirp'));
 
 var exports = {};
 
@@ -84,6 +83,73 @@ exports.ifnotundef = function(a, b, c) {
     return (arguments.length <= 2) ?
         ((typeof a != 'undefined' && a != null) ? a : b) :  // 2 arguments mode: return b if a is undefined else return a
         ((typeof a != 'undefined' && a != null) ? b : c);   // 3 arguments mode: return c if a is undefined else return b
+
+};
+
+
+/**
+ * Wrapper for helper functions for arrays.
+ * @namespace
+ */
+exports.Array = {
+
+    /**
+     * Cuts an array in chunks of predefined size
+     *
+     * @param {Array} array An array to cut in chunks
+     * @param {int} n the chunk size
+     * @returns {Array.<Array>} An array of chunks
+     */
+    chunk: function(array, n) {
+        return array.reduce(function(p, cur, i) {
+            (p[i/n|0] = p[i/n|0] || []).push(cur);
+            return p;
+        },[]);
+    }
+
+};
+
+/**
+ * Wrapper for helper functions for objects.
+ * @namespace
+ */
+exports.Object = {
+
+    /**
+     * Map function for objects
+     *
+     * @param {Object} obj an object
+     * @param {Function} f a function to apply to each property of obj
+     * @returns {Object} an object with the same keys as obj but with values that are f(obj[key])
+     */
+    map: function(obj, f) {
+        var result = {};
+        Object.keys(obj).forEach(function(key) {
+            result[key] = f(obj[key], key, obj);
+        });
+        return result;
+    },
+
+    /**
+     * Gets an object's keys into an array
+     *
+     * @param {Object} obj the object to get keys from
+     * @returns {Array} an array containing obj's keys
+     */
+    keys : function(obj) {
+        return Object.keys(obj);
+    },
+
+    /**
+     * Gets an object's values into an array
+     *
+     * @param {Object} obj the object to get values from
+     * @returns {Array} an array containing obj's values
+     */
+    values : function(obj) {
+        return Object.keys(obj).map(function (key) {return obj[key]});
+    }
+
 
 };
 
@@ -243,8 +309,19 @@ exports.getTicket = function(options, params) {
     });
 
     ticketOptions.pfx = options.pfx;
+	
+	// Send ticket
+	// Also if there was a problem with the target Id, try to generate another ticket
+	// by reseting target Id
 
-    return exports.request(ticketOptions, params);
+    return exports.request(ticketOptions, params).fail(function(err) {
+		if(err.body.match(/^Specified targetId .* was unknown$/)) {
+			params.TargetId = undefined;
+			return exports.getTicket(options, params);
+		} else {
+			return Q.reject(err);
+		}
+	});
 
 };
 
@@ -536,15 +613,15 @@ exports.task = function() {
     // Private methods
 
     var notifyBound = function() {
-        listen.then(function(task) {
-            var retVal = [];
-            bound.forEach(function(item) {
-                retVal.push(item.func(_this));
+            listen.then(function(task) {
+                var retVal = [];
+                bound.forEach(function(item) {
+                    retVal.push(item.func(_this));
+                });
+                return Q.all(retVal);
             });
-            return Q.all(retVal);
-        });
-    }
-;
+        }
+        ;
     var changeStatus = function(status, val, detail) {
 
         _this.status = status;
@@ -965,11 +1042,11 @@ exports.dynamicAppClone = function(options, templateAppId, scriptMarker, scriptR
 
 };
 
-var read = Promise.denodeify(fs.readFile);
-var readdir = Promise.denodeify(fs.readdir);
-var write = Promise.denodeify(fs.writeFile);
-var unlink = Promise.denodeify(fs.unlink);
-var mkdir = Promise.denodeify(fs.mkdir);
+var read = Q.denodeify(fs.readFile);
+var readdir = Q.denodeify(fs.readdir);
+var write = Q.denodeify(fs.writeFile);
+var unlink = Q.denodeify(fs.unlink);
+var mkdir = Q.denodeify(fs.mkdir);
 
 exports.Config = {};
 

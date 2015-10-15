@@ -12,6 +12,12 @@ var utils = require("qlik-utils");
 
 * [qlik-utils](#module_qlik-utils)
   * _static_
+    * [.Array](#module_qlik-utils.Array) : <code>object</code>
+      * [.chunk(array, n)](#module_qlik-utils.Array.chunk) ⇒ <code>Array.&lt;Array&gt;</code>
+    * [.Object](#module_qlik-utils.Object) : <code>object</code>
+      * [.map(obj, f)](#module_qlik-utils.Object.map) ⇒ <code>Object</code>
+      * [.keys(obj)](#module_qlik-utils.Object.keys) ⇒ <code>Array</code>
+      * [.values(obj)](#module_qlik-utils.Object.values) ⇒ <code>Array</code>
     * [.ifnotundef(a, b, [c])](#module_qlik-utils.ifnotundef) ⇒ <code>\*</code>
     * [.generateXrfkey([size], [chars])](#module_qlik-utils.generateXrfkey) ⇒ <code>string</code>
     * [.request(options, [params])](#module_qlik-utils.request) ⇒ <code>Promise.&lt;\*&gt;</code>
@@ -29,6 +35,68 @@ var utils = require("qlik-utils");
     * [~options](#module_qlik-utils..options) : <code>Object</code>
     * [~ticketParams](#module_qlik-utils..ticketParams) : <code>Object</code>
     * [~ticket](#module_qlik-utils..ticket) : <code>Object</code>
+
+<a name="module_qlik-utils.Array"></a>
+### utils.Array : <code>object</code>
+Wrapper for helper functions for arrays.
+
+**Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
+<a name="module_qlik-utils.Array.chunk"></a>
+#### Array.chunk(array, n) ⇒ <code>Array.&lt;Array&gt;</code>
+Cuts an array in chunks of predefined size
+
+**Kind**: static method of <code>[Array](#module_qlik-utils.Array)</code>  
+**Returns**: <code>Array.&lt;Array&gt;</code> - An array of chunks  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | An array to cut in chunks |
+| n | <code>int</code> | the chunk size |
+
+<a name="module_qlik-utils.Object"></a>
+### utils.Object : <code>object</code>
+Wrapper for helper functions for objects.
+
+**Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
+
+  * [.Object](#module_qlik-utils.Object) : <code>object</code>
+    * [.map(obj, f)](#module_qlik-utils.Object.map) ⇒ <code>Object</code>
+    * [.keys(obj)](#module_qlik-utils.Object.keys) ⇒ <code>Array</code>
+    * [.values(obj)](#module_qlik-utils.Object.values) ⇒ <code>Array</code>
+
+<a name="module_qlik-utils.Object.map"></a>
+#### Object.map(obj, f) ⇒ <code>Object</code>
+Map function for objects
+
+**Kind**: static method of <code>[Object](#module_qlik-utils.Object)</code>  
+**Returns**: <code>Object</code> - an object with the same keys as obj but with values that are f(obj[key])  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>Object</code> | an object |
+| f | <code>function</code> | a function to apply to each property of obj |
+
+<a name="module_qlik-utils.Object.keys"></a>
+#### Object.keys(obj) ⇒ <code>Array</code>
+Gets an object's keys into an array
+
+**Kind**: static method of <code>[Object](#module_qlik-utils.Object)</code>  
+**Returns**: <code>Array</code> - an array containing obj's keys  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>Object</code> | the object to get keys from |
+
+<a name="module_qlik-utils.Object.values"></a>
+#### Object.values(obj) ⇒ <code>Array</code>
+Gets an object's values into an array
+
+**Kind**: static method of <code>[Object](#module_qlik-utils.Object)</code>  
+**Returns**: <code>Array</code> - an array containing obj's values  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>Object</code> | the object to get values from |
 
 <a name="module_qlik-utils.ifnotundef"></a>
 ### utils.ifnotundef(a, b, [c]) ⇒ <code>\*</code>
