@@ -6,9 +6,7 @@ A set of utility functions / classes for simplifying the call to Qlik Sense APIs
 **License**: MIT Licensed  
 **Copyright**: Copyright (C) 2015 Loic Formont  
 **Example**  
-```js
-var utils = require("qlik-utils");
-```
+```javascriptvar utils = require("qlik-utils");```
 
 * [qlik-utils](#module_qlik-utils)
   * [.Array](#module_qlik-utils.Array) : <code>object</code>
@@ -27,26 +25,22 @@ var utils = require("qlik-utils");
 
 <a name="module_qlik-utils.Array"></a>
 ### utils.Array : <code>object</code>
-Wrapper for helper functions for arrays.
-     [See documentation](lib/array.md)
+Wrapper for helper functions for arrays.[See documentation](lib/array.md)
 
 **Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
 <a name="module_qlik-utils.Object"></a>
 ### utils.Object : <code>object</code>
-Wrapper for helper functions for objects.
-     [See documentation](lib/object.md)
+Wrapper for helper functions for objects.[See documentation](lib/object.md)
 
 **Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
 <a name="module_qlik-utils.Core"></a>
 ### utils.Core : <code>object</code>
-Wrapper for helper functions.
-     [See documentation](lib/core.md)
+Wrapper for helper functions.[See documentation](lib/core.md)
 
 **Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
 <a name="module_qlik-utils.Qlik"></a>
 ### utils.Qlik : <code>object</code>
-Wrapper for helper functions for Qlik Sense.
-     [See documentation](lib/qlik.md)
+Wrapper for helper functions for Qlik Sense.[See documentation](lib/qlik.md)
 
 **Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
 <a name="module_qlik-utils.ifnotundef"></a>
