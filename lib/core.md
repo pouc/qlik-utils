@@ -103,8 +103,7 @@ Starts the task.
 **Returns**: <code>Promise</code> - A promise that resolves when the Task is started  
 <a name="Core.Task+running"></a>
 #### task.running(val, [detail]) ⇒ <code>Promise</code>
-Changes the Task to the 'running' status.
-         This method can also be called to update the 'running' status with a new value
+Changes the Task to the 'running' status.This method can also be called to update the 'running' status with a new value
 
 **Kind**: instance method of <code>[Task](#Core.Task)</code>  
 **Returns**: <code>Promise</code> - A promise that resolves when the Task status is updated  
@@ -324,10 +323,7 @@ Stores the file to the disk
 **Returns**: <code>Promise</code> - A promise that resolves when the file is stored  
 <a name="Core.ifNotUndef"></a>
 ### Core.ifNotUndef(a, b, [c]) ⇒ <code>\*</code>
-Two parameters mode
-      If a is undefined, return b else a
-     Three parameters mode
-      If a is undefined, return c else b
+Two parameters mode If a is undefined, return b else aThree parameters mode If a is undefined, return c else b
 
 **Kind**: static method of <code>[Core](#Core)</code>  
 **Returns**: <code>\*</code> - a, b or c depending on their undefined status  
@@ -339,19 +335,7 @@ Two parameters mode
 | [c] | <code>\*</code> | the third parameter |
 
 **Example**  
-Two ways to use ifNotUndef. Either with two parameters (a||b):
-
-```javascript
-var myHost = utils.Core.ifNotUndef(options.host, options.hostname);
-```
-
-or with three parameters (a?b:c):
-     
-```javascript
-var myHost = utils.Core.ifNotUndef(options.host, options.hostname, 'localhost');
-```
-
-     
+Two ways to use ifNotUndef. Either with two parameters (a||b):```javascriptvar myHost = utils.Core.ifNotUndef(options.host, options.hostname);```or with three parameters (a?b:c):```javascriptvar myHost = utils.Core.ifNotUndef(options.host, options.hostname, 'localhost');```
 <a name="Core.loop"></a>
 ### Core.loop(func, param, retry, retryTimeout, task)
 Loops until func finishes successfully
@@ -367,26 +351,7 @@ Loops until func finishes successfully
 | task | <code>Task</code> | the task object to update when required |
 
 **Example**  
-```js
-     utils.Core.loop(
-          utils.Qlik.addToWhiteList,
-          [
-              '10.76.224.72',
-              {
-                  restUri: 'https://10.76.224.72:4242',
-                  pfx: certif,
-                  passPhrase: '',
-                  UserId: 'qlikservice',
-                  UserDirectory: '2008R2-0'
-              }
-          ],
-          30,
-          2000,
-          task
-     );
-     ```
-
-     
+```javascriptutils.Core.loop(     utils.Qlik.addToWhiteList,     [         '10.76.224.72',         {             restUri: 'https://10.76.224.72:4242',             pfx: certif,             passPhrase: '',             UserId: 'qlikservice',             UserDirectory: '2008R2-0'         }     ],     30,     2000,     task);```
 <a name="Core.setTimeout2Promise"></a>
 ### Core.setTimeout2Promise(timeout) ⇒ <code>Promise</code>
 Equivalent to setTimeout but returns a promise instead
@@ -400,11 +365,7 @@ Equivalent to setTimeout but returns a promise instead
 
 **Example**  
 ```js
-utils.Core.setTimeout2Promise(1000).then(function() {
-          console.log('hi');
-     });
-
-     
+utils.Core.setTimeout2Promise(1000).then(function() {     console.log('hi');});
 ```
 <a name="Core.copyFile"></a>
 ### Core.copyFile(source, target) ⇒ <code>Promise</code>
