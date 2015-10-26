@@ -340,11 +340,14 @@ Two parameters mode
 
 **Example**  
 Two ways to use ifNotUndef. Either with two parameters (a||b):
-     ```js
+
+     ```javascript
      var myHost = utils.Core.ifNotUndef(options.host, options.hostname);
      ```
+
      or with three parameters (a?b:c):
-     ```js
+     
+     ```javascript
      var myHost = utils.Core.ifNotUndef(options.host, options.hostname, 'localhost');
      ```
 
