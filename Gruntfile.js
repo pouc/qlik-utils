@@ -7,6 +7,14 @@ module.exports = function(grunt) {
             oneOutputFile: {
                 src: [ 'index.js', 'lib/**/*.js'],
                 dest: 'README.md'
+            },
+            multipleOutputfiles: {
+                files: [
+                    {src: "index.js", dest: "README.md"},
+                    {src: "lib/array.js", dest: "lib/array.md"},
+                    {src: "lib/core.js", dest: "lib/core.md"},
+                    {src: "lib/object.js", dest: "lib/object.md"}
+                ]
             }
         },
         bump: {
@@ -28,7 +36,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
 
     grunt.registerTask("release", "Release a new version, push it and publish it", function() {
-        grunt.task.run("bump-only:patch", "jsdoc2md", "shell:publish");
+        grunt.task.run("bump-only:patch", "jsdoc2md:oneOutputFile", "shell:publish");
     });
 
 };
