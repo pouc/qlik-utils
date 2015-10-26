@@ -1,12 +1,12 @@
 <a name="module_qlik-utils"></a>
 ## qlik-utils
-A set of utility functions / classes for simplifying the call to Qlik Sense APIs
+A set of utility functions / classes for simplifying the call to Qlik Sense APIs[See documentation](../README.md)
 
 **Author:** Loic Formont  
 **License**: MIT Licensed  
 **Copyright**: Copyright (C) 2015 Loic Formont  
 **Example**  
-```javascriptvar core = require("qlik-utils").Core;```
+```javascriptvar utils = require("qlik-utils");```
 
 * [qlik-utils](#module_qlik-utils)
   * [.Core](#module_qlik-utils.Core) : <code>object</code>
@@ -49,7 +49,7 @@ A set of utility functions / classes for simplifying the call to Qlik Sense APIs
 
 <a name="module_qlik-utils.Core"></a>
 ### utils.Core : <code>object</code>
-Wrapper for helper functions.
+Wrapper for helper functions.[See documentation](lib/core.md)
 
 **Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
 
