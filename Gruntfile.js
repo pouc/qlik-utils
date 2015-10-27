@@ -13,7 +13,8 @@ module.exports = function(grunt) {
                     {src: "index.js", dest: "README.md"},
                     {src: "lib/array.js", dest: "lib/array.md"},
                     {src: "lib/core.js", dest: "lib/core.md"},
-                    {src: "lib/object.js", dest: "lib/object.md"}
+                    {src: "lib/object.js", dest: "lib/object.md"},
+                    {src: [ "lib/qlik.js", "lib/qlik/*.js" ], dest: "lib/qlik.md"} // **/
                 ]
             }
         },
@@ -36,7 +37,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
 
     grunt.registerTask("release", "Release a new version, push it and publish it", function() {
-        grunt.task.run("bump-only:patch", "jsdoc2md:oneOutputFile", "shell:publish");
+        grunt.task.run("bump-only:patch", "jsdoc2md:multipleOutputfiles", "shell:publish");
     });
 
 };

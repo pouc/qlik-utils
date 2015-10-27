@@ -1,9 +1,3 @@
-var extend = require('extend');
-
-var base = require('./lib/qlik/base').Base;
-var advanced = require('./lib/qlik/advanced').Advanced;
-var qrs = require('./lib/qlik/apis/qrs');
-
 /**
  * A set of utility functions / classes for simplifying the call to Qlik Sense APIs
  * @module qlik-utils
@@ -50,7 +44,8 @@ module.exports = {
      *
      * @namespace
      */
-    Qlik: extend(true, {}, base, advanced, qrs)
+    Qlik: require('./lib/qlik').Qlik
+
 
 };
 
