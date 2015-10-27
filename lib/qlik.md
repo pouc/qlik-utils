@@ -6,9 +6,9 @@
 </dl>
 ## Typedefs
 <dl>
-<dt><a href="#options">options</a> : <code>Object</code></dt>
-<dd></dd>
 <dt><a href="#ticketParams">ticketParams</a> : <code>Object</code></dt>
+<dd></dd>
+<dt><a href="#options">options</a> : <code>Object</code></dt>
 <dd></dd>
 <dt><a href="#ticket">ticket</a> : <code>Object</code></dt>
 <dd></dd>
@@ -24,7 +24,7 @@ Wrapper for helper functions for Qlik Sense APIs.
   * [.addToWhiteList(ip, options)](#Qlik.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
   * [.dynamicAppClone(options)](#Qlik.dynamicAppClone) ⇒ <code>Promise</code>
   * [.generateXrfKey([size], [chars])](#Qlik.generateXrfKey) ⇒ <code>string</code>
-  * [.request(options, [params])](#Qlik.request) ⇒ <code>Promise.&lt;\*&gt;</code>
+  * [.request(options, [params])](#Qlik.request) ⇒ <code>Promise</code>
   * [.openSession(ticket, hostUri)](#Qlik.openSession) ⇒ <code>Promise.&lt;string&gt;</code>
 
 <a name="Qlik.getTicket"></a>
@@ -40,9 +40,7 @@ Generates a ticket on Qlik Sense QRS Api. If the targetId is not correctthen th
 | options | <code>[options](#options)</code> | the options to connect to the ticket API endpoint |
 
 **Example**  
-```js
-utils.Qlik.getTicket({     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''}, {     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}).then(function(retVal) {     console.log(retVal);});
-```
+```javascriptutils.Qlik.getTicket({     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''}, {     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}).then(function(retVal) {     console.log(retVal);});```
 <a name="Qlik.addToWhiteList"></a>
 ### Qlik.addToWhiteList(ip, options) ⇒ <code>Promise.&lt;Object&gt;</code>
 Adds the given ip address to the websocket whitelist of the given virtual proxy.Be careful: this restarts the proxy. The restart can take 1-2 seconds. All subsequent APIcalls within this restart will fail miserably with various random & useless error messages.
@@ -56,14 +54,13 @@ Adds the given ip address to the websocket whitelist of the given virtual proxy.
 | options | <code>[options](#options)</code> | the endpoint to add the ip to |
 
 **Example**  
-```js
-readFile('./client.pfx').then(function(certif) {     return utils.Qlik.addToWhiteList('10.76.224.72', {         restUri: 'https://10.76.224.72:4242',         pfx: certif,         passPhrase: '',         UserId: 'qlikservice',         UserDirectory: '2008R2-0'     });}).then(function(ret) {     console.log(ret);}, function(ret) {     console.log(ret);});
-```
+```javascriptreadFile('./client.pfx').then(function(certif) {     return utils.Qlik.addToWhiteList('10.76.224.72', {         restUri: 'https://10.76.224.72:4242',         pfx: certif,         passPhrase: '',         UserId: 'qlikservice',         UserDirectory: '2008R2-0'     });}).then(function(ret) {     console.log(ret);}, function(ret) {     console.log(ret);});```
 <a name="Qlik.dynamicAppClone"></a>
 ### Qlik.dynamicAppClone(options) ⇒ <code>Promise</code>
 Duplicates a template app, updates its script, reloads it and publishes it
 
 **Kind**: static method of <code>[Qlik](#Qlik)</code>  
+**Returns**: <code>Promise</code> - a promise that resolves when the process is finished  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -78,9 +75,7 @@ Duplicates a template app, updates its script, reloads it and publishes it
 | options.task | <code>Task</code> |  | task that will trace the cloning progress |
 
 **Example**  
-```js
-var task = new utils.Core.Task();task.start();task.bind(function(task) {     console.log(task.val, task.detail);});readFile(testQlikSensePfx).then(function(pfx) {     task.running('info', 'certificate loaded...');     return utils.Qlik.dynamicAppClone({         restUri: 'http://10.20.30.40',         pfx: pfx,         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         templateAppId: '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',         templateMaxParDup: 5,         scriptMarker: '%Replace me!%',         scriptReplaces: [ 'Employees.qvd' ],         scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,         publishStreamId: 'aaec8d41-5201-43ab-809f-3063750dfafd',         publishReplace: true,         task: task     });});
-```
+```javascriptvar task = new utils.Core.Task();task.start();task.bind(function(task) {     console.log(task.val, task.detail);});readFile(testQlikSensePfx).then(function(pfx) {     task.running('info', 'certificate loaded...');     return utils.Qlik.dynamicAppClone({         restUri: 'http://10.20.30.40',         pfx: pfx,         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         templateAppId: '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',         templateMaxParDup: 5,         scriptMarker: '%Replace me!%',         scriptReplaces: [ 'Employees.qvd' ],         scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,         publishStreamId: 'aaec8d41-5201-43ab-809f-3063750dfafd',         publishReplace: true,         task: task     });});```
 <a name="Qlik.generateXrfKey"></a>
 ### Qlik.generateXrfKey([size], [chars]) ⇒ <code>string</code>
 Generates a random Xrf key of a given size within a set of given chars
@@ -94,15 +89,13 @@ Generates a random Xrf key of a given size within a set of given chars
 | [chars] | <code>string</code> | <code>&quot;abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789&quot;</code> | the characters from which to construct the key |
 
 **Example**  
-```js
-var xrf = utils.Qlik.generateXrfkey(8);
-```
+```javascriptvar xrf = utils.Qlik.generateXrfkey(8);```
 <a name="Qlik.request"></a>
-### Qlik.request(options, [params]) ⇒ <code>Promise.&lt;\*&gt;</code>
+### Qlik.request(options, [params]) ⇒ <code>Promise</code>
 Makes a request on a Qlik Sense API endpoint defined in the options object, posting the params object
 
 **Kind**: static method of <code>[Qlik](#Qlik)</code>  
-**Returns**: <code>Promise.&lt;\*&gt;</code> - a promise resolving to the response to the request  
+**Returns**: <code>Promise</code> - a promise resolving to the response to the request  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -110,9 +103,7 @@ Makes a request on a Qlik Sense API endpoint defined in the options object, post
 | [params] | <code>Object</code> | the parameters to post to the API endpoint |
 
 **Example**  
-```js
-utils.Qlik.request({     restUri: 'https://10.76.224.72:4243/qps/ticket',     pfx: pfx,     passPhrase: ''}, {     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}).then(function(retVal) {     console.log(retVal);});
-```
+```javascriptutils.Qlik.request({     restUri: 'https://10.76.224.72:4243/qps/ticket',     pfx: pfx,     passPhrase: ''}, {     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}).then(function(retVal) {     console.log(retVal);});```
 <a name="Qlik.openSession"></a>
 ### Qlik.openSession(ticket, hostUri) ⇒ <code>Promise.&lt;string&gt;</code>
 Opens a session on the Qlik Sense Hub with the given ticket and returns the session cookie
@@ -126,9 +117,18 @@ Opens a session on the Qlik Sense Hub with the given ticket and returns the sess
 | hostUri | <code>string</code> | the URI of the Qlik Sense host (Hub or preferably QMC) to open a session on |
 
 **Example**  
-```js
-utils.Qlik.openSession({     UserDirectory: '2008R2-0',     UserId: 'qlikservice',     Attributes: [],     Ticket: 'QzSPXzBmJKjhucPF',     TargetUri: null}, 'https://localhost/hub').then(function(retVal) {     console.log(retVal);});
-```
+```javascriptutils.Qlik.openSession({     UserDirectory: '2008R2-0',     UserId: 'qlikservice',     Attributes: [],     Ticket: 'QzSPXzBmJKjhucPF',     TargetUri: null}, 'https://localhost/hub').then(function(retVal) {     console.log(retVal);});```
+<a name="ticketParams"></a>
+## ticketParams : <code>Object</code>
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| UserId | <code>string</code> | the user id to generate a ticket for |
+| UserDirectory | <code>string</code> | the user directory of the user to generate a ticket for |
+| Attributes | <code>string</code> | the user attributes |
+
 <a name="options"></a>
 ## options : <code>Object</code>
 **Kind**: global typedef  
@@ -144,17 +144,6 @@ utils.Qlik.openSession({     UserDirectory: '2008R2-0',     UserId: 'qlikservi
 | pfx | <code>buffer</code> |  | the Qlik Sense pfx certificate (not required if a session is set) |
 | passphrase | <code>string</code> |  | the Qlik Sense certificate's passphrase (not required if a session is set) |
 | timeout | <code>int</code> |  | the timeout of the HTTP request |
-
-<a name="ticketParams"></a>
-## ticketParams : <code>Object</code>
-**Kind**: global typedef  
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| UserId | <code>string</code> | the user id to generate a ticket for |
-| UserDirectory | <code>string</code> | the user directory of the user to generate a ticket for |
-| Attributes | <code>Array.&lt;string&gt;</code> | the user attributes |
 
 <a name="ticket"></a>
 ## ticket : <code>Object</code>
