@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     {src: "lib/core.js", dest: "lib/core.md"},
                     {src: "lib/object.js", dest: "lib/object.md"},
                     {src: [ "lib/qlik.js", "lib/qlik/*.js" ], dest: "lib/qlik.md"},
-                    {src: "lib/qlik/apis/qrs.js", dest: "lib/qlik/apis/qrs.md"}
+                    {src: [ "lib/qlik/apis/qrs.js", "lib/qlik/apis/qrs.sdk.js" ], dest: "lib/qlik/apis/qrs.md"}
                 ]
             }
         },

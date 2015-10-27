@@ -127,7 +127,8 @@ Opens a session on the Qlik Sense Hub with the given ticket and returns the sess
 | --- | --- | --- |
 | UserId | <code>string</code> | the user id to generate a ticket for |
 | UserDirectory | <code>string</code> | the user directory of the user to generate a ticket for |
-| Attributes | <code>string</code> | the user attributes |
+| Attributes | <code>Array.&lt;string&gt;</code> | the user attributes |
+| TargetId | <code>string</code> | a target id |
 
 <a name="options"></a>
 ## options : <code>Object</code>
