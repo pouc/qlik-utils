@@ -12,6 +12,8 @@
 <dd></dd>
 <dt><a href="#ticket">ticket</a> : <code>Object</code></dt>
 <dd></dd>
+<dt><a href="#replaceDef">replaceDef</a> : <code>Object</code></dt>
+<dd></dd>
 </dl>
 <a name="Qlik"></a>
 ## Qlik : <code>object</code>
@@ -80,7 +82,7 @@ Duplicates a template app, updates its script, reloads it and publishes it
 | options.templateAppId | <code>string</code> |  | id of the template application |
 | [options.templateMaxParDup] | <code>int</code> | <code>5</code> | maximum number of // operations (opened sockets & QRS API queries) |
 | [options.scriptMarker=] | <code>string</code> |  | marker to be found in the script and replaced during the duplication. If this parameter is null, the script is not updated. |
-| options.scriptReplaces | <code>Array.&lt;string&gt;</code> |  | replace value of the marker above for each array value |
+| options.scriptReplaces | <code>Array.&lt;(string\|replaceDef)&gt;</code> |  | replace value of the marker above for each array value |
 | [options.scriptRegex=] | <code>RegExp</code> |  | regex to track in the script trace. If this parameter is null (or scriptMarker parameter above is null), then the app is not reloaded |
 | [options.publishStreamId=] | <code>string</code> |  | id of the stream to publish into. If this parameter is null, then the app is not published |
 | options.publishReplace | <code>boolean</code> |  | boolean telling wether to replace the app if an app with the same name was already published in the same stream |
@@ -170,4 +172,15 @@ Opens a session on the Qlik Sense Hub with the given ticket and returns the sess
 | Attributes | <code>Array.&lt;string&gt;</code> | the user attributes |
 | Ticket | <code>string</code> | the ticket |
 | TargetUri | <code>string</code> | the target uri |
+
+<a name="replaceDef"></a>
+## replaceDef : <code>Object</code>
+**Kind**: global typedef  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| replace | <code>string</code> | the value to replace in the script |
+| oldAppName | <code>string</code> | an existing app name to replace |
+| newAppName | <code>string</code> | the new app name |
+| [publishStreamId] | <code>string</code> | a stream to publish the new app in |
 

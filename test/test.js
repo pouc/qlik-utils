@@ -568,14 +568,14 @@ describe('dynamicAppClone...', function() {
                 templateMaxParDup: 2,
                 scriptMarker: '%Replace me!%',
                 scriptReplaces: [
-                    randomLoop, { replace: randomLoop, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]' },
+                    randomLoop, { replace: randomLoop, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]', publishStreamId: '140c11bd-4c63-4ef1-8d95-458f7b8f2644' },
 //                    randomLoop + 1, { replace: randomLoop + 1, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]' },
 //                    randomLoop + 2, { replace: randomLoop + 2, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]' },
 //                    randomLoop + 3, { replace: randomLoop + 3, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]' },
 //                    randomLoop + 4, { replace: randomLoop + 4, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]' }
                 ],
                 scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,
-                publishStreamId: '140c11bd-4c63-4ef1-8d95-458f7b8f2644',
+//                publishStreamId: '140c11bd-4c63-4ef1-8d95-458f7b8f2644',
                 publishReplace: true,
                 task: task
             });
