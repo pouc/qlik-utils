@@ -54,78 +54,78 @@ module.exports = {
  * Deprecated since version 2.0. Use Core.ifNotUndef instead
  * @deprecated
  */
-exports.ifnotundef = function(a, b, c) {
-    return utils.Core.ifNotUndef.apply(this, arguments);
+module.exports.ifnotundef = function(a, b, c) {
+    return module.exports.Core.ifNotUndef.apply(this, arguments);
 };
 
 /**
  * Deprecated since version 2.0. Use Qlik.generateXrfKey instead
  * @deprecated
  */
-exports.generateXrfkey = function(size, chars) {
-    return utils.Qlik.generateXrfKey.apply(this, arguments);
+module.exports.generateXrfkey = function(size, chars) {
+    return module.exports.Qlik.generateXrfKey.apply(this, arguments);
 };
 
 /**
  * Deprecated since version 2.0. Use Qlik.request instead
  * @deprecated
  */
-exports.request = function(options, params) {
-    return utils.Qlik.request.apply(this, arguments);
+module.exports.request = function(options, params) {
+    return module.exports.Qlik.request.apply(this, arguments);
 };
 
 /**
  * Deprecated since version 2.0. Use Qlik.getTicket instead
  * @deprecated
  */
-exports.getTicket = function(options, params) {
-    return utils.Qlik.getTicket.apply(this, arguments);
+module.exports.getTicket = function(options, params) {
+    return module.exports.Qlik.getTicket.apply(this, arguments);
 };
 
 /**
  * Deprecated since version 2.0. Use Qlik.openSession instead
  * @deprecated
  */
-exports.openSession = function(ticket, hostUri) {
-    return utils.Qlik.openSession.apply(this, arguments);
+module.exports.openSession = function(ticket, hostUri) {
+    return module.exports.Qlik.openSession.apply(this, arguments);
 };
 
 /**
  * Deprecated since version 2.0. Use Qlik.addToWhiteList instead
  * @deprecated
  */
-exports.addToWhiteList = function(ip, options) {
-    return utils.Qlik.addToWhiteList.apply(this, arguments);
+module.exports.addToWhiteList = function(ip, options) {
+    return module.exports.Qlik.addToWhiteList.apply(this, arguments);
 };
 
 /**
  * Deprecated since version 2.0. Use Core.loop instead
  * @deprecated
  */
-exports.loop = function(func, param, retry, retryTimeout, task) {
-    return utils.Core.loop.apply(this, arguments);
+module.exports.loop = function(func, param, retry, retryTimeout, task) {
+    return module.exports.Core.loop.apply(this, arguments);
 };
 
 /**
  * Deprecated since version 2.0. Use Core.setTimeout2Promise instead
  * @deprecated
  */
-exports.setTimeout2Promise = function(timeout) {
-    return utils.Core.setTimeout2Promise.apply(this, arguments);
+module.exports.setTimeout2Promise = function(timeout) {
+    return module.exports.Core.setTimeout2Promise.apply(this, arguments);
 };
 
 /**
  * Deprecated since version 2.0. Use Qlik.dynamicAppClone instead
  * @deprecated
  */
-exports.dynamicAppClone = function(options, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) {
+module.exports.dynamicAppClone = function(options, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) {
     options.templateAppId = templateAppId;
     options.scriptMarker = scriptMarker;
     options.scriptReplaces = scriptReplaces;
     options.scriptRegex = scriptRegex;
     options.publishStreamId = publishStreamId;
     options.task = task;
-    return utils.Qlik.dynamicAppClone.apply(this, arguments);
+    return module.exports.Qlik.dynamicAppClone.apply(this, arguments);
 };
 
 

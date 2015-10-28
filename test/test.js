@@ -259,7 +259,6 @@ describe('openSession...', function() {
     });
 
     it('should open session', function(done) {
-
         Q.all([
             pfx.then(function(pfx) {
                 return utils.getTicket({
@@ -275,9 +274,7 @@ describe('openSession...', function() {
                 return utils.Qlik.openSession(ticket, 'https://' + testQlikSenseIp + '/qmc/')
             }).should.eventually.match(/X-Qlik-Session=[a-f0-9\-]{36};/)
         ]).should.notify(done);
-
     });
-
 });
 
 describe('Task...', function() {
@@ -598,7 +595,7 @@ describe('dynamicAppClone...', function() {
 describe('createQrsApiSdk...', function() {
 
     it('should be defined', function() {
-        expect(utils.Qlik.createQrsApiSdk).to.not.be.undefined;
+        expect(utils.Qlik.apis.createQrsApiSdk).to.not.be.undefined;
     });
 
     var pfx = readFile(testQlikSensePfx);
@@ -613,87 +610,88 @@ describe('createQrsApiSdk...', function() {
 
         Q.all([
             pfx.then(function(pfx) {
-                var sdk = utils.Qlik.createQrsApiSdk({
+                return sdk = utils.Qlik.apis.createQrsApiSdk({
                     restUri: 'https://' + testQlikSenseIp + ':4242',
                     pfx: pfx,
                     passPhrase: '',
                     UserId: 'qlikservice',
                     UserDirectory: '2008R2-0'
-                }).then(function(sdk) {
-                    eval('parsedSdk = ' + sdk);
-                    return parsedSdk({});
-                });
-
-                return Q.all([
-                    sdk.should.eventually.have.property("about").to.not.be.undefined,
-                    sdk.should.eventually.have.property("app").to.not.be.undefined,
-                    sdk.should.eventually.have.property("appavailability").to.not.be.undefined,
-                    sdk.should.eventually.have.property("appcomponent").to.not.be.undefined,
-                    sdk.should.eventually.have.property("appcontent").to.not.be.undefined,
-                    sdk.should.eventually.have.property("appcontentquota").to.not.be.undefined,
-                    sdk.should.eventually.have.property("applicationlog").to.not.be.undefined,
-                    sdk.should.eventually.have.property("appseedinfo").to.not.be.undefined,
-                    sdk.should.eventually.have.property("appstatus").to.not.be.undefined,
-                    sdk.should.eventually.have.property("binarydelete").to.not.be.undefined,
-                    sdk.should.eventually.have.property("binarydownload").to.not.be.undefined,
-                    sdk.should.eventually.have.property("binarysyncruleevaluation").to.not.be.undefined,
-                    sdk.should.eventually.have.property("cache").to.not.be.undefined,
-                    sdk.should.eventually.have.property("certificatedistribution").to.not.be.undefined,
-                    sdk.should.eventually.have.property("compositeevent").to.not.be.undefined,
-                    sdk.should.eventually.have.property("compositeeventoperational").to.not.be.undefined,
-                    sdk.should.eventually.have.property("compositeeventruleoperational").to.not.be.undefined,
-                    sdk.should.eventually.have.property("contentlibrary").to.not.be.undefined,
-                    sdk.should.eventually.have.property("custompropertydefinition").to.not.be.undefined,
-                    sdk.should.eventually.have.property("dataconnection").to.not.be.undefined,
-                    sdk.should.eventually.have.property("download").to.not.be.undefined,
-                    sdk.should.eventually.have.property("engineservice").to.not.be.undefined,
-                    sdk.should.eventually.have.property("event").to.not.be.undefined,
-                    sdk.should.eventually.have.property("eventoperational").to.not.be.undefined,
-                    sdk.should.eventually.have.property("executionresult").to.not.be.undefined,
-                    sdk.should.eventually.have.property("executionsession").to.not.be.undefined,
-                    sdk.should.eventually.have.property("extension").to.not.be.undefined,
-                    sdk.should.eventually.have.property("externalchangeinfo").to.not.be.undefined,
-                    sdk.should.eventually.have.property("externalprogramtask").to.not.be.undefined,
-                    sdk.should.eventually.have.property("externalprogramtaskoperational").to.not.be.undefined,
-                    sdk.should.eventually.have.property("filereference").to.not.be.undefined,
-                    sdk.should.eventually.have.property("license").to.not.be.undefined,
-                    sdk.should.eventually.have.property("licenseaccessusage").to.not.be.undefined,
-                    sdk.should.eventually.have.property("loadbalancing").to.not.be.undefined,
-                    sdk.should.eventually.have.property("log").to.not.be.undefined,
-                    sdk.should.eventually.have.property("managementconsolelog").to.not.be.undefined,
-                    sdk.should.eventually.have.property("mimetype").to.not.be.undefined,
-                    sdk.should.eventually.have.property("notification").to.not.be.undefined,
-                    sdk.should.eventually.have.property("printingservice").to.not.be.undefined,
-                    sdk.should.eventually.have.property("proxyservice").to.not.be.undefined,
-                    sdk.should.eventually.have.property("reloadtask").to.not.be.undefined,
-                    sdk.should.eventually.have.property("reloadtaskoperational").to.not.be.undefined,
-                    sdk.should.eventually.have.property("repositoryservice").to.not.be.undefined,
-                    sdk.should.eventually.have.property("schedulerservice").to.not.be.undefined,
-                    sdk.should.eventually.have.property("schemaevent").to.not.be.undefined,
-                    sdk.should.eventually.have.property("schemaeventoperational").to.not.be.undefined,
-                    sdk.should.eventually.have.property("selection").to.not.be.undefined,
-                    sdk.should.eventually.have.property("servernodeconfiguration").to.not.be.undefined,
-                    sdk.should.eventually.have.property("servernoderegistration").to.not.be.undefined,
-                    sdk.should.eventually.have.property("servicestatus").to.not.be.undefined,
-                    sdk.should.eventually.have.property("staticcontent").to.not.be.undefined,
-                    sdk.should.eventually.have.property("staticcontentreference").to.not.be.undefined,
-                    sdk.should.eventually.have.property("staticcontentreferencebase").to.not.be.undefined,
-                    sdk.should.eventually.have.property("stream").to.not.be.undefined,
-                    sdk.should.eventually.have.property("sync").to.not.be.undefined,
-                    sdk.should.eventually.have.property("syncsession").to.not.be.undefined,
-                    sdk.should.eventually.have.property("systemrule").to.not.be.undefined,
-                    sdk.should.eventually.have.property("tag").to.not.be.undefined,
-                    sdk.should.eventually.have.property("task").to.not.be.undefined,
-                    sdk.should.eventually.have.property("taskoperational").to.not.be.undefined,
-                    sdk.should.eventually.have.property("tempcontent").to.not.be.undefined,
-                    sdk.should.eventually.have.property("user").to.not.be.undefined,
-                    sdk.should.eventually.have.property("userdirectory").to.not.be.undefined,
-                    sdk.should.eventually.have.property("userdirectoryconnector").to.not.be.undefined,
-                    sdk.should.eventually.have.property("loadbalancing").to.not.be.undefined,
-                    sdk.should.eventually.have.property("usersynctask").to.not.be.undefined,
-                    sdk.should.eventually.have.property("usersynctaskoperational").to.not.be.undefined,
-                    sdk.should.eventually.have.property("virtualproxyconfig").to.not.be.undefined
-                ]);
+                })
+            }).then(function(sdk) {
+                return sdk.objects.map(function(item) { return item.key; });
+            }).then(function(qrs) {
+                var refQrs = [
+                    "about",
+                    "app",
+                    "appavailability",
+                    "appcomponent",
+                    "appcontent",
+                    "appcontentquota",
+                    "applicationlog",
+                    "appseedinfo",
+                    "appstatus",
+                    "binarydelete",
+                    "binarydownload",
+                    "binarysyncruleevaluation",
+                    "cache",
+                    "certificatedistribution",
+                    "compositeevent",
+                    "compositeeventoperational",
+                    "compositeeventruleoperational",
+                    "contentlibrary",
+                    "custompropertydefinition",
+                    "dataconnection",
+                    "download",
+                    "engineservice",
+                    "event",
+                    "eventoperational",
+                    "executionresult",
+                    "executionsession",
+                    "extension",
+                    "externalchangeinfo",
+                    "externalprogramtask",
+                    "externalprogramtaskoperational",
+                    "filereference",
+                    "license",
+                    "licenseaccessusage",
+                    "loadbalancing",
+                    "log",
+                    "managementconsolelog",
+                    "mimetype",
+                    "notification",
+                    "printingservice",
+                    "proxyservice",
+                    "reloadtask",
+                    "reloadtaskoperational",
+                    "repositoryservice",
+                    "schedulerservice",
+                    "schemaevent",
+                    "schemaeventoperational",
+                    "selection",
+                    "servernodeconfiguration",
+                    "servernoderegistration",
+                    "servicestatus",
+                    "staticcontent",
+                    "staticcontentreference",
+                    "staticcontentreferencebase",
+                    "stream",
+                    "sync",
+                    "syncsession",
+                    "systemrule",
+                    "tag",
+                    "task",
+                    "taskoperational",
+                    "tempcontent",
+                    "user",
+                    "userdirectory",
+                    "userdirectoryconnector",
+                    "loadbalancing",
+                    "usersynctask",
+                    "usersynctaskoperational",
+                    "virtualproxyconfig"
+                ];
+                expect(qrs.filter(function(i) {return refQrs.indexOf(i) < 0;}).length).to.equal(0);
+                expect(refQrs.filter(function(i) {return qrs.indexOf(i) < 0;}).length).to.equal(0);
             })
         ]).should.notify(done)
     });
@@ -703,7 +701,7 @@ describe('createQrsApiSdk...', function() {
 describe('QRS SDK...', function() {
 
     it('should be defined', function() {
-        expect(utils.Qlik.qrs).to.not.be.undefined;
+        expect(utils.Qlik.apis.qrs).to.not.be.undefined;
     });
 
     var pfx = readFile(testQlikSensePfx);
@@ -716,22 +714,21 @@ describe('QRS SDK...', function() {
 
         var qrs = pfx.then(function(pfx) {
             return Q.all([
-                utils.Qlik.qrs({
+                utils.Qlik.apis.qrs({
                     restUri: 'https://' + testQlikSenseIp + ':4242',
                     pfx: pfx,
                     passPhrase: '',
                     UserId: 'qlikservice',
                     UserDirectory: '2008R2-0'
                 }),
-                utils.Qlik.createQrsApiSdk({
+                utils.Qlik.apis.createQrsApiSdk({
                     restUri: 'https://' + testQlikSenseIp + ':4242',
                     pfx: pfx,
                     passPhrase: '',
                     UserId: 'qlikservice',
                     UserDirectory: '2008R2-0'
                 }).then(function(sdk) {
-                    eval('var parsedSdk = ' + sdk);
-                    return parsedSdk({});
+                    return sdk.objects.map(function(item) { return item.key; });
                 })
             ])
         }).then(function(reply) {
@@ -739,7 +736,7 @@ describe('QRS SDK...', function() {
             var qrsRef = reply[1];
 
             var qrsEP = Object.keys(qrs);
-            var qrsRefEp = Object.keys(qrsRef);
+            var qrsRefEp = qrsRef;
 
             expect(qrsEP.filter(function(i) {return qrsRefEp.indexOf(i) < 0;}).length).to.equal(0);
             expect(qrsRefEp.filter(function(i) {return qrsEP.indexOf(i) < 0;}).length).to.equal(0);
@@ -747,6 +744,22 @@ describe('QRS SDK...', function() {
         }).should.notify(done);
     });
 
+    it('should implement QRS API', function(done) {
+
+        pfx.then(function(pfx) {
+            return utils.Qlik.apis.qrs({
+                restUri: 'https://' + testQlikSenseIp + ':4242',
+                pfx: pfx,
+                passPhrase: '',
+                UserId: 'qlikservice',
+                UserDirectory: '2008R2-0'
+            });
+        }).then(function(qrsApi) {
+            return qrsApi.about.api.description.get(true, undefined, 'JSON');
+        }).should.notify(done)
+
+
+    });
 
 
 });

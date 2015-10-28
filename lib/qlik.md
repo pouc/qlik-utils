@@ -20,6 +20,8 @@ Wrapper for helper functions for Qlik Sense APIs.
 **Kind**: global namespace  
 
 * [Qlik](#Qlik) : <code>object</code>
+  * [.apis](#Qlik.apis) : <code>object</code>
+    * [.qrs](#Qlik.apis.qrs) : <code>object</code>
   * [.getTicket(params, options)](#Qlik.getTicket) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
   * [.addToWhiteList(ip, options)](#Qlik.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
   * [.dynamicAppClone(options)](#Qlik.dynamicAppClone) ⇒ <code>Promise</code>
@@ -27,6 +29,16 @@ Wrapper for helper functions for Qlik Sense APIs.
   * [.request(options, [params])](#Qlik.request) ⇒ <code>Promise</code>
   * [.openSession(ticket, hostUri)](#Qlik.openSession) ⇒ <code>Promise.&lt;string&gt;</code>
 
+<a name="Qlik.apis"></a>
+### Qlik.apis : <code>object</code>
+**Kind**: static namespace of <code>[Qlik](#Qlik)</code>  
+<a name="Qlik.apis.qrs"></a>
+#### apis.qrs : <code>object</code>
+[See documentation](qlik/apis/qrs/qrs.md)
+
+**Kind**: static namespace of <code>[apis](#Qlik.apis)</code>  
+**Example**  
+```javascriptvar qrsApi = utils.Qlik.apis.qrs({    restUri: 'https://localhost:4242',    pfx: pfx,    UserId: 'qlikservice',    UserDirectory: '2008R2-0'});```
 <a name="Qlik.getTicket"></a>
 ### Qlik.getTicket(params, options) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
 Generates a ticket on Qlik Sense QRS Api. If the targetId is not correctthen the ticket will redirect to the hub
