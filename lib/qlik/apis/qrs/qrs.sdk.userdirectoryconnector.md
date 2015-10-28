@@ -19,7 +19,9 @@
 <a name="userdirectoryconnector.deleteudandusers.delete"></a>
 #### deleteudandusers.delete([userdirectoryid]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectoryconnector/deleteudandusers?userdirectoryid={userdirectoryid}
+
 This method is manual
 
 **Kind**: static method of <code>[deleteudandusers](#userdirectoryconnector.deleteudandusers)</code>  
@@ -41,7 +43,9 @@ qrsApi.userdirectoryconnector.deleteudandusers.delete(userdirectoryid).then(func
 <a name="userdirectoryconnector.refreshudctypes.post"></a>
 #### refreshudctypes.post() ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectoryconnector/refreshudctypes
+
 This method is manual
 
 **Kind**: static method of <code>[refreshudctypes](#userdirectoryconnector.refreshudctypes)</code>  
@@ -58,7 +62,9 @@ qrsApi.userdirectoryconnector.refreshudctypes.post().then(function(Object) {
 <a name="userdirectoryconnector.syncuserdirectories.post"></a>
 #### syncuserdirectories.post(postParams) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectoryconnector/syncuserdirectories
+
 This method is manual
 
 **Kind**: static method of <code>[syncuserdirectories](#userdirectoryconnector.syncuserdirectories)</code>  
@@ -77,7 +83,9 @@ qrsApi.userdirectoryconnector.syncuserdirectories.post(postParams).then(function
 <a name="userdirectoryconnector.get"></a>
 ### userdirectoryconnector.get() ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectoryconnector
+
 This method is manual
 
 **Kind**: static method of <code>[userdirectoryconnector](#userdirectoryconnector)</code>  

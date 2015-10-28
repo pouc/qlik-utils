@@ -51,7 +51,9 @@
 <a name="userdirectory.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#userdirectory.id)</code>  
@@ -65,7 +67,9 @@ qrsApi.userdirectory.id(id).delete().then(function() {
 <a name="userdirectory.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;UserDirectory&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#userdirectory.id)</code>  
@@ -84,7 +88,9 @@ qrsApi.userdirectory.id(id).get(appendprivileges).then(function(UserDirectory) {
 <a name="userdirectory.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserDirectory&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#userdirectory.id)</code>  
@@ -107,7 +113,9 @@ qrsApi.userdirectory.id(id).put(postParams, appendprivileges).then(function(User
 <a name="userdirectory.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#userdirectory.count)</code>  
@@ -129,7 +137,9 @@ qrsApi.userdirectory.count.get(filter).then(function(int) {
 <a name="userdirectory.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectory&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#userdirectory.full)</code>  
@@ -153,7 +163,9 @@ qrsApi.userdirectory.full.get(filter, orderby, appendprivileges).then(function(A
 <a name="userdirectory.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectory&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#userdirectory.many)</code>  
@@ -176,7 +188,9 @@ qrsApi.userdirectory.many.post(postParams, appendprivileges).then(function(Array
 <a name="userdirectory.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#userdirectory.previewcreateprivilege)</code>  
@@ -198,7 +212,9 @@ qrsApi.userdirectory.previewcreateprivilege.post(postParams).then(function(Boole
 <a name="userdirectory.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#userdirectory.table)</code>  
@@ -253,7 +269,9 @@ qrsApi.userdirectory.table.post(postParams, filter, skip, take, sortcolumn, orde
 <a name="userdirectory.template.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#userdirectory.template.id)</code>  
@@ -267,7 +285,9 @@ qrsApi.userdirectory.template.id(id).delete().then(function() {
 <a name="userdirectory.template.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;UserDirectoryTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#userdirectory.template.id)</code>  
@@ -286,7 +306,9 @@ qrsApi.userdirectory.template.id(id).get(appendprivileges).then(function(UserDir
 <a name="userdirectory.template.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserDirectoryTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#userdirectory.template.id)</code>  
@@ -309,7 +331,9 @@ qrsApi.userdirectory.template.id(id).put(postParams, appendprivileges).then(func
 <a name="userdirectory.template.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#userdirectory.template.count)</code>  
@@ -331,7 +355,9 @@ qrsApi.userdirectory.template.count.get(filter).then(function(int) {
 <a name="userdirectory.template.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#userdirectory.template.full)</code>  
@@ -355,7 +381,9 @@ qrsApi.userdirectory.template.full.get(filter, orderby, appendprivileges).then(f
 <a name="userdirectory.template.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#userdirectory.template.many)</code>  
@@ -378,7 +406,9 @@ qrsApi.userdirectory.template.many.post(postParams, appendprivileges).then(funct
 <a name="userdirectory.template.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#userdirectory.template.previewcreateprivilege)</code>  
@@ -400,7 +430,9 @@ qrsApi.userdirectory.template.previewcreateprivilege.post(postParams).then(funct
 <a name="userdirectory.template.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#userdirectory.template.table)</code>  
@@ -424,7 +456,9 @@ qrsApi.userdirectory.template.table.post(postParams, filter, skip, take, sortcol
 <a name="userdirectory.template.get"></a>
 #### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#userdirectory.template)</code>  
@@ -445,7 +479,9 @@ qrsApi.userdirectory.template.get(filter, orderby, appendprivileges).then(functi
 <a name="userdirectory.template.post"></a>
 #### template.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserDirectoryTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory/template?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#userdirectory.template)</code>  
@@ -465,7 +501,9 @@ qrsApi.userdirectory.template.post(postParams, appendprivileges).then(function(U
 <a name="userdirectory.get"></a>
 ### userdirectory.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectory&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[userdirectory](#userdirectory)</code>  
@@ -486,7 +524,9 @@ qrsApi.userdirectory.get(filter, orderby, appendprivileges).then(function(Array.
 <a name="userdirectory.post"></a>
 ### userdirectory.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserDirectory&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/userdirectory?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[userdirectory](#userdirectory)</code>  

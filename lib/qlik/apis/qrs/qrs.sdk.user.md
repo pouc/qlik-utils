@@ -74,7 +74,9 @@
 <a name="user.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#user.id)</code>  
@@ -88,7 +90,9 @@ qrsApi.user.id(id).delete().then(function() {
 <a name="user.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;User&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#user.id)</code>  
@@ -107,7 +111,9 @@ qrsApi.user.id(id).get(appendprivileges).then(function(User) {
 <a name="user.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;User&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#user.id)</code>  
@@ -130,7 +136,9 @@ qrsApi.user.id(id).put(postParams, appendprivileges).then(function(User) {
 <a name="user.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#user.count)</code>  
@@ -180,7 +188,9 @@ qrsApi.user.count.get(filter).then(function(int) {
 <a name="user.followingapp.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#user.followingapp.id)</code>  
@@ -194,7 +204,9 @@ qrsApi.user.followingapp.id(id).delete().then(function() {
 <a name="user.followingapp.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;UserFollowingApp&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#user.followingapp.id)</code>  
@@ -213,7 +225,9 @@ qrsApi.user.followingapp.id(id).get(appendprivileges).then(function(UserFollowin
 <a name="user.followingapp.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserFollowingApp&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#user.followingapp.id)</code>  
@@ -236,7 +250,9 @@ qrsApi.user.followingapp.id(id).put(postParams, appendprivileges).then(function(
 <a name="user.followingapp.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#user.followingapp.count)</code>  
@@ -258,7 +274,9 @@ qrsApi.user.followingapp.count.get(filter).then(function(int) {
 <a name="user.followingapp.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#user.followingapp.full)</code>  
@@ -282,7 +300,9 @@ qrsApi.user.followingapp.full.get(filter, orderby, appendprivileges).then(functi
 <a name="user.followingapp.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#user.followingapp.many)</code>  
@@ -305,7 +325,9 @@ qrsApi.user.followingapp.many.post(postParams, appendprivileges).then(function(A
 <a name="user.followingapp.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#user.followingapp.previewcreateprivilege)</code>  
@@ -327,7 +349,9 @@ qrsApi.user.followingapp.previewcreateprivilege.post(postParams).then(function(B
 <a name="user.followingapp.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#user.followingapp.table)</code>  
@@ -351,7 +375,9 @@ qrsApi.user.followingapp.table.post(postParams, filter, skip, take, sortcolumn, 
 <a name="user.followingapp.get"></a>
 #### followingapp.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[followingapp](#user.followingapp)</code>  
@@ -372,7 +398,9 @@ qrsApi.user.followingapp.get(filter, orderby, appendprivileges).then(function(Ar
 <a name="user.followingapp.post"></a>
 #### followingapp.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserFollowingApp&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/followingapp?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[followingapp](#user.followingapp)</code>  
@@ -395,7 +423,9 @@ qrsApi.user.followingapp.post(postParams, appendprivileges).then(function(UserFo
 <a name="user.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;User&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#user.full)</code>  
@@ -419,7 +449,9 @@ qrsApi.user.full.get(filter, orderby, appendprivileges).then(function(Array.<Use
 <a name="user.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;User&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#user.many)</code>  
@@ -442,7 +474,9 @@ qrsApi.user.many.post(postParams, appendprivileges).then(function(Array.<User>) 
 <a name="user.ownedresources.get"></a>
 #### ownedresources.get([selectionid], [limit], [filter], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;OwnedResourceResult&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/ownedresources?userselection={selectionid}&limit={limit}&filter={filter}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[ownedresources](#user.ownedresources)</code>  
@@ -467,7 +501,9 @@ qrsApi.user.ownedresources.get(selectionid, limit, filter, appendprivileges).the
 <a name="user.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#user.previewcreateprivilege)</code>  
@@ -517,7 +553,9 @@ qrsApi.user.previewcreateprivilege.post(postParams).then(function(Boolean) {
 <a name="user.recentapp.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#user.recentapp.id)</code>  
@@ -531,7 +569,9 @@ qrsApi.user.recentapp.id(id).delete().then(function() {
 <a name="user.recentapp.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;UserRecentApp&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#user.recentapp.id)</code>  
@@ -550,7 +590,9 @@ qrsApi.user.recentapp.id(id).get(appendprivileges).then(function(UserRecentApp) 
 <a name="user.recentapp.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserRecentApp&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#user.recentapp.id)</code>  
@@ -573,7 +615,9 @@ qrsApi.user.recentapp.id(id).put(postParams, appendprivileges).then(function(Use
 <a name="user.recentapp.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#user.recentapp.count)</code>  
@@ -595,7 +639,9 @@ qrsApi.user.recentapp.count.get(filter).then(function(int) {
 <a name="user.recentapp.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#user.recentapp.full)</code>  
@@ -619,7 +665,9 @@ qrsApi.user.recentapp.full.get(filter, orderby, appendprivileges).then(function(
 <a name="user.recentapp.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#user.recentapp.many)</code>  
@@ -642,7 +690,9 @@ qrsApi.user.recentapp.many.post(postParams, appendprivileges).then(function(Arra
 <a name="user.recentapp.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#user.recentapp.previewcreateprivilege)</code>  
@@ -664,7 +714,9 @@ qrsApi.user.recentapp.previewcreateprivilege.post(postParams).then(function(Bool
 <a name="user.recentapp.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#user.recentapp.table)</code>  
@@ -688,7 +740,9 @@ qrsApi.user.recentapp.table.post(postParams, filter, skip, take, sortcolumn, ord
 <a name="user.recentapp.get"></a>
 #### recentapp.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[recentapp](#user.recentapp)</code>  
@@ -709,7 +763,9 @@ qrsApi.user.recentapp.get(filter, orderby, appendprivileges).then(function(Array
 <a name="user.recentapp.post"></a>
 #### recentapp.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserRecentApp&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/recentapp?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[recentapp](#user.recentapp)</code>  
@@ -749,7 +805,9 @@ qrsApi.user.recentapp.post(postParams, appendprivileges).then(function(UserRecen
 <a name="user.sync.userdirectory.userid.get"></a>
 ###### userid.get() ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/sync/{userdirectory}/{userid}
+
 This method is manual
 
 **Kind**: static method of <code>[userid](#user.sync.userdirectory.userid)</code>  
@@ -766,7 +824,9 @@ qrsApi.user.sync.userdirectory(userdirectory).userid(userid).get().then(function
 <a name="user.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#user.table)</code>  
@@ -790,7 +850,9 @@ qrsApi.user.table.post(postParams, filter, skip, take, sortcolumn, orderascendin
 <a name="user.get"></a>
 ### user.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;User&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[user](#user)</code>  
@@ -811,7 +873,9 @@ qrsApi.user.get(filter, orderby, appendprivileges).then(function(Array.<User>) {
 <a name="user.post"></a>
 ### user.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;User&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/user?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[user](#user)</code>  

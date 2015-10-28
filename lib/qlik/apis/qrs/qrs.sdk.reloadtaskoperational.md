@@ -34,7 +34,9 @@
 <a name="reloadtaskoperational.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#reloadtaskoperational.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.reloadtaskoperational.id(id).delete().then(function() {
 <a name="reloadtaskoperational.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;ReloadTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#reloadtaskoperational.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.reloadtaskoperational.id(id).get(appendprivileges).then(function(ReloadTa
 <a name="reloadtaskoperational.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ReloadTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#reloadtaskoperational.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.reloadtaskoperational.id(id).put(postParams, appendprivileges).then(funct
 <a name="reloadtaskoperational.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#reloadtaskoperational.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.reloadtaskoperational.count.get(filter).then(function(int) {
 <a name="reloadtaskoperational.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#reloadtaskoperational.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.reloadtaskoperational.full.get(filter, orderby, appendprivileges).then(fu
 <a name="reloadtaskoperational.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#reloadtaskoperational.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.reloadtaskoperational.many.post(postParams, appendprivileges).then(functi
 <a name="reloadtaskoperational.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#reloadtaskoperational.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.reloadtaskoperational.previewcreateprivilege.post(postParams).then(functi
 <a name="reloadtaskoperational.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#reloadtaskoperational.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.reloadtaskoperational.table.post(postParams, filter, skip, take, sortcolu
 <a name="reloadtaskoperational.get"></a>
 ### reloadtaskoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtaskoperational](#reloadtaskoperational)</code>  
@@ -226,7 +244,9 @@ qrsApi.reloadtaskoperational.get(filter, orderby, appendprivileges).then(functio
 <a name="reloadtaskoperational.post"></a>
 ### reloadtaskoperational.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ReloadTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtaskoperational?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtaskoperational](#reloadtaskoperational)</code>  

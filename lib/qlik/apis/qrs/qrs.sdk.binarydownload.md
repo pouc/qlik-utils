@@ -21,7 +21,9 @@
 <a name="binarydownload.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;BinaryDownload&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydownload/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#binarydownload.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.binarydownload.id(id).get(appendprivileges).then(function(BinaryDownload)
 <a name="binarydownload.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydownload/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#binarydownload.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.binarydownload.count.get(filter).then(function(int) {
 <a name="binarydownload.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinaryDownload&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydownload/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#binarydownload.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.binarydownload.full.get(filter, orderby, appendprivileges).then(function(
 <a name="binarydownload.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydownload/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#binarydownload.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.binarydownload.table.post(postParams, filter, skip, take, sortcolumn, ord
 <a name="binarydownload.get"></a>
 ### binarydownload.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinaryDownload&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydownload?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[binarydownload](#binarydownload)</code>  

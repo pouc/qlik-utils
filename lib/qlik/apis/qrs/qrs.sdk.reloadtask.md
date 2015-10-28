@@ -41,7 +41,9 @@
 <a name="reloadtask.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#reloadtask.id)</code>  
@@ -55,7 +57,9 @@ qrsApi.reloadtask.id(id).delete().then(function() {
 <a name="reloadtask.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;ReloadTask&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#reloadtask.id)</code>  
@@ -74,7 +78,9 @@ qrsApi.reloadtask.id(id).get(appendprivileges).then(function(ReloadTask) {
 <a name="reloadtask.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ReloadTask&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#reloadtask.id)</code>  
@@ -105,7 +111,9 @@ qrsApi.reloadtask.id(id).put(postParams, appendprivileges).then(function(ReloadT
 <a name="reloadtask.reloadtaskid.scriptlog.get"></a>
 ##### scriptlog.get([filereferenceid]) ⇒ <code>Promise.&lt;Guid&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/{reloadtaskid}/scriptlog?filereferenceid={filereferenceid}
+
 This method is manual
 
 **Kind**: static method of <code>[scriptlog](#reloadtask.reloadtaskid.scriptlog)</code>  
@@ -127,7 +135,9 @@ qrsApi.reloadtask.reloadtaskid(reloadtaskid).scriptlog.get(filereferenceid).then
 <a name="reloadtask.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#reloadtask.count)</code>  
@@ -149,7 +159,9 @@ qrsApi.reloadtask.count.get(filter).then(function(int) {
 <a name="reloadtask.create.post"></a>
 #### create.post(postParams) ⇒ <code>Promise.&lt;ReloadTask&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/create
+
 This method is manual
 
 **Kind**: static method of <code>[create](#reloadtask.create)</code>  
@@ -171,7 +183,9 @@ qrsApi.reloadtask.create.post(postParams).then(function(ReloadTask) {
 <a name="reloadtask.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#reloadtask.full)</code>  
@@ -195,7 +209,9 @@ qrsApi.reloadtask.full.get(filter, orderby, appendprivileges).then(function(Arra
 <a name="reloadtask.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#reloadtask.many)</code>  
@@ -218,7 +234,9 @@ qrsApi.reloadtask.many.post(postParams, appendprivileges).then(function(Array.<R
 <a name="reloadtask.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#reloadtask.previewcreateprivilege)</code>  
@@ -240,7 +258,9 @@ qrsApi.reloadtask.previewcreateprivilege.post(postParams).then(function(Boolean)
 <a name="reloadtask.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#reloadtask.table)</code>  
@@ -267,7 +287,9 @@ qrsApi.reloadtask.table.post(postParams, filter, skip, take, sortcolumn, orderas
 <a name="reloadtask.update.post"></a>
 #### update.post(postParams) ⇒ <code>Promise.&lt;ReloadTask&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask/update
+
 This method is manual
 
 **Kind**: static method of <code>[update](#reloadtask.update)</code>  
@@ -286,7 +308,9 @@ qrsApi.reloadtask.update.post(postParams).then(function(ReloadTask) {
 <a name="reloadtask.get"></a>
 ### reloadtask.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtask](#reloadtask)</code>  
@@ -307,7 +331,9 @@ qrsApi.reloadtask.get(filter, orderby, appendprivileges).then(function(Array.<Re
 <a name="reloadtask.post"></a>
 ### reloadtask.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ReloadTask&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/reloadtask?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtask](#reloadtask)</code>  

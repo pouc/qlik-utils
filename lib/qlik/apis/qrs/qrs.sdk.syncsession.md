@@ -21,7 +21,9 @@
 <a name="syncsession.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;SyncSession&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/syncsession/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#syncsession.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.syncsession.id(id).get(appendprivileges).then(function(SyncSession) {
 <a name="syncsession.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/syncsession/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#syncsession.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.syncsession.count.get(filter).then(function(int) {
 <a name="syncsession.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SyncSession&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/syncsession/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#syncsession.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.syncsession.full.get(filter, orderby, appendprivileges).then(function(Arr
 <a name="syncsession.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/syncsession/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#syncsession.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.syncsession.table.post(postParams, filter, skip, take, sortcolumn, ordera
 <a name="syncsession.get"></a>
 ### syncsession.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SyncSession&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/syncsession?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[syncsession](#syncsession)</code>  

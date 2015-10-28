@@ -17,7 +17,9 @@
 <a name="appcomponent.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IAppComponent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcomponent/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#appcomponent.full)</code>  
@@ -41,7 +43,9 @@ qrsApi.appcomponent.full.get(filter, orderby, appendprivileges).then(function(Ar
 <a name="appcomponent.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcomponent/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#appcomponent.table)</code>  
@@ -65,7 +69,9 @@ qrsApi.appcomponent.table.post(postParams, filter, skip, take, sortcolumn, order
 <a name="appcomponent.get"></a>
 ### appcomponent.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IAppComponent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcomponent?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appcomponent](#appcomponent)</code>  

@@ -1734,7 +1734,9 @@
 <a name="selection.id.app.content.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/content/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.app.content.count)</code>  
@@ -1756,7 +1758,9 @@ qrsApi.selection.id(id).app.content.count.get(filter).then(function(int) {
 <a name="selection.id.app.content.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppContent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/content/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[full](#selection.id.app.content.full)</code>  
@@ -1780,7 +1784,9 @@ qrsApi.selection.id(id).app.content.full.get(filter, orderby, appendprivileges).
 <a name="selection.id.app.content.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/content/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[synthetic](#selection.id.app.content.synthetic)</code>  
@@ -1803,7 +1809,9 @@ qrsApi.selection.id(id).app.content.synthetic.get(filter, appendprivileges).then
 <a name="selection.id.app.content.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/content/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is manual
 
 **Kind**: static method of <code>[table](#selection.id.app.content.table)</code>  
@@ -1827,7 +1835,9 @@ qrsApi.selection.id(id).app.content.table.post(postParams, filter, skip, take, s
 <a name="selection.id.app.content.get"></a>
 ###### content.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppContent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/content?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[content](#selection.id.app.content)</code>  
@@ -1851,7 +1861,9 @@ qrsApi.selection.id(id).app.content.get(filter, orderby, appendprivileges).then(
 <a name="selection.id.app.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.app.count)</code>  
@@ -1888,7 +1900,9 @@ qrsApi.selection.id(id).app.count.get(filter).then(function(int) {
 <a name="selection.id.app.datasegment.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/datasegment/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.app.datasegment.count)</code>  
@@ -1910,7 +1924,9 @@ qrsApi.selection.id(id).app.datasegment.count.get(filter).then(function(int) {
 <a name="selection.id.app.datasegment.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppDataSegment&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/datasegment/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.app.datasegment.full)</code>  
@@ -1934,7 +1950,9 @@ qrsApi.selection.id(id).app.datasegment.full.get(filter, orderby, appendprivileg
 <a name="selection.id.app.datasegment.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/datasegment/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.app.datasegment.synthetic)</code>  
@@ -1957,7 +1975,9 @@ qrsApi.selection.id(id).app.datasegment.synthetic.get(filter, appendprivileges).
 <a name="selection.id.app.datasegment.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/datasegment/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.app.datasegment.table)</code>  
@@ -1981,7 +2001,9 @@ qrsApi.selection.id(id).app.datasegment.table.post(postParams, filter, skip, tak
 <a name="selection.id.app.datasegment.get"></a>
 ###### datasegment.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppDataSegment&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/datasegment?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[datasegment](#selection.id.app.datasegment)</code>  
@@ -2005,7 +2027,9 @@ qrsApi.selection.id(id).app.datasegment.get(filter, orderby, appendprivileges).t
 <a name="selection.id.app.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;App&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.app.full)</code>  
@@ -2044,7 +2068,9 @@ qrsApi.selection.id(id).app.full.get(filter, orderby, appendprivileges).then(fun
 <a name="selection.id.app.internal.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/internal/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.app.internal.count)</code>  
@@ -2066,7 +2092,9 @@ qrsApi.selection.id(id).app.internal.count.get(filter).then(function(int) {
 <a name="selection.id.app.internal.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppInternal&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/internal/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.app.internal.full)</code>  
@@ -2090,7 +2118,9 @@ qrsApi.selection.id(id).app.internal.full.get(filter, orderby, appendprivileges)
 <a name="selection.id.app.internal.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/internal/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.app.internal.synthetic)</code>  
@@ -2113,7 +2143,9 @@ qrsApi.selection.id(id).app.internal.synthetic.get(filter, appendprivileges).the
 <a name="selection.id.app.internal.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/internal/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.app.internal.table)</code>  
@@ -2137,7 +2169,9 @@ qrsApi.selection.id(id).app.internal.table.post(postParams, filter, skip, take, 
 <a name="selection.id.app.internal.get"></a>
 ###### internal.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppInternal&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/internal?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[internal](#selection.id.app.internal)</code>  
@@ -2178,7 +2212,9 @@ qrsApi.selection.id(id).app.internal.get(filter, orderby, appendprivileges).then
 <a name="selection.id.app.object.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/object/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.app.object.count)</code>  
@@ -2200,7 +2236,9 @@ qrsApi.selection.id(id).app.object.count.get(filter).then(function(int) {
 <a name="selection.id.app.object.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppObject&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/object/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.app.object.full)</code>  
@@ -2229,7 +2267,9 @@ qrsApi.selection.id(id).app.object.full.get(filter, orderby, appendprivileges).t
 <a name="selection.id.app.object.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/object/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.app.object.synthetic)</code>  
@@ -2249,7 +2289,9 @@ qrsApi.selection.id(id).app.object.synthetic.put(postParams, filter).then(functi
 <a name="selection.id.app.object.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/object/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.app.object.synthetic)</code>  
@@ -2272,7 +2314,9 @@ qrsApi.selection.id(id).app.object.synthetic.get(filter, appendprivileges).then(
 <a name="selection.id.app.object.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/object/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.app.object.table)</code>  
@@ -2296,7 +2340,9 @@ qrsApi.selection.id(id).app.object.table.post(postParams, filter, skip, take, so
 <a name="selection.id.app.object.delete"></a>
 ###### object.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/object?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[object](#selection.id.app.object)</code>  
@@ -2315,7 +2361,9 @@ qrsApi.selection.id(id).app.object.delete(filter).then(function() {
 <a name="selection.id.app.object.get"></a>
 ###### object.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppObject&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/object?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[object](#selection.id.app.object)</code>  
@@ -2344,7 +2392,9 @@ qrsApi.selection.id(id).app.object.get(filter, orderby, appendprivileges).then(f
 <a name="selection.id.app.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.app.synthetic)</code>  
@@ -2364,7 +2414,9 @@ qrsApi.selection.id(id).app.synthetic.put(postParams, filter).then(function() {
 <a name="selection.id.app.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.app.synthetic)</code>  
@@ -2387,7 +2439,9 @@ qrsApi.selection.id(id).app.synthetic.get(filter, appendprivileges).then(functio
 <a name="selection.id.app.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.app.table)</code>  
@@ -2411,7 +2465,9 @@ qrsApi.selection.id(id).app.table.post(postParams, filter, skip, take, sortcolum
 <a name="selection.id.app.delete"></a>
 ##### app.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app?filter={filter}
+
 This method is manual
 
 **Kind**: static method of <code>[app](#selection.id.app)</code>  
@@ -2430,7 +2486,9 @@ qrsApi.selection.id(id).app.delete(filter).then(function() {
 <a name="selection.id.app.get"></a>
 ##### app.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;App&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/app?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[app](#selection.id.app)</code>  
@@ -2469,7 +2527,9 @@ qrsApi.selection.id(id).app.get(filter, orderby, appendprivileges).then(function
 <a name="selection.id.appavailability.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appavailability/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.appavailability.count)</code>  
@@ -2491,7 +2551,9 @@ qrsApi.selection.id(id).appavailability.count.get(filter).then(function(int) {
 <a name="selection.id.appavailability.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppAvailability&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appavailability/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.appavailability.full)</code>  
@@ -2515,7 +2577,9 @@ qrsApi.selection.id(id).appavailability.full.get(filter, orderby, appendprivileg
 <a name="selection.id.appavailability.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appavailability/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.appavailability.synthetic)</code>  
@@ -2538,7 +2602,9 @@ qrsApi.selection.id(id).appavailability.synthetic.get(filter, appendprivileges).
 <a name="selection.id.appavailability.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appavailability/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.appavailability.table)</code>  
@@ -2562,7 +2628,9 @@ qrsApi.selection.id(id).appavailability.table.post(postParams, filter, skip, tak
 <a name="selection.id.appavailability.get"></a>
 ##### appavailability.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppAvailability&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appavailability?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appavailability](#selection.id.appavailability)</code>  
@@ -2595,7 +2663,9 @@ qrsApi.selection.id(id).appavailability.get(filter, orderby, appendprivileges).t
 <a name="selection.id.appcomponent.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IAppComponent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appcomponent/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.appcomponent.full)</code>  
@@ -2616,7 +2686,9 @@ qrsApi.selection.id(id).appcomponent.full.get(filter, orderby, appendprivileges)
 <a name="selection.id.appcomponent.get"></a>
 ##### appcomponent.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IAppComponent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appcomponent?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appcomponent](#selection.id.appcomponent)</code>  
@@ -2656,7 +2728,9 @@ qrsApi.selection.id(id).appcomponent.get(filter, orderby, appendprivileges).then
 <a name="selection.id.appcontentquota.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appcontentquota/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.appcontentquota.count)</code>  
@@ -2678,7 +2752,9 @@ qrsApi.selection.id(id).appcontentquota.count.get(filter).then(function(int) {
 <a name="selection.id.appcontentquota.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppContentQuota&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appcontentquota/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.appcontentquota.full)</code>  
@@ -2707,7 +2783,9 @@ qrsApi.selection.id(id).appcontentquota.full.get(filter, orderby, appendprivileg
 <a name="selection.id.appcontentquota.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appcontentquota/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.appcontentquota.synthetic)</code>  
@@ -2727,7 +2805,9 @@ qrsApi.selection.id(id).appcontentquota.synthetic.put(postParams, filter).then(f
 <a name="selection.id.appcontentquota.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appcontentquota/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.appcontentquota.synthetic)</code>  
@@ -2750,7 +2830,9 @@ qrsApi.selection.id(id).appcontentquota.synthetic.get(filter, appendprivileges).
 <a name="selection.id.appcontentquota.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appcontentquota/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.appcontentquota.table)</code>  
@@ -2774,7 +2856,9 @@ qrsApi.selection.id(id).appcontentquota.table.post(postParams, filter, skip, tak
 <a name="selection.id.appcontentquota.get"></a>
 ##### appcontentquota.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppContentQuota&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appcontentquota?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appcontentquota](#selection.id.appcontentquota)</code>  
@@ -2813,7 +2897,9 @@ qrsApi.selection.id(id).appcontentquota.get(filter, orderby, appendprivileges).t
 <a name="selection.id.appseedinfo.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appseedinfo/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.appseedinfo.count)</code>  
@@ -2835,7 +2921,9 @@ qrsApi.selection.id(id).appseedinfo.count.get(filter).then(function(int) {
 <a name="selection.id.appseedinfo.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppSeedInfo&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appseedinfo/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.appseedinfo.full)</code>  
@@ -2859,7 +2947,9 @@ qrsApi.selection.id(id).appseedinfo.full.get(filter, orderby, appendprivileges).
 <a name="selection.id.appseedinfo.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appseedinfo/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.appseedinfo.synthetic)</code>  
@@ -2882,7 +2972,9 @@ qrsApi.selection.id(id).appseedinfo.synthetic.get(filter, appendprivileges).then
 <a name="selection.id.appseedinfo.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appseedinfo/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.appseedinfo.table)</code>  
@@ -2906,7 +2998,9 @@ qrsApi.selection.id(id).appseedinfo.table.post(postParams, filter, skip, take, s
 <a name="selection.id.appseedinfo.get"></a>
 ##### appseedinfo.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppSeedInfo&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appseedinfo?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appseedinfo](#selection.id.appseedinfo)</code>  
@@ -2945,7 +3039,9 @@ qrsApi.selection.id(id).appseedinfo.get(filter, orderby, appendprivileges).then(
 <a name="selection.id.appstatus.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appstatus/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.appstatus.count)</code>  
@@ -2967,7 +3063,9 @@ qrsApi.selection.id(id).appstatus.count.get(filter).then(function(int) {
 <a name="selection.id.appstatus.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppStatus&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appstatus/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.appstatus.full)</code>  
@@ -2991,7 +3089,9 @@ qrsApi.selection.id(id).appstatus.full.get(filter, orderby, appendprivileges).th
 <a name="selection.id.appstatus.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appstatus/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.appstatus.synthetic)</code>  
@@ -3014,7 +3114,9 @@ qrsApi.selection.id(id).appstatus.synthetic.get(filter, appendprivileges).then(f
 <a name="selection.id.appstatus.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appstatus/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.appstatus.table)</code>  
@@ -3038,7 +3140,9 @@ qrsApi.selection.id(id).appstatus.table.post(postParams, filter, skip, take, sor
 <a name="selection.id.appstatus.get"></a>
 ##### appstatus.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppStatus&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/appstatus?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appstatus](#selection.id.appstatus)</code>  
@@ -3077,7 +3181,9 @@ qrsApi.selection.id(id).appstatus.get(filter, orderby, appendprivileges).then(fu
 <a name="selection.id.binarydelete.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydelete/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.binarydelete.count)</code>  
@@ -3099,7 +3205,9 @@ qrsApi.selection.id(id).binarydelete.count.get(filter).then(function(int) {
 <a name="selection.id.binarydelete.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinaryDelete&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydelete/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.binarydelete.full)</code>  
@@ -3123,7 +3231,9 @@ qrsApi.selection.id(id).binarydelete.full.get(filter, orderby, appendprivileges)
 <a name="selection.id.binarydelete.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydelete/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.binarydelete.synthetic)</code>  
@@ -3146,7 +3256,9 @@ qrsApi.selection.id(id).binarydelete.synthetic.get(filter, appendprivileges).the
 <a name="selection.id.binarydelete.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydelete/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.binarydelete.table)</code>  
@@ -3170,7 +3282,9 @@ qrsApi.selection.id(id).binarydelete.table.post(postParams, filter, skip, take, 
 <a name="selection.id.binarydelete.get"></a>
 ##### binarydelete.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinaryDelete&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydelete?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[binarydelete](#selection.id.binarydelete)</code>  
@@ -3209,7 +3323,9 @@ qrsApi.selection.id(id).binarydelete.get(filter, orderby, appendprivileges).then
 <a name="selection.id.binarydownload.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydownload/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.binarydownload.count)</code>  
@@ -3231,7 +3347,9 @@ qrsApi.selection.id(id).binarydownload.count.get(filter).then(function(int) {
 <a name="selection.id.binarydownload.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinaryDownload&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydownload/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.binarydownload.full)</code>  
@@ -3255,7 +3373,9 @@ qrsApi.selection.id(id).binarydownload.full.get(filter, orderby, appendprivilege
 <a name="selection.id.binarydownload.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydownload/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.binarydownload.synthetic)</code>  
@@ -3278,7 +3398,9 @@ qrsApi.selection.id(id).binarydownload.synthetic.get(filter, appendprivileges).t
 <a name="selection.id.binarydownload.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydownload/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.binarydownload.table)</code>  
@@ -3302,7 +3424,9 @@ qrsApi.selection.id(id).binarydownload.table.post(postParams, filter, skip, take
 <a name="selection.id.binarydownload.get"></a>
 ##### binarydownload.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinaryDownload&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarydownload?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[binarydownload](#selection.id.binarydownload)</code>  
@@ -3341,7 +3465,9 @@ qrsApi.selection.id(id).binarydownload.get(filter, orderby, appendprivileges).th
 <a name="selection.id.binarysyncruleevaluation.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarysyncruleevaluation/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.binarysyncruleevaluation.count)</code>  
@@ -3363,7 +3489,9 @@ qrsApi.selection.id(id).binarysyncruleevaluation.count.get(filter).then(function
 <a name="selection.id.binarysyncruleevaluation.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinarySyncRuleEvaluation&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarysyncruleevaluation/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.binarysyncruleevaluation.full)</code>  
@@ -3387,7 +3515,9 @@ qrsApi.selection.id(id).binarysyncruleevaluation.full.get(filter, orderby, appen
 <a name="selection.id.binarysyncruleevaluation.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarysyncruleevaluation/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.binarysyncruleevaluation.synthetic)</code>  
@@ -3410,7 +3540,9 @@ qrsApi.selection.id(id).binarysyncruleevaluation.synthetic.get(filter, appendpri
 <a name="selection.id.binarysyncruleevaluation.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarysyncruleevaluation/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.binarysyncruleevaluation.table)</code>  
@@ -3434,7 +3566,9 @@ qrsApi.selection.id(id).binarysyncruleevaluation.table.post(postParams, filter, 
 <a name="selection.id.binarysyncruleevaluation.get"></a>
 ##### binarysyncruleevaluation.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinarySyncRuleEvaluation&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/binarysyncruleevaluation?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[binarysyncruleevaluation](#selection.id.binarysyncruleevaluation)</code>  
@@ -3475,7 +3609,9 @@ qrsApi.selection.id(id).binarysyncruleevaluation.get(filter, orderby, appendpriv
 <a name="selection.id.compositeevent.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeevent/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.compositeevent.count)</code>  
@@ -3497,7 +3633,9 @@ qrsApi.selection.id(id).compositeevent.count.get(filter).then(function(int) {
 <a name="selection.id.compositeevent.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CompositeEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeevent/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.compositeevent.full)</code>  
@@ -3526,7 +3664,9 @@ qrsApi.selection.id(id).compositeevent.full.get(filter, orderby, appendprivilege
 <a name="selection.id.compositeevent.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeevent/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.compositeevent.synthetic)</code>  
@@ -3546,7 +3686,9 @@ qrsApi.selection.id(id).compositeevent.synthetic.put(postParams, filter).then(fu
 <a name="selection.id.compositeevent.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeevent/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.compositeevent.synthetic)</code>  
@@ -3569,7 +3711,9 @@ qrsApi.selection.id(id).compositeevent.synthetic.get(filter, appendprivileges).t
 <a name="selection.id.compositeevent.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeevent/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.compositeevent.table)</code>  
@@ -3593,7 +3737,9 @@ qrsApi.selection.id(id).compositeevent.table.post(postParams, filter, skip, take
 <a name="selection.id.compositeevent.delete"></a>
 ##### compositeevent.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeevent?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeevent](#selection.id.compositeevent)</code>  
@@ -3612,7 +3758,9 @@ qrsApi.selection.id(id).compositeevent.delete(filter).then(function() {
 <a name="selection.id.compositeevent.get"></a>
 ##### compositeevent.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CompositeEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeevent?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeevent](#selection.id.compositeevent)</code>  
@@ -3653,7 +3801,9 @@ qrsApi.selection.id(id).compositeevent.get(filter, orderby, appendprivileges).th
 <a name="selection.id.compositeeventoperational.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.compositeeventoperational.count)</code>  
@@ -3675,7 +3825,9 @@ qrsApi.selection.id(id).compositeeventoperational.count.get(filter).then(functio
 <a name="selection.id.compositeeventoperational.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CompositeEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.compositeeventoperational.full)</code>  
@@ -3704,7 +3856,9 @@ qrsApi.selection.id(id).compositeeventoperational.full.get(filter, orderby, appe
 <a name="selection.id.compositeeventoperational.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventoperational/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.compositeeventoperational.synthetic)</code>  
@@ -3724,7 +3878,9 @@ qrsApi.selection.id(id).compositeeventoperational.synthetic.put(postParams, filt
 <a name="selection.id.compositeeventoperational.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventoperational/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.compositeeventoperational.synthetic)</code>  
@@ -3747,7 +3903,9 @@ qrsApi.selection.id(id).compositeeventoperational.synthetic.get(filter, appendpr
 <a name="selection.id.compositeeventoperational.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.compositeeventoperational.table)</code>  
@@ -3771,7 +3929,9 @@ qrsApi.selection.id(id).compositeeventoperational.table.post(postParams, filter,
 <a name="selection.id.compositeeventoperational.delete"></a>
 ##### compositeeventoperational.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeeventoperational](#selection.id.compositeeventoperational)</code>  
@@ -3790,7 +3950,9 @@ qrsApi.selection.id(id).compositeeventoperational.delete(filter).then(function()
 <a name="selection.id.compositeeventoperational.get"></a>
 ##### compositeeventoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CompositeEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeeventoperational](#selection.id.compositeeventoperational)</code>  
@@ -3831,7 +3993,9 @@ qrsApi.selection.id(id).compositeeventoperational.get(filter, orderby, appendpri
 <a name="selection.id.compositeeventruleoperational.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventruleoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.compositeeventruleoperational.count)</code>  
@@ -3853,7 +4017,9 @@ qrsApi.selection.id(id).compositeeventruleoperational.count.get(filter).then(fun
 <a name="selection.id.compositeeventruleoperational.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CompositeEventRuleOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventruleoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.compositeeventruleoperational.full)</code>  
@@ -3882,7 +4048,9 @@ qrsApi.selection.id(id).compositeeventruleoperational.full.get(filter, orderby, 
 <a name="selection.id.compositeeventruleoperational.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventruleoperational/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.compositeeventruleoperational.synthetic)</code>  
@@ -3902,7 +4070,9 @@ qrsApi.selection.id(id).compositeeventruleoperational.synthetic.put(postParams, 
 <a name="selection.id.compositeeventruleoperational.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventruleoperational/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.compositeeventruleoperational.synthetic)</code>  
@@ -3925,7 +4095,9 @@ qrsApi.selection.id(id).compositeeventruleoperational.synthetic.get(filter, appe
 <a name="selection.id.compositeeventruleoperational.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventruleoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.compositeeventruleoperational.table)</code>  
@@ -3949,7 +4121,9 @@ qrsApi.selection.id(id).compositeeventruleoperational.table.post(postParams, fil
 <a name="selection.id.compositeeventruleoperational.delete"></a>
 ##### compositeeventruleoperational.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventruleoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeeventruleoperational](#selection.id.compositeeventruleoperational)</code>  
@@ -3968,7 +4142,9 @@ qrsApi.selection.id(id).compositeeventruleoperational.delete(filter).then(functi
 <a name="selection.id.compositeeventruleoperational.get"></a>
 ##### compositeeventruleoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CompositeEventRuleOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/compositeeventruleoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeeventruleoperational](#selection.id.compositeeventruleoperational)</code>  
@@ -4009,7 +4185,9 @@ qrsApi.selection.id(id).compositeeventruleoperational.get(filter, orderby, appen
 <a name="selection.id.contentlibrary.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/contentlibrary/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.contentlibrary.count)</code>  
@@ -4031,7 +4209,9 @@ qrsApi.selection.id(id).contentlibrary.count.get(filter).then(function(int) {
 <a name="selection.id.contentlibrary.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ContentLibrary&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/contentlibrary/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.contentlibrary.full)</code>  
@@ -4060,7 +4240,9 @@ qrsApi.selection.id(id).contentlibrary.full.get(filter, orderby, appendprivilege
 <a name="selection.id.contentlibrary.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/contentlibrary/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.contentlibrary.synthetic)</code>  
@@ -4080,7 +4262,9 @@ qrsApi.selection.id(id).contentlibrary.synthetic.put(postParams, filter).then(fu
 <a name="selection.id.contentlibrary.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/contentlibrary/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.contentlibrary.synthetic)</code>  
@@ -4103,7 +4287,9 @@ qrsApi.selection.id(id).contentlibrary.synthetic.get(filter, appendprivileges).t
 <a name="selection.id.contentlibrary.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/contentlibrary/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.contentlibrary.table)</code>  
@@ -4127,7 +4313,9 @@ qrsApi.selection.id(id).contentlibrary.table.post(postParams, filter, skip, take
 <a name="selection.id.contentlibrary.delete"></a>
 ##### contentlibrary.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/contentlibrary?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[contentlibrary](#selection.id.contentlibrary)</code>  
@@ -4146,7 +4334,9 @@ qrsApi.selection.id(id).contentlibrary.delete(filter).then(function() {
 <a name="selection.id.contentlibrary.get"></a>
 ##### contentlibrary.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ContentLibrary&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/contentlibrary?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[contentlibrary](#selection.id.contentlibrary)</code>  
@@ -4187,7 +4377,9 @@ qrsApi.selection.id(id).contentlibrary.get(filter, orderby, appendprivileges).th
 <a name="selection.id.custompropertydefinition.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/custompropertydefinition/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.custompropertydefinition.count)</code>  
@@ -4209,7 +4401,9 @@ qrsApi.selection.id(id).custompropertydefinition.count.get(filter).then(function
 <a name="selection.id.custompropertydefinition.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CustomPropertyDefinition&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/custompropertydefinition/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.custompropertydefinition.full)</code>  
@@ -4238,7 +4432,9 @@ qrsApi.selection.id(id).custompropertydefinition.full.get(filter, orderby, appen
 <a name="selection.id.custompropertydefinition.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/custompropertydefinition/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.custompropertydefinition.synthetic)</code>  
@@ -4258,7 +4454,9 @@ qrsApi.selection.id(id).custompropertydefinition.synthetic.put(postParams, filte
 <a name="selection.id.custompropertydefinition.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/custompropertydefinition/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.custompropertydefinition.synthetic)</code>  
@@ -4281,7 +4479,9 @@ qrsApi.selection.id(id).custompropertydefinition.synthetic.get(filter, appendpri
 <a name="selection.id.custompropertydefinition.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/custompropertydefinition/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.custompropertydefinition.table)</code>  
@@ -4305,7 +4505,9 @@ qrsApi.selection.id(id).custompropertydefinition.table.post(postParams, filter, 
 <a name="selection.id.custompropertydefinition.delete"></a>
 ##### custompropertydefinition.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/custompropertydefinition?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[custompropertydefinition](#selection.id.custompropertydefinition)</code>  
@@ -4324,7 +4526,9 @@ qrsApi.selection.id(id).custompropertydefinition.delete(filter).then(function() 
 <a name="selection.id.custompropertydefinition.get"></a>
 ##### custompropertydefinition.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CustomPropertyDefinition&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/custompropertydefinition?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[custompropertydefinition](#selection.id.custompropertydefinition)</code>  
@@ -4365,7 +4569,9 @@ qrsApi.selection.id(id).custompropertydefinition.get(filter, orderby, appendpriv
 <a name="selection.id.dataconnection.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/dataconnection/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.dataconnection.count)</code>  
@@ -4387,7 +4593,9 @@ qrsApi.selection.id(id).dataconnection.count.get(filter).then(function(int) {
 <a name="selection.id.dataconnection.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;DataConnection&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/dataconnection/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.dataconnection.full)</code>  
@@ -4416,7 +4624,9 @@ qrsApi.selection.id(id).dataconnection.full.get(filter, orderby, appendprivilege
 <a name="selection.id.dataconnection.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/dataconnection/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.dataconnection.synthetic)</code>  
@@ -4436,7 +4646,9 @@ qrsApi.selection.id(id).dataconnection.synthetic.put(postParams, filter).then(fu
 <a name="selection.id.dataconnection.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/dataconnection/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.dataconnection.synthetic)</code>  
@@ -4459,7 +4671,9 @@ qrsApi.selection.id(id).dataconnection.synthetic.get(filter, appendprivileges).t
 <a name="selection.id.dataconnection.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/dataconnection/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.dataconnection.table)</code>  
@@ -4483,7 +4697,9 @@ qrsApi.selection.id(id).dataconnection.table.post(postParams, filter, skip, take
 <a name="selection.id.dataconnection.delete"></a>
 ##### dataconnection.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/dataconnection?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[dataconnection](#selection.id.dataconnection)</code>  
@@ -4502,7 +4718,9 @@ qrsApi.selection.id(id).dataconnection.delete(filter).then(function() {
 <a name="selection.id.dataconnection.get"></a>
 ##### dataconnection.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;DataConnection&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/dataconnection?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[dataconnection](#selection.id.dataconnection)</code>  
@@ -4554,7 +4772,9 @@ qrsApi.selection.id(id).dataconnection.get(filter, orderby, appendprivileges).th
 <a name="selection.id.engineservice.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.engineservice.count)</code>  
@@ -4576,7 +4796,9 @@ qrsApi.selection.id(id).engineservice.count.get(filter).then(function(int) {
 <a name="selection.id.engineservice.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;EngineService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.engineservice.full)</code>  
@@ -4605,7 +4827,9 @@ qrsApi.selection.id(id).engineservice.full.get(filter, orderby, appendprivileges
 <a name="selection.id.engineservice.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.engineservice.synthetic)</code>  
@@ -4625,7 +4849,9 @@ qrsApi.selection.id(id).engineservice.synthetic.put(postParams, filter).then(fun
 <a name="selection.id.engineservice.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.engineservice.synthetic)</code>  
@@ -4648,7 +4874,9 @@ qrsApi.selection.id(id).engineservice.synthetic.get(filter, appendprivileges).th
 <a name="selection.id.engineservice.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.engineservice.table)</code>  
@@ -4692,7 +4920,9 @@ qrsApi.selection.id(id).engineservice.table.post(postParams, filter, skip, take,
 <a name="selection.id.engineservice.template.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.engineservice.template.count)</code>  
@@ -4714,7 +4944,9 @@ qrsApi.selection.id(id).engineservice.template.count.get(filter).then(function(i
 <a name="selection.id.engineservice.template.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.engineservice.template.full)</code>  
@@ -4743,7 +4975,9 @@ qrsApi.selection.id(id).engineservice.template.full.get(filter, orderby, appendp
 <a name="selection.id.engineservice.template.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/template/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.engineservice.template.synthetic)</code>  
@@ -4763,7 +4997,9 @@ qrsApi.selection.id(id).engineservice.template.synthetic.put(postParams, filter)
 <a name="selection.id.engineservice.template.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/template/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.engineservice.template.synthetic)</code>  
@@ -4786,7 +5022,9 @@ qrsApi.selection.id(id).engineservice.template.synthetic.get(filter, appendprivi
 <a name="selection.id.engineservice.template.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.engineservice.template.table)</code>  
@@ -4810,7 +5048,9 @@ qrsApi.selection.id(id).engineservice.template.table.post(postParams, filter, sk
 <a name="selection.id.engineservice.template.delete"></a>
 ###### template.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.engineservice.template)</code>  
@@ -4829,7 +5069,9 @@ qrsApi.selection.id(id).engineservice.template.delete(filter).then(function() {
 <a name="selection.id.engineservice.template.get"></a>
 ###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.engineservice.template)</code>  
@@ -4850,7 +5092,9 @@ qrsApi.selection.id(id).engineservice.template.get(filter, orderby, appendprivil
 <a name="selection.id.engineservice.get"></a>
 ##### engineservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;EngineService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/engineservice?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[engineservice](#selection.id.engineservice)</code>  
@@ -4883,7 +5127,9 @@ qrsApi.selection.id(id).engineservice.get(filter, orderby, appendprivileges).the
 <a name="selection.id.event.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/event/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.event.full)</code>  
@@ -4904,7 +5150,9 @@ qrsApi.selection.id(id).event.full.get(filter, orderby, appendprivileges).then(f
 <a name="selection.id.event.get"></a>
 ##### event.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/event?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[event](#selection.id.event)</code>  
@@ -4937,7 +5185,9 @@ qrsApi.selection.id(id).event.get(filter, orderby, appendprivileges).then(functi
 <a name="selection.id.eventoperational.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/eventoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.eventoperational.full)</code>  
@@ -4958,7 +5208,9 @@ qrsApi.selection.id(id).eventoperational.full.get(filter, orderby, appendprivile
 <a name="selection.id.eventoperational.get"></a>
 ##### eventoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/eventoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[eventoperational](#selection.id.eventoperational)</code>  
@@ -5011,7 +5263,9 @@ qrsApi.selection.id(id).eventoperational.get(filter, orderby, appendprivileges).
 <a name="selection.id.executionresult.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.executionresult.count)</code>  
@@ -5050,7 +5304,9 @@ qrsApi.selection.id(id).executionresult.count.get(filter).then(function(int) {
 <a name="selection.id.executionresult.detail.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/detail/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.executionresult.detail.count)</code>  
@@ -5072,7 +5328,9 @@ qrsApi.selection.id(id).executionresult.detail.count.get(filter).then(function(i
 <a name="selection.id.executionresult.detail.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExecutionResultDetail&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/detail/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.executionresult.detail.full)</code>  
@@ -5101,7 +5359,9 @@ qrsApi.selection.id(id).executionresult.detail.full.get(filter, orderby, appendp
 <a name="selection.id.executionresult.detail.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/detail/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.executionresult.detail.synthetic)</code>  
@@ -5121,7 +5381,9 @@ qrsApi.selection.id(id).executionresult.detail.synthetic.put(postParams, filter)
 <a name="selection.id.executionresult.detail.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/detail/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.executionresult.detail.synthetic)</code>  
@@ -5144,7 +5406,9 @@ qrsApi.selection.id(id).executionresult.detail.synthetic.get(filter, appendprivi
 <a name="selection.id.executionresult.detail.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/detail/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.executionresult.detail.table)</code>  
@@ -5168,7 +5432,9 @@ qrsApi.selection.id(id).executionresult.detail.table.post(postParams, filter, sk
 <a name="selection.id.executionresult.detail.delete"></a>
 ###### detail.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/detail?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[detail](#selection.id.executionresult.detail)</code>  
@@ -5187,7 +5453,9 @@ qrsApi.selection.id(id).executionresult.detail.delete(filter).then(function() {
 <a name="selection.id.executionresult.detail.get"></a>
 ###### detail.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExecutionResultDetail&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/detail?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[detail](#selection.id.executionresult.detail)</code>  
@@ -5211,7 +5479,9 @@ qrsApi.selection.id(id).executionresult.detail.get(filter, orderby, appendprivil
 <a name="selection.id.executionresult.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExecutionResult&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.executionresult.full)</code>  
@@ -5240,7 +5510,9 @@ qrsApi.selection.id(id).executionresult.full.get(filter, orderby, appendprivileg
 <a name="selection.id.executionresult.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.executionresult.synthetic)</code>  
@@ -5260,7 +5532,9 @@ qrsApi.selection.id(id).executionresult.synthetic.put(postParams, filter).then(f
 <a name="selection.id.executionresult.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.executionresult.synthetic)</code>  
@@ -5283,7 +5557,9 @@ qrsApi.selection.id(id).executionresult.synthetic.get(filter, appendprivileges).
 <a name="selection.id.executionresult.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.executionresult.table)</code>  
@@ -5307,7 +5583,9 @@ qrsApi.selection.id(id).executionresult.table.post(postParams, filter, skip, tak
 <a name="selection.id.executionresult.delete"></a>
 ##### executionresult.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[executionresult](#selection.id.executionresult)</code>  
@@ -5326,7 +5604,9 @@ qrsApi.selection.id(id).executionresult.delete(filter).then(function() {
 <a name="selection.id.executionresult.get"></a>
 ##### executionresult.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExecutionResult&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionresult?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[executionresult](#selection.id.executionresult)</code>  
@@ -5367,7 +5647,9 @@ qrsApi.selection.id(id).executionresult.get(filter, orderby, appendprivileges).t
 <a name="selection.id.executionsession.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionsession/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.executionsession.count)</code>  
@@ -5389,7 +5671,9 @@ qrsApi.selection.id(id).executionsession.count.get(filter).then(function(int) {
 <a name="selection.id.executionsession.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExecutionSession&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionsession/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.executionsession.full)</code>  
@@ -5418,7 +5702,9 @@ qrsApi.selection.id(id).executionsession.full.get(filter, orderby, appendprivile
 <a name="selection.id.executionsession.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionsession/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.executionsession.synthetic)</code>  
@@ -5438,7 +5724,9 @@ qrsApi.selection.id(id).executionsession.synthetic.put(postParams, filter).then(
 <a name="selection.id.executionsession.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionsession/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.executionsession.synthetic)</code>  
@@ -5461,7 +5749,9 @@ qrsApi.selection.id(id).executionsession.synthetic.get(filter, appendprivileges)
 <a name="selection.id.executionsession.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionsession/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.executionsession.table)</code>  
@@ -5485,7 +5775,9 @@ qrsApi.selection.id(id).executionsession.table.post(postParams, filter, skip, ta
 <a name="selection.id.executionsession.delete"></a>
 ##### executionsession.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionsession?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[executionsession](#selection.id.executionsession)</code>  
@@ -5504,7 +5796,9 @@ qrsApi.selection.id(id).executionsession.delete(filter).then(function() {
 <a name="selection.id.executionsession.get"></a>
 ##### executionsession.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExecutionSession&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/executionsession?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[executionsession](#selection.id.executionsession)</code>  
@@ -5545,7 +5839,9 @@ qrsApi.selection.id(id).executionsession.get(filter, orderby, appendprivileges).
 <a name="selection.id.extension.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/extension/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.extension.count)</code>  
@@ -5567,7 +5863,9 @@ qrsApi.selection.id(id).extension.count.get(filter).then(function(int) {
 <a name="selection.id.extension.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Extension&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/extension/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.extension.full)</code>  
@@ -5596,7 +5894,9 @@ qrsApi.selection.id(id).extension.full.get(filter, orderby, appendprivileges).th
 <a name="selection.id.extension.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/extension/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.extension.synthetic)</code>  
@@ -5616,7 +5916,9 @@ qrsApi.selection.id(id).extension.synthetic.put(postParams, filter).then(functio
 <a name="selection.id.extension.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/extension/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.extension.synthetic)</code>  
@@ -5639,7 +5941,9 @@ qrsApi.selection.id(id).extension.synthetic.get(filter, appendprivileges).then(f
 <a name="selection.id.extension.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/extension/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.extension.table)</code>  
@@ -5663,7 +5967,9 @@ qrsApi.selection.id(id).extension.table.post(postParams, filter, skip, take, sor
 <a name="selection.id.extension.delete"></a>
 ##### extension.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/extension?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[extension](#selection.id.extension)</code>  
@@ -5682,7 +5988,9 @@ qrsApi.selection.id(id).extension.delete(filter).then(function() {
 <a name="selection.id.extension.get"></a>
 ##### extension.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Extension&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/extension?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[extension](#selection.id.extension)</code>  
@@ -5723,7 +6031,9 @@ qrsApi.selection.id(id).extension.get(filter, orderby, appendprivileges).then(fu
 <a name="selection.id.externalchangeinfo.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalchangeinfo/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.externalchangeinfo.count)</code>  
@@ -5745,7 +6055,9 @@ qrsApi.selection.id(id).externalchangeinfo.count.get(filter).then(function(int) 
 <a name="selection.id.externalchangeinfo.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalChangeInfo&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalchangeinfo/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.externalchangeinfo.full)</code>  
@@ -5774,7 +6086,9 @@ qrsApi.selection.id(id).externalchangeinfo.full.get(filter, orderby, appendprivi
 <a name="selection.id.externalchangeinfo.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalchangeinfo/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.externalchangeinfo.synthetic)</code>  
@@ -5794,7 +6108,9 @@ qrsApi.selection.id(id).externalchangeinfo.synthetic.put(postParams, filter).the
 <a name="selection.id.externalchangeinfo.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalchangeinfo/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.externalchangeinfo.synthetic)</code>  
@@ -5817,7 +6133,9 @@ qrsApi.selection.id(id).externalchangeinfo.synthetic.get(filter, appendprivilege
 <a name="selection.id.externalchangeinfo.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalchangeinfo/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.externalchangeinfo.table)</code>  
@@ -5841,7 +6159,9 @@ qrsApi.selection.id(id).externalchangeinfo.table.post(postParams, filter, skip, 
 <a name="selection.id.externalchangeinfo.delete"></a>
 ##### externalchangeinfo.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalchangeinfo?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[externalchangeinfo](#selection.id.externalchangeinfo)</code>  
@@ -5860,7 +6180,9 @@ qrsApi.selection.id(id).externalchangeinfo.delete(filter).then(function() {
 <a name="selection.id.externalchangeinfo.get"></a>
 ##### externalchangeinfo.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalChangeInfo&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalchangeinfo?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[externalchangeinfo](#selection.id.externalchangeinfo)</code>  
@@ -5901,7 +6223,9 @@ qrsApi.selection.id(id).externalchangeinfo.get(filter, orderby, appendprivileges
 <a name="selection.id.externalprogramtask.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtask/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.externalprogramtask.count)</code>  
@@ -5923,7 +6247,9 @@ qrsApi.selection.id(id).externalprogramtask.count.get(filter).then(function(int)
 <a name="selection.id.externalprogramtask.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalProgramTask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtask/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.externalprogramtask.full)</code>  
@@ -5952,7 +6278,9 @@ qrsApi.selection.id(id).externalprogramtask.full.get(filter, orderby, appendpriv
 <a name="selection.id.externalprogramtask.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtask/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.externalprogramtask.synthetic)</code>  
@@ -5972,7 +6300,9 @@ qrsApi.selection.id(id).externalprogramtask.synthetic.put(postParams, filter).th
 <a name="selection.id.externalprogramtask.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtask/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.externalprogramtask.synthetic)</code>  
@@ -5995,7 +6325,9 @@ qrsApi.selection.id(id).externalprogramtask.synthetic.get(filter, appendprivileg
 <a name="selection.id.externalprogramtask.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtask/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.externalprogramtask.table)</code>  
@@ -6019,7 +6351,9 @@ qrsApi.selection.id(id).externalprogramtask.table.post(postParams, filter, skip,
 <a name="selection.id.externalprogramtask.delete"></a>
 ##### externalprogramtask.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtask?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[externalprogramtask](#selection.id.externalprogramtask)</code>  
@@ -6038,7 +6372,9 @@ qrsApi.selection.id(id).externalprogramtask.delete(filter).then(function() {
 <a name="selection.id.externalprogramtask.get"></a>
 ##### externalprogramtask.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalProgramTask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtask?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[externalprogramtask](#selection.id.externalprogramtask)</code>  
@@ -6079,7 +6415,9 @@ qrsApi.selection.id(id).externalprogramtask.get(filter, orderby, appendprivilege
 <a name="selection.id.externalprogramtaskoperational.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtaskoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.externalprogramtaskoperational.count)</code>  
@@ -6101,7 +6439,9 @@ qrsApi.selection.id(id).externalprogramtaskoperational.count.get(filter).then(fu
 <a name="selection.id.externalprogramtaskoperational.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalProgramTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtaskoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.externalprogramtaskoperational.full)</code>  
@@ -6130,7 +6470,9 @@ qrsApi.selection.id(id).externalprogramtaskoperational.full.get(filter, orderby,
 <a name="selection.id.externalprogramtaskoperational.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtaskoperational/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.externalprogramtaskoperational.synthetic)</code>  
@@ -6150,7 +6492,9 @@ qrsApi.selection.id(id).externalprogramtaskoperational.synthetic.put(postParams,
 <a name="selection.id.externalprogramtaskoperational.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtaskoperational/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.externalprogramtaskoperational.synthetic)</code>  
@@ -6173,7 +6517,9 @@ qrsApi.selection.id(id).externalprogramtaskoperational.synthetic.get(filter, app
 <a name="selection.id.externalprogramtaskoperational.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtaskoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.externalprogramtaskoperational.table)</code>  
@@ -6197,7 +6543,9 @@ qrsApi.selection.id(id).externalprogramtaskoperational.table.post(postParams, fi
 <a name="selection.id.externalprogramtaskoperational.delete"></a>
 ##### externalprogramtaskoperational.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtaskoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[externalprogramtaskoperational](#selection.id.externalprogramtaskoperational)</code>  
@@ -6216,7 +6564,9 @@ qrsApi.selection.id(id).externalprogramtaskoperational.delete(filter).then(funct
 <a name="selection.id.externalprogramtaskoperational.get"></a>
 ##### externalprogramtaskoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalProgramTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/externalprogramtaskoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[externalprogramtaskoperational](#selection.id.externalprogramtaskoperational)</code>  
@@ -6255,7 +6605,9 @@ qrsApi.selection.id(id).externalprogramtaskoperational.get(filter, orderby, appe
 <a name="selection.id.filereference.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/filereference/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.filereference.count)</code>  
@@ -6277,7 +6629,9 @@ qrsApi.selection.id(id).filereference.count.get(filter).then(function(int) {
 <a name="selection.id.filereference.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;FileReference&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/filereference/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.filereference.full)</code>  
@@ -6301,7 +6655,9 @@ qrsApi.selection.id(id).filereference.full.get(filter, orderby, appendprivileges
 <a name="selection.id.filereference.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/filereference/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.filereference.synthetic)</code>  
@@ -6324,7 +6680,9 @@ qrsApi.selection.id(id).filereference.synthetic.get(filter, appendprivileges).th
 <a name="selection.id.filereference.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/filereference/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.filereference.table)</code>  
@@ -6348,7 +6706,9 @@ qrsApi.selection.id(id).filereference.table.post(postParams, filter, skip, take,
 <a name="selection.id.filereference.get"></a>
 ##### filereference.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;FileReference&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/filereference?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[filereference](#selection.id.filereference)</code>  
@@ -6452,7 +6812,9 @@ qrsApi.selection.id(id).filereference.get(filter, orderby, appendprivileges).the
 <a name="selection.id.license.loginaccesstype.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccesstype/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.license.loginaccesstype.count)</code>  
@@ -6474,7 +6836,9 @@ qrsApi.selection.id(id).license.loginaccesstype.count.get(filter).then(function(
 <a name="selection.id.license.loginaccesstype.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccesstype/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.license.loginaccesstype.full)</code>  
@@ -6503,7 +6867,9 @@ qrsApi.selection.id(id).license.loginaccesstype.full.get(filter, orderby, append
 <a name="selection.id.license.loginaccesstype.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccesstype/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.license.loginaccesstype.synthetic)</code>  
@@ -6523,7 +6889,9 @@ qrsApi.selection.id(id).license.loginaccesstype.synthetic.put(postParams, filter
 <a name="selection.id.license.loginaccesstype.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccesstype/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.license.loginaccesstype.synthetic)</code>  
@@ -6546,7 +6914,9 @@ qrsApi.selection.id(id).license.loginaccesstype.synthetic.get(filter, appendpriv
 <a name="selection.id.license.loginaccesstype.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccesstype/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.license.loginaccesstype.table)</code>  
@@ -6570,7 +6940,9 @@ qrsApi.selection.id(id).license.loginaccesstype.table.post(postParams, filter, s
 <a name="selection.id.license.loginaccesstype.delete"></a>
 ###### loginaccesstype.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccesstype?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[loginaccesstype](#selection.id.license.loginaccesstype)</code>  
@@ -6589,7 +6961,9 @@ qrsApi.selection.id(id).license.loginaccesstype.delete(filter).then(function() {
 <a name="selection.id.license.loginaccesstype.get"></a>
 ###### loginaccesstype.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccesstype?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[loginaccesstype](#selection.id.license.loginaccesstype)</code>  
@@ -6628,7 +7002,9 @@ qrsApi.selection.id(id).license.loginaccesstype.get(filter, orderby, appendprivi
 <a name="selection.id.license.loginaccessusage.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccessusage/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.license.loginaccessusage.count)</code>  
@@ -6650,7 +7026,9 @@ qrsApi.selection.id(id).license.loginaccessusage.count.get(filter).then(function
 <a name="selection.id.license.loginaccessusage.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccessusage/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.license.loginaccessusage.full)</code>  
@@ -6674,7 +7052,9 @@ qrsApi.selection.id(id).license.loginaccessusage.full.get(filter, orderby, appen
 <a name="selection.id.license.loginaccessusage.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccessusage/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.license.loginaccessusage.synthetic)</code>  
@@ -6697,7 +7077,9 @@ qrsApi.selection.id(id).license.loginaccessusage.synthetic.get(filter, appendpri
 <a name="selection.id.license.loginaccessusage.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccessusage/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.license.loginaccessusage.table)</code>  
@@ -6721,7 +7103,9 @@ qrsApi.selection.id(id).license.loginaccessusage.table.post(postParams, filter, 
 <a name="selection.id.license.loginaccessusage.get"></a>
 ###### loginaccessusage.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/loginaccessusage?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[loginaccessusage](#selection.id.license.loginaccessusage)</code>  
@@ -6762,7 +7146,9 @@ qrsApi.selection.id(id).license.loginaccessusage.get(filter, orderby, appendpriv
 <a name="selection.id.license.useraccessgroup.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessgroup/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.license.useraccessgroup.count)</code>  
@@ -6784,7 +7170,9 @@ qrsApi.selection.id(id).license.useraccessgroup.count.get(filter).then(function(
 <a name="selection.id.license.useraccessgroup.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessGroup&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessgroup/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.license.useraccessgroup.full)</code>  
@@ -6813,7 +7201,9 @@ qrsApi.selection.id(id).license.useraccessgroup.full.get(filter, orderby, append
 <a name="selection.id.license.useraccessgroup.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessgroup/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.license.useraccessgroup.synthetic)</code>  
@@ -6833,7 +7223,9 @@ qrsApi.selection.id(id).license.useraccessgroup.synthetic.put(postParams, filter
 <a name="selection.id.license.useraccessgroup.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessgroup/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.license.useraccessgroup.synthetic)</code>  
@@ -6856,7 +7248,9 @@ qrsApi.selection.id(id).license.useraccessgroup.synthetic.get(filter, appendpriv
 <a name="selection.id.license.useraccessgroup.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessgroup/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.license.useraccessgroup.table)</code>  
@@ -6880,7 +7274,9 @@ qrsApi.selection.id(id).license.useraccessgroup.table.post(postParams, filter, s
 <a name="selection.id.license.useraccessgroup.delete"></a>
 ###### useraccessgroup.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessgroup?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccessgroup](#selection.id.license.useraccessgroup)</code>  
@@ -6899,7 +7295,9 @@ qrsApi.selection.id(id).license.useraccessgroup.delete(filter).then(function() {
 <a name="selection.id.license.useraccessgroup.get"></a>
 ###### useraccessgroup.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessGroup&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessgroup?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccessgroup](#selection.id.license.useraccessgroup)</code>  
@@ -6940,7 +7338,9 @@ qrsApi.selection.id(id).license.useraccessgroup.get(filter, orderby, appendprivi
 <a name="selection.id.license.useraccesstype.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccesstype/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.license.useraccesstype.count)</code>  
@@ -6962,7 +7362,9 @@ qrsApi.selection.id(id).license.useraccesstype.count.get(filter).then(function(i
 <a name="selection.id.license.useraccesstype.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccesstype/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.license.useraccesstype.full)</code>  
@@ -6991,7 +7393,9 @@ qrsApi.selection.id(id).license.useraccesstype.full.get(filter, orderby, appendp
 <a name="selection.id.license.useraccesstype.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccesstype/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.license.useraccesstype.synthetic)</code>  
@@ -7011,7 +7415,9 @@ qrsApi.selection.id(id).license.useraccesstype.synthetic.put(postParams, filter)
 <a name="selection.id.license.useraccesstype.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccesstype/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.license.useraccesstype.synthetic)</code>  
@@ -7034,7 +7440,9 @@ qrsApi.selection.id(id).license.useraccesstype.synthetic.get(filter, appendprivi
 <a name="selection.id.license.useraccesstype.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccesstype/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.license.useraccesstype.table)</code>  
@@ -7058,7 +7466,9 @@ qrsApi.selection.id(id).license.useraccesstype.table.post(postParams, filter, sk
 <a name="selection.id.license.useraccesstype.delete"></a>
 ###### useraccesstype.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccesstype?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccesstype](#selection.id.license.useraccesstype)</code>  
@@ -7077,7 +7487,9 @@ qrsApi.selection.id(id).license.useraccesstype.delete(filter).then(function() {
 <a name="selection.id.license.useraccesstype.get"></a>
 ###### useraccesstype.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccesstype?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccesstype](#selection.id.license.useraccesstype)</code>  
@@ -7116,7 +7528,9 @@ qrsApi.selection.id(id).license.useraccesstype.get(filter, orderby, appendprivil
 <a name="selection.id.license.useraccessusage.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessusage/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.license.useraccessusage.count)</code>  
@@ -7138,7 +7552,9 @@ qrsApi.selection.id(id).license.useraccessusage.count.get(filter).then(function(
 <a name="selection.id.license.useraccessusage.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessusage/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.license.useraccessusage.full)</code>  
@@ -7162,7 +7578,9 @@ qrsApi.selection.id(id).license.useraccessusage.full.get(filter, orderby, append
 <a name="selection.id.license.useraccessusage.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessusage/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.license.useraccessusage.synthetic)</code>  
@@ -7185,7 +7603,9 @@ qrsApi.selection.id(id).license.useraccessusage.synthetic.get(filter, appendpriv
 <a name="selection.id.license.useraccessusage.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessusage/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.license.useraccessusage.table)</code>  
@@ -7209,7 +7629,9 @@ qrsApi.selection.id(id).license.useraccessusage.table.post(postParams, filter, s
 <a name="selection.id.license.useraccessusage.get"></a>
 ###### useraccessusage.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license/useraccessusage?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccessusage](#selection.id.license.useraccessusage)</code>  
@@ -7230,7 +7652,9 @@ qrsApi.selection.id(id).license.useraccessusage.get(filter, orderby, appendprivi
 <a name="selection.id.license.delete"></a>
 ##### license.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/license?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[license](#selection.id.license)</code>  
@@ -7261,7 +7685,9 @@ qrsApi.selection.id(id).license.delete(filter).then(function() {
 <a name="selection.id.licenseaccessusage.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ILicenseAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/licenseaccessusage/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.licenseaccessusage.full)</code>  
@@ -7282,7 +7708,9 @@ qrsApi.selection.id(id).licenseaccessusage.full.get(filter, orderby, appendprivi
 <a name="selection.id.licenseaccessusage.get"></a>
 ##### licenseaccessusage.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ILicenseAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/licenseaccessusage?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[licenseaccessusage](#selection.id.licenseaccessusage)</code>  
@@ -7323,7 +7751,9 @@ qrsApi.selection.id(id).licenseaccessusage.get(filter, orderby, appendprivileges
 <a name="selection.id.mimetype.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/mimetype/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.mimetype.count)</code>  
@@ -7345,7 +7775,9 @@ qrsApi.selection.id(id).mimetype.count.get(filter).then(function(int) {
 <a name="selection.id.mimetype.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;MimeType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/mimetype/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.mimetype.full)</code>  
@@ -7374,7 +7806,9 @@ qrsApi.selection.id(id).mimetype.full.get(filter, orderby, appendprivileges).the
 <a name="selection.id.mimetype.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/mimetype/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.mimetype.synthetic)</code>  
@@ -7394,7 +7828,9 @@ qrsApi.selection.id(id).mimetype.synthetic.put(postParams, filter).then(function
 <a name="selection.id.mimetype.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/mimetype/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.mimetype.synthetic)</code>  
@@ -7417,7 +7853,9 @@ qrsApi.selection.id(id).mimetype.synthetic.get(filter, appendprivileges).then(fu
 <a name="selection.id.mimetype.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/mimetype/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.mimetype.table)</code>  
@@ -7441,7 +7879,9 @@ qrsApi.selection.id(id).mimetype.table.post(postParams, filter, skip, take, sort
 <a name="selection.id.mimetype.delete"></a>
 ##### mimetype.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/mimetype?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[mimetype](#selection.id.mimetype)</code>  
@@ -7460,7 +7900,9 @@ qrsApi.selection.id(id).mimetype.delete(filter).then(function() {
 <a name="selection.id.mimetype.get"></a>
 ##### mimetype.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;MimeType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/mimetype?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[mimetype](#selection.id.mimetype)</code>  
@@ -7512,7 +7954,9 @@ qrsApi.selection.id(id).mimetype.get(filter, orderby, appendprivileges).then(fun
 <a name="selection.id.printingservice.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.printingservice.count)</code>  
@@ -7534,7 +7978,9 @@ qrsApi.selection.id(id).printingservice.count.get(filter).then(function(int) {
 <a name="selection.id.printingservice.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.printingservice.full)</code>  
@@ -7563,7 +8009,9 @@ qrsApi.selection.id(id).printingservice.full.get(filter, orderby, appendprivileg
 <a name="selection.id.printingservice.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.printingservice.synthetic)</code>  
@@ -7583,7 +8031,9 @@ qrsApi.selection.id(id).printingservice.synthetic.put(postParams, filter).then(f
 <a name="selection.id.printingservice.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.printingservice.synthetic)</code>  
@@ -7606,7 +8056,9 @@ qrsApi.selection.id(id).printingservice.synthetic.get(filter, appendprivileges).
 <a name="selection.id.printingservice.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.printingservice.table)</code>  
@@ -7650,7 +8102,9 @@ qrsApi.selection.id(id).printingservice.table.post(postParams, filter, skip, tak
 <a name="selection.id.printingservice.template.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.printingservice.template.count)</code>  
@@ -7672,7 +8126,9 @@ qrsApi.selection.id(id).printingservice.template.count.get(filter).then(function
 <a name="selection.id.printingservice.template.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.printingservice.template.full)</code>  
@@ -7701,7 +8157,9 @@ qrsApi.selection.id(id).printingservice.template.full.get(filter, orderby, appen
 <a name="selection.id.printingservice.template.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/template/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.printingservice.template.synthetic)</code>  
@@ -7721,7 +8179,9 @@ qrsApi.selection.id(id).printingservice.template.synthetic.put(postParams, filte
 <a name="selection.id.printingservice.template.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/template/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.printingservice.template.synthetic)</code>  
@@ -7744,7 +8204,9 @@ qrsApi.selection.id(id).printingservice.template.synthetic.get(filter, appendpri
 <a name="selection.id.printingservice.template.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.printingservice.template.table)</code>  
@@ -7768,7 +8230,9 @@ qrsApi.selection.id(id).printingservice.template.table.post(postParams, filter, 
 <a name="selection.id.printingservice.template.delete"></a>
 ###### template.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.printingservice.template)</code>  
@@ -7787,7 +8251,9 @@ qrsApi.selection.id(id).printingservice.template.delete(filter).then(function() 
 <a name="selection.id.printingservice.template.get"></a>
 ###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.printingservice.template)</code>  
@@ -7808,7 +8274,9 @@ qrsApi.selection.id(id).printingservice.template.get(filter, orderby, appendpriv
 <a name="selection.id.printingservice.get"></a>
 ##### printingservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/printingservice?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[printingservice](#selection.id.printingservice)</code>  
@@ -7860,7 +8328,9 @@ qrsApi.selection.id(id).printingservice.get(filter, orderby, appendprivileges).t
 <a name="selection.id.proxyservice.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.proxyservice.count)</code>  
@@ -7882,7 +8352,9 @@ qrsApi.selection.id(id).proxyservice.count.get(filter).then(function(int) {
 <a name="selection.id.proxyservice.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.proxyservice.full)</code>  
@@ -7911,7 +8383,9 @@ qrsApi.selection.id(id).proxyservice.full.get(filter, orderby, appendprivileges)
 <a name="selection.id.proxyservice.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.proxyservice.synthetic)</code>  
@@ -7931,7 +8405,9 @@ qrsApi.selection.id(id).proxyservice.synthetic.put(postParams, filter).then(func
 <a name="selection.id.proxyservice.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.proxyservice.synthetic)</code>  
@@ -7954,7 +8430,9 @@ qrsApi.selection.id(id).proxyservice.synthetic.get(filter, appendprivileges).the
 <a name="selection.id.proxyservice.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.proxyservice.table)</code>  
@@ -7998,7 +8476,9 @@ qrsApi.selection.id(id).proxyservice.table.post(postParams, filter, skip, take, 
 <a name="selection.id.proxyservice.template.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.proxyservice.template.count)</code>  
@@ -8020,7 +8500,9 @@ qrsApi.selection.id(id).proxyservice.template.count.get(filter).then(function(in
 <a name="selection.id.proxyservice.template.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.proxyservice.template.full)</code>  
@@ -8049,7 +8531,9 @@ qrsApi.selection.id(id).proxyservice.template.full.get(filter, orderby, appendpr
 <a name="selection.id.proxyservice.template.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/template/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.proxyservice.template.synthetic)</code>  
@@ -8069,7 +8553,9 @@ qrsApi.selection.id(id).proxyservice.template.synthetic.put(postParams, filter).
 <a name="selection.id.proxyservice.template.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/template/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.proxyservice.template.synthetic)</code>  
@@ -8092,7 +8578,9 @@ qrsApi.selection.id(id).proxyservice.template.synthetic.get(filter, appendprivil
 <a name="selection.id.proxyservice.template.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.proxyservice.template.table)</code>  
@@ -8116,7 +8604,9 @@ qrsApi.selection.id(id).proxyservice.template.table.post(postParams, filter, ski
 <a name="selection.id.proxyservice.template.delete"></a>
 ###### template.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.proxyservice.template)</code>  
@@ -8135,7 +8625,9 @@ qrsApi.selection.id(id).proxyservice.template.delete(filter).then(function() {
 <a name="selection.id.proxyservice.template.get"></a>
 ###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.proxyservice.template)</code>  
@@ -8156,7 +8648,9 @@ qrsApi.selection.id(id).proxyservice.template.get(filter, orderby, appendprivile
 <a name="selection.id.proxyservice.get"></a>
 ##### proxyservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/proxyservice?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[proxyservice](#selection.id.proxyservice)</code>  
@@ -8197,7 +8691,9 @@ qrsApi.selection.id(id).proxyservice.get(filter, orderby, appendprivileges).then
 <a name="selection.id.reloadtask.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtask/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.reloadtask.count)</code>  
@@ -8219,7 +8715,9 @@ qrsApi.selection.id(id).reloadtask.count.get(filter).then(function(int) {
 <a name="selection.id.reloadtask.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtask/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.reloadtask.full)</code>  
@@ -8248,7 +8746,9 @@ qrsApi.selection.id(id).reloadtask.full.get(filter, orderby, appendprivileges).t
 <a name="selection.id.reloadtask.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtask/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.reloadtask.synthetic)</code>  
@@ -8268,7 +8768,9 @@ qrsApi.selection.id(id).reloadtask.synthetic.put(postParams, filter).then(functi
 <a name="selection.id.reloadtask.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtask/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.reloadtask.synthetic)</code>  
@@ -8291,7 +8793,9 @@ qrsApi.selection.id(id).reloadtask.synthetic.get(filter, appendprivileges).then(
 <a name="selection.id.reloadtask.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtask/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.reloadtask.table)</code>  
@@ -8315,7 +8819,9 @@ qrsApi.selection.id(id).reloadtask.table.post(postParams, filter, skip, take, so
 <a name="selection.id.reloadtask.delete"></a>
 ##### reloadtask.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtask?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtask](#selection.id.reloadtask)</code>  
@@ -8334,7 +8840,9 @@ qrsApi.selection.id(id).reloadtask.delete(filter).then(function() {
 <a name="selection.id.reloadtask.get"></a>
 ##### reloadtask.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtask?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtask](#selection.id.reloadtask)</code>  
@@ -8375,7 +8883,9 @@ qrsApi.selection.id(id).reloadtask.get(filter, orderby, appendprivileges).then(f
 <a name="selection.id.reloadtaskoperational.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtaskoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.reloadtaskoperational.count)</code>  
@@ -8397,7 +8907,9 @@ qrsApi.selection.id(id).reloadtaskoperational.count.get(filter).then(function(in
 <a name="selection.id.reloadtaskoperational.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtaskoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.reloadtaskoperational.full)</code>  
@@ -8426,7 +8938,9 @@ qrsApi.selection.id(id).reloadtaskoperational.full.get(filter, orderby, appendpr
 <a name="selection.id.reloadtaskoperational.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtaskoperational/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.reloadtaskoperational.synthetic)</code>  
@@ -8446,7 +8960,9 @@ qrsApi.selection.id(id).reloadtaskoperational.synthetic.put(postParams, filter).
 <a name="selection.id.reloadtaskoperational.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtaskoperational/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.reloadtaskoperational.synthetic)</code>  
@@ -8469,7 +8985,9 @@ qrsApi.selection.id(id).reloadtaskoperational.synthetic.get(filter, appendprivil
 <a name="selection.id.reloadtaskoperational.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtaskoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.reloadtaskoperational.table)</code>  
@@ -8493,7 +9011,9 @@ qrsApi.selection.id(id).reloadtaskoperational.table.post(postParams, filter, ski
 <a name="selection.id.reloadtaskoperational.delete"></a>
 ##### reloadtaskoperational.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtaskoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtaskoperational](#selection.id.reloadtaskoperational)</code>  
@@ -8512,7 +9032,9 @@ qrsApi.selection.id(id).reloadtaskoperational.delete(filter).then(function() {
 <a name="selection.id.reloadtaskoperational.get"></a>
 ##### reloadtaskoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ReloadTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/reloadtaskoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtaskoperational](#selection.id.reloadtaskoperational)</code>  
@@ -8564,7 +9086,9 @@ qrsApi.selection.id(id).reloadtaskoperational.get(filter, orderby, appendprivile
 <a name="selection.id.repositoryservice.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.repositoryservice.count)</code>  
@@ -8586,7 +9110,9 @@ qrsApi.selection.id(id).repositoryservice.count.get(filter).then(function(int) {
 <a name="selection.id.repositoryservice.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.repositoryservice.full)</code>  
@@ -8615,7 +9141,9 @@ qrsApi.selection.id(id).repositoryservice.full.get(filter, orderby, appendprivil
 <a name="selection.id.repositoryservice.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.repositoryservice.synthetic)</code>  
@@ -8635,7 +9163,9 @@ qrsApi.selection.id(id).repositoryservice.synthetic.put(postParams, filter).then
 <a name="selection.id.repositoryservice.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.repositoryservice.synthetic)</code>  
@@ -8658,7 +9188,9 @@ qrsApi.selection.id(id).repositoryservice.synthetic.get(filter, appendprivileges
 <a name="selection.id.repositoryservice.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.repositoryservice.table)</code>  
@@ -8702,7 +9234,9 @@ qrsApi.selection.id(id).repositoryservice.table.post(postParams, filter, skip, t
 <a name="selection.id.repositoryservice.template.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.repositoryservice.template.count)</code>  
@@ -8724,7 +9258,9 @@ qrsApi.selection.id(id).repositoryservice.template.count.get(filter).then(functi
 <a name="selection.id.repositoryservice.template.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.repositoryservice.template.full)</code>  
@@ -8753,7 +9289,9 @@ qrsApi.selection.id(id).repositoryservice.template.full.get(filter, orderby, app
 <a name="selection.id.repositoryservice.template.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/template/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.repositoryservice.template.synthetic)</code>  
@@ -8773,7 +9311,9 @@ qrsApi.selection.id(id).repositoryservice.template.synthetic.put(postParams, fil
 <a name="selection.id.repositoryservice.template.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/template/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.repositoryservice.template.synthetic)</code>  
@@ -8796,7 +9336,9 @@ qrsApi.selection.id(id).repositoryservice.template.synthetic.get(filter, appendp
 <a name="selection.id.repositoryservice.template.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.repositoryservice.template.table)</code>  
@@ -8820,7 +9362,9 @@ qrsApi.selection.id(id).repositoryservice.template.table.post(postParams, filter
 <a name="selection.id.repositoryservice.template.delete"></a>
 ###### template.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.repositoryservice.template)</code>  
@@ -8839,7 +9383,9 @@ qrsApi.selection.id(id).repositoryservice.template.delete(filter).then(function(
 <a name="selection.id.repositoryservice.template.get"></a>
 ###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.repositoryservice.template)</code>  
@@ -8860,7 +9406,9 @@ qrsApi.selection.id(id).repositoryservice.template.get(filter, orderby, appendpr
 <a name="selection.id.repositoryservice.get"></a>
 ##### repositoryservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/repositoryservice?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[repositoryservice](#selection.id.repositoryservice)</code>  
@@ -8912,7 +9460,9 @@ qrsApi.selection.id(id).repositoryservice.get(filter, orderby, appendprivileges)
 <a name="selection.id.schedulerservice.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.schedulerservice.count)</code>  
@@ -8934,7 +9484,9 @@ qrsApi.selection.id(id).schedulerservice.count.get(filter).then(function(int) {
 <a name="selection.id.schedulerservice.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.schedulerservice.full)</code>  
@@ -8963,7 +9515,9 @@ qrsApi.selection.id(id).schedulerservice.full.get(filter, orderby, appendprivile
 <a name="selection.id.schedulerservice.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.schedulerservice.synthetic)</code>  
@@ -8983,7 +9537,9 @@ qrsApi.selection.id(id).schedulerservice.synthetic.put(postParams, filter).then(
 <a name="selection.id.schedulerservice.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.schedulerservice.synthetic)</code>  
@@ -9006,7 +9562,9 @@ qrsApi.selection.id(id).schedulerservice.synthetic.get(filter, appendprivileges)
 <a name="selection.id.schedulerservice.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.schedulerservice.table)</code>  
@@ -9050,7 +9608,9 @@ qrsApi.selection.id(id).schedulerservice.table.post(postParams, filter, skip, ta
 <a name="selection.id.schedulerservice.template.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.schedulerservice.template.count)</code>  
@@ -9072,7 +9632,9 @@ qrsApi.selection.id(id).schedulerservice.template.count.get(filter).then(functio
 <a name="selection.id.schedulerservice.template.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.schedulerservice.template.full)</code>  
@@ -9101,7 +9663,9 @@ qrsApi.selection.id(id).schedulerservice.template.full.get(filter, orderby, appe
 <a name="selection.id.schedulerservice.template.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/template/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.schedulerservice.template.synthetic)</code>  
@@ -9121,7 +9685,9 @@ qrsApi.selection.id(id).schedulerservice.template.synthetic.put(postParams, filt
 <a name="selection.id.schedulerservice.template.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/template/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.schedulerservice.template.synthetic)</code>  
@@ -9144,7 +9710,9 @@ qrsApi.selection.id(id).schedulerservice.template.synthetic.get(filter, appendpr
 <a name="selection.id.schedulerservice.template.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.schedulerservice.template.table)</code>  
@@ -9168,7 +9736,9 @@ qrsApi.selection.id(id).schedulerservice.template.table.post(postParams, filter,
 <a name="selection.id.schedulerservice.template.delete"></a>
 ###### template.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.schedulerservice.template)</code>  
@@ -9187,7 +9757,9 @@ qrsApi.selection.id(id).schedulerservice.template.delete(filter).then(function()
 <a name="selection.id.schedulerservice.template.get"></a>
 ###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.schedulerservice.template)</code>  
@@ -9208,7 +9780,9 @@ qrsApi.selection.id(id).schedulerservice.template.get(filter, orderby, appendpri
 <a name="selection.id.schedulerservice.get"></a>
 ##### schedulerservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schedulerservice?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[schedulerservice](#selection.id.schedulerservice)</code>  
@@ -9249,7 +9823,9 @@ qrsApi.selection.id(id).schedulerservice.get(filter, orderby, appendprivileges).
 <a name="selection.id.schemaevent.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaevent/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.schemaevent.count)</code>  
@@ -9271,7 +9847,9 @@ qrsApi.selection.id(id).schemaevent.count.get(filter).then(function(int) {
 <a name="selection.id.schemaevent.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaevent/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.schemaevent.full)</code>  
@@ -9300,7 +9878,9 @@ qrsApi.selection.id(id).schemaevent.full.get(filter, orderby, appendprivileges).
 <a name="selection.id.schemaevent.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaevent/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.schemaevent.synthetic)</code>  
@@ -9320,7 +9900,9 @@ qrsApi.selection.id(id).schemaevent.synthetic.put(postParams, filter).then(funct
 <a name="selection.id.schemaevent.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaevent/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.schemaevent.synthetic)</code>  
@@ -9343,7 +9925,9 @@ qrsApi.selection.id(id).schemaevent.synthetic.get(filter, appendprivileges).then
 <a name="selection.id.schemaevent.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaevent/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.schemaevent.table)</code>  
@@ -9367,7 +9951,9 @@ qrsApi.selection.id(id).schemaevent.table.post(postParams, filter, skip, take, s
 <a name="selection.id.schemaevent.delete"></a>
 ##### schemaevent.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaevent?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaevent](#selection.id.schemaevent)</code>  
@@ -9386,7 +9972,9 @@ qrsApi.selection.id(id).schemaevent.delete(filter).then(function() {
 <a name="selection.id.schemaevent.get"></a>
 ##### schemaevent.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaevent?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaevent](#selection.id.schemaevent)</code>  
@@ -9427,7 +10015,9 @@ qrsApi.selection.id(id).schemaevent.get(filter, orderby, appendprivileges).then(
 <a name="selection.id.schemaeventoperational.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaeventoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.schemaeventoperational.count)</code>  
@@ -9449,7 +10039,9 @@ qrsApi.selection.id(id).schemaeventoperational.count.get(filter).then(function(i
 <a name="selection.id.schemaeventoperational.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaeventoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.schemaeventoperational.full)</code>  
@@ -9478,7 +10070,9 @@ qrsApi.selection.id(id).schemaeventoperational.full.get(filter, orderby, appendp
 <a name="selection.id.schemaeventoperational.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaeventoperational/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.schemaeventoperational.synthetic)</code>  
@@ -9498,7 +10092,9 @@ qrsApi.selection.id(id).schemaeventoperational.synthetic.put(postParams, filter)
 <a name="selection.id.schemaeventoperational.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaeventoperational/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.schemaeventoperational.synthetic)</code>  
@@ -9521,7 +10117,9 @@ qrsApi.selection.id(id).schemaeventoperational.synthetic.get(filter, appendprivi
 <a name="selection.id.schemaeventoperational.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaeventoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.schemaeventoperational.table)</code>  
@@ -9545,7 +10143,9 @@ qrsApi.selection.id(id).schemaeventoperational.table.post(postParams, filter, sk
 <a name="selection.id.schemaeventoperational.delete"></a>
 ##### schemaeventoperational.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaeventoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaeventoperational](#selection.id.schemaeventoperational)</code>  
@@ -9564,7 +10164,9 @@ qrsApi.selection.id(id).schemaeventoperational.delete(filter).then(function() {
 <a name="selection.id.schemaeventoperational.get"></a>
 ##### schemaeventoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/schemaeventoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaeventoperational](#selection.id.schemaeventoperational)</code>  
@@ -9605,7 +10207,9 @@ qrsApi.selection.id(id).schemaeventoperational.get(filter, orderby, appendprivil
 <a name="selection.id.servernodeconfiguration.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servernodeconfiguration/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.servernodeconfiguration.count)</code>  
@@ -9627,7 +10231,9 @@ qrsApi.selection.id(id).servernodeconfiguration.count.get(filter).then(function(
 <a name="selection.id.servernodeconfiguration.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ServerNodeConfiguration&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servernodeconfiguration/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.servernodeconfiguration.full)</code>  
@@ -9656,7 +10262,9 @@ qrsApi.selection.id(id).servernodeconfiguration.full.get(filter, orderby, append
 <a name="selection.id.servernodeconfiguration.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servernodeconfiguration/synthetic?filter={filter}
+
 This method is manual
 
 **Kind**: static method of <code>[synthetic](#selection.id.servernodeconfiguration.synthetic)</code>  
@@ -9676,7 +10284,9 @@ qrsApi.selection.id(id).servernodeconfiguration.synthetic.put(postParams, filter
 <a name="selection.id.servernodeconfiguration.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servernodeconfiguration/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.servernodeconfiguration.synthetic)</code>  
@@ -9699,7 +10309,9 @@ qrsApi.selection.id(id).servernodeconfiguration.synthetic.get(filter, appendpriv
 <a name="selection.id.servernodeconfiguration.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servernodeconfiguration/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.servernodeconfiguration.table)</code>  
@@ -9723,7 +10335,9 @@ qrsApi.selection.id(id).servernodeconfiguration.table.post(postParams, filter, s
 <a name="selection.id.servernodeconfiguration.delete"></a>
 ##### servernodeconfiguration.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servernodeconfiguration?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[servernodeconfiguration](#selection.id.servernodeconfiguration)</code>  
@@ -9742,7 +10356,9 @@ qrsApi.selection.id(id).servernodeconfiguration.delete(filter).then(function() {
 <a name="selection.id.servernodeconfiguration.get"></a>
 ##### servernodeconfiguration.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ServerNodeConfiguration&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servernodeconfiguration?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[servernodeconfiguration](#selection.id.servernodeconfiguration)</code>  
@@ -9781,7 +10397,9 @@ qrsApi.selection.id(id).servernodeconfiguration.get(filter, orderby, appendprivi
 <a name="selection.id.servicestatus.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servicestatus/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.servicestatus.count)</code>  
@@ -9803,7 +10421,9 @@ qrsApi.selection.id(id).servicestatus.count.get(filter).then(function(int) {
 <a name="selection.id.servicestatus.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ServiceStatus&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servicestatus/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.servicestatus.full)</code>  
@@ -9827,7 +10447,9 @@ qrsApi.selection.id(id).servicestatus.full.get(filter, orderby, appendprivileges
 <a name="selection.id.servicestatus.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servicestatus/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.servicestatus.synthetic)</code>  
@@ -9850,7 +10472,9 @@ qrsApi.selection.id(id).servicestatus.synthetic.get(filter, appendprivileges).th
 <a name="selection.id.servicestatus.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servicestatus/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.servicestatus.table)</code>  
@@ -9874,7 +10498,9 @@ qrsApi.selection.id(id).servicestatus.table.post(postParams, filter, skip, take,
 <a name="selection.id.servicestatus.get"></a>
 ##### servicestatus.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ServiceStatus&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/servicestatus?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[servicestatus](#selection.id.servicestatus)</code>  
@@ -9913,7 +10539,9 @@ qrsApi.selection.id(id).servicestatus.get(filter, orderby, appendprivileges).the
 <a name="selection.id.staticcontentreference.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/staticcontentreference/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.staticcontentreference.count)</code>  
@@ -9935,7 +10563,9 @@ qrsApi.selection.id(id).staticcontentreference.count.get(filter).then(function(i
 <a name="selection.id.staticcontentreference.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;StaticContentReference&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/staticcontentreference/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.staticcontentreference.full)</code>  
@@ -9959,7 +10589,9 @@ qrsApi.selection.id(id).staticcontentreference.full.get(filter, orderby, appendp
 <a name="selection.id.staticcontentreference.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/staticcontentreference/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.staticcontentreference.synthetic)</code>  
@@ -9982,7 +10614,9 @@ qrsApi.selection.id(id).staticcontentreference.synthetic.get(filter, appendprivi
 <a name="selection.id.staticcontentreference.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/staticcontentreference/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.staticcontentreference.table)</code>  
@@ -10006,7 +10640,9 @@ qrsApi.selection.id(id).staticcontentreference.table.post(postParams, filter, sk
 <a name="selection.id.staticcontentreference.get"></a>
 ##### staticcontentreference.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;StaticContentReference&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/staticcontentreference?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[staticcontentreference](#selection.id.staticcontentreference)</code>  
@@ -10039,7 +10675,9 @@ qrsApi.selection.id(id).staticcontentreference.get(filter, orderby, appendprivil
 <a name="selection.id.staticcontentreferencebase.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IStaticContentReferenceBase&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/staticcontentreferencebase/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.staticcontentreferencebase.full)</code>  
@@ -10060,7 +10698,9 @@ qrsApi.selection.id(id).staticcontentreferencebase.full.get(filter, orderby, app
 <a name="selection.id.staticcontentreferencebase.get"></a>
 ##### staticcontentreferencebase.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IStaticContentReferenceBase&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/staticcontentreferencebase?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[staticcontentreferencebase](#selection.id.staticcontentreferencebase)</code>  
@@ -10101,7 +10741,9 @@ qrsApi.selection.id(id).staticcontentreferencebase.get(filter, orderby, appendpr
 <a name="selection.id.stream.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/stream/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.stream.count)</code>  
@@ -10123,7 +10765,9 @@ qrsApi.selection.id(id).stream.count.get(filter).then(function(int) {
 <a name="selection.id.stream.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Stream&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/stream/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.stream.full)</code>  
@@ -10152,7 +10796,9 @@ qrsApi.selection.id(id).stream.full.get(filter, orderby, appendprivileges).then(
 <a name="selection.id.stream.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/stream/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.stream.synthetic)</code>  
@@ -10172,7 +10818,9 @@ qrsApi.selection.id(id).stream.synthetic.put(postParams, filter).then(function()
 <a name="selection.id.stream.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/stream/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.stream.synthetic)</code>  
@@ -10195,7 +10843,9 @@ qrsApi.selection.id(id).stream.synthetic.get(filter, appendprivileges).then(func
 <a name="selection.id.stream.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/stream/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.stream.table)</code>  
@@ -10219,7 +10869,9 @@ qrsApi.selection.id(id).stream.table.post(postParams, filter, skip, take, sortco
 <a name="selection.id.stream.delete"></a>
 ##### stream.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/stream?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[stream](#selection.id.stream)</code>  
@@ -10238,7 +10890,9 @@ qrsApi.selection.id(id).stream.delete(filter).then(function() {
 <a name="selection.id.stream.get"></a>
 ##### stream.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Stream&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/stream?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[stream](#selection.id.stream)</code>  
@@ -10277,7 +10931,9 @@ qrsApi.selection.id(id).stream.get(filter, orderby, appendprivileges).then(funct
 <a name="selection.id.syncsession.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/syncsession/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.syncsession.count)</code>  
@@ -10299,7 +10955,9 @@ qrsApi.selection.id(id).syncsession.count.get(filter).then(function(int) {
 <a name="selection.id.syncsession.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SyncSession&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/syncsession/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.syncsession.full)</code>  
@@ -10323,7 +10981,9 @@ qrsApi.selection.id(id).syncsession.full.get(filter, orderby, appendprivileges).
 <a name="selection.id.syncsession.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/syncsession/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.syncsession.synthetic)</code>  
@@ -10346,7 +11006,9 @@ qrsApi.selection.id(id).syncsession.synthetic.get(filter, appendprivileges).then
 <a name="selection.id.syncsession.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/syncsession/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.syncsession.table)</code>  
@@ -10370,7 +11032,9 @@ qrsApi.selection.id(id).syncsession.table.post(postParams, filter, skip, take, s
 <a name="selection.id.syncsession.get"></a>
 ##### syncsession.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SyncSession&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/syncsession?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[syncsession](#selection.id.syncsession)</code>  
@@ -10411,7 +11075,9 @@ qrsApi.selection.id(id).syncsession.get(filter, orderby, appendprivileges).then(
 <a name="selection.id.systemrule.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/systemrule/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.systemrule.count)</code>  
@@ -10433,7 +11099,9 @@ qrsApi.selection.id(id).systemrule.count.get(filter).then(function(int) {
 <a name="selection.id.systemrule.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SystemRule&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/systemrule/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.systemrule.full)</code>  
@@ -10462,7 +11130,9 @@ qrsApi.selection.id(id).systemrule.full.get(filter, orderby, appendprivileges).t
 <a name="selection.id.systemrule.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/systemrule/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.systemrule.synthetic)</code>  
@@ -10482,7 +11152,9 @@ qrsApi.selection.id(id).systemrule.synthetic.put(postParams, filter).then(functi
 <a name="selection.id.systemrule.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/systemrule/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.systemrule.synthetic)</code>  
@@ -10505,7 +11177,9 @@ qrsApi.selection.id(id).systemrule.synthetic.get(filter, appendprivileges).then(
 <a name="selection.id.systemrule.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/systemrule/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.systemrule.table)</code>  
@@ -10529,7 +11203,9 @@ qrsApi.selection.id(id).systemrule.table.post(postParams, filter, skip, take, so
 <a name="selection.id.systemrule.delete"></a>
 ##### systemrule.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/systemrule?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[systemrule](#selection.id.systemrule)</code>  
@@ -10548,7 +11224,9 @@ qrsApi.selection.id(id).systemrule.delete(filter).then(function() {
 <a name="selection.id.systemrule.get"></a>
 ##### systemrule.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SystemRule&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/systemrule?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[systemrule](#selection.id.systemrule)</code>  
@@ -10589,7 +11267,9 @@ qrsApi.selection.id(id).systemrule.get(filter, orderby, appendprivileges).then(f
 <a name="selection.id.tag.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tag/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.tag.count)</code>  
@@ -10611,7 +11291,9 @@ qrsApi.selection.id(id).tag.count.get(filter).then(function(int) {
 <a name="selection.id.tag.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Tag&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tag/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.tag.full)</code>  
@@ -10640,7 +11322,9 @@ qrsApi.selection.id(id).tag.full.get(filter, orderby, appendprivileges).then(fun
 <a name="selection.id.tag.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tag/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.tag.synthetic)</code>  
@@ -10660,7 +11344,9 @@ qrsApi.selection.id(id).tag.synthetic.put(postParams, filter).then(function() {
 <a name="selection.id.tag.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tag/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.tag.synthetic)</code>  
@@ -10683,7 +11369,9 @@ qrsApi.selection.id(id).tag.synthetic.get(filter, appendprivileges).then(functio
 <a name="selection.id.tag.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tag/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.tag.table)</code>  
@@ -10707,7 +11395,9 @@ qrsApi.selection.id(id).tag.table.post(postParams, filter, skip, take, sortcolum
 <a name="selection.id.tag.delete"></a>
 ##### tag.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tag?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[tag](#selection.id.tag)</code>  
@@ -10726,7 +11416,9 @@ qrsApi.selection.id(id).tag.delete(filter).then(function() {
 <a name="selection.id.tag.get"></a>
 ##### tag.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Tag&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tag?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[tag](#selection.id.tag)</code>  
@@ -10759,7 +11451,9 @@ qrsApi.selection.id(id).tag.get(filter, orderby, appendprivileges).then(function
 <a name="selection.id.task.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ITask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/task/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.task.full)</code>  
@@ -10780,7 +11474,9 @@ qrsApi.selection.id(id).task.full.get(filter, orderby, appendprivileges).then(fu
 <a name="selection.id.task.get"></a>
 ##### task.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ITask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/task?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[task](#selection.id.task)</code>  
@@ -10813,7 +11509,9 @@ qrsApi.selection.id(id).task.get(filter, orderby, appendprivileges).then(functio
 <a name="selection.id.taskoperational.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ITaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/taskoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.taskoperational.full)</code>  
@@ -10834,7 +11532,9 @@ qrsApi.selection.id(id).taskoperational.full.get(filter, orderby, appendprivileg
 <a name="selection.id.taskoperational.get"></a>
 ##### taskoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ITaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/taskoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[taskoperational](#selection.id.taskoperational)</code>  
@@ -10873,7 +11573,9 @@ qrsApi.selection.id(id).taskoperational.get(filter, orderby, appendprivileges).t
 <a name="selection.id.tempcontent.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tempcontent/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.tempcontent.count)</code>  
@@ -10895,7 +11597,9 @@ qrsApi.selection.id(id).tempcontent.count.get(filter).then(function(int) {
 <a name="selection.id.tempcontent.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;TempContent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tempcontent/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.tempcontent.full)</code>  
@@ -10919,7 +11623,9 @@ qrsApi.selection.id(id).tempcontent.full.get(filter, orderby, appendprivileges).
 <a name="selection.id.tempcontent.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tempcontent/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.tempcontent.synthetic)</code>  
@@ -10942,7 +11648,9 @@ qrsApi.selection.id(id).tempcontent.synthetic.get(filter, appendprivileges).then
 <a name="selection.id.tempcontent.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tempcontent/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.tempcontent.table)</code>  
@@ -10966,7 +11674,9 @@ qrsApi.selection.id(id).tempcontent.table.post(postParams, filter, skip, take, s
 <a name="selection.id.tempcontent.get"></a>
 ##### tempcontent.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;TempContent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/tempcontent?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[tempcontent](#selection.id.tempcontent)</code>  
@@ -11034,7 +11744,9 @@ qrsApi.selection.id(id).tempcontent.get(filter, orderby, appendprivileges).then(
 <a name="selection.id.user.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.user.count)</code>  
@@ -11073,7 +11785,9 @@ qrsApi.selection.id(id).user.count.get(filter).then(function(int) {
 <a name="selection.id.user.followingapp.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/followingapp/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.user.followingapp.count)</code>  
@@ -11095,7 +11809,9 @@ qrsApi.selection.id(id).user.followingapp.count.get(filter).then(function(int) {
 <a name="selection.id.user.followingapp.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/followingapp/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.user.followingapp.full)</code>  
@@ -11124,7 +11840,9 @@ qrsApi.selection.id(id).user.followingapp.full.get(filter, orderby, appendprivil
 <a name="selection.id.user.followingapp.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/followingapp/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.user.followingapp.synthetic)</code>  
@@ -11144,7 +11862,9 @@ qrsApi.selection.id(id).user.followingapp.synthetic.put(postParams, filter).then
 <a name="selection.id.user.followingapp.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/followingapp/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.user.followingapp.synthetic)</code>  
@@ -11167,7 +11887,9 @@ qrsApi.selection.id(id).user.followingapp.synthetic.get(filter, appendprivileges
 <a name="selection.id.user.followingapp.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/followingapp/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.user.followingapp.table)</code>  
@@ -11191,7 +11913,9 @@ qrsApi.selection.id(id).user.followingapp.table.post(postParams, filter, skip, t
 <a name="selection.id.user.followingapp.delete"></a>
 ###### followingapp.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/followingapp?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[followingapp](#selection.id.user.followingapp)</code>  
@@ -11210,7 +11934,9 @@ qrsApi.selection.id(id).user.followingapp.delete(filter).then(function() {
 <a name="selection.id.user.followingapp.get"></a>
 ###### followingapp.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/followingapp?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[followingapp](#selection.id.user.followingapp)</code>  
@@ -11234,7 +11960,9 @@ qrsApi.selection.id(id).user.followingapp.get(filter, orderby, appendprivileges)
 <a name="selection.id.user.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;User&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.user.full)</code>  
@@ -11266,7 +11994,9 @@ qrsApi.selection.id(id).user.full.get(filter, orderby, appendprivileges).then(fu
 <a name="selection.id.user.license.useraccesstype.post"></a>
 ####### useraccesstype.post(postParams) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/license/useraccesstype
+
 This method is manual
 
 **Kind**: static method of <code>[useraccesstype](#selection.id.user.license.useraccesstype)</code>  
@@ -11305,7 +12035,9 @@ qrsApi.selection.id(id).user.license.useraccesstype.post(postParams).then(functi
 <a name="selection.id.user.recentapp.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/recentapp/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.user.recentapp.count)</code>  
@@ -11327,7 +12059,9 @@ qrsApi.selection.id(id).user.recentapp.count.get(filter).then(function(int) {
 <a name="selection.id.user.recentapp.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/recentapp/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.user.recentapp.full)</code>  
@@ -11356,7 +12090,9 @@ qrsApi.selection.id(id).user.recentapp.full.get(filter, orderby, appendprivilege
 <a name="selection.id.user.recentapp.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/recentapp/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.user.recentapp.synthetic)</code>  
@@ -11376,7 +12112,9 @@ qrsApi.selection.id(id).user.recentapp.synthetic.put(postParams, filter).then(fu
 <a name="selection.id.user.recentapp.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/recentapp/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.user.recentapp.synthetic)</code>  
@@ -11399,7 +12137,9 @@ qrsApi.selection.id(id).user.recentapp.synthetic.get(filter, appendprivileges).t
 <a name="selection.id.user.recentapp.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/recentapp/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.user.recentapp.table)</code>  
@@ -11423,7 +12163,9 @@ qrsApi.selection.id(id).user.recentapp.table.post(postParams, filter, skip, take
 <a name="selection.id.user.recentapp.delete"></a>
 ###### recentapp.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/recentapp?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[recentapp](#selection.id.user.recentapp)</code>  
@@ -11442,7 +12184,9 @@ qrsApi.selection.id(id).user.recentapp.delete(filter).then(function() {
 <a name="selection.id.user.recentapp.get"></a>
 ###### recentapp.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/recentapp?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[recentapp](#selection.id.user.recentapp)</code>  
@@ -11471,7 +12215,9 @@ qrsApi.selection.id(id).user.recentapp.get(filter, orderby, appendprivileges).th
 <a name="selection.id.user.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.user.synthetic)</code>  
@@ -11491,7 +12237,9 @@ qrsApi.selection.id(id).user.synthetic.put(postParams, filter).then(function() {
 <a name="selection.id.user.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.user.synthetic)</code>  
@@ -11514,7 +12262,9 @@ qrsApi.selection.id(id).user.synthetic.get(filter, appendprivileges).then(functi
 <a name="selection.id.user.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.user.table)</code>  
@@ -11538,7 +12288,9 @@ qrsApi.selection.id(id).user.table.post(postParams, filter, skip, take, sortcolu
 <a name="selection.id.user.delete"></a>
 ##### user.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[user](#selection.id.user)</code>  
@@ -11557,7 +12309,9 @@ qrsApi.selection.id(id).user.delete(filter).then(function() {
 <a name="selection.id.user.get"></a>
 ##### user.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;User&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/user?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[user](#selection.id.user)</code>  
@@ -11610,7 +12364,9 @@ qrsApi.selection.id(id).user.get(filter, orderby, appendprivileges).then(functio
 <a name="selection.id.userdirectory.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.userdirectory.count)</code>  
@@ -11632,7 +12388,9 @@ qrsApi.selection.id(id).userdirectory.count.get(filter).then(function(int) {
 <a name="selection.id.userdirectory.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectory&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.userdirectory.full)</code>  
@@ -11661,7 +12419,9 @@ qrsApi.selection.id(id).userdirectory.full.get(filter, orderby, appendprivileges
 <a name="selection.id.userdirectory.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.userdirectory.synthetic)</code>  
@@ -11681,7 +12441,9 @@ qrsApi.selection.id(id).userdirectory.synthetic.put(postParams, filter).then(fun
 <a name="selection.id.userdirectory.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.userdirectory.synthetic)</code>  
@@ -11704,7 +12466,9 @@ qrsApi.selection.id(id).userdirectory.synthetic.get(filter, appendprivileges).th
 <a name="selection.id.userdirectory.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.userdirectory.table)</code>  
@@ -11748,7 +12512,9 @@ qrsApi.selection.id(id).userdirectory.table.post(postParams, filter, skip, take,
 <a name="selection.id.userdirectory.template.count.get"></a>
 ####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.userdirectory.template.count)</code>  
@@ -11770,7 +12536,9 @@ qrsApi.selection.id(id).userdirectory.template.count.get(filter).then(function(i
 <a name="selection.id.userdirectory.template.full.get"></a>
 ####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.userdirectory.template.full)</code>  
@@ -11799,7 +12567,9 @@ qrsApi.selection.id(id).userdirectory.template.full.get(filter, orderby, appendp
 <a name="selection.id.userdirectory.template.synthetic.put"></a>
 ####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/template/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.userdirectory.template.synthetic)</code>  
@@ -11819,7 +12589,9 @@ qrsApi.selection.id(id).userdirectory.template.synthetic.put(postParams, filter)
 <a name="selection.id.userdirectory.template.synthetic.get"></a>
 ####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/template/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.userdirectory.template.synthetic)</code>  
@@ -11842,7 +12614,9 @@ qrsApi.selection.id(id).userdirectory.template.synthetic.get(filter, appendprivi
 <a name="selection.id.userdirectory.template.table.post"></a>
 ####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.userdirectory.template.table)</code>  
@@ -11866,7 +12640,9 @@ qrsApi.selection.id(id).userdirectory.template.table.post(postParams, filter, sk
 <a name="selection.id.userdirectory.template.delete"></a>
 ###### template.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.userdirectory.template)</code>  
@@ -11885,7 +12661,9 @@ qrsApi.selection.id(id).userdirectory.template.delete(filter).then(function() {
 <a name="selection.id.userdirectory.template.get"></a>
 ###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.id.userdirectory.template)</code>  
@@ -11906,7 +12684,9 @@ qrsApi.selection.id(id).userdirectory.template.get(filter, orderby, appendprivil
 <a name="selection.id.userdirectory.delete"></a>
 ##### userdirectory.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[userdirectory](#selection.id.userdirectory)</code>  
@@ -11925,7 +12705,9 @@ qrsApi.selection.id(id).userdirectory.delete(filter).then(function() {
 <a name="selection.id.userdirectory.get"></a>
 ##### userdirectory.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectory&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/userdirectory?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[userdirectory](#selection.id.userdirectory)</code>  
@@ -11966,7 +12748,9 @@ qrsApi.selection.id(id).userdirectory.get(filter, orderby, appendprivileges).the
 <a name="selection.id.usersynctask.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctask/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.usersynctask.count)</code>  
@@ -11988,7 +12772,9 @@ qrsApi.selection.id(id).usersynctask.count.get(filter).then(function(int) {
 <a name="selection.id.usersynctask.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserSyncTask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctask/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.usersynctask.full)</code>  
@@ -12017,7 +12803,9 @@ qrsApi.selection.id(id).usersynctask.full.get(filter, orderby, appendprivileges)
 <a name="selection.id.usersynctask.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctask/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.usersynctask.synthetic)</code>  
@@ -12037,7 +12825,9 @@ qrsApi.selection.id(id).usersynctask.synthetic.put(postParams, filter).then(func
 <a name="selection.id.usersynctask.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctask/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.usersynctask.synthetic)</code>  
@@ -12060,7 +12850,9 @@ qrsApi.selection.id(id).usersynctask.synthetic.get(filter, appendprivileges).the
 <a name="selection.id.usersynctask.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctask/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.usersynctask.table)</code>  
@@ -12084,7 +12876,9 @@ qrsApi.selection.id(id).usersynctask.table.post(postParams, filter, skip, take, 
 <a name="selection.id.usersynctask.delete"></a>
 ##### usersynctask.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctask?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[usersynctask](#selection.id.usersynctask)</code>  
@@ -12103,7 +12897,9 @@ qrsApi.selection.id(id).usersynctask.delete(filter).then(function() {
 <a name="selection.id.usersynctask.get"></a>
 ##### usersynctask.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserSyncTask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctask?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[usersynctask](#selection.id.usersynctask)</code>  
@@ -12144,7 +12940,9 @@ qrsApi.selection.id(id).usersynctask.get(filter, orderby, appendprivileges).then
 <a name="selection.id.usersynctaskoperational.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctaskoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.usersynctaskoperational.count)</code>  
@@ -12166,7 +12964,9 @@ qrsApi.selection.id(id).usersynctaskoperational.count.get(filter).then(function(
 <a name="selection.id.usersynctaskoperational.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserSyncTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctaskoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.usersynctaskoperational.full)</code>  
@@ -12195,7 +12995,9 @@ qrsApi.selection.id(id).usersynctaskoperational.full.get(filter, orderby, append
 <a name="selection.id.usersynctaskoperational.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctaskoperational/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.usersynctaskoperational.synthetic)</code>  
@@ -12215,7 +13017,9 @@ qrsApi.selection.id(id).usersynctaskoperational.synthetic.put(postParams, filter
 <a name="selection.id.usersynctaskoperational.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctaskoperational/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.usersynctaskoperational.synthetic)</code>  
@@ -12238,7 +13042,9 @@ qrsApi.selection.id(id).usersynctaskoperational.synthetic.get(filter, appendpriv
 <a name="selection.id.usersynctaskoperational.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctaskoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.usersynctaskoperational.table)</code>  
@@ -12262,7 +13068,9 @@ qrsApi.selection.id(id).usersynctaskoperational.table.post(postParams, filter, s
 <a name="selection.id.usersynctaskoperational.delete"></a>
 ##### usersynctaskoperational.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctaskoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[usersynctaskoperational](#selection.id.usersynctaskoperational)</code>  
@@ -12281,7 +13089,9 @@ qrsApi.selection.id(id).usersynctaskoperational.delete(filter).then(function() {
 <a name="selection.id.usersynctaskoperational.get"></a>
 ##### usersynctaskoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserSyncTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/usersynctaskoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[usersynctaskoperational](#selection.id.usersynctaskoperational)</code>  
@@ -12322,7 +13132,9 @@ qrsApi.selection.id(id).usersynctaskoperational.get(filter, orderby, appendprivi
 <a name="selection.id.virtualproxyconfig.count.get"></a>
 ###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/virtualproxyconfig/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.id.virtualproxyconfig.count)</code>  
@@ -12344,7 +13156,9 @@ qrsApi.selection.id(id).virtualproxyconfig.count.get(filter).then(function(int) 
 <a name="selection.id.virtualproxyconfig.full.get"></a>
 ###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;VirtualProxyConfig&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/virtualproxyconfig/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.id.virtualproxyconfig.full)</code>  
@@ -12373,7 +13187,9 @@ qrsApi.selection.id(id).virtualproxyconfig.full.get(filter, orderby, appendprivi
 <a name="selection.id.virtualproxyconfig.synthetic.put"></a>
 ###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/virtualproxyconfig/synthetic?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.virtualproxyconfig.synthetic)</code>  
@@ -12393,7 +13209,9 @@ qrsApi.selection.id(id).virtualproxyconfig.synthetic.put(postParams, filter).the
 <a name="selection.id.virtualproxyconfig.synthetic.get"></a>
 ###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/virtualproxyconfig/synthetic?filter={filter}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[synthetic](#selection.id.virtualproxyconfig.synthetic)</code>  
@@ -12416,7 +13234,9 @@ qrsApi.selection.id(id).virtualproxyconfig.synthetic.get(filter, appendprivilege
 <a name="selection.id.virtualproxyconfig.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/virtualproxyconfig/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.id.virtualproxyconfig.table)</code>  
@@ -12440,7 +13260,9 @@ qrsApi.selection.id(id).virtualproxyconfig.table.post(postParams, filter, skip, 
 <a name="selection.id.virtualproxyconfig.delete"></a>
 ##### virtualproxyconfig.delete([filter]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/virtualproxyconfig?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[virtualproxyconfig](#selection.id.virtualproxyconfig)</code>  
@@ -12459,7 +13281,9 @@ qrsApi.selection.id(id).virtualproxyconfig.delete(filter).then(function() {
 <a name="selection.id.virtualproxyconfig.get"></a>
 ##### virtualproxyconfig.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;VirtualProxyConfig&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}/virtualproxyconfig?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[virtualproxyconfig](#selection.id.virtualproxyconfig)</code>  
@@ -12480,7 +13304,9 @@ qrsApi.selection.id(id).virtualproxyconfig.get(filter, orderby, appendprivileges
 <a name="selection.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#selection.id)</code>  
@@ -12494,7 +13320,9 @@ qrsApi.selection.id(id).delete().then(function() {
 <a name="selection.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#selection.id)</code>  
@@ -12513,7 +13341,9 @@ qrsApi.selection.id(id).get(appendprivileges).then(function(Selection) {
 <a name="selection.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{id}?privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[id](#selection.id)</code>  
@@ -12571,7 +13401,9 @@ qrsApi.selection.id(id).put(postParams, appendprivileges).then(function(Selectio
 <a name="selection.selectionid.appcomponent.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{selectionid}/appcomponent/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.selectionid.appcomponent.table)</code>  
@@ -12606,7 +13438,9 @@ qrsApi.selection.selectionid(selectionid).appcomponent.table.post(postParams, fi
 <a name="selection.selectionid.event.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{selectionid}/event/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.selectionid.event.table)</code>  
@@ -12641,7 +13475,9 @@ qrsApi.selection.selectionid(selectionid).event.table.post(postParams, filter, s
 <a name="selection.selectionid.eventoperational.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{selectionid}/eventoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.selectionid.eventoperational.table)</code>  
@@ -12676,7 +13512,9 @@ qrsApi.selection.selectionid(selectionid).eventoperational.table.post(postParams
 <a name="selection.selectionid.licenseaccessusage.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{selectionid}/licenseaccessusage/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.selectionid.licenseaccessusage.table)</code>  
@@ -12711,7 +13549,9 @@ qrsApi.selection.selectionid(selectionid).licenseaccessusage.table.post(postPara
 <a name="selection.selectionid.staticcontentreferencebase.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{selectionid}/staticcontentreferencebase/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.selectionid.staticcontentreferencebase.table)</code>  
@@ -12746,7 +13586,9 @@ qrsApi.selection.selectionid(selectionid).staticcontentreferencebase.table.post(
 <a name="selection.selectionid.task.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{selectionid}/task/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.selectionid.task.table)</code>  
@@ -12781,7 +13623,9 @@ qrsApi.selection.selectionid(selectionid).task.table.post(postParams, filter, sk
 <a name="selection.selectionid.taskoperational.table.post"></a>
 ###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/{selectionid}/taskoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#selection.selectionid.taskoperational.table)</code>  
@@ -12823,7 +13667,9 @@ qrsApi.selection.selectionid(selectionid).taskoperational.table.post(postParams,
 <a name="selection.app.content.post"></a>
 ##### content.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/app/content?filter={filter}
+
 This method is manual
 
 **Kind**: static method of <code>[content](#selection.app.content)</code>  
@@ -12845,7 +13691,9 @@ qrsApi.selection.app.content.post(filter).then(function(Selection) {
 <a name="selection.app.datasegment.post"></a>
 ##### datasegment.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/app/datasegment?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[datasegment](#selection.app.datasegment)</code>  
@@ -12867,7 +13715,9 @@ qrsApi.selection.app.datasegment.post(filter).then(function(Selection) {
 <a name="selection.app.internal.post"></a>
 ##### internal.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/app/internal?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[internal](#selection.app.internal)</code>  
@@ -12889,7 +13739,9 @@ qrsApi.selection.app.internal.post(filter).then(function(Selection) {
 <a name="selection.app.object.post"></a>
 ##### object.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/app/object?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[object](#selection.app.object)</code>  
@@ -12908,7 +13760,9 @@ qrsApi.selection.app.object.post(filter).then(function(Selection) {
 <a name="selection.app.post"></a>
 #### app.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/app?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[app](#selection.app)</code>  
@@ -12930,7 +13784,9 @@ qrsApi.selection.app.post(filter).then(function(Selection) {
 <a name="selection.appavailability.post"></a>
 #### appavailability.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/appavailability?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[appavailability](#selection.appavailability)</code>  
@@ -12952,7 +13808,9 @@ qrsApi.selection.appavailability.post(filter).then(function(Selection) {
 <a name="selection.appcontentquota.post"></a>
 #### appcontentquota.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/appcontentquota?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[appcontentquota](#selection.appcontentquota)</code>  
@@ -12974,7 +13832,9 @@ qrsApi.selection.appcontentquota.post(filter).then(function(Selection) {
 <a name="selection.appseedinfo.post"></a>
 #### appseedinfo.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/appseedinfo?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[appseedinfo](#selection.appseedinfo)</code>  
@@ -12996,7 +13856,9 @@ qrsApi.selection.appseedinfo.post(filter).then(function(Selection) {
 <a name="selection.appstatus.post"></a>
 #### appstatus.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/appstatus?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[appstatus](#selection.appstatus)</code>  
@@ -13018,7 +13880,9 @@ qrsApi.selection.appstatus.post(filter).then(function(Selection) {
 <a name="selection.binarydelete.post"></a>
 #### binarydelete.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/binarydelete?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[binarydelete](#selection.binarydelete)</code>  
@@ -13040,7 +13904,9 @@ qrsApi.selection.binarydelete.post(filter).then(function(Selection) {
 <a name="selection.binarydownload.post"></a>
 #### binarydownload.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/binarydownload?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[binarydownload](#selection.binarydownload)</code>  
@@ -13062,7 +13928,9 @@ qrsApi.selection.binarydownload.post(filter).then(function(Selection) {
 <a name="selection.binarysyncruleevaluation.post"></a>
 #### binarysyncruleevaluation.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/binarysyncruleevaluation?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[binarysyncruleevaluation](#selection.binarysyncruleevaluation)</code>  
@@ -13084,7 +13952,9 @@ qrsApi.selection.binarysyncruleevaluation.post(filter).then(function(Selection) 
 <a name="selection.compositeevent.post"></a>
 #### compositeevent.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/compositeevent?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeevent](#selection.compositeevent)</code>  
@@ -13106,7 +13976,9 @@ qrsApi.selection.compositeevent.post(filter).then(function(Selection) {
 <a name="selection.compositeeventoperational.post"></a>
 #### compositeeventoperational.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/compositeeventoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeeventoperational](#selection.compositeeventoperational)</code>  
@@ -13128,7 +14000,9 @@ qrsApi.selection.compositeeventoperational.post(filter).then(function(Selection)
 <a name="selection.compositeeventruleoperational.post"></a>
 #### compositeeventruleoperational.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/compositeeventruleoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeeventruleoperational](#selection.compositeeventruleoperational)</code>  
@@ -13150,7 +14024,9 @@ qrsApi.selection.compositeeventruleoperational.post(filter).then(function(Select
 <a name="selection.contentlibrary.post"></a>
 #### contentlibrary.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/contentlibrary?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[contentlibrary](#selection.contentlibrary)</code>  
@@ -13172,7 +14048,9 @@ qrsApi.selection.contentlibrary.post(filter).then(function(Selection) {
 <a name="selection.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#selection.count)</code>  
@@ -13194,7 +14072,9 @@ qrsApi.selection.count.get(filter).then(function(int) {
 <a name="selection.custompropertydefinition.post"></a>
 #### custompropertydefinition.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/custompropertydefinition?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[custompropertydefinition](#selection.custompropertydefinition)</code>  
@@ -13216,7 +14096,9 @@ qrsApi.selection.custompropertydefinition.post(filter).then(function(Selection) 
 <a name="selection.dataconnection.post"></a>
 #### dataconnection.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/dataconnection?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[dataconnection](#selection.dataconnection)</code>  
@@ -13247,7 +14129,9 @@ qrsApi.selection.dataconnection.post(filter).then(function(Selection) {
 <a name="selection.engineservice.template.post"></a>
 ##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/engineservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.engineservice.template)</code>  
@@ -13266,7 +14150,9 @@ qrsApi.selection.engineservice.template.post(filter).then(function(Selection) {
 <a name="selection.engineservice.post"></a>
 #### engineservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/engineservice?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[engineservice](#selection.engineservice)</code>  
@@ -13297,7 +14183,9 @@ qrsApi.selection.engineservice.post(filter).then(function(Selection) {
 <a name="selection.executionresult.detail.post"></a>
 ##### detail.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/executionresult/detail?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[detail](#selection.executionresult.detail)</code>  
@@ -13316,7 +14204,9 @@ qrsApi.selection.executionresult.detail.post(filter).then(function(Selection) {
 <a name="selection.executionresult.post"></a>
 #### executionresult.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/executionresult?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[executionresult](#selection.executionresult)</code>  
@@ -13338,7 +14228,9 @@ qrsApi.selection.executionresult.post(filter).then(function(Selection) {
 <a name="selection.executionsession.post"></a>
 #### executionsession.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/executionsession?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[executionsession](#selection.executionsession)</code>  
@@ -13360,7 +14252,9 @@ qrsApi.selection.executionsession.post(filter).then(function(Selection) {
 <a name="selection.extension.post"></a>
 #### extension.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/extension?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[extension](#selection.extension)</code>  
@@ -13382,7 +14276,9 @@ qrsApi.selection.extension.post(filter).then(function(Selection) {
 <a name="selection.externalchangeinfo.post"></a>
 #### externalchangeinfo.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/externalchangeinfo?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[externalchangeinfo](#selection.externalchangeinfo)</code>  
@@ -13404,7 +14300,9 @@ qrsApi.selection.externalchangeinfo.post(filter).then(function(Selection) {
 <a name="selection.externalprogramtask.post"></a>
 #### externalprogramtask.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/externalprogramtask?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[externalprogramtask](#selection.externalprogramtask)</code>  
@@ -13426,7 +14324,9 @@ qrsApi.selection.externalprogramtask.post(filter).then(function(Selection) {
 <a name="selection.externalprogramtaskoperational.post"></a>
 #### externalprogramtaskoperational.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/externalprogramtaskoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[externalprogramtaskoperational](#selection.externalprogramtaskoperational)</code>  
@@ -13448,7 +14348,9 @@ qrsApi.selection.externalprogramtaskoperational.post(filter).then(function(Selec
 <a name="selection.filereference.post"></a>
 #### filereference.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/filereference?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[filereference](#selection.filereference)</code>  
@@ -13470,7 +14372,9 @@ qrsApi.selection.filereference.post(filter).then(function(Selection) {
 <a name="selection.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Selection&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#selection.full)</code>  
@@ -13510,7 +14414,9 @@ qrsApi.selection.full.get(filter, orderby, appendprivileges).then(function(Array
 <a name="selection.license.loginaccesstype.post"></a>
 ##### loginaccesstype.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/license/loginaccesstype?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[loginaccesstype](#selection.license.loginaccesstype)</code>  
@@ -13532,7 +14438,9 @@ qrsApi.selection.license.loginaccesstype.post(filter).then(function(Selection) {
 <a name="selection.license.loginaccessusage.post"></a>
 ##### loginaccessusage.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/license/loginaccessusage?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[loginaccessusage](#selection.license.loginaccessusage)</code>  
@@ -13554,7 +14462,9 @@ qrsApi.selection.license.loginaccessusage.post(filter).then(function(Selection) 
 <a name="selection.license.useraccessgroup.post"></a>
 ##### useraccessgroup.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/license/useraccessgroup?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccessgroup](#selection.license.useraccessgroup)</code>  
@@ -13576,7 +14486,9 @@ qrsApi.selection.license.useraccessgroup.post(filter).then(function(Selection) {
 <a name="selection.license.useraccesstype.post"></a>
 ##### useraccesstype.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/license/useraccesstype?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccesstype](#selection.license.useraccesstype)</code>  
@@ -13598,7 +14510,9 @@ qrsApi.selection.license.useraccesstype.post(filter).then(function(Selection) {
 <a name="selection.license.useraccessusage.post"></a>
 ##### useraccessusage.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/license/useraccessusage?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccessusage](#selection.license.useraccessusage)</code>  
@@ -13620,7 +14534,9 @@ qrsApi.selection.license.useraccessusage.post(filter).then(function(Selection) {
 <a name="selection.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Selection&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#selection.many)</code>  
@@ -13643,7 +14559,9 @@ qrsApi.selection.many.post(postParams, appendprivileges).then(function(Array.<Se
 <a name="selection.mimetype.post"></a>
 #### mimetype.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/mimetype?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[mimetype](#selection.mimetype)</code>  
@@ -13665,7 +14583,9 @@ qrsApi.selection.mimetype.post(filter).then(function(Selection) {
 <a name="selection.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#selection.previewcreateprivilege)</code>  
@@ -13696,7 +14616,9 @@ qrsApi.selection.previewcreateprivilege.post(postParams).then(function(Boolean) 
 <a name="selection.printingservice.template.post"></a>
 ##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/printingservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.printingservice.template)</code>  
@@ -13715,7 +14637,9 @@ qrsApi.selection.printingservice.template.post(filter).then(function(Selection) 
 <a name="selection.printingservice.post"></a>
 #### printingservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/printingservice?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[printingservice](#selection.printingservice)</code>  
@@ -13746,7 +14670,9 @@ qrsApi.selection.printingservice.post(filter).then(function(Selection) {
 <a name="selection.proxyservice.template.post"></a>
 ##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/proxyservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.proxyservice.template)</code>  
@@ -13765,7 +14691,9 @@ qrsApi.selection.proxyservice.template.post(filter).then(function(Selection) {
 <a name="selection.proxyservice.post"></a>
 #### proxyservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/proxyservice?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[proxyservice](#selection.proxyservice)</code>  
@@ -13787,7 +14715,9 @@ qrsApi.selection.proxyservice.post(filter).then(function(Selection) {
 <a name="selection.reloadtask.post"></a>
 #### reloadtask.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/reloadtask?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtask](#selection.reloadtask)</code>  
@@ -13809,7 +14739,9 @@ qrsApi.selection.reloadtask.post(filter).then(function(Selection) {
 <a name="selection.reloadtaskoperational.post"></a>
 #### reloadtaskoperational.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/reloadtaskoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[reloadtaskoperational](#selection.reloadtaskoperational)</code>  
@@ -13840,7 +14772,9 @@ qrsApi.selection.reloadtaskoperational.post(filter).then(function(Selection) {
 <a name="selection.repositoryservice.template.post"></a>
 ##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/repositoryservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.repositoryservice.template)</code>  
@@ -13859,7 +14793,9 @@ qrsApi.selection.repositoryservice.template.post(filter).then(function(Selection
 <a name="selection.repositoryservice.post"></a>
 #### repositoryservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/repositoryservice?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[repositoryservice](#selection.repositoryservice)</code>  
@@ -13890,7 +14826,9 @@ qrsApi.selection.repositoryservice.post(filter).then(function(Selection) {
 <a name="selection.schedulerservice.template.post"></a>
 ##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/schedulerservice/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.schedulerservice.template)</code>  
@@ -13909,7 +14847,9 @@ qrsApi.selection.schedulerservice.template.post(filter).then(function(Selection)
 <a name="selection.schedulerservice.post"></a>
 #### schedulerservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/schedulerservice?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[schedulerservice](#selection.schedulerservice)</code>  
@@ -13931,7 +14871,9 @@ qrsApi.selection.schedulerservice.post(filter).then(function(Selection) {
 <a name="selection.schemaevent.post"></a>
 #### schemaevent.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/schemaevent?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaevent](#selection.schemaevent)</code>  
@@ -13953,7 +14895,9 @@ qrsApi.selection.schemaevent.post(filter).then(function(Selection) {
 <a name="selection.schemaeventoperational.post"></a>
 #### schemaeventoperational.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/schemaeventoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaeventoperational](#selection.schemaeventoperational)</code>  
@@ -13975,7 +14919,9 @@ qrsApi.selection.schemaeventoperational.post(filter).then(function(Selection) {
 <a name="selection.servernodeconfiguration.post"></a>
 #### servernodeconfiguration.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/servernodeconfiguration?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[servernodeconfiguration](#selection.servernodeconfiguration)</code>  
@@ -13997,7 +14943,9 @@ qrsApi.selection.servernodeconfiguration.post(filter).then(function(Selection) {
 <a name="selection.servicestatus.post"></a>
 #### servicestatus.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/servicestatus?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[servicestatus](#selection.servicestatus)</code>  
@@ -14019,7 +14967,9 @@ qrsApi.selection.servicestatus.post(filter).then(function(Selection) {
 <a name="selection.staticcontentreference.post"></a>
 #### staticcontentreference.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/staticcontentreference?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[staticcontentreference](#selection.staticcontentreference)</code>  
@@ -14041,7 +14991,9 @@ qrsApi.selection.staticcontentreference.post(filter).then(function(Selection) {
 <a name="selection.stream.post"></a>
 #### stream.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/stream?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[stream](#selection.stream)</code>  
@@ -14063,7 +15015,9 @@ qrsApi.selection.stream.post(filter).then(function(Selection) {
 <a name="selection.syncsession.post"></a>
 #### syncsession.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/syncsession?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[syncsession](#selection.syncsession)</code>  
@@ -14085,7 +15039,9 @@ qrsApi.selection.syncsession.post(filter).then(function(Selection) {
 <a name="selection.systemrule.post"></a>
 #### systemrule.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/systemrule?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[systemrule](#selection.systemrule)</code>  
@@ -14107,7 +15063,9 @@ qrsApi.selection.systemrule.post(filter).then(function(Selection) {
 <a name="selection.tag.post"></a>
 #### tag.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/tag?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[tag](#selection.tag)</code>  
@@ -14129,7 +15087,9 @@ qrsApi.selection.tag.post(filter).then(function(Selection) {
 <a name="selection.tempcontent.post"></a>
 #### tempcontent.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/tempcontent?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[tempcontent](#selection.tempcontent)</code>  
@@ -14162,7 +15122,9 @@ qrsApi.selection.tempcontent.post(filter).then(function(Selection) {
 <a name="selection.user.followingapp.post"></a>
 ##### followingapp.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/user/followingapp?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[followingapp](#selection.user.followingapp)</code>  
@@ -14184,7 +15146,9 @@ qrsApi.selection.user.followingapp.post(filter).then(function(Selection) {
 <a name="selection.user.recentapp.post"></a>
 ##### recentapp.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/user/recentapp?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[recentapp](#selection.user.recentapp)</code>  
@@ -14203,7 +15167,9 @@ qrsApi.selection.user.recentapp.post(filter).then(function(Selection) {
 <a name="selection.user.post"></a>
 #### user.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/user?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[user](#selection.user)</code>  
@@ -14234,7 +15200,9 @@ qrsApi.selection.user.post(filter).then(function(Selection) {
 <a name="selection.userdirectory.template.post"></a>
 ##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/userdirectory/template?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#selection.userdirectory.template)</code>  
@@ -14253,7 +15221,9 @@ qrsApi.selection.userdirectory.template.post(filter).then(function(Selection) {
 <a name="selection.userdirectory.post"></a>
 #### userdirectory.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/userdirectory?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[userdirectory](#selection.userdirectory)</code>  
@@ -14275,7 +15245,9 @@ qrsApi.selection.userdirectory.post(filter).then(function(Selection) {
 <a name="selection.usersynctask.post"></a>
 #### usersynctask.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/usersynctask?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[usersynctask](#selection.usersynctask)</code>  
@@ -14297,7 +15269,9 @@ qrsApi.selection.usersynctask.post(filter).then(function(Selection) {
 <a name="selection.usersynctaskoperational.post"></a>
 #### usersynctaskoperational.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/usersynctaskoperational?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[usersynctaskoperational](#selection.usersynctaskoperational)</code>  
@@ -14319,7 +15293,9 @@ qrsApi.selection.usersynctaskoperational.post(filter).then(function(Selection) {
 <a name="selection.virtualproxyconfig.post"></a>
 #### virtualproxyconfig.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection/virtualproxyconfig?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[virtualproxyconfig](#selection.virtualproxyconfig)</code>  
@@ -14338,7 +15314,9 @@ qrsApi.selection.virtualproxyconfig.post(filter).then(function(Selection) {
 <a name="selection.get"></a>
 ### selection.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Selection&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[selection](#selection)</code>  
@@ -14359,7 +15337,9 @@ qrsApi.selection.get(filter, orderby, appendprivileges).then(function(Array.<Sel
 <a name="selection.post"></a>
 ### selection.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/selection?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[selection](#selection)</code>  

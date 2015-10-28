@@ -21,7 +21,9 @@
 <a name="binarysyncruleevaluation.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;BinarySyncRuleEvaluation&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarysyncruleevaluation/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#binarysyncruleevaluation.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.binarysyncruleevaluation.id(id).get(appendprivileges).then(function(Binar
 <a name="binarysyncruleevaluation.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarysyncruleevaluation/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#binarysyncruleevaluation.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.binarysyncruleevaluation.count.get(filter).then(function(int) {
 <a name="binarysyncruleevaluation.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinarySyncRuleEvaluation&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarysyncruleevaluation/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#binarysyncruleevaluation.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.binarysyncruleevaluation.full.get(filter, orderby, appendprivileges).then
 <a name="binarysyncruleevaluation.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarysyncruleevaluation/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#binarysyncruleevaluation.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.binarysyncruleevaluation.table.post(postParams, filter, skip, take, sortc
 <a name="binarysyncruleevaluation.get"></a>
 ### binarysyncruleevaluation.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinarySyncRuleEvaluation&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarysyncruleevaluation?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[binarysyncruleevaluation](#binarysyncruleevaluation)</code>  

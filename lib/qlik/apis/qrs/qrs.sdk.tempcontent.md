@@ -21,7 +21,9 @@
 <a name="tempcontent.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;TempContent&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tempcontent/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#tempcontent.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.tempcontent.id(id).get(appendprivileges).then(function(TempContent) {
 <a name="tempcontent.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tempcontent/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#tempcontent.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.tempcontent.count.get(filter).then(function(int) {
 <a name="tempcontent.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;TempContent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tempcontent/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#tempcontent.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.tempcontent.full.get(filter, orderby, appendprivileges).then(function(Arr
 <a name="tempcontent.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tempcontent/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#tempcontent.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.tempcontent.table.post(postParams, filter, skip, take, sortcolumn, ordera
 <a name="tempcontent.get"></a>
 ### tempcontent.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;TempContent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tempcontent?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[tempcontent](#tempcontent)</code>  

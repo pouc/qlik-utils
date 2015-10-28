@@ -39,7 +39,9 @@
 <a name="contentlibrary.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#contentlibrary.id)</code>  
@@ -53,7 +55,9 @@ qrsApi.contentlibrary.id(id).delete().then(function() {
 <a name="contentlibrary.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;ContentLibrary&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#contentlibrary.id)</code>  
@@ -72,7 +76,9 @@ qrsApi.contentlibrary.id(id).get(appendprivileges).then(function(ContentLibrary)
 <a name="contentlibrary.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ContentLibrary&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#contentlibrary.id)</code>  
@@ -105,7 +111,9 @@ qrsApi.contentlibrary.id(id).put(postParams, appendprivileges).then(function(Con
 <a name="contentlibrary.libname.deletecontent.delete"></a>
 ##### deletecontent.delete([externalpath]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/{libname}/deletecontent?externalpath={externalpath}
+
 This method is manual
 
 **Kind**: static method of <code>[deletecontent](#contentlibrary.libname.deletecontent)</code>  
@@ -127,7 +135,9 @@ qrsApi.contentlibrary.libname(libname).deletecontent.delete(externalpath).then(f
 <a name="contentlibrary.libname.uploadfile.post"></a>
 ##### uploadfile.post(postParams, [externalpath], [overwrite]) ⇒ <code>Promise.&lt;String&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/{libname}/uploadfile?externalpath={externalpath}&overwrite={overwrite}
+
 This method is manual
 
 **Kind**: static method of <code>[uploadfile](#contentlibrary.libname.uploadfile)</code>  
@@ -151,7 +161,9 @@ qrsApi.contentlibrary.libname(libname).uploadfile.post(postParams, externalpath,
 <a name="contentlibrary.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#contentlibrary.count)</code>  
@@ -173,7 +185,9 @@ qrsApi.contentlibrary.count.get(filter).then(function(int) {
 <a name="contentlibrary.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ContentLibrary&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#contentlibrary.full)</code>  
@@ -197,7 +211,9 @@ qrsApi.contentlibrary.full.get(filter, orderby, appendprivileges).then(function(
 <a name="contentlibrary.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ContentLibrary&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#contentlibrary.many)</code>  
@@ -220,7 +236,9 @@ qrsApi.contentlibrary.many.post(postParams, appendprivileges).then(function(Arra
 <a name="contentlibrary.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#contentlibrary.previewcreateprivilege)</code>  
@@ -242,7 +260,9 @@ qrsApi.contentlibrary.previewcreateprivilege.post(postParams).then(function(Bool
 <a name="contentlibrary.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#contentlibrary.table)</code>  
@@ -266,7 +286,9 @@ qrsApi.contentlibrary.table.post(postParams, filter, skip, take, sortcolumn, ord
 <a name="contentlibrary.get"></a>
 ### contentlibrary.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ContentLibrary&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[contentlibrary](#contentlibrary)</code>  
@@ -287,7 +309,9 @@ qrsApi.contentlibrary.get(filter, orderby, appendprivileges).then(function(Array
 <a name="contentlibrary.post"></a>
 ### contentlibrary.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ContentLibrary&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/contentlibrary?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[contentlibrary](#contentlibrary)</code>  

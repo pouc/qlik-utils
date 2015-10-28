@@ -27,7 +27,9 @@
 <a name="appcontentquota.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;AppContentQuota&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcontentquota/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#appcontentquota.id)</code>  
@@ -46,7 +48,9 @@ qrsApi.appcontentquota.id(id).get(appendprivileges).then(function(AppContentQuot
 <a name="appcontentquota.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;AppContentQuota&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcontentquota/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#appcontentquota.id)</code>  
@@ -69,7 +73,9 @@ qrsApi.appcontentquota.id(id).put(postParams, appendprivileges).then(function(Ap
 <a name="appcontentquota.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcontentquota/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#appcontentquota.count)</code>  
@@ -91,7 +97,9 @@ qrsApi.appcontentquota.count.get(filter).then(function(int) {
 <a name="appcontentquota.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppContentQuota&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcontentquota/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#appcontentquota.full)</code>  
@@ -115,7 +123,9 @@ qrsApi.appcontentquota.full.get(filter, orderby, appendprivileges).then(function
 <a name="appcontentquota.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcontentquota/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#appcontentquota.table)</code>  
@@ -139,7 +149,9 @@ qrsApi.appcontentquota.table.post(postParams, filter, skip, take, sortcolumn, or
 <a name="appcontentquota.get"></a>
 ### appcontentquota.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppContentQuota&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcontentquota?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appcontentquota](#appcontentquota)</code>  

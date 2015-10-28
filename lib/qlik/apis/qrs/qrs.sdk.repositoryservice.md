@@ -44,7 +44,9 @@
 <a name="repositoryservice.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;RepositoryService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#repositoryservice.id)</code>  
@@ -63,7 +65,9 @@ qrsApi.repositoryservice.id(id).get(appendprivileges).then(function(RepositorySe
 <a name="repositoryservice.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;RepositoryService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#repositoryservice.id)</code>  
@@ -86,7 +90,9 @@ qrsApi.repositoryservice.id(id).put(postParams, appendprivileges).then(function(
 <a name="repositoryservice.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#repositoryservice.count)</code>  
@@ -108,7 +114,9 @@ qrsApi.repositoryservice.count.get(filter).then(function(int) {
 <a name="repositoryservice.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#repositoryservice.full)</code>  
@@ -132,7 +140,9 @@ qrsApi.repositoryservice.full.get(filter, orderby, appendprivileges).then(functi
 <a name="repositoryservice.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#repositoryservice.table)</code>  
@@ -187,7 +197,9 @@ qrsApi.repositoryservice.table.post(postParams, filter, skip, take, sortcolumn, 
 <a name="repositoryservice.template.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#repositoryservice.template.id)</code>  
@@ -201,7 +213,9 @@ qrsApi.repositoryservice.template.id(id).delete().then(function() {
 <a name="repositoryservice.template.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;RepositoryServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#repositoryservice.template.id)</code>  
@@ -220,7 +234,9 @@ qrsApi.repositoryservice.template.id(id).get(appendprivileges).then(function(Rep
 <a name="repositoryservice.template.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;RepositoryServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#repositoryservice.template.id)</code>  
@@ -243,7 +259,9 @@ qrsApi.repositoryservice.template.id(id).put(postParams, appendprivileges).then(
 <a name="repositoryservice.template.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#repositoryservice.template.count)</code>  
@@ -265,7 +283,9 @@ qrsApi.repositoryservice.template.count.get(filter).then(function(int) {
 <a name="repositoryservice.template.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#repositoryservice.template.full)</code>  
@@ -289,7 +309,9 @@ qrsApi.repositoryservice.template.full.get(filter, orderby, appendprivileges).th
 <a name="repositoryservice.template.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#repositoryservice.template.many)</code>  
@@ -312,7 +334,9 @@ qrsApi.repositoryservice.template.many.post(postParams, appendprivileges).then(f
 <a name="repositoryservice.template.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#repositoryservice.template.previewcreateprivilege)</code>  
@@ -334,7 +358,9 @@ qrsApi.repositoryservice.template.previewcreateprivilege.post(postParams).then(f
 <a name="repositoryservice.template.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#repositoryservice.template.table)</code>  
@@ -358,7 +384,9 @@ qrsApi.repositoryservice.template.table.post(postParams, filter, skip, take, sor
 <a name="repositoryservice.template.get"></a>
 #### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#repositoryservice.template)</code>  
@@ -379,7 +407,9 @@ qrsApi.repositoryservice.template.get(filter, orderby, appendprivileges).then(fu
 <a name="repositoryservice.template.post"></a>
 #### template.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;RepositoryServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice/template?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#repositoryservice.template)</code>  
@@ -399,7 +429,9 @@ qrsApi.repositoryservice.template.post(postParams, appendprivileges).then(functi
 <a name="repositoryservice.get"></a>
 ### repositoryservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/repositoryservice?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[repositoryservice](#repositoryservice)</code>  

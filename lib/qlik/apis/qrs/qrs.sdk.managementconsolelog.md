@@ -6,7 +6,9 @@
 <a name="managementconsolelog.post"></a>
 ### managementconsolelog.post(postParams) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/managementconsolelog
+
 This method is manual
 
 **Kind**: static method of <code>[managementconsolelog](#managementconsolelog)</code>  

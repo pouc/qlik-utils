@@ -34,7 +34,9 @@
 <a name="dataconnection.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#dataconnection.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.dataconnection.id(id).delete().then(function() {
 <a name="dataconnection.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;DataConnection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#dataconnection.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.dataconnection.id(id).get(appendprivileges).then(function(DataConnection)
 <a name="dataconnection.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;DataConnection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#dataconnection.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.dataconnection.id(id).put(postParams, appendprivileges).then(function(Dat
 <a name="dataconnection.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#dataconnection.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.dataconnection.count.get(filter).then(function(int) {
 <a name="dataconnection.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;DataConnection&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#dataconnection.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.dataconnection.full.get(filter, orderby, appendprivileges).then(function(
 <a name="dataconnection.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;DataConnection&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#dataconnection.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.dataconnection.many.post(postParams, appendprivileges).then(function(Arra
 <a name="dataconnection.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#dataconnection.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.dataconnection.previewcreateprivilege.post(postParams).then(function(Bool
 <a name="dataconnection.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#dataconnection.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.dataconnection.table.post(postParams, filter, skip, take, sortcolumn, ord
 <a name="dataconnection.get"></a>
 ### dataconnection.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;DataConnection&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[dataconnection](#dataconnection)</code>  
@@ -226,7 +244,9 @@ qrsApi.dataconnection.get(filter, orderby, appendprivileges).then(function(Array
 <a name="dataconnection.post"></a>
 ### dataconnection.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;DataConnection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/dataconnection?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[dataconnection](#dataconnection)</code>  

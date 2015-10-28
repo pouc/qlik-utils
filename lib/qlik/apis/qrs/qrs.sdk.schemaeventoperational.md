@@ -34,7 +34,9 @@
 <a name="schemaeventoperational.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schemaeventoperational.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.schemaeventoperational.id(id).delete().then(function() {
 <a name="schemaeventoperational.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;SchemaEventOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schemaeventoperational.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.schemaeventoperational.id(id).get(appendprivileges).then(function(SchemaE
 <a name="schemaeventoperational.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;SchemaEventOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schemaeventoperational.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.schemaeventoperational.id(id).put(postParams, appendprivileges).then(func
 <a name="schemaeventoperational.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#schemaeventoperational.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.schemaeventoperational.count.get(filter).then(function(int) {
 <a name="schemaeventoperational.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#schemaeventoperational.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.schemaeventoperational.full.get(filter, orderby, appendprivileges).then(f
 <a name="schemaeventoperational.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#schemaeventoperational.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.schemaeventoperational.many.post(postParams, appendprivileges).then(funct
 <a name="schemaeventoperational.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#schemaeventoperational.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.schemaeventoperational.previewcreateprivilege.post(postParams).then(funct
 <a name="schemaeventoperational.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#schemaeventoperational.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.schemaeventoperational.table.post(postParams, filter, skip, take, sortcol
 <a name="schemaeventoperational.get"></a>
 ### schemaeventoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaeventoperational](#schemaeventoperational)</code>  
@@ -226,7 +244,9 @@ qrsApi.schemaeventoperational.get(filter, orderby, appendprivileges).then(functi
 <a name="schemaeventoperational.post"></a>
 ### schemaeventoperational.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;SchemaEventOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaeventoperational?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaeventoperational](#schemaeventoperational)</code>  

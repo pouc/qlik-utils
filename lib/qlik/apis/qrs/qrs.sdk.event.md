@@ -17,7 +17,9 @@
 <a name="event.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/event/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#event.full)</code>  
@@ -41,7 +43,9 @@ qrsApi.event.full.get(filter, orderby, appendprivileges).then(function(Array.<IE
 <a name="event.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/event/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#event.table)</code>  
@@ -65,7 +69,9 @@ qrsApi.event.table.post(postParams, filter, skip, take, sortcolumn, orderascendi
 <a name="event.get"></a>
 ### event.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/event?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[event](#event)</code>  

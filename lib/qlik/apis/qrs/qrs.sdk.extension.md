@@ -51,7 +51,9 @@
 <a name="extension.extension.deletecontent.delete"></a>
 ##### deletecontent.delete([externalpath]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/{extension}/deletecontent?externalpath={externalpath}
+
 This method is manual
 
 **Kind**: static method of <code>[deletecontent](#extension.extension.deletecontent)</code>  
@@ -73,7 +75,9 @@ qrsApi.extension.extension(extension).deletecontent.delete(externalpath).then(fu
 <a name="extension.extension.uploadfile.post"></a>
 ##### uploadfile.post(postParams, [externalpath], [overwrite]) ⇒ <code>Promise.&lt;String&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/{extension}/uploadfile?externalpath={externalpath}&overwrite={overwrite}
+
 This method is manual
 
 **Kind**: static method of <code>[uploadfile](#extension.extension.uploadfile)</code>  
@@ -103,7 +107,9 @@ qrsApi.extension.extension(extension).uploadfile.post(postParams, externalpath, 
 <a name="extension.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#extension.id)</code>  
@@ -117,7 +123,9 @@ qrsApi.extension.id(id).delete().then(function() {
 <a name="extension.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;Extension&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#extension.id)</code>  
@@ -136,7 +144,9 @@ qrsApi.extension.id(id).get(appendprivileges).then(function(Extension) {
 <a name="extension.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Extension&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#extension.id)</code>  
@@ -159,7 +169,9 @@ qrsApi.extension.id(id).put(postParams, appendprivileges).then(function(Extensio
 <a name="extension.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#extension.count)</code>  
@@ -181,7 +193,9 @@ qrsApi.extension.count.get(filter).then(function(int) {
 <a name="extension.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Extension&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#extension.full)</code>  
@@ -205,7 +219,9 @@ qrsApi.extension.full.get(filter, orderby, appendprivileges).then(function(Array
 <a name="extension.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Extension&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#extension.many)</code>  
@@ -242,7 +258,9 @@ qrsApi.extension.many.post(postParams, appendprivileges).then(function(Array.<Ex
 <a name="extension.name.extension.delete"></a>
 ##### extension.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/name/{extension}
+
 This method is manual
 
 **Kind**: static method of <code>[extension](#extension.name.extension)</code>  
@@ -256,7 +274,9 @@ qrsApi.extension.name.extension(extension).delete().then(function() {
 <a name="extension.name.extension.post"></a>
 ##### extension.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Extension&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/name/{extension}?privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[extension](#extension.name.extension)</code>  
@@ -279,7 +299,9 @@ qrsApi.extension.name.extension(extension).post(postParams, appendprivileges).th
 <a name="extension.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#extension.previewcreateprivilege)</code>  
@@ -301,7 +323,9 @@ qrsApi.extension.previewcreateprivilege.post(postParams).then(function(Boolean) 
 <a name="extension.schema.get"></a>
 #### schema.get() ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/schema
+
 This method is manual
 
 **Kind**: static method of <code>[schema](#extension.schema)</code>  
@@ -318,7 +342,9 @@ qrsApi.extension.schema.get().then(function(Object) {
 <a name="extension.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#extension.table)</code>  
@@ -345,7 +371,9 @@ qrsApi.extension.table.post(postParams, filter, skip, take, sortcolumn, orderasc
 <a name="extension.upload.post"></a>
 #### upload.post(postParams, [password], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Extension&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension/upload?pwd={password}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[upload](#extension.upload)</code>  
@@ -366,7 +394,9 @@ qrsApi.extension.upload.post(postParams, password, appendprivileges).then(functi
 <a name="extension.get"></a>
 ### extension.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Extension&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[extension](#extension)</code>  
@@ -387,7 +417,9 @@ qrsApi.extension.get(filter, orderby, appendprivileges).then(function(Array.<Ext
 <a name="extension.post"></a>
 ### extension.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Extension&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/extension?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[extension](#extension)</code>  

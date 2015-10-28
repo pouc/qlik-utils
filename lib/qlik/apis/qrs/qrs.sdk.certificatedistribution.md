@@ -30,7 +30,9 @@
 <a name="certificatedistribution.distributecertificate.servernodeconfigurationid.get"></a>
 ##### servernodeconfigurationid.get() ⇒ <code>Promise.&lt;String&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/certificatedistribution/distributecertificate/{servernodeconfigurationid}
+
 This method is manual
 
 **Kind**: static method of <code>[servernodeconfigurationid](#certificatedistribution.distributecertificate.servernodeconfigurationid)</code>  
@@ -47,7 +49,9 @@ qrsApi.certificatedistribution.distributecertificate.servernodeconfigurationid(s
 <a name="certificatedistribution.exportcertificates.post"></a>
 #### exportcertificates.post(postParams) ⇒ <code>Promise.&lt;String&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/certificatedistribution/exportcertificates
+
 This method is manual
 
 **Kind**: static method of <code>[exportcertificates](#certificatedistribution.exportcertificates)</code>  
@@ -69,7 +73,9 @@ qrsApi.certificatedistribution.exportcertificates.post(postParams).then(function
 <a name="certificatedistribution.exportcertificatespath.get"></a>
 #### exportcertificatespath.get() ⇒ <code>Promise.&lt;String&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/certificatedistribution/exportcertificatespath
+
 This method is manual
 
 **Kind**: static method of <code>[exportcertificatespath](#certificatedistribution.exportcertificatespath)</code>  
@@ -94,7 +100,9 @@ qrsApi.certificatedistribution.exportcertificatespath.get().then(function(String
 <a name="certificatedistribution.redistributecertificate.servernodeconfigurationid.head"></a>
 ##### servernodeconfigurationid.head() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/certificatedistribution/redistributecertificate/{servernodeconfigurationid}
+
 This method is manual
 
 **Kind**: static method of <code>[servernodeconfigurationid](#certificatedistribution.redistributecertificate.servernodeconfigurationid)</code>  

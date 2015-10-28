@@ -17,7 +17,9 @@
 <a name="eventoperational.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/eventoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#eventoperational.full)</code>  
@@ -41,7 +43,9 @@ qrsApi.eventoperational.full.get(filter, orderby, appendprivileges).then(functio
 <a name="eventoperational.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/eventoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#eventoperational.table)</code>  
@@ -65,7 +69,9 @@ qrsApi.eventoperational.table.post(postParams, filter, skip, take, sortcolumn, o
 <a name="eventoperational.get"></a>
 ### eventoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IEventOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/eventoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[eventoperational](#eventoperational)</code>  

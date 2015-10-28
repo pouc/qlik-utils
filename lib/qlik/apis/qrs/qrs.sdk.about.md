@@ -457,7 +457,9 @@
 <a name="about.api.default.app.get"></a>
 ###### app.get([listentries]) ⇒ <code>Promise.&lt;App&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/app?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[app](#about.api.default.app)</code>  
@@ -479,7 +481,9 @@ qrsApi.about.api.default.app.get(listentries).then(function(App) {
 <a name="about.api.default.appavailability.get"></a>
 ###### appavailability.get([listentries]) ⇒ <code>Promise.&lt;AppAvailability&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/appavailability?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[appavailability](#about.api.default.appavailability)</code>  
@@ -501,7 +505,9 @@ qrsApi.about.api.default.appavailability.get(listentries).then(function(AppAvail
 <a name="about.api.default.appcontentquota.get"></a>
 ###### appcontentquota.get([listentries]) ⇒ <code>Promise.&lt;AppContentQuota&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/appcontentquota?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[appcontentquota](#about.api.default.appcontentquota)</code>  
@@ -523,7 +529,9 @@ qrsApi.about.api.default.appcontentquota.get(listentries).then(function(AppConte
 <a name="about.api.default.appseedinfo.get"></a>
 ###### appseedinfo.get([listentries]) ⇒ <code>Promise.&lt;AppSeedInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/appseedinfo?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[appseedinfo](#about.api.default.appseedinfo)</code>  
@@ -545,7 +553,9 @@ qrsApi.about.api.default.appseedinfo.get(listentries).then(function(AppSeedInfo)
 <a name="about.api.default.appstatus.get"></a>
 ###### appstatus.get([listentries]) ⇒ <code>Promise.&lt;AppStatus&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/appstatus?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[appstatus](#about.api.default.appstatus)</code>  
@@ -567,7 +577,9 @@ qrsApi.about.api.default.appstatus.get(listentries).then(function(AppStatus) {
 <a name="about.api.default.binarydelete.get"></a>
 ###### binarydelete.get([listentries]) ⇒ <code>Promise.&lt;BinaryDelete&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/binarydelete?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[binarydelete](#about.api.default.binarydelete)</code>  
@@ -589,7 +601,9 @@ qrsApi.about.api.default.binarydelete.get(listentries).then(function(BinaryDelet
 <a name="about.api.default.binarydownload.get"></a>
 ###### binarydownload.get([listentries]) ⇒ <code>Promise.&lt;BinaryDownload&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/binarydownload?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[binarydownload](#about.api.default.binarydownload)</code>  
@@ -611,7 +625,9 @@ qrsApi.about.api.default.binarydownload.get(listentries).then(function(BinaryDow
 <a name="about.api.default.binarysyncruleevaluation.get"></a>
 ###### binarysyncruleevaluation.get([listentries]) ⇒ <code>Promise.&lt;BinarySyncRuleEvaluation&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/binarysyncruleevaluation?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[binarysyncruleevaluation](#about.api.default.binarysyncruleevaluation)</code>  
@@ -633,7 +649,9 @@ qrsApi.about.api.default.binarysyncruleevaluation.get(listentries).then(function
 <a name="about.api.default.compositeevent.get"></a>
 ###### compositeevent.get([listentries]) ⇒ <code>Promise.&lt;CompositeEvent&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/compositeevent?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[compositeevent](#about.api.default.compositeevent)</code>  
@@ -655,7 +673,9 @@ qrsApi.about.api.default.compositeevent.get(listentries).then(function(Composite
 <a name="about.api.default.compositeeventoperational.get"></a>
 ###### compositeeventoperational.get([listentries]) ⇒ <code>Promise.&lt;CompositeEventOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/compositeeventoperational?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[compositeeventoperational](#about.api.default.compositeeventoperational)</code>  
@@ -677,7 +697,9 @@ qrsApi.about.api.default.compositeeventoperational.get(listentries).then(functio
 <a name="about.api.default.compositeeventruleoperational.get"></a>
 ###### compositeeventruleoperational.get([listentries]) ⇒ <code>Promise.&lt;CompositeEventRuleOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/compositeeventruleoperational?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[compositeeventruleoperational](#about.api.default.compositeeventruleoperational)</code>  
@@ -699,7 +721,9 @@ qrsApi.about.api.default.compositeeventruleoperational.get(listentries).then(fun
 <a name="about.api.default.content.get"></a>
 ###### content.get([listentries]) ⇒ <code>Promise.&lt;AppContent&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/content?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[content](#about.api.default.content)</code>  
@@ -721,7 +745,9 @@ qrsApi.about.api.default.content.get(listentries).then(function(AppContent) {
 <a name="about.api.default.contentlibrary.get"></a>
 ###### contentlibrary.get([listentries]) ⇒ <code>Promise.&lt;ContentLibrary&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/contentlibrary?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[contentlibrary](#about.api.default.contentlibrary)</code>  
@@ -743,7 +769,9 @@ qrsApi.about.api.default.contentlibrary.get(listentries).then(function(ContentLi
 <a name="about.api.default.custompropertydefinition.get"></a>
 ###### custompropertydefinition.get([listentries]) ⇒ <code>Promise.&lt;CustomPropertyDefinition&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/custompropertydefinition?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[custompropertydefinition](#about.api.default.custompropertydefinition)</code>  
@@ -765,7 +793,9 @@ qrsApi.about.api.default.custompropertydefinition.get(listentries).then(function
 <a name="about.api.default.dataconnection.get"></a>
 ###### dataconnection.get([listentries]) ⇒ <code>Promise.&lt;DataConnection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/dataconnection?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[dataconnection](#about.api.default.dataconnection)</code>  
@@ -787,7 +817,9 @@ qrsApi.about.api.default.dataconnection.get(listentries).then(function(DataConne
 <a name="about.api.default.datasegment.get"></a>
 ###### datasegment.get([listentries]) ⇒ <code>Promise.&lt;AppDataSegment&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/datasegment?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[datasegment](#about.api.default.datasegment)</code>  
@@ -809,7 +841,9 @@ qrsApi.about.api.default.datasegment.get(listentries).then(function(AppDataSegme
 <a name="about.api.default.detail.get"></a>
 ###### detail.get([listentries]) ⇒ <code>Promise.&lt;ExecutionResultDetail&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/detail?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[detail](#about.api.default.detail)</code>  
@@ -831,7 +865,9 @@ qrsApi.about.api.default.detail.get(listentries).then(function(ExecutionResultDe
 <a name="about.api.default.engineservice.get"></a>
 ###### engineservice.get([listentries]) ⇒ <code>Promise.&lt;EngineService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/engineservice?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[engineservice](#about.api.default.engineservice)</code>  
@@ -853,7 +889,9 @@ qrsApi.about.api.default.engineservice.get(listentries).then(function(EngineServ
 <a name="about.api.default.engineservicetemplate.get"></a>
 ###### engineservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;EngineServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/engineservicetemplate?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[engineservicetemplate](#about.api.default.engineservicetemplate)</code>  
@@ -875,7 +913,9 @@ qrsApi.about.api.default.engineservicetemplate.get(listentries).then(function(En
 <a name="about.api.default.executionresult.get"></a>
 ###### executionresult.get([listentries]) ⇒ <code>Promise.&lt;ExecutionResult&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/executionresult?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[executionresult](#about.api.default.executionresult)</code>  
@@ -897,7 +937,9 @@ qrsApi.about.api.default.executionresult.get(listentries).then(function(Executio
 <a name="about.api.default.executionsession.get"></a>
 ###### executionsession.get([listentries]) ⇒ <code>Promise.&lt;ExecutionSession&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/executionsession?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[executionsession](#about.api.default.executionsession)</code>  
@@ -919,7 +961,9 @@ qrsApi.about.api.default.executionsession.get(listentries).then(function(Executi
 <a name="about.api.default.extension.get"></a>
 ###### extension.get([listentries]) ⇒ <code>Promise.&lt;Extension&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/extension?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[extension](#about.api.default.extension)</code>  
@@ -941,7 +985,9 @@ qrsApi.about.api.default.extension.get(listentries).then(function(Extension) {
 <a name="about.api.default.externalchangeinfo.get"></a>
 ###### externalchangeinfo.get([listentries]) ⇒ <code>Promise.&lt;ExternalChangeInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/externalchangeinfo?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[externalchangeinfo](#about.api.default.externalchangeinfo)</code>  
@@ -963,7 +1009,9 @@ qrsApi.about.api.default.externalchangeinfo.get(listentries).then(function(Exter
 <a name="about.api.default.externalprogramtask.get"></a>
 ###### externalprogramtask.get([listentries]) ⇒ <code>Promise.&lt;ExternalProgramTask&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/externalprogramtask?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[externalprogramtask](#about.api.default.externalprogramtask)</code>  
@@ -985,7 +1033,9 @@ qrsApi.about.api.default.externalprogramtask.get(listentries).then(function(Exte
 <a name="about.api.default.externalprogramtaskoperational.get"></a>
 ###### externalprogramtaskoperational.get([listentries]) ⇒ <code>Promise.&lt;ExternalProgramTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/externalprogramtaskoperational?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[externalprogramtaskoperational](#about.api.default.externalprogramtaskoperational)</code>  
@@ -1007,7 +1057,9 @@ qrsApi.about.api.default.externalprogramtaskoperational.get(listentries).then(fu
 <a name="about.api.default.filereference.get"></a>
 ###### filereference.get([listentries]) ⇒ <code>Promise.&lt;FileReference&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/filereference?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[filereference](#about.api.default.filereference)</code>  
@@ -1029,7 +1081,9 @@ qrsApi.about.api.default.filereference.get(listentries).then(function(FileRefere
 <a name="about.api.default.followingapp.get"></a>
 ###### followingapp.get([listentries]) ⇒ <code>Promise.&lt;UserFollowingApp&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/followingapp?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[followingapp](#about.api.default.followingapp)</code>  
@@ -1051,7 +1105,9 @@ qrsApi.about.api.default.followingapp.get(listentries).then(function(UserFollowi
 <a name="about.api.default.internal.get"></a>
 ###### internal.get([listentries]) ⇒ <code>Promise.&lt;AppInternal&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/internal?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[internal](#about.api.default.internal)</code>  
@@ -1073,7 +1129,9 @@ qrsApi.about.api.default.internal.get(listentries).then(function(AppInternal) {
 <a name="about.api.default.license.get"></a>
 ###### license.get([listentries]) ⇒ <code>Promise.&lt;License&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/license?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[license](#about.api.default.license)</code>  
@@ -1095,7 +1153,9 @@ qrsApi.about.api.default.license.get(listentries).then(function(License) {
 <a name="about.api.default.localconfig.get"></a>
 ###### localconfig.get([listentries]) ⇒ <code>Promise.&lt;LocalConfig&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/localconfig?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[localconfig](#about.api.default.localconfig)</code>  
@@ -1117,7 +1177,9 @@ qrsApi.about.api.default.localconfig.get(listentries).then(function(LocalConfig)
 <a name="about.api.default.loginaccesstype.get"></a>
 ###### loginaccesstype.get([listentries]) ⇒ <code>Promise.&lt;LicenseLoginAccessType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/loginaccesstype?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[loginaccesstype](#about.api.default.loginaccesstype)</code>  
@@ -1139,7 +1201,9 @@ qrsApi.about.api.default.loginaccesstype.get(listentries).then(function(LicenseL
 <a name="about.api.default.loginaccessusage.get"></a>
 ###### loginaccessusage.get([listentries]) ⇒ <code>Promise.&lt;LicenseLoginAccessUsage&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/loginaccessusage?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[loginaccessusage](#about.api.default.loginaccessusage)</code>  
@@ -1161,7 +1225,9 @@ qrsApi.about.api.default.loginaccessusage.get(listentries).then(function(License
 <a name="about.api.default.mimetype.get"></a>
 ###### mimetype.get([listentries]) ⇒ <code>Promise.&lt;MimeType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/mimetype?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[mimetype](#about.api.default.mimetype)</code>  
@@ -1183,7 +1249,9 @@ qrsApi.about.api.default.mimetype.get(listentries).then(function(MimeType) {
 <a name="about.api.default.object.get"></a>
 ###### object.get([listentries]) ⇒ <code>Promise.&lt;AppObject&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/object?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[object](#about.api.default.object)</code>  
@@ -1205,7 +1273,9 @@ qrsApi.about.api.default.object.get(listentries).then(function(AppObject) {
 <a name="about.api.default.printingservice.get"></a>
 ###### printingservice.get([listentries]) ⇒ <code>Promise.&lt;PrintingService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/printingservice?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[printingservice](#about.api.default.printingservice)</code>  
@@ -1227,7 +1297,9 @@ qrsApi.about.api.default.printingservice.get(listentries).then(function(Printing
 <a name="about.api.default.printingservicetemplate.get"></a>
 ###### printingservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;PrintingServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/printingservicetemplate?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[printingservicetemplate](#about.api.default.printingservicetemplate)</code>  
@@ -1249,7 +1321,9 @@ qrsApi.about.api.default.printingservicetemplate.get(listentries).then(function(
 <a name="about.api.default.proxyservice.get"></a>
 ###### proxyservice.get([listentries]) ⇒ <code>Promise.&lt;ProxyService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/proxyservice?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[proxyservice](#about.api.default.proxyservice)</code>  
@@ -1271,7 +1345,9 @@ qrsApi.about.api.default.proxyservice.get(listentries).then(function(ProxyServic
 <a name="about.api.default.proxyservicetemplate.get"></a>
 ###### proxyservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;ProxyServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/proxyservicetemplate?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[proxyservicetemplate](#about.api.default.proxyservicetemplate)</code>  
@@ -1293,7 +1369,9 @@ qrsApi.about.api.default.proxyservicetemplate.get(listentries).then(function(Pro
 <a name="about.api.default.recentapp.get"></a>
 ###### recentapp.get([listentries]) ⇒ <code>Promise.&lt;UserRecentApp&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/recentapp?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[recentapp](#about.api.default.recentapp)</code>  
@@ -1315,7 +1393,9 @@ qrsApi.about.api.default.recentapp.get(listentries).then(function(UserRecentApp)
 <a name="about.api.default.reloadtask.get"></a>
 ###### reloadtask.get([listentries]) ⇒ <code>Promise.&lt;ReloadTask&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/reloadtask?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[reloadtask](#about.api.default.reloadtask)</code>  
@@ -1337,7 +1417,9 @@ qrsApi.about.api.default.reloadtask.get(listentries).then(function(ReloadTask) {
 <a name="about.api.default.reloadtaskoperational.get"></a>
 ###### reloadtaskoperational.get([listentries]) ⇒ <code>Promise.&lt;ReloadTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/reloadtaskoperational?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[reloadtaskoperational](#about.api.default.reloadtaskoperational)</code>  
@@ -1359,7 +1441,9 @@ qrsApi.about.api.default.reloadtaskoperational.get(listentries).then(function(Re
 <a name="about.api.default.removedsystemrule.get"></a>
 ###### removedsystemrule.get([listentries]) ⇒ <code>Promise.&lt;RemovedSystemRule&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/removedsystemrule?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[removedsystemrule](#about.api.default.removedsystemrule)</code>  
@@ -1381,7 +1465,9 @@ qrsApi.about.api.default.removedsystemrule.get(listentries).then(function(Remove
 <a name="about.api.default.repositoryservice.get"></a>
 ###### repositoryservice.get([listentries]) ⇒ <code>Promise.&lt;RepositoryService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/repositoryservice?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[repositoryservice](#about.api.default.repositoryservice)</code>  
@@ -1403,7 +1489,9 @@ qrsApi.about.api.default.repositoryservice.get(listentries).then(function(Reposi
 <a name="about.api.default.repositoryservicetemplate.get"></a>
 ###### repositoryservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;RepositoryServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/repositoryservicetemplate?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[repositoryservicetemplate](#about.api.default.repositoryservicetemplate)</code>  
@@ -1425,7 +1513,9 @@ qrsApi.about.api.default.repositoryservicetemplate.get(listentries).then(functio
 <a name="about.api.default.schedulerservice.get"></a>
 ###### schedulerservice.get([listentries]) ⇒ <code>Promise.&lt;SchedulerService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/schedulerservice?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[schedulerservice](#about.api.default.schedulerservice)</code>  
@@ -1447,7 +1537,9 @@ qrsApi.about.api.default.schedulerservice.get(listentries).then(function(Schedul
 <a name="about.api.default.schedulerservicetemplate.get"></a>
 ###### schedulerservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;SchedulerServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/schedulerservicetemplate?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[schedulerservicetemplate](#about.api.default.schedulerservicetemplate)</code>  
@@ -1469,7 +1561,9 @@ qrsApi.about.api.default.schedulerservicetemplate.get(listentries).then(function
 <a name="about.api.default.schemaevent.get"></a>
 ###### schemaevent.get([listentries]) ⇒ <code>Promise.&lt;SchemaEvent&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/schemaevent?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[schemaevent](#about.api.default.schemaevent)</code>  
@@ -1491,7 +1585,9 @@ qrsApi.about.api.default.schemaevent.get(listentries).then(function(SchemaEvent)
 <a name="about.api.default.schemaeventoperational.get"></a>
 ###### schemaeventoperational.get([listentries]) ⇒ <code>Promise.&lt;SchemaEventOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/schemaeventoperational?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[schemaeventoperational](#about.api.default.schemaeventoperational)</code>  
@@ -1513,7 +1609,9 @@ qrsApi.about.api.default.schemaeventoperational.get(listentries).then(function(S
 <a name="about.api.default.selection.get"></a>
 ###### selection.get([listentries]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/selection?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[selection](#about.api.default.selection)</code>  
@@ -1535,7 +1633,9 @@ qrsApi.about.api.default.selection.get(listentries).then(function(Selection) {
 <a name="about.api.default.servernodeconfiguration.get"></a>
 ###### servernodeconfiguration.get([listentries]) ⇒ <code>Promise.&lt;ServerNodeConfiguration&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/servernodeconfiguration?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[servernodeconfiguration](#about.api.default.servernodeconfiguration)</code>  
@@ -1557,7 +1657,9 @@ qrsApi.about.api.default.servernodeconfiguration.get(listentries).then(function(
 <a name="about.api.default.servicestatus.get"></a>
 ###### servicestatus.get([listentries]) ⇒ <code>Promise.&lt;ServiceStatus&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/servicestatus?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[servicestatus](#about.api.default.servicestatus)</code>  
@@ -1579,7 +1681,9 @@ qrsApi.about.api.default.servicestatus.get(listentries).then(function(ServiceSta
 <a name="about.api.default.staticcontentreference.get"></a>
 ###### staticcontentreference.get([listentries]) ⇒ <code>Promise.&lt;StaticContentReference&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/staticcontentreference?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[staticcontentreference](#about.api.default.staticcontentreference)</code>  
@@ -1601,7 +1705,9 @@ qrsApi.about.api.default.staticcontentreference.get(listentries).then(function(S
 <a name="about.api.default.stream.get"></a>
 ###### stream.get([listentries]) ⇒ <code>Promise.&lt;Stream&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/stream?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[stream](#about.api.default.stream)</code>  
@@ -1623,7 +1729,9 @@ qrsApi.about.api.default.stream.get(listentries).then(function(Stream) {
 <a name="about.api.default.syncsession.get"></a>
 ###### syncsession.get([listentries]) ⇒ <code>Promise.&lt;SyncSession&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/syncsession?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[syncsession](#about.api.default.syncsession)</code>  
@@ -1645,7 +1753,9 @@ qrsApi.about.api.default.syncsession.get(listentries).then(function(SyncSession)
 <a name="about.api.default.systeminfo.get"></a>
 ###### systeminfo.get([listentries]) ⇒ <code>Promise.&lt;SystemInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/systeminfo?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[systeminfo](#about.api.default.systeminfo)</code>  
@@ -1667,7 +1777,9 @@ qrsApi.about.api.default.systeminfo.get(listentries).then(function(SystemInfo) {
 <a name="about.api.default.systemrule.get"></a>
 ###### systemrule.get([listentries]) ⇒ <code>Promise.&lt;SystemRule&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/systemrule?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[systemrule](#about.api.default.systemrule)</code>  
@@ -1689,7 +1801,9 @@ qrsApi.about.api.default.systemrule.get(listentries).then(function(SystemRule) {
 <a name="about.api.default.tabledefinition.get"></a>
 ###### tabledefinition.get([listentries]) ⇒ <code>Promise.&lt;TableDefinition&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/tabledefinition?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[tabledefinition](#about.api.default.tabledefinition)</code>  
@@ -1711,7 +1825,9 @@ qrsApi.about.api.default.tabledefinition.get(listentries).then(function(TableDef
 <a name="about.api.default.tag.get"></a>
 ###### tag.get([listentries]) ⇒ <code>Promise.&lt;Tag&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/tag?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[tag](#about.api.default.tag)</code>  
@@ -1733,7 +1849,9 @@ qrsApi.about.api.default.tag.get(listentries).then(function(Tag) {
 <a name="about.api.default.tempcontent.get"></a>
 ###### tempcontent.get([listentries]) ⇒ <code>Promise.&lt;TempContent&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/tempcontent?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[tempcontent](#about.api.default.tempcontent)</code>  
@@ -1755,7 +1873,9 @@ qrsApi.about.api.default.tempcontent.get(listentries).then(function(TempContent)
 <a name="about.api.default.termsacceptance.get"></a>
 ###### termsacceptance.get([listentries]) ⇒ <code>Promise.&lt;TermsAcceptance&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/termsacceptance?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[termsacceptance](#about.api.default.termsacceptance)</code>  
@@ -1777,7 +1897,9 @@ qrsApi.about.api.default.termsacceptance.get(listentries).then(function(TermsAcc
 <a name="about.api.default.user.get"></a>
 ###### user.get([listentries]) ⇒ <code>Promise.&lt;User&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/user?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[user](#about.api.default.user)</code>  
@@ -1799,7 +1921,9 @@ qrsApi.about.api.default.user.get(listentries).then(function(User) {
 <a name="about.api.default.useraccessgroup.get"></a>
 ###### useraccessgroup.get([listentries]) ⇒ <code>Promise.&lt;LicenseUserAccessGroup&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/useraccessgroup?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[useraccessgroup](#about.api.default.useraccessgroup)</code>  
@@ -1821,7 +1945,9 @@ qrsApi.about.api.default.useraccessgroup.get(listentries).then(function(LicenseU
 <a name="about.api.default.useraccesstype.get"></a>
 ###### useraccesstype.get([listentries]) ⇒ <code>Promise.&lt;LicenseUserAccessType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/useraccesstype?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[useraccesstype](#about.api.default.useraccesstype)</code>  
@@ -1843,7 +1969,9 @@ qrsApi.about.api.default.useraccesstype.get(listentries).then(function(LicenseUs
 <a name="about.api.default.useraccessusage.get"></a>
 ###### useraccessusage.get([listentries]) ⇒ <code>Promise.&lt;LicenseUserAccessUsage&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/useraccessusage?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[useraccessusage](#about.api.default.useraccessusage)</code>  
@@ -1865,7 +1993,9 @@ qrsApi.about.api.default.useraccessusage.get(listentries).then(function(LicenseU
 <a name="about.api.default.userdirectory.get"></a>
 ###### userdirectory.get([listentries]) ⇒ <code>Promise.&lt;UserDirectory&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/userdirectory?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[userdirectory](#about.api.default.userdirectory)</code>  
@@ -1887,7 +2017,9 @@ qrsApi.about.api.default.userdirectory.get(listentries).then(function(UserDirect
 <a name="about.api.default.userdirectorytemplate.get"></a>
 ###### userdirectorytemplate.get([listentries]) ⇒ <code>Promise.&lt;UserDirectoryTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/userdirectorytemplate?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[userdirectorytemplate](#about.api.default.userdirectorytemplate)</code>  
@@ -1909,7 +2041,9 @@ qrsApi.about.api.default.userdirectorytemplate.get(listentries).then(function(Us
 <a name="about.api.default.usersynctask.get"></a>
 ###### usersynctask.get([listentries]) ⇒ <code>Promise.&lt;UserSyncTask&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/usersynctask?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[usersynctask](#about.api.default.usersynctask)</code>  
@@ -1931,7 +2065,9 @@ qrsApi.about.api.default.usersynctask.get(listentries).then(function(UserSyncTas
 <a name="about.api.default.usersynctaskoperational.get"></a>
 ###### usersynctaskoperational.get([listentries]) ⇒ <code>Promise.&lt;UserSyncTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/usersynctaskoperational?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[usersynctaskoperational](#about.api.default.usersynctaskoperational)</code>  
@@ -1953,7 +2089,9 @@ qrsApi.about.api.default.usersynctaskoperational.get(listentries).then(function(
 <a name="about.api.default.virtualproxyconfig.get"></a>
 ###### virtualproxyconfig.get([listentries]) ⇒ <code>Promise.&lt;VirtualProxyConfig&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default/virtualproxyconfig?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[virtualproxyconfig](#about.api.default.virtualproxyconfig)</code>  
@@ -1972,7 +2110,9 @@ qrsApi.about.api.default.virtualproxyconfig.get(listentries).then(function(Virtu
 <a name="about.api.default.get"></a>
 ##### default.get([listentries]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/default?listentries={listentries}
+
 This method is manual
 
 **Kind**: static method of <code>[default](#about.api.default)</code>  
@@ -1994,7 +2134,9 @@ qrsApi.about.api.default.get(listentries).then(function(Object) {
 <a name="about.api.description.get"></a>
 ##### description.get([extended], [method], [format]) ⇒ <code>Promise.&lt;Array.&lt;String&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/description?extended={extended}&method={method}&format={format}
+
 This method is manual
 
 **Kind**: static method of <code>[description](#about.api.description)</code>  
@@ -2018,7 +2160,9 @@ qrsApi.about.api.description.get(extended, method, format).then(function(Array.<
 <a name="about.api.enums.get"></a>
 ##### enums.get() ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/enums
+
 This method is manual
 
 **Kind**: static method of <code>[enums](#about.api.enums)</code>  
@@ -2035,7 +2179,9 @@ qrsApi.about.api.enums.get().then(function(Object) {
 <a name="about.api.relations.get"></a>
 ##### relations.get() ⇒ <code>Promise.&lt;Array.&lt;String&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about/api/relations
+
 This method is manual
 
 **Kind**: static method of <code>[relations](#about.api.relations)</code>  
@@ -2049,7 +2195,9 @@ qrsApi.about.api.relations.get().then(function(Array.<String>) {
 <a name="about.get"></a>
 ### about.get() ⇒ <code>Promise.&lt;About&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/about
+
 This method is manual
 
 **Kind**: static method of <code>[about](#about)</code>  

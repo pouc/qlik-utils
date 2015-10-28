@@ -21,7 +21,9 @@
 <a name="staticcontentreference.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;StaticContentReference&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/staticcontentreference/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#staticcontentreference.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.staticcontentreference.id(id).get(appendprivileges).then(function(StaticC
 <a name="staticcontentreference.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/staticcontentreference/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#staticcontentreference.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.staticcontentreference.count.get(filter).then(function(int) {
 <a name="staticcontentreference.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;StaticContentReference&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/staticcontentreference/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#staticcontentreference.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.staticcontentreference.full.get(filter, orderby, appendprivileges).then(f
 <a name="staticcontentreference.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/staticcontentreference/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#staticcontentreference.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.staticcontentreference.table.post(postParams, filter, skip, take, sortcol
 <a name="staticcontentreference.get"></a>
 ### staticcontentreference.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;StaticContentReference&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/staticcontentreference?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[staticcontentreference](#staticcontentreference)</code>  

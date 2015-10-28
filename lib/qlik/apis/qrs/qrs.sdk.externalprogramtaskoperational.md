@@ -34,7 +34,9 @@
 <a name="externalprogramtaskoperational.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#externalprogramtaskoperational.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.externalprogramtaskoperational.id(id).delete().then(function() {
 <a name="externalprogramtaskoperational.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;ExternalProgramTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#externalprogramtaskoperational.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.externalprogramtaskoperational.id(id).get(appendprivileges).then(function
 <a name="externalprogramtaskoperational.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ExternalProgramTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#externalprogramtaskoperational.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.externalprogramtaskoperational.id(id).put(postParams, appendprivileges).t
 <a name="externalprogramtaskoperational.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#externalprogramtaskoperational.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.externalprogramtaskoperational.count.get(filter).then(function(int) {
 <a name="externalprogramtaskoperational.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalProgramTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#externalprogramtaskoperational.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.externalprogramtaskoperational.full.get(filter, orderby, appendprivileges
 <a name="externalprogramtaskoperational.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalProgramTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#externalprogramtaskoperational.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.externalprogramtaskoperational.many.post(postParams, appendprivileges).th
 <a name="externalprogramtaskoperational.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#externalprogramtaskoperational.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.externalprogramtaskoperational.previewcreateprivilege.post(postParams).th
 <a name="externalprogramtaskoperational.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#externalprogramtaskoperational.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.externalprogramtaskoperational.table.post(postParams, filter, skip, take,
 <a name="externalprogramtaskoperational.get"></a>
 ### externalprogramtaskoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalProgramTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[externalprogramtaskoperational](#externalprogramtaskoperational)</code>  
@@ -226,7 +244,9 @@ qrsApi.externalprogramtaskoperational.get(filter, orderby, appendprivileges).the
 <a name="externalprogramtaskoperational.post"></a>
 ### externalprogramtaskoperational.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ExternalProgramTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalprogramtaskoperational?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[externalprogramtaskoperational](#externalprogramtaskoperational)</code>  

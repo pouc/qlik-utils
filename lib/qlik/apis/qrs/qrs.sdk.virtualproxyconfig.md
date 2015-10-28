@@ -38,7 +38,9 @@
 <a name="virtualproxyconfig.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#virtualproxyconfig.id)</code>  
@@ -52,7 +54,9 @@ qrsApi.virtualproxyconfig.id(id).delete().then(function() {
 <a name="virtualproxyconfig.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;VirtualProxyConfig&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#virtualproxyconfig.id)</code>  
@@ -71,7 +75,9 @@ qrsApi.virtualproxyconfig.id(id).get(appendprivileges).then(function(VirtualProx
 <a name="virtualproxyconfig.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;VirtualProxyConfig&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#virtualproxyconfig.id)</code>  
@@ -111,7 +117,9 @@ qrsApi.virtualproxyconfig.id(id).put(postParams, appendprivileges).then(function
 <a name="virtualproxyconfig.vpid.generate.samlmetadata.get"></a>
 ###### samlmetadata.get() ⇒ <code>Promise.&lt;Guid&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig/{vpid}/generate/samlmetadata
+
 This method is manual
 
 **Kind**: static method of <code>[samlmetadata](#virtualproxyconfig.vpid.generate.samlmetadata)</code>  
@@ -128,7 +136,9 @@ qrsApi.virtualproxyconfig.vpid(vpid).generate.samlmetadata.get().then(function(G
 <a name="virtualproxyconfig.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#virtualproxyconfig.count)</code>  
@@ -150,7 +160,9 @@ qrsApi.virtualproxyconfig.count.get(filter).then(function(int) {
 <a name="virtualproxyconfig.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;VirtualProxyConfig&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#virtualproxyconfig.full)</code>  
@@ -174,7 +186,9 @@ qrsApi.virtualproxyconfig.full.get(filter, orderby, appendprivileges).then(funct
 <a name="virtualproxyconfig.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;VirtualProxyConfig&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#virtualproxyconfig.many)</code>  
@@ -197,7 +211,9 @@ qrsApi.virtualproxyconfig.many.post(postParams, appendprivileges).then(function(
 <a name="virtualproxyconfig.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#virtualproxyconfig.previewcreateprivilege)</code>  
@@ -219,7 +235,9 @@ qrsApi.virtualproxyconfig.previewcreateprivilege.post(postParams).then(function(
 <a name="virtualproxyconfig.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#virtualproxyconfig.table)</code>  
@@ -243,7 +261,9 @@ qrsApi.virtualproxyconfig.table.post(postParams, filter, skip, take, sortcolumn,
 <a name="virtualproxyconfig.get"></a>
 ### virtualproxyconfig.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;VirtualProxyConfig&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[virtualproxyconfig](#virtualproxyconfig)</code>  
@@ -264,7 +284,9 @@ qrsApi.virtualproxyconfig.get(filter, orderby, appendprivileges).then(function(A
 <a name="virtualproxyconfig.post"></a>
 ### virtualproxyconfig.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;VirtualProxyConfig&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/virtualproxyconfig?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[virtualproxyconfig](#virtualproxyconfig)</code>  

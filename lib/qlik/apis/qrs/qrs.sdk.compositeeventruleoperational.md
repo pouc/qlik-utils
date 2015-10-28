@@ -34,7 +34,9 @@
 <a name="compositeeventruleoperational.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#compositeeventruleoperational.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.compositeeventruleoperational.id(id).delete().then(function() {
 <a name="compositeeventruleoperational.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;CompositeEventRuleOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#compositeeventruleoperational.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.compositeeventruleoperational.id(id).get(appendprivileges).then(function(
 <a name="compositeeventruleoperational.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;CompositeEventRuleOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#compositeeventruleoperational.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.compositeeventruleoperational.id(id).put(postParams, appendprivileges).th
 <a name="compositeeventruleoperational.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#compositeeventruleoperational.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.compositeeventruleoperational.count.get(filter).then(function(int) {
 <a name="compositeeventruleoperational.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CompositeEventRuleOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#compositeeventruleoperational.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.compositeeventruleoperational.full.get(filter, orderby, appendprivileges)
 <a name="compositeeventruleoperational.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CompositeEventRuleOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#compositeeventruleoperational.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.compositeeventruleoperational.many.post(postParams, appendprivileges).the
 <a name="compositeeventruleoperational.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#compositeeventruleoperational.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.compositeeventruleoperational.previewcreateprivilege.post(postParams).the
 <a name="compositeeventruleoperational.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#compositeeventruleoperational.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.compositeeventruleoperational.table.post(postParams, filter, skip, take, 
 <a name="compositeeventruleoperational.get"></a>
 ### compositeeventruleoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CompositeEventRuleOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeeventruleoperational](#compositeeventruleoperational)</code>  
@@ -226,7 +244,9 @@ qrsApi.compositeeventruleoperational.get(filter, orderby, appendprivileges).then
 <a name="compositeeventruleoperational.post"></a>
 ### compositeeventruleoperational.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;CompositeEventRuleOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/compositeeventruleoperational?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[compositeeventruleoperational](#compositeeventruleoperational)</code>  

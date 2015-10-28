@@ -52,7 +52,9 @@
 <a name="download.app.id.exportticketid.localfilename.get"></a>
 ####### localfilename.get() ⇒ <code>Promise.&lt;FileDownloadInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/download/app/{id}/{exportticketid}/{localfilename}
+
 This method is manual
 
 **Kind**: static method of <code>[localfilename](#download.app.id.exportticketid.localfilename)</code>  
@@ -86,7 +88,9 @@ qrsApi.download.app.id(id).exportticketid(exportticketid).localfilename(localfil
 <a name="download.reloadtask.downloadticketid.localfilename.get"></a>
 ###### localfilename.get() ⇒ <code>Promise.&lt;FileDownloadInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/download/reloadtask/{downloadticketid}/{localfilename}
+
 This method is manual
 
 **Kind**: static method of <code>[localfilename](#download.reloadtask.downloadticketid.localfilename)</code>  
@@ -120,7 +124,9 @@ qrsApi.download.reloadtask.downloadticketid(downloadticketid).localfilename(loca
 <a name="download.samlmetadata.exportticketid.localfilename.get"></a>
 ###### localfilename.get() ⇒ <code>Promise.&lt;FileDownloadInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/download/samlmetadata/{exportticketid}/{localfilename}
+
 This method is manual
 
 **Kind**: static method of <code>[localfilename](#download.samlmetadata.exportticketid.localfilename)</code>  

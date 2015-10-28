@@ -34,7 +34,9 @@
 <a name="custompropertydefinition.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#custompropertydefinition.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.custompropertydefinition.id(id).delete().then(function() {
 <a name="custompropertydefinition.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;CustomPropertyDefinition&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#custompropertydefinition.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.custompropertydefinition.id(id).get(appendprivileges).then(function(Custo
 <a name="custompropertydefinition.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;CustomPropertyDefinition&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#custompropertydefinition.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.custompropertydefinition.id(id).put(postParams, appendprivileges).then(fu
 <a name="custompropertydefinition.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#custompropertydefinition.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.custompropertydefinition.count.get(filter).then(function(int) {
 <a name="custompropertydefinition.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CustomPropertyDefinition&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#custompropertydefinition.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.custompropertydefinition.full.get(filter, orderby, appendprivileges).then
 <a name="custompropertydefinition.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CustomPropertyDefinition&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#custompropertydefinition.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.custompropertydefinition.many.post(postParams, appendprivileges).then(fun
 <a name="custompropertydefinition.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#custompropertydefinition.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.custompropertydefinition.previewcreateprivilege.post(postParams).then(fun
 <a name="custompropertydefinition.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#custompropertydefinition.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.custompropertydefinition.table.post(postParams, filter, skip, take, sortc
 <a name="custompropertydefinition.get"></a>
 ### custompropertydefinition.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;CustomPropertyDefinition&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[custompropertydefinition](#custompropertydefinition)</code>  
@@ -226,7 +244,9 @@ qrsApi.custompropertydefinition.get(filter, orderby, appendprivileges).then(func
 <a name="custompropertydefinition.post"></a>
 ### custompropertydefinition.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;CustomPropertyDefinition&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/custompropertydefinition?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[custompropertydefinition](#custompropertydefinition)</code>  

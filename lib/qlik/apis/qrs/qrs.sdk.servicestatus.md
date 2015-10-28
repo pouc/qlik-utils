@@ -21,7 +21,9 @@
 <a name="servicestatus.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;ServiceStatus&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/servicestatus/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#servicestatus.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.servicestatus.id(id).get(appendprivileges).then(function(ServiceStatus) {
 <a name="servicestatus.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/servicestatus/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#servicestatus.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.servicestatus.count.get(filter).then(function(int) {
 <a name="servicestatus.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ServiceStatus&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/servicestatus/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#servicestatus.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.servicestatus.full.get(filter, orderby, appendprivileges).then(function(A
 <a name="servicestatus.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/servicestatus/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#servicestatus.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.servicestatus.table.post(postParams, filter, skip, take, sortcolumn, orde
 <a name="servicestatus.get"></a>
 ### servicestatus.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ServiceStatus&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/servicestatus?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[servicestatus](#servicestatus)</code>  

@@ -21,7 +21,9 @@
 <a name="appavailability.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;AppAvailability&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appavailability/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#appavailability.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.appavailability.id(id).get(appendprivileges).then(function(AppAvailabilit
 <a name="appavailability.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appavailability/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#appavailability.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.appavailability.count.get(filter).then(function(int) {
 <a name="appavailability.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppAvailability&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appavailability/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#appavailability.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.appavailability.full.get(filter, orderby, appendprivileges).then(function
 <a name="appavailability.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appavailability/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#appavailability.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.appavailability.table.post(postParams, filter, skip, take, sortcolumn, or
 <a name="appavailability.get"></a>
 ### appavailability.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppAvailability&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appavailability?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appavailability](#appavailability)</code>  

@@ -17,7 +17,9 @@
 <a name="taskoperational.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ITaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/taskoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#taskoperational.full)</code>  
@@ -41,7 +43,9 @@ qrsApi.taskoperational.full.get(filter, orderby, appendprivileges).then(function
 <a name="taskoperational.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/taskoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#taskoperational.table)</code>  
@@ -65,7 +69,9 @@ qrsApi.taskoperational.table.post(postParams, filter, skip, take, sortcolumn, or
 <a name="taskoperational.get"></a>
 ### taskoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ITaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/taskoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[taskoperational](#taskoperational)</code>  

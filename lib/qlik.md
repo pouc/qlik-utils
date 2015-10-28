@@ -24,6 +24,16 @@ Wrapper for helper functions for Qlik Sense APIs.
 * [Qlik](#Qlik) : <code>object</code>
   * [.apis](#Qlik.apis) : <code>object</code>
     * [.qrs](#Qlik.apis.qrs) : <code>object</code>
+    * [.qps](#Qlik.apis.qps) : <code>object</code>
+      * [.ticket](#Qlik.apis.qps.ticket) : <code>object</code>
+        * [.post(postParams)](#Qlik.apis.qps.ticket.post) ⇒ <code>Promise.&lt;Ticket&gt;</code>
+      * [.user](#Qlik.apis.qps.user) : <code>object</code>
+        * [.get(directory, id)](#Qlik.apis.qps.user.get) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+        * [.delete(directory, id)](#Qlik.apis.qps.user.delete) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+      * [.session](#Qlik.apis.qps.session) : <code>object</code>
+        * [.get(id)](#Qlik.apis.qps.session.get) ⇒ <code>Promise.&lt;Session&gt;</code>
+        * [.post(postParams)](#Qlik.apis.qps.session.post) ⇒ <code>Promise.&lt;Session&gt;</code>
+        * [.delete(id)](#Qlik.apis.qps.session.delete) ⇒ <code>Promise.&lt;Session&gt;</code>
   * [.getTicket(params, options)](#Qlik.getTicket) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
   * [.addToWhiteList(ip, options)](#Qlik.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
   * [.dynamicAppClone(options)](#Qlik.dynamicAppClone) ⇒ <code>Promise</code>
@@ -34,6 +44,20 @@ Wrapper for helper functions for Qlik Sense APIs.
 <a name="Qlik.apis"></a>
 ### Qlik.apis : <code>object</code>
 **Kind**: static namespace of <code>[Qlik](#Qlik)</code>  
+
+* [.apis](#Qlik.apis) : <code>object</code>
+  * [.qrs](#Qlik.apis.qrs) : <code>object</code>
+  * [.qps](#Qlik.apis.qps) : <code>object</code>
+    * [.ticket](#Qlik.apis.qps.ticket) : <code>object</code>
+      * [.post(postParams)](#Qlik.apis.qps.ticket.post) ⇒ <code>Promise.&lt;Ticket&gt;</code>
+    * [.user](#Qlik.apis.qps.user) : <code>object</code>
+      * [.get(directory, id)](#Qlik.apis.qps.user.get) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+      * [.delete(directory, id)](#Qlik.apis.qps.user.delete) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+    * [.session](#Qlik.apis.qps.session) : <code>object</code>
+      * [.get(id)](#Qlik.apis.qps.session.get) ⇒ <code>Promise.&lt;Session&gt;</code>
+      * [.post(postParams)](#Qlik.apis.qps.session.post) ⇒ <code>Promise.&lt;Session&gt;</code>
+      * [.delete(id)](#Qlik.apis.qps.session.delete) ⇒ <code>Promise.&lt;Session&gt;</code>
+
 <a name="Qlik.apis.qrs"></a>
 #### apis.qrs : <code>object</code>
 [See documentation](qlik/apis/qrs/qrs.md)
@@ -41,6 +65,123 @@ Wrapper for helper functions for Qlik Sense APIs.
 **Kind**: static namespace of <code>[apis](#Qlik.apis)</code>  
 **Example**  
 ```javascriptvar qrsApi = utils.Qlik.apis.qrs({    restUri: 'https://localhost:4242',    pfx: pfx,    UserId: 'qlikservice',    UserDirectory: '2008R2-0'});```
+<a name="Qlik.apis.qps"></a>
+#### apis.qps : <code>object</code>
+**Kind**: static namespace of <code>[apis](#Qlik.apis)</code>  
+**Example**  
+```javascriptvar qpsApi = utils.Qlik.apis.qps({    restUri: 'https://localhost:4242',    virtualProxy: 'test',    pfx: pfx,    UserId: 'qlikservice',    UserDirectory: '2008R2-0'});```
+
+* [.qps](#Qlik.apis.qps) : <code>object</code>
+  * [.ticket](#Qlik.apis.qps.ticket) : <code>object</code>
+    * [.post(postParams)](#Qlik.apis.qps.ticket.post) ⇒ <code>Promise.&lt;Ticket&gt;</code>
+  * [.user](#Qlik.apis.qps.user) : <code>object</code>
+    * [.get(directory, id)](#Qlik.apis.qps.user.get) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+    * [.delete(directory, id)](#Qlik.apis.qps.user.delete) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+  * [.session](#Qlik.apis.qps.session) : <code>object</code>
+    * [.get(id)](#Qlik.apis.qps.session.get) ⇒ <code>Promise.&lt;Session&gt;</code>
+    * [.post(postParams)](#Qlik.apis.qps.session.post) ⇒ <code>Promise.&lt;Session&gt;</code>
+    * [.delete(id)](#Qlik.apis.qps.session.delete) ⇒ <code>Promise.&lt;Session&gt;</code>
+
+<a name="Qlik.apis.qps.ticket"></a>
+##### qps.ticket : <code>object</code>
+**Kind**: static namespace of <code>[qps](#Qlik.apis.qps)</code>  
+<a name="Qlik.apis.qps.ticket.post"></a>
+###### ticket.post(postParams) ⇒ <code>Promise.&lt;Ticket&gt;</code>
+This returns a JSON object containing the same UserId and an authentication ticket (Ticket):/qrs/{virtual proxy/}ticket
+
+**Kind**: static method of <code>[ticket](#Qlik.apis.qps.ticket)</code>  
+**Returns**: <code>Promise.&lt;Ticket&gt;</code> - a promise resolving to the ticket  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>Object</code> | the ticket definition to post |
+
+**Example**  
+```javascriptqpsApi.ticket.post(postParams).then(function(Ticket) {	console.log(Ticket)})```
+<a name="Qlik.apis.qps.user"></a>
+##### qps.user : <code>object</code>
+**Kind**: static namespace of <code>[qps](#Qlik.apis.qps)</code>  
+
+* [.user](#Qlik.apis.qps.user) : <code>object</code>
+  * [.get(directory, id)](#Qlik.apis.qps.user.get) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+  * [.delete(directory, id)](#Qlik.apis.qps.user.delete) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+
+<a name="Qlik.apis.qps.user.get"></a>
+###### user.get(directory, id) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+This returns all proxy sessions that a user (identified by {directory} and {id}) has./qrs/{virtual proxy/}user/{directory}/{id}
+
+**Kind**: static method of <code>[user](#Qlik.apis.qps.user)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code> - a promise resolving to a list of sessions  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| directory | <code>string</code> | the user directory |
+| id | <code>string</code> | the user id |
+
+**Example**  
+```javascriptqpsApi.user.get(directory, id).then(function(Sessions) {	console.log(Sessions)})```
+<a name="Qlik.apis.qps.user.delete"></a>
+###### user.delete(directory, id) ⇒ <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code>
+This is part of the Logout API. The directory and ID are the same UserDirectory and UserId as those that were sent in POST /qps/{virtual proxy/}ticket.A list of all proxy sessions that were connected to the deleted user is returned./qrs/{virtual proxy/}user/{directory}/{id}
+
+**Kind**: static method of <code>[user](#Qlik.apis.qps.user)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;Session&gt;&gt;</code> - a promise resolving to a list of disconnected sessions  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| directory | <code>string</code> | the user directory |
+| id | <code>string</code> | the user id |
+
+**Example**  
+```javascriptqpsApi.user.delete(directory, id).then(function(Sessions) {	console.log(Sessions)})```
+<a name="Qlik.apis.qps.session"></a>
+##### qps.session : <code>object</code>
+**Kind**: static namespace of <code>[qps](#Qlik.apis.qps)</code>  
+
+* [.session](#Qlik.apis.qps.session) : <code>object</code>
+  * [.get(id)](#Qlik.apis.qps.session.get) ⇒ <code>Promise.&lt;Session&gt;</code>
+  * [.post(postParams)](#Qlik.apis.qps.session.post) ⇒ <code>Promise.&lt;Session&gt;</code>
+  * [.delete(id)](#Qlik.apis.qps.session.delete) ⇒ <code>Promise.&lt;Session&gt;</code>
+
+<a name="Qlik.apis.qps.session.get"></a>
+###### session.get(id) ⇒ <code>Promise.&lt;Session&gt;</code>
+This returns the proxy session identified by {id}./qps/{virtual proxy/}session/{id}
+
+**Kind**: static method of <code>[session](#Qlik.apis.qps.session)</code>  
+**Returns**: <code>Promise.&lt;Session&gt;</code> - a promise resolving to a session  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | the session id |
+
+**Example**  
+```javascriptqpsApi.session.get(id).then(function(Session) {	console.log(Session)})```
+<a name="Qlik.apis.qps.session.post"></a>
+###### session.post(postParams) ⇒ <code>Promise.&lt;Session&gt;</code>
+This adds a new proxy session./qps/{virtual proxy/}session
+
+**Kind**: static method of <code>[session](#Qlik.apis.qps.session)</code>  
+**Returns**: <code>Promise.&lt;Session&gt;</code> - a promise resolving to a session  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>Object</code> | the session to create |
+
+**Example**  
+```javascriptqpsApi.session.post(postParams).then(function(Session) {	console.log(Session)})```
+<a name="Qlik.apis.qps.session.delete"></a>
+###### session.delete(id) ⇒ <code>Promise.&lt;Session&gt;</code>
+This deletes the proxy session identified by {id} and returns it as a session struct./qps/{virtual proxy/}session/{id}
+
+**Kind**: static method of <code>[session](#Qlik.apis.qps.session)</code>  
+**Returns**: <code>Promise.&lt;Session&gt;</code> - a promise resolving to the session that was deleted  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | the session id |
+
+**Example**  
+```javascriptqpsApi.session.delete(id).then(function(Session) {	console.log(Session)})```
 <a name="Qlik.getTicket"></a>
 ### Qlik.getTicket(params, options) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
 Generates a ticket on Qlik Sense QRS Api. If the targetId is not correctthen the ticket will redirect to the hub

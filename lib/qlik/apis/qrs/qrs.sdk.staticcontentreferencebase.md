@@ -17,7 +17,9 @@
 <a name="staticcontentreferencebase.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IStaticContentReferenceBase&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/staticcontentreferencebase/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#staticcontentreferencebase.full)</code>  
@@ -41,7 +43,9 @@ qrsApi.staticcontentreferencebase.full.get(filter, orderby, appendprivileges).th
 <a name="staticcontentreferencebase.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/staticcontentreferencebase/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#staticcontentreferencebase.table)</code>  
@@ -65,7 +69,9 @@ qrsApi.staticcontentreferencebase.table.post(postParams, filter, skip, take, sor
 <a name="staticcontentreferencebase.get"></a>
 ### staticcontentreferencebase.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;IStaticContentReferenceBase&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/staticcontentreferencebase?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[staticcontentreferencebase](#staticcontentreferencebase)</code>  

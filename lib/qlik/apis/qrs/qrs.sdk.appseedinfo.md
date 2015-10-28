@@ -21,7 +21,9 @@
 <a name="appseedinfo.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;AppSeedInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appseedinfo/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#appseedinfo.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.appseedinfo.id(id).get(appendprivileges).then(function(AppSeedInfo) {
 <a name="appseedinfo.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appseedinfo/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#appseedinfo.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.appseedinfo.count.get(filter).then(function(int) {
 <a name="appseedinfo.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppSeedInfo&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appseedinfo/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#appseedinfo.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.appseedinfo.full.get(filter, orderby, appendprivileges).then(function(Arr
 <a name="appseedinfo.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appseedinfo/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#appseedinfo.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.appseedinfo.table.post(postParams, filter, skip, take, sortcolumn, ordera
 <a name="appseedinfo.get"></a>
 ### appseedinfo.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppSeedInfo&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appseedinfo?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appseedinfo](#appseedinfo)</code>  

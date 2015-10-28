@@ -54,7 +54,9 @@
 <a name="task.id.start.synchronous.post"></a>
 ###### synchronous.post() ⇒ <code>Promise.&lt;Guid&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task/{id}/start/synchronous
+
 This method is manual
 
 **Kind**: static method of <code>[synchronous](#task.id.start.synchronous)</code>  
@@ -68,7 +70,9 @@ qrsApi.task.id(id).start.synchronous.post().then(function(Guid) {
 <a name="task.id.start.post"></a>
 ##### start.post() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task/{id}/start
+
 This method is manual
 
 **Kind**: static method of <code>[start](#task.id.start)</code>  
@@ -85,7 +89,9 @@ qrsApi.task.id(id).start.post().then(function() {
 <a name="task.id.stop.post"></a>
 ##### stop.post() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task/{id}/stop
+
 This method is manual
 
 **Kind**: static method of <code>[stop](#task.id.stop)</code>  
@@ -102,7 +108,9 @@ qrsApi.task.id(id).stop.post().then(function() {
 <a name="task.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ITask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#task.full)</code>  
@@ -137,7 +145,9 @@ qrsApi.task.full.get(filter, orderby, appendprivileges).then(function(Array.<ITa
 <a name="task.start.many.post"></a>
 ##### many.post(postParams) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task/start/many
+
 This method is manual
 
 **Kind**: static method of <code>[many](#task.start.many)</code>  
@@ -159,7 +169,9 @@ qrsApi.task.start.many.post(postParams).then(function() {
 <a name="task.start.synchronous.post"></a>
 ##### synchronous.post([name]) ⇒ <code>Promise.&lt;Guid&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task/start/synchronous?name={name}
+
 This method is manual
 
 **Kind**: static method of <code>[synchronous](#task.start.synchronous)</code>  
@@ -178,7 +190,9 @@ qrsApi.task.start.synchronous.post(name).then(function(Guid) {
 <a name="task.start.post"></a>
 #### start.post([name]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task/start?name={name}
+
 This method is manual
 
 **Kind**: static method of <code>[start](#task.start)</code>  
@@ -208,7 +222,9 @@ qrsApi.task.start.post(name).then(function() {
 <a name="task.stop.many.post"></a>
 ##### many.post(postParams) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task/stop/many
+
 This method is manual
 
 **Kind**: static method of <code>[many](#task.stop.many)</code>  
@@ -230,7 +246,9 @@ qrsApi.task.stop.many.post(postParams).then(function() {
 <a name="task.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#task.table)</code>  
@@ -254,7 +272,9 @@ qrsApi.task.table.post(postParams, filter, skip, take, sortcolumn, orderascendin
 <a name="task.get"></a>
 ### task.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ITask&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/task?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[task](#task)</code>  

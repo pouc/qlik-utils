@@ -46,7 +46,9 @@
 <a name="schedulerservice.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;SchedulerService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schedulerservice.id)</code>  
@@ -65,7 +67,9 @@ qrsApi.schedulerservice.id(id).get(appendprivileges).then(function(SchedulerServ
 <a name="schedulerservice.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;SchedulerService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schedulerservice.id)</code>  
@@ -88,7 +92,9 @@ qrsApi.schedulerservice.id(id).put(postParams, appendprivileges).then(function(S
 <a name="schedulerservice.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#schedulerservice.count)</code>  
@@ -110,7 +116,9 @@ qrsApi.schedulerservice.count.get(filter).then(function(int) {
 <a name="schedulerservice.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#schedulerservice.full)</code>  
@@ -134,7 +142,9 @@ qrsApi.schedulerservice.full.get(filter, orderby, appendprivileges).then(functio
 <a name="schedulerservice.local.get"></a>
 #### local.get() ⇒ <code>Promise.&lt;SchedulerService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/local
+
 This method is manual
 
 **Kind**: static method of <code>[local](#schedulerservice.local)</code>  
@@ -151,7 +161,9 @@ qrsApi.schedulerservice.local.get().then(function(SchedulerService) {
 <a name="schedulerservice.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#schedulerservice.table)</code>  
@@ -206,7 +218,9 @@ qrsApi.schedulerservice.table.post(postParams, filter, skip, take, sortcolumn, o
 <a name="schedulerservice.template.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schedulerservice.template.id)</code>  
@@ -220,7 +234,9 @@ qrsApi.schedulerservice.template.id(id).delete().then(function() {
 <a name="schedulerservice.template.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;SchedulerServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schedulerservice.template.id)</code>  
@@ -239,7 +255,9 @@ qrsApi.schedulerservice.template.id(id).get(appendprivileges).then(function(Sche
 <a name="schedulerservice.template.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;SchedulerServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schedulerservice.template.id)</code>  
@@ -262,7 +280,9 @@ qrsApi.schedulerservice.template.id(id).put(postParams, appendprivileges).then(f
 <a name="schedulerservice.template.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#schedulerservice.template.count)</code>  
@@ -284,7 +304,9 @@ qrsApi.schedulerservice.template.count.get(filter).then(function(int) {
 <a name="schedulerservice.template.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#schedulerservice.template.full)</code>  
@@ -308,7 +330,9 @@ qrsApi.schedulerservice.template.full.get(filter, orderby, appendprivileges).the
 <a name="schedulerservice.template.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#schedulerservice.template.many)</code>  
@@ -331,7 +355,9 @@ qrsApi.schedulerservice.template.many.post(postParams, appendprivileges).then(fu
 <a name="schedulerservice.template.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#schedulerservice.template.previewcreateprivilege)</code>  
@@ -353,7 +379,9 @@ qrsApi.schedulerservice.template.previewcreateprivilege.post(postParams).then(fu
 <a name="schedulerservice.template.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#schedulerservice.template.table)</code>  
@@ -377,7 +405,9 @@ qrsApi.schedulerservice.template.table.post(postParams, filter, skip, take, sort
 <a name="schedulerservice.template.get"></a>
 #### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#schedulerservice.template)</code>  
@@ -398,7 +428,9 @@ qrsApi.schedulerservice.template.get(filter, orderby, appendprivileges).then(fun
 <a name="schedulerservice.template.post"></a>
 #### template.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;SchedulerServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice/template?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#schedulerservice.template)</code>  
@@ -418,7 +450,9 @@ qrsApi.schedulerservice.template.post(postParams, appendprivileges).then(functio
 <a name="schedulerservice.get"></a>
 ### schedulerservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schedulerservice?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[schedulerservice](#schedulerservice)</code>  

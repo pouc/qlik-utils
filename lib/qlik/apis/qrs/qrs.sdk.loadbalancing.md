@@ -14,7 +14,9 @@
 <a name="loadbalancing.validengines.post"></a>
 #### validengines.post(postParams) ⇒ <code>Promise.&lt;LoadBalancingResult&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/loadbalancing/validengines
+
 This method is manual
 
 **Kind**: static method of <code>[validengines](#loadbalancing.validengines)</code>  

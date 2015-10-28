@@ -6,7 +6,9 @@
 <a name="applicationlog.post"></a>
 ### applicationlog.post(postParams) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/applicationlog
+
 This method is manual
 
 **Kind**: static method of <code>[applicationlog](#applicationlog)</code>  

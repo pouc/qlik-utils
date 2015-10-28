@@ -26,7 +26,9 @@
 <a name="log.archive.logrootsubfolder.post"></a>
 ##### logrootsubfolder.post(postParams) ⇒ <code>Promise.&lt;Guid&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/log/archive/{logrootsubfolder}
+
 This method is manual
 
 **Kind**: static method of <code>[logrootsubfolder](#log.archive.logrootsubfolder)</code>  
@@ -56,7 +58,9 @@ qrsApi.log.archive.logrootsubfolder(logrootsubfolder).post(postParams).then(func
 <a name="log.rolled.logrootsubfolder.post"></a>
 ##### logrootsubfolder.post(postParams) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/log/rolled/{logrootsubfolder}
+
 This method is manual
 
 **Kind**: static method of <code>[logrootsubfolder](#log.rolled.logrootsubfolder)</code>  

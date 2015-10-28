@@ -46,7 +46,9 @@
 <a name="printingservice.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;PrintingService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#printingservice.id)</code>  
@@ -65,7 +67,9 @@ qrsApi.printingservice.id(id).get(appendprivileges).then(function(PrintingServic
 <a name="printingservice.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;PrintingService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#printingservice.id)</code>  
@@ -88,7 +92,9 @@ qrsApi.printingservice.id(id).put(postParams, appendprivileges).then(function(Pr
 <a name="printingservice.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#printingservice.count)</code>  
@@ -110,7 +116,9 @@ qrsApi.printingservice.count.get(filter).then(function(int) {
 <a name="printingservice.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#printingservice.full)</code>  
@@ -134,7 +142,9 @@ qrsApi.printingservice.full.get(filter, orderby, appendprivileges).then(function
 <a name="printingservice.local.get"></a>
 #### local.get() ⇒ <code>Promise.&lt;PrintingService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/local
+
 This method is manual
 
 **Kind**: static method of <code>[local](#printingservice.local)</code>  
@@ -151,7 +161,9 @@ qrsApi.printingservice.local.get().then(function(PrintingService) {
 <a name="printingservice.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#printingservice.table)</code>  
@@ -206,7 +218,9 @@ qrsApi.printingservice.table.post(postParams, filter, skip, take, sortcolumn, or
 <a name="printingservice.template.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#printingservice.template.id)</code>  
@@ -220,7 +234,9 @@ qrsApi.printingservice.template.id(id).delete().then(function() {
 <a name="printingservice.template.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;PrintingServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#printingservice.template.id)</code>  
@@ -239,7 +255,9 @@ qrsApi.printingservice.template.id(id).get(appendprivileges).then(function(Print
 <a name="printingservice.template.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;PrintingServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#printingservice.template.id)</code>  
@@ -262,7 +280,9 @@ qrsApi.printingservice.template.id(id).put(postParams, appendprivileges).then(fu
 <a name="printingservice.template.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#printingservice.template.count)</code>  
@@ -284,7 +304,9 @@ qrsApi.printingservice.template.count.get(filter).then(function(int) {
 <a name="printingservice.template.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#printingservice.template.full)</code>  
@@ -308,7 +330,9 @@ qrsApi.printingservice.template.full.get(filter, orderby, appendprivileges).then
 <a name="printingservice.template.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#printingservice.template.many)</code>  
@@ -331,7 +355,9 @@ qrsApi.printingservice.template.many.post(postParams, appendprivileges).then(fun
 <a name="printingservice.template.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#printingservice.template.previewcreateprivilege)</code>  
@@ -353,7 +379,9 @@ qrsApi.printingservice.template.previewcreateprivilege.post(postParams).then(fun
 <a name="printingservice.template.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#printingservice.template.table)</code>  
@@ -377,7 +405,9 @@ qrsApi.printingservice.template.table.post(postParams, filter, skip, take, sortc
 <a name="printingservice.template.get"></a>
 #### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#printingservice.template)</code>  
@@ -398,7 +428,9 @@ qrsApi.printingservice.template.get(filter, orderby, appendprivileges).then(func
 <a name="printingservice.template.post"></a>
 #### template.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;PrintingServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice/template?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#printingservice.template)</code>  
@@ -418,7 +450,9 @@ qrsApi.printingservice.template.post(postParams, appendprivileges).then(function
 <a name="printingservice.get"></a>
 ### printingservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/printingservice?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[printingservice](#printingservice)</code>  

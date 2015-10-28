@@ -34,7 +34,9 @@
 <a name="usersynctaskoperational.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#usersynctaskoperational.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.usersynctaskoperational.id(id).delete().then(function() {
 <a name="usersynctaskoperational.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;UserSyncTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#usersynctaskoperational.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.usersynctaskoperational.id(id).get(appendprivileges).then(function(UserSy
 <a name="usersynctaskoperational.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserSyncTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#usersynctaskoperational.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.usersynctaskoperational.id(id).put(postParams, appendprivileges).then(fun
 <a name="usersynctaskoperational.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#usersynctaskoperational.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.usersynctaskoperational.count.get(filter).then(function(int) {
 <a name="usersynctaskoperational.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserSyncTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#usersynctaskoperational.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.usersynctaskoperational.full.get(filter, orderby, appendprivileges).then(
 <a name="usersynctaskoperational.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserSyncTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#usersynctaskoperational.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.usersynctaskoperational.many.post(postParams, appendprivileges).then(func
 <a name="usersynctaskoperational.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#usersynctaskoperational.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.usersynctaskoperational.previewcreateprivilege.post(postParams).then(func
 <a name="usersynctaskoperational.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#usersynctaskoperational.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.usersynctaskoperational.table.post(postParams, filter, skip, take, sortco
 <a name="usersynctaskoperational.get"></a>
 ### usersynctaskoperational.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserSyncTaskOperational&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[usersynctaskoperational](#usersynctaskoperational)</code>  
@@ -226,7 +244,9 @@ qrsApi.usersynctaskoperational.get(filter, orderby, appendprivileges).then(funct
 <a name="usersynctaskoperational.post"></a>
 ### usersynctaskoperational.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;UserSyncTaskOperational&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/usersynctaskoperational?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[usersynctaskoperational](#usersynctaskoperational)</code>  

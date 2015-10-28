@@ -104,7 +104,9 @@
 <a name="license.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.id)</code>  
@@ -118,7 +120,9 @@ qrsApi.license.id(id).delete().then(function() {
 <a name="license.id.put"></a>
 #### id.put(postParams, [control], [appendprivileges]) ⇒ <code>Promise.&lt;License&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/{id}?control={control}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[id](#license.id)</code>  
@@ -142,7 +146,9 @@ qrsApi.license.id(id).put(postParams, control, appendprivileges).then(function(L
 <a name="license.accesstypeinfo.get"></a>
 #### accesstypeinfo.get() ⇒ <code>Promise.&lt;AccessTypesInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/accesstypeinfo
+
 This method is manual
 
 **Kind**: static method of <code>[accesstypeinfo](#license.accesstypeinfo)</code>  
@@ -169,7 +175,9 @@ qrsApi.license.accesstypeinfo.get().then(function(AccessTypesInfo) {
 <a name="license.datamarket.id.put"></a>
 ##### id.put(postParams, [control], [appendprivileges]) ⇒ <code>Promise.&lt;License&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/datamarket/{id}?control={control}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[id](#license.datamarket.id)</code>  
@@ -190,7 +198,9 @@ qrsApi.license.datamarket.id(id).put(postParams, control, appendprivileges).then
 <a name="license.datamarket.post"></a>
 #### datamarket.post(postParams, [control], [appendprivileges]) ⇒ <code>Promise.&lt;License&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/datamarket/?control={control}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[datamarket](#license.datamarket)</code>  
@@ -211,7 +221,9 @@ qrsApi.license.datamarket.post(postParams, control, appendprivileges).then(funct
 <a name="license.datamarket.get"></a>
 #### datamarket.get([appendprivileges]) ⇒ <code>Promise.&lt;License&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/datamarket/?privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[datamarket](#license.datamarket)</code>  
@@ -233,7 +245,9 @@ qrsApi.license.datamarket.get(appendprivileges).then(function(License) {
 <a name="license.download.get"></a>
 #### download.get([serial], [control], [user], [org]) ⇒ <code>Promise.&lt;String&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/download?serial={serial}&control={control}&user={user}&org={org}
+
 This method is manual
 
 **Kind**: static method of <code>[download](#license.download)</code>  
@@ -286,7 +300,9 @@ qrsApi.license.download.get(serial, control, user, org).then(function(String) {
 <a name="license.loginaccesstype.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.loginaccesstype.id)</code>  
@@ -300,7 +316,9 @@ qrsApi.license.loginaccesstype.id(id).delete().then(function() {
 <a name="license.loginaccesstype.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;LicenseLoginAccessType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.loginaccesstype.id)</code>  
@@ -319,7 +337,9 @@ qrsApi.license.loginaccesstype.id(id).get(appendprivileges).then(function(Licens
 <a name="license.loginaccesstype.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseLoginAccessType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.loginaccesstype.id)</code>  
@@ -342,7 +362,9 @@ qrsApi.license.loginaccesstype.id(id).put(postParams, appendprivileges).then(fun
 <a name="license.loginaccesstype.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#license.loginaccesstype.count)</code>  
@@ -364,7 +386,9 @@ qrsApi.license.loginaccesstype.count.get(filter).then(function(int) {
 <a name="license.loginaccesstype.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#license.loginaccesstype.full)</code>  
@@ -388,7 +412,9 @@ qrsApi.license.loginaccesstype.full.get(filter, orderby, appendprivileges).then(
 <a name="license.loginaccesstype.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#license.loginaccesstype.many)</code>  
@@ -411,7 +437,9 @@ qrsApi.license.loginaccesstype.many.post(postParams, appendprivileges).then(func
 <a name="license.loginaccesstype.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#license.loginaccesstype.previewcreateprivilege)</code>  
@@ -433,7 +461,9 @@ qrsApi.license.loginaccesstype.previewcreateprivilege.post(postParams).then(func
 <a name="license.loginaccesstype.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#license.loginaccesstype.table)</code>  
@@ -457,7 +487,9 @@ qrsApi.license.loginaccesstype.table.post(postParams, filter, skip, take, sortco
 <a name="license.loginaccesstype.get"></a>
 #### loginaccesstype.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[loginaccesstype](#license.loginaccesstype)</code>  
@@ -478,7 +510,9 @@ qrsApi.license.loginaccesstype.get(filter, orderby, appendprivileges).then(funct
 <a name="license.loginaccesstype.post"></a>
 #### loginaccesstype.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseLoginAccessType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccesstype?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[loginaccesstype](#license.loginaccesstype)</code>  
@@ -516,7 +550,9 @@ qrsApi.license.loginaccesstype.post(postParams, appendprivileges).then(function(
 <a name="license.loginaccessusage.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;LicenseLoginAccessUsage&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccessusage/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.loginaccessusage.id)</code>  
@@ -538,7 +574,9 @@ qrsApi.license.loginaccessusage.id(id).get(appendprivileges).then(function(Licen
 <a name="license.loginaccessusage.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccessusage/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#license.loginaccessusage.count)</code>  
@@ -560,7 +598,9 @@ qrsApi.license.loginaccessusage.count.get(filter).then(function(int) {
 <a name="license.loginaccessusage.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccessusage/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#license.loginaccessusage.full)</code>  
@@ -584,7 +624,9 @@ qrsApi.license.loginaccessusage.full.get(filter, orderby, appendprivileges).then
 <a name="license.loginaccessusage.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccessusage/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#license.loginaccessusage.table)</code>  
@@ -608,7 +650,9 @@ qrsApi.license.loginaccessusage.table.post(postParams, filter, skip, take, sortc
 <a name="license.loginaccessusage.get"></a>
 #### loginaccessusage.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/loginaccessusage?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[loginaccessusage](#license.loginaccessusage)</code>  
@@ -632,7 +676,9 @@ qrsApi.license.loginaccessusage.get(filter, orderby, appendprivileges).then(func
 <a name="license.requestaccesstype.post"></a>
 #### requestaccesstype.post(postParams) ⇒ <code>Promise.&lt;AccessTypeResult&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/requestaccesstype
+
 This method is manual
 
 **Kind**: static method of <code>[requestaccesstype](#license.requestaccesstype)</code>  
@@ -682,7 +728,9 @@ qrsApi.license.requestaccesstype.post(postParams).then(function(AccessTypeResult
 <a name="license.useraccessgroup.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.useraccessgroup.id)</code>  
@@ -696,7 +744,9 @@ qrsApi.license.useraccessgroup.id(id).delete().then(function() {
 <a name="license.useraccessgroup.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;LicenseUserAccessGroup&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.useraccessgroup.id)</code>  
@@ -715,7 +765,9 @@ qrsApi.license.useraccessgroup.id(id).get(appendprivileges).then(function(Licens
 <a name="license.useraccessgroup.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseUserAccessGroup&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.useraccessgroup.id)</code>  
@@ -738,7 +790,9 @@ qrsApi.license.useraccessgroup.id(id).put(postParams, appendprivileges).then(fun
 <a name="license.useraccessgroup.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#license.useraccessgroup.count)</code>  
@@ -760,7 +814,9 @@ qrsApi.license.useraccessgroup.count.get(filter).then(function(int) {
 <a name="license.useraccessgroup.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessGroup&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#license.useraccessgroup.full)</code>  
@@ -784,7 +840,9 @@ qrsApi.license.useraccessgroup.full.get(filter, orderby, appendprivileges).then(
 <a name="license.useraccessgroup.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessGroup&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#license.useraccessgroup.many)</code>  
@@ -807,7 +865,9 @@ qrsApi.license.useraccessgroup.many.post(postParams, appendprivileges).then(func
 <a name="license.useraccessgroup.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#license.useraccessgroup.previewcreateprivilege)</code>  
@@ -829,7 +889,9 @@ qrsApi.license.useraccessgroup.previewcreateprivilege.post(postParams).then(func
 <a name="license.useraccessgroup.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#license.useraccessgroup.table)</code>  
@@ -853,7 +915,9 @@ qrsApi.license.useraccessgroup.table.post(postParams, filter, skip, take, sortco
 <a name="license.useraccessgroup.get"></a>
 #### useraccessgroup.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessGroup&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccessgroup](#license.useraccessgroup)</code>  
@@ -874,7 +938,9 @@ qrsApi.license.useraccessgroup.get(filter, orderby, appendprivileges).then(funct
 <a name="license.useraccessgroup.post"></a>
 #### useraccessgroup.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseUserAccessGroup&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessgroup?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccessgroup](#license.useraccessgroup)</code>  
@@ -925,7 +991,9 @@ qrsApi.license.useraccessgroup.post(postParams, appendprivileges).then(function(
 <a name="license.useraccesstype.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.useraccesstype.id)</code>  
@@ -939,7 +1007,9 @@ qrsApi.license.useraccesstype.id(id).delete().then(function() {
 <a name="license.useraccesstype.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;LicenseUserAccessType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.useraccesstype.id)</code>  
@@ -958,7 +1028,9 @@ qrsApi.license.useraccesstype.id(id).get(appendprivileges).then(function(License
 <a name="license.useraccesstype.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseUserAccessType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.useraccesstype.id)</code>  
@@ -981,7 +1053,9 @@ qrsApi.license.useraccesstype.id(id).put(postParams, appendprivileges).then(func
 <a name="license.useraccesstype.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#license.useraccesstype.count)</code>  
@@ -1003,7 +1077,9 @@ qrsApi.license.useraccesstype.count.get(filter).then(function(int) {
 <a name="license.useraccesstype.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#license.useraccesstype.full)</code>  
@@ -1027,7 +1103,9 @@ qrsApi.license.useraccesstype.full.get(filter, orderby, appendprivileges).then(f
 <a name="license.useraccesstype.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#license.useraccesstype.many)</code>  
@@ -1050,7 +1128,9 @@ qrsApi.license.useraccesstype.many.post(postParams, appendprivileges).then(funct
 <a name="license.useraccesstype.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#license.useraccesstype.previewcreateprivilege)</code>  
@@ -1072,7 +1152,9 @@ qrsApi.license.useraccesstype.previewcreateprivilege.post(postParams).then(funct
 <a name="license.useraccesstype.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#license.useraccesstype.table)</code>  
@@ -1096,7 +1178,9 @@ qrsApi.license.useraccesstype.table.post(postParams, filter, skip, take, sortcol
 <a name="license.useraccesstype.get"></a>
 #### useraccesstype.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccesstype](#license.useraccesstype)</code>  
@@ -1117,7 +1201,9 @@ qrsApi.license.useraccesstype.get(filter, orderby, appendprivileges).then(functi
 <a name="license.useraccesstype.post"></a>
 #### useraccesstype.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseUserAccessType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccesstype?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccesstype](#license.useraccesstype)</code>  
@@ -1155,7 +1241,9 @@ qrsApi.license.useraccesstype.post(postParams, appendprivileges).then(function(L
 <a name="license.useraccessusage.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;LicenseUserAccessUsage&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessusage/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#license.useraccessusage.id)</code>  
@@ -1177,7 +1265,9 @@ qrsApi.license.useraccessusage.id(id).get(appendprivileges).then(function(Licens
 <a name="license.useraccessusage.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessusage/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#license.useraccessusage.count)</code>  
@@ -1199,7 +1289,9 @@ qrsApi.license.useraccessusage.count.get(filter).then(function(int) {
 <a name="license.useraccessusage.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessusage/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#license.useraccessusage.full)</code>  
@@ -1223,7 +1315,9 @@ qrsApi.license.useraccessusage.full.get(filter, orderby, appendprivileges).then(
 <a name="license.useraccessusage.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessusage/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#license.useraccessusage.table)</code>  
@@ -1247,7 +1341,9 @@ qrsApi.license.useraccessusage.table.post(postParams, filter, skip, take, sortco
 <a name="license.useraccessusage.get"></a>
 #### useraccessusage.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/useraccessusage?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[useraccessusage](#license.useraccessusage)</code>  
@@ -1268,7 +1364,9 @@ qrsApi.license.useraccessusage.get(filter, orderby, appendprivileges).then(funct
 <a name="license.post"></a>
 ### license.post(postParams, [control], [appendprivileges]) ⇒ <code>Promise.&lt;License&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/?control={control}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[license](#license)</code>  
@@ -1289,7 +1387,9 @@ qrsApi.license.post(postParams, control, appendprivileges).then(function(License
 <a name="license.get"></a>
 ### license.get([appendprivileges]) ⇒ <code>Promise.&lt;License&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/license/?privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[license](#license)</code>  

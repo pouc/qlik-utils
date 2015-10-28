@@ -34,7 +34,9 @@
 <a name="externalchangeinfo.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#externalchangeinfo.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.externalchangeinfo.id(id).delete().then(function() {
 <a name="externalchangeinfo.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;ExternalChangeInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#externalchangeinfo.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.externalchangeinfo.id(id).get(appendprivileges).then(function(ExternalCha
 <a name="externalchangeinfo.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ExternalChangeInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#externalchangeinfo.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.externalchangeinfo.id(id).put(postParams, appendprivileges).then(function
 <a name="externalchangeinfo.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#externalchangeinfo.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.externalchangeinfo.count.get(filter).then(function(int) {
 <a name="externalchangeinfo.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalChangeInfo&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#externalchangeinfo.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.externalchangeinfo.full.get(filter, orderby, appendprivileges).then(funct
 <a name="externalchangeinfo.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalChangeInfo&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#externalchangeinfo.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.externalchangeinfo.many.post(postParams, appendprivileges).then(function(
 <a name="externalchangeinfo.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#externalchangeinfo.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.externalchangeinfo.previewcreateprivilege.post(postParams).then(function(
 <a name="externalchangeinfo.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#externalchangeinfo.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.externalchangeinfo.table.post(postParams, filter, skip, take, sortcolumn,
 <a name="externalchangeinfo.get"></a>
 ### externalchangeinfo.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ExternalChangeInfo&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[externalchangeinfo](#externalchangeinfo)</code>  
@@ -226,7 +244,9 @@ qrsApi.externalchangeinfo.get(filter, orderby, appendprivileges).then(function(A
 <a name="externalchangeinfo.post"></a>
 ### externalchangeinfo.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ExternalChangeInfo&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/externalchangeinfo?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[externalchangeinfo](#externalchangeinfo)</code>  

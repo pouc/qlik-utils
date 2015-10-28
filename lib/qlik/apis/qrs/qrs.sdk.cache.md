@@ -6,7 +6,9 @@
 <a name="cache.delete"></a>
 ### cache.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/cache
+
 This method is manual
 
 **Kind**: static method of <code>[cache](#cache)</code>  

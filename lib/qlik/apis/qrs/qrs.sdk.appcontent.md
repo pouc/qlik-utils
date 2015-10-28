@@ -27,7 +27,9 @@
 <a name="appcontent.appid.deletecontent.delete"></a>
 ##### deletecontent.delete([externalpath]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcontent/{appid}/deletecontent?externalpath={externalpath}
+
 This method is manual
 
 **Kind**: static method of <code>[deletecontent](#appcontent.appid.deletecontent)</code>  
@@ -49,7 +51,9 @@ qrsApi.appcontent.appid(appid).deletecontent.delete(externalpath).then(function(
 <a name="appcontent.appid.uploadfile.post"></a>
 ##### uploadfile.post(postParams, [externalpath], [overwrite]) ⇒ <code>Promise.&lt;String&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appcontent/{appid}/uploadfile?externalpath={externalpath}&overwrite={overwrite}
+
 This method is manual
 
 **Kind**: static method of <code>[uploadfile](#appcontent.appid.uploadfile)</code>  

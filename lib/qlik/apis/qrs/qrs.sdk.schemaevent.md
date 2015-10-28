@@ -34,7 +34,9 @@
 <a name="schemaevent.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schemaevent.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.schemaevent.id(id).delete().then(function() {
 <a name="schemaevent.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;SchemaEvent&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schemaevent.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.schemaevent.id(id).get(appendprivileges).then(function(SchemaEvent) {
 <a name="schemaevent.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;SchemaEvent&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#schemaevent.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.schemaevent.id(id).put(postParams, appendprivileges).then(function(Schema
 <a name="schemaevent.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#schemaevent.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.schemaevent.count.get(filter).then(function(int) {
 <a name="schemaevent.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#schemaevent.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.schemaevent.full.get(filter, orderby, appendprivileges).then(function(Arr
 <a name="schemaevent.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#schemaevent.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.schemaevent.many.post(postParams, appendprivileges).then(function(Array.<
 <a name="schemaevent.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#schemaevent.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.schemaevent.previewcreateprivilege.post(postParams).then(function(Boolean
 <a name="schemaevent.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#schemaevent.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.schemaevent.table.post(postParams, filter, skip, take, sortcolumn, ordera
 <a name="schemaevent.get"></a>
 ### schemaevent.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchemaEvent&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaevent](#schemaevent)</code>  
@@ -226,7 +244,9 @@ qrsApi.schemaevent.get(filter, orderby, appendprivileges).then(function(Array.<S
 <a name="schemaevent.post"></a>
 ### schemaevent.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;SchemaEvent&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/schemaevent?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[schemaevent](#schemaevent)</code>  

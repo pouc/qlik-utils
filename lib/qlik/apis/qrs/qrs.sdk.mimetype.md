@@ -34,7 +34,9 @@
 <a name="mimetype.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#mimetype.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.mimetype.id(id).delete().then(function() {
 <a name="mimetype.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;MimeType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#mimetype.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.mimetype.id(id).get(appendprivileges).then(function(MimeType) {
 <a name="mimetype.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;MimeType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#mimetype.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.mimetype.id(id).put(postParams, appendprivileges).then(function(MimeType)
 <a name="mimetype.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#mimetype.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.mimetype.count.get(filter).then(function(int) {
 <a name="mimetype.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;MimeType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#mimetype.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.mimetype.full.get(filter, orderby, appendprivileges).then(function(Array.
 <a name="mimetype.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;MimeType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#mimetype.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.mimetype.many.post(postParams, appendprivileges).then(function(Array.<Mim
 <a name="mimetype.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#mimetype.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.mimetype.previewcreateprivilege.post(postParams).then(function(Boolean) {
 <a name="mimetype.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#mimetype.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.mimetype.table.post(postParams, filter, skip, take, sortcolumn, orderasce
 <a name="mimetype.get"></a>
 ### mimetype.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;MimeType&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[mimetype](#mimetype)</code>  
@@ -226,7 +244,9 @@ qrsApi.mimetype.get(filter, orderby, appendprivileges).then(function(Array.<Mime
 <a name="mimetype.post"></a>
 ### mimetype.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;MimeType&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/mimetype?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[mimetype](#mimetype)</code>  

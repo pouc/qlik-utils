@@ -14,7 +14,9 @@
 <a name="sync.snapshot.post"></a>
 #### snapshot.post() ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/sync/snapshot
+
 This method is manual
 
 **Kind**: static method of <code>[snapshot](#sync.snapshot)</code>  

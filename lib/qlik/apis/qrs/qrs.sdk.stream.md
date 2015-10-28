@@ -34,7 +34,9 @@
 <a name="stream.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#stream.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.stream.id(id).delete().then(function() {
 <a name="stream.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;Stream&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#stream.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.stream.id(id).get(appendprivileges).then(function(Stream) {
 <a name="stream.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Stream&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#stream.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.stream.id(id).put(postParams, appendprivileges).then(function(Stream) {
 <a name="stream.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#stream.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.stream.count.get(filter).then(function(int) {
 <a name="stream.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Stream&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#stream.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.stream.full.get(filter, orderby, appendprivileges).then(function(Array.<S
 <a name="stream.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Stream&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#stream.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.stream.many.post(postParams, appendprivileges).then(function(Array.<Strea
 <a name="stream.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#stream.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.stream.previewcreateprivilege.post(postParams).then(function(Boolean) {
 <a name="stream.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#stream.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.stream.table.post(postParams, filter, skip, take, sortcolumn, orderascend
 <a name="stream.get"></a>
 ### stream.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Stream&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[stream](#stream)</code>  
@@ -226,7 +244,9 @@ qrsApi.stream.get(filter, orderby, appendprivileges).then(function(Array.<Stream
 <a name="stream.post"></a>
 ### stream.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Stream&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/stream?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[stream](#stream)</code>  

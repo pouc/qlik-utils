@@ -17,7 +17,9 @@
 <a name="licenseaccessusage.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ILicenseAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/licenseaccessusage/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#licenseaccessusage.full)</code>  
@@ -41,7 +43,9 @@ qrsApi.licenseaccessusage.full.get(filter, orderby, appendprivileges).then(funct
 <a name="licenseaccessusage.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/licenseaccessusage/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#licenseaccessusage.table)</code>  
@@ -65,7 +69,9 @@ qrsApi.licenseaccessusage.table.post(postParams, filter, skip, take, sortcolumn,
 <a name="licenseaccessusage.get"></a>
 ### licenseaccessusage.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ILicenseAccessUsage&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/licenseaccessusage?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[licenseaccessusage](#licenseaccessusage)</code>  

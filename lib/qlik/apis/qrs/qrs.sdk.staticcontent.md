@@ -14,7 +14,9 @@
 <a name="staticcontent.enumeratefiles.get"></a>
 #### enumeratefiles.get([path]) ⇒ <code>Promise.&lt;Array.&lt;EnumerateFilesResult&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/staticcontent/enumeratefiles?path={path}
+
 This method is manual
 
 **Kind**: static method of <code>[enumeratefiles](#staticcontent.enumeratefiles)</code>  

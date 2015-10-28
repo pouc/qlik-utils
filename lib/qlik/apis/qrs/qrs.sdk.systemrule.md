@@ -78,7 +78,9 @@
 <a name="systemrule.category.associatedrules.get"></a>
 ##### associatedrules.get([resourcetype], [resourcefilter], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SystemRule&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/{category}/associatedrules?resourcetype={resourcetype}&resourcefilter={resourcefilter}&privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[associatedrules](#systemrule.category.associatedrules)</code>  
@@ -108,7 +110,9 @@ qrsApi.systemrule.category(category).associatedrules.get(resourcetype, resourcef
 <a name="systemrule.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#systemrule.id)</code>  
@@ -122,7 +126,9 @@ qrsApi.systemrule.id(id).delete().then(function() {
 <a name="systemrule.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;SystemRule&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#systemrule.id)</code>  
@@ -141,7 +147,9 @@ qrsApi.systemrule.id(id).get(appendprivileges).then(function(SystemRule) {
 <a name="systemrule.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;SystemRule&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#systemrule.id)</code>  
@@ -164,7 +172,9 @@ qrsApi.systemrule.id(id).put(postParams, appendprivileges).then(function(SystemR
 <a name="systemrule.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#systemrule.count)</code>  
@@ -186,7 +196,9 @@ qrsApi.systemrule.count.get(filter).then(function(int) {
 <a name="systemrule.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SystemRule&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#systemrule.full)</code>  
@@ -231,7 +243,9 @@ qrsApi.systemrule.full.get(filter, orderby, appendprivileges).then(function(Arra
 <a name="systemrule.license.audit.preview.post"></a>
 ###### preview.post(postParams) ⇒ <code>Promise.&lt;AuditPreviewResult&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/license/audit/preview
+
 This method is manual
 
 **Kind**: static method of <code>[preview](#systemrule.license.audit.preview)</code>  
@@ -250,7 +264,9 @@ qrsApi.systemrule.license.audit.preview.post(postParams).then(function(AuditPrev
 <a name="systemrule.license.audit.post"></a>
 ##### audit.post(postParams) ⇒ <code>Promise.&lt;AuditResult&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/license/audit
+
 This method is manual
 
 **Kind**: static method of <code>[audit](#systemrule.license.audit)</code>  
@@ -272,7 +288,9 @@ qrsApi.systemrule.license.audit.post(postParams).then(function(AuditResult) {
 <a name="systemrule.license.useractions.post"></a>
 ##### useractions.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserLicenseActions&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/license/useractions?privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[useractions](#systemrule.license.useractions)</code>  
@@ -295,7 +313,9 @@ qrsApi.systemrule.license.useractions.post(postParams, appendprivileges).then(fu
 <a name="systemrule.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SystemRule&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#systemrule.many)</code>  
@@ -318,7 +338,9 @@ qrsApi.systemrule.many.post(postParams, appendprivileges).then(function(Array.<S
 <a name="systemrule.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#systemrule.previewcreateprivilege)</code>  
@@ -368,7 +390,9 @@ qrsApi.systemrule.previewcreateprivilege.post(postParams).then(function(Boolean)
 <a name="systemrule.security.accessibleattributes.get"></a>
 ##### accessibleattributes.get([resourcetype]) ⇒ <code>Promise.&lt;Array.&lt;String&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/accessibleattributes?resourcetype={resourcetype}
+
 This method is manual
 
 **Kind**: static method of <code>[accessibleattributes](#systemrule.security.accessibleattributes)</code>  
@@ -390,7 +414,9 @@ qrsApi.systemrule.security.accessibleattributes.get(resourcetype).then(function(
 <a name="systemrule.security.attributevalues.get"></a>
 ##### attributevalues.get([resourcetype], [attribute], [filter], [limit], [selection]) ⇒ <code>Promise.&lt;Array.&lt;String&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/attributevalues?resourcetype={resourcetype}&attribute={attribute}&filter={filter}&limit={limit}&selection={selection}
+
 This method is manual
 
 **Kind**: static method of <code>[attributevalues](#systemrule.security.attributevalues)</code>  
@@ -431,7 +457,9 @@ qrsApi.systemrule.security.attributevalues.get(resourcetype, attribute, filter, 
 <a name="systemrule.security.audit.accessibleobjects.post"></a>
 ###### accessibleobjects.post(postParams) ⇒ <code>Promise.&lt;Array.&lt;IRepositoryObject&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/audit/accessibleobjects
+
 This method is manual
 
 **Kind**: static method of <code>[accessibleobjects](#systemrule.security.audit.accessibleobjects)</code>  
@@ -453,7 +481,9 @@ qrsApi.systemrule.security.audit.accessibleobjects.post(postParams).then(functio
 <a name="systemrule.security.audit.countresources.post"></a>
 ###### countresources.post(postParams) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/audit/countresources
+
 This method is manual
 
 **Kind**: static method of <code>[countresources](#systemrule.security.audit.countresources)</code>  
@@ -475,7 +505,9 @@ qrsApi.systemrule.security.audit.countresources.post(postParams).then(function(i
 <a name="systemrule.security.audit.export.get"></a>
 ###### export.get() ⇒ <code>Promise.&lt;Array.&lt;String&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/audit/export
+
 This method is manual
 
 **Kind**: static method of <code>[export](#systemrule.security.audit.export)</code>  
@@ -492,7 +524,9 @@ qrsApi.systemrule.security.audit.export.get().then(function(Array.<String>) {
 <a name="systemrule.security.audit.preview.post"></a>
 ###### preview.post(postParams) ⇒ <code>Promise.&lt;AuditPreviewResult&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/audit/preview
+
 This method is manual
 
 **Kind**: static method of <code>[preview](#systemrule.security.audit.preview)</code>  
@@ -511,7 +545,9 @@ qrsApi.systemrule.security.audit.preview.post(postParams).then(function(AuditPre
 <a name="systemrule.security.audit.post"></a>
 ##### audit.post(postParams) ⇒ <code>Promise.&lt;AuditResult&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/audit
+
 This method is manual
 
 **Kind**: static method of <code>[audit](#systemrule.security.audit)</code>  
@@ -533,7 +569,9 @@ qrsApi.systemrule.security.audit.post(postParams).then(function(AuditResult) {
 <a name="systemrule.security.evaluatetransientresources.post"></a>
 ##### evaluatetransientresources.post(postParams) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/evaluatetransientresources
+
 This method is manual
 
 **Kind**: static method of <code>[evaluatetransientresources](#systemrule.security.evaluatetransientresources)</code>  
@@ -555,7 +593,9 @@ qrsApi.systemrule.security.evaluatetransientresources.post(postParams).then(func
 <a name="systemrule.security.parsetree.get"></a>
 ##### parsetree.get([rule]) ⇒ <code>Promise.&lt;BacktrackedRule&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/parsetree?rule={rule}
+
 This method is manual
 
 **Kind**: static method of <code>[parsetree](#systemrule.security.parsetree)</code>  
@@ -577,7 +617,9 @@ qrsApi.systemrule.security.parsetree.get(rule).then(function(BacktrackedRule) {
 <a name="systemrule.security.referenceduserroles.get"></a>
 ##### referenceduserroles.get() ⇒ <code>Promise.&lt;Array.&lt;String&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/referenceduserroles
+
 This method is manual
 
 **Kind**: static method of <code>[referenceduserroles](#systemrule.security.referenceduserroles)</code>  
@@ -594,7 +636,9 @@ qrsApi.systemrule.security.referenceduserroles.get().then(function(Array.<String
 <a name="systemrule.security.useractions.post"></a>
 ##### useractions.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserActions&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/security/useractions?privileges={appendprivileges}
+
 This method is manual
 
 **Kind**: static method of <code>[useractions](#systemrule.security.useractions)</code>  
@@ -640,7 +684,9 @@ qrsApi.systemrule.security.useractions.post(postParams, appendprivileges).then(f
 <a name="systemrule.sync.audit.preview.post"></a>
 ###### preview.post(postParams) ⇒ <code>Promise.&lt;SyncPreviewResult&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/sync/audit/preview
+
 This method is manual
 
 **Kind**: static method of <code>[preview](#systemrule.sync.audit.preview)</code>  
@@ -659,7 +705,9 @@ qrsApi.systemrule.sync.audit.preview.post(postParams).then(function(SyncPreviewR
 <a name="systemrule.sync.audit.post"></a>
 ##### audit.post(postParams) ⇒ <code>Promise.&lt;SyncAuditResult&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/sync/audit
+
 This method is manual
 
 **Kind**: static method of <code>[audit](#systemrule.sync.audit)</code>  
@@ -681,7 +729,9 @@ qrsApi.systemrule.sync.audit.post(postParams).then(function(SyncAuditResult) {
 <a name="systemrule.sync.linkednodes.get"></a>
 ##### linkednodes.get([resourcetype], [resourceid]) ⇒ <code>Promise.&lt;Array.&lt;Guid&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/sync/linkednodes?resourcetype={resourcetype}&resourceid={resourceid}
+
 This method is manual
 
 **Kind**: static method of <code>[linkednodes](#systemrule.sync.linkednodes)</code>  
@@ -704,7 +754,9 @@ qrsApi.systemrule.sync.linkednodes.get(resourcetype, resourceid).then(function(A
 <a name="systemrule.sync.linkedobjects.get"></a>
 ##### linkedobjects.get([servernodeconfiguration], [resourcetype]) ⇒ <code>Promise.&lt;Array.&lt;Guid&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/sync/linkedobjects?node={servernodeconfiguration}&resourcetype={resourcetype}
+
 This method is manual
 
 **Kind**: static method of <code>[linkedobjects](#systemrule.sync.linkedobjects)</code>  
@@ -727,7 +779,9 @@ qrsApi.systemrule.sync.linkedobjects.get(servernodeconfiguration, resourcetype).
 <a name="systemrule.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#systemrule.table)</code>  
@@ -751,7 +805,9 @@ qrsApi.systemrule.table.post(postParams, filter, skip, take, sortcolumn, orderas
 <a name="systemrule.get"></a>
 ### systemrule.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SystemRule&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[systemrule](#systemrule)</code>  
@@ -772,7 +828,9 @@ qrsApi.systemrule.get(filter, orderby, appendprivileges).then(function(Array.<Sy
 <a name="systemrule.post"></a>
 ### systemrule.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;SystemRule&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/systemrule?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[systemrule](#systemrule)</code>  

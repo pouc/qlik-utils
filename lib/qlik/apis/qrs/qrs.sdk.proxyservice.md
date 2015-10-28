@@ -46,7 +46,9 @@
 <a name="proxyservice.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;ProxyService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#proxyservice.id)</code>  
@@ -65,7 +67,9 @@ qrsApi.proxyservice.id(id).get(appendprivileges).then(function(ProxyService) {
 <a name="proxyservice.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ProxyService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#proxyservice.id)</code>  
@@ -88,7 +92,9 @@ qrsApi.proxyservice.id(id).put(postParams, appendprivileges).then(function(Proxy
 <a name="proxyservice.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#proxyservice.count)</code>  
@@ -110,7 +116,9 @@ qrsApi.proxyservice.count.get(filter).then(function(int) {
 <a name="proxyservice.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#proxyservice.full)</code>  
@@ -134,7 +142,9 @@ qrsApi.proxyservice.full.get(filter, orderby, appendprivileges).then(function(Ar
 <a name="proxyservice.local.get"></a>
 #### local.get() ⇒ <code>Promise.&lt;ProxyService&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/local
+
 This method is manual
 
 **Kind**: static method of <code>[local](#proxyservice.local)</code>  
@@ -151,7 +161,9 @@ qrsApi.proxyservice.local.get().then(function(ProxyService) {
 <a name="proxyservice.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#proxyservice.table)</code>  
@@ -206,7 +218,9 @@ qrsApi.proxyservice.table.post(postParams, filter, skip, take, sortcolumn, order
 <a name="proxyservice.template.id.delete"></a>
 ##### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#proxyservice.template.id)</code>  
@@ -220,7 +234,9 @@ qrsApi.proxyservice.template.id(id).delete().then(function() {
 <a name="proxyservice.template.id.get"></a>
 ##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;ProxyServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#proxyservice.template.id)</code>  
@@ -239,7 +255,9 @@ qrsApi.proxyservice.template.id(id).get(appendprivileges).then(function(ProxySer
 <a name="proxyservice.template.id.put"></a>
 ##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ProxyServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#proxyservice.template.id)</code>  
@@ -262,7 +280,9 @@ qrsApi.proxyservice.template.id(id).put(postParams, appendprivileges).then(funct
 <a name="proxyservice.template.count.get"></a>
 ##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#proxyservice.template.count)</code>  
@@ -284,7 +304,9 @@ qrsApi.proxyservice.template.count.get(filter).then(function(int) {
 <a name="proxyservice.template.full.get"></a>
 ##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#proxyservice.template.full)</code>  
@@ -308,7 +330,9 @@ qrsApi.proxyservice.template.full.get(filter, orderby, appendprivileges).then(fu
 <a name="proxyservice.template.many.post"></a>
 ##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#proxyservice.template.many)</code>  
@@ -331,7 +355,9 @@ qrsApi.proxyservice.template.many.post(postParams, appendprivileges).then(functi
 <a name="proxyservice.template.previewcreateprivilege.post"></a>
 ##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#proxyservice.template.previewcreateprivilege)</code>  
@@ -353,7 +379,9 @@ qrsApi.proxyservice.template.previewcreateprivilege.post(postParams).then(functi
 <a name="proxyservice.template.table.post"></a>
 ##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#proxyservice.template.table)</code>  
@@ -377,7 +405,9 @@ qrsApi.proxyservice.template.table.post(postParams, filter, skip, take, sortcolu
 <a name="proxyservice.template.get"></a>
 #### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#proxyservice.template)</code>  
@@ -398,7 +428,9 @@ qrsApi.proxyservice.template.get(filter, orderby, appendprivileges).then(functio
 <a name="proxyservice.template.post"></a>
 #### template.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;ProxyServiceTemplate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice/template?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[template](#proxyservice.template)</code>  
@@ -418,7 +450,9 @@ qrsApi.proxyservice.template.post(postParams, appendprivileges).then(function(Pr
 <a name="proxyservice.get"></a>
 ### proxyservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/proxyservice?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[proxyservice](#proxyservice)</code>  

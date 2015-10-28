@@ -21,7 +21,9 @@
 <a name="filereference.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;FileReference&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/filereference/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#filereference.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.filereference.id(id).get(appendprivileges).then(function(FileReference) {
 <a name="filereference.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/filereference/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#filereference.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.filereference.count.get(filter).then(function(int) {
 <a name="filereference.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;FileReference&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/filereference/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#filereference.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.filereference.full.get(filter, orderby, appendprivileges).then(function(A
 <a name="filereference.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/filereference/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#filereference.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.filereference.table.post(postParams, filter, skip, take, sortcolumn, orde
 <a name="filereference.get"></a>
 ### filereference.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;FileReference&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/filereference?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[filereference](#filereference)</code>  

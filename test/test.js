@@ -18,6 +18,7 @@ var rmdir = promise.denodeify(require('rimraf'));
 
 var testQlikSenseIp = 'localhost';
 var testQlikSensePfx = __dirname + '/client.pfx';
+var testQlikSensePemDir = __dirname;
 
 var readFile = promise.denodeify(fs.readFile);
 var readdir = promise.denodeify(fs.readdir);
@@ -211,6 +212,38 @@ describe('request...', function() {
                 })
             }).should.eventually.have.property("id").to.match(/^[a-f\-0-9]*$/)
         ]).should.notify(done)
+    });
+
+    var key = readFile(testQlikSensePemDir + '/client_key.pem');
+    var cert = readFile(testQlikSensePemDir + '/client.pem');
+    var ca = readFile(testQlikSensePemDir + '/root.pem');
+
+    it('should find certificate pem files', function(done) {
+        expect(Q.all([
+            key,
+            cert,
+            ca
+        ])).to.be.fulfilled.notify(done);
+    });
+
+    it('should accept real endpoints using pems', function(done) {
+
+        Q.all([
+            key,
+            cert,
+            ca
+        ]).then(function(reply) {
+            return utils.Qlik.request({
+                restUri: 'https://' + testQlikSenseIp + ':4242/qrs/proxyservice/local',
+                method: 'GET',
+                'UserId': 'qlikservice',
+                'UserDirectory': '2008R2-0',
+                key: reply[0],
+                cert: reply[1],
+                ca: reply[2]
+            })
+        }).should.eventually.have.property("id").to.match(/^[a-f\-0-9]*$/).should.notify(done)
+
     });
 
 });
@@ -744,7 +777,7 @@ describe('QRS SDK...', function() {
         }).should.notify(done);
     });
 
-    it('should implement QRS API', function(done) {
+    it('about API description should work', function(done) {
 
         pfx.then(function(pfx) {
             return utils.Qlik.apis.qrs({
@@ -763,6 +796,44 @@ describe('QRS SDK...', function() {
 
 
 });
+
+describe('QPS SDK...', function() {
+
+    it('should be defined', function() {
+        expect(utils.Qlik.apis.qps).to.not.be.undefined;
+    });
+
+    var pfx = readFile(testQlikSensePfx);
+
+    it('should find certificate pfx file', function(done) {
+        expect(pfx).to.be.fulfilled.notify(done);
+    });
+
+    it('get ticket should work', function(done) {
+
+        pfx.then(function(pfx) {
+            return utils.Qlik.apis.qps({
+                restUri: 'https://' + testQlikSenseIp + ':4243',
+                pfx: pfx,
+                passPhrase: '',
+                UserId: 'qlikservice',
+                UserDirectory: '2008R2-0'
+            });
+        }).then(function(qpsApi) {
+            return qpsApi.ticket.post({
+                'UserId': 'qlikservice',
+                'UserDirectory': '2008R2-0',
+                'Attributes': []
+            });
+        }).should.eventually.have.property("Ticket").to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16).notify(done);
+
+
+    });
+
+
+});
+
+
 
 var testConfig;
 

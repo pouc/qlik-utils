@@ -23,7 +23,9 @@
 <a name="servernoderegistration.start.servernodeconfigurationid.get"></a>
 ##### servernodeconfigurationid.get() ⇒ <code>Promise.&lt;String&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/servernoderegistration/start/{servernodeconfigurationid}
+
 This method is manual
 
 **Kind**: static method of <code>[servernodeconfigurationid](#servernoderegistration.start.servernodeconfigurationid)</code>  

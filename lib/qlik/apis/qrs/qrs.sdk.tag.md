@@ -34,7 +34,9 @@
 <a name="tag.id.delete"></a>
 #### id.delete() ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag/{id}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#tag.id)</code>  
@@ -48,7 +50,9 @@ qrsApi.tag.id(id).delete().then(function() {
 <a name="tag.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;Tag&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#tag.id)</code>  
@@ -67,7 +71,9 @@ qrsApi.tag.id(id).get(appendprivileges).then(function(Tag) {
 <a name="tag.id.put"></a>
 #### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Tag&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#tag.id)</code>  
@@ -90,7 +96,9 @@ qrsApi.tag.id(id).put(postParams, appendprivileges).then(function(Tag) {
 <a name="tag.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#tag.count)</code>  
@@ -112,7 +120,9 @@ qrsApi.tag.count.get(filter).then(function(int) {
 <a name="tag.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Tag&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#tag.full)</code>  
@@ -136,7 +146,9 @@ qrsApi.tag.full.get(filter, orderby, appendprivileges).then(function(Array.<Tag>
 <a name="tag.many.post"></a>
 #### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Tag&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag/many?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[many](#tag.many)</code>  
@@ -159,7 +171,9 @@ qrsApi.tag.many.post(postParams, appendprivileges).then(function(Array.<Tag>) {
 <a name="tag.previewcreateprivilege.post"></a>
 #### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag/previewcreateprivilege
+
 This method is generated
 
 **Kind**: static method of <code>[previewcreateprivilege](#tag.previewcreateprivilege)</code>  
@@ -181,7 +195,9 @@ qrsApi.tag.previewcreateprivilege.post(postParams).then(function(Boolean) {
 <a name="tag.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#tag.table)</code>  
@@ -205,7 +221,9 @@ qrsApi.tag.table.post(postParams, filter, skip, take, sortcolumn, orderascending
 <a name="tag.get"></a>
 ### tag.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;Tag&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[tag](#tag)</code>  
@@ -226,7 +244,9 @@ qrsApi.tag.get(filter, orderby, appendprivileges).then(function(Array.<Tag>) {
 <a name="tag.post"></a>
 ### tag.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Tag&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/tag?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[tag](#tag)</code>  

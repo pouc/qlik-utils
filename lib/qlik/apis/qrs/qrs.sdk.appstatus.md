@@ -21,7 +21,9 @@
 <a name="appstatus.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;AppStatus&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appstatus/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#appstatus.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.appstatus.id(id).get(appendprivileges).then(function(AppStatus) {
 <a name="appstatus.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appstatus/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#appstatus.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.appstatus.count.get(filter).then(function(int) {
 <a name="appstatus.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppStatus&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appstatus/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#appstatus.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.appstatus.full.get(filter, orderby, appendprivileges).then(function(Array
 <a name="appstatus.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appstatus/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#appstatus.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.appstatus.table.post(postParams, filter, skip, take, sortcolumn, orderasc
 <a name="appstatus.get"></a>
 ### appstatus.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;AppStatus&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/appstatus?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[appstatus](#appstatus)</code>  

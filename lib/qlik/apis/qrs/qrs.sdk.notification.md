@@ -16,7 +16,9 @@
 <a name="notification.changes.get"></a>
 #### changes.get([since], [types]) ⇒ <code>Promise.&lt;Array.&lt;ChangesSinceOutput&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/notification/changes?since={since}&types={types}
+
 This method is manual
 
 **Kind**: static method of <code>[changes](#notification.changes)</code>  
@@ -36,7 +38,9 @@ qrsApi.notification.changes.get(since, types).then(function(Array.<ChangesSinceO
 <a name="notification.delete"></a>
 ### notification.delete([handle]) ⇒ <code>Promise</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/notification/?handle={handle}
+
 This method is manual
 
 **Kind**: static method of <code>[notification](#notification)</code>  
@@ -55,7 +59,9 @@ qrsApi.notification.delete(handle).then(function() {
 <a name="notification.post"></a>
 ### notification.post(postParams, [typename], [id], [filter], [condition], [changetype], [propertyname]) ⇒ <code>Promise.&lt;Guid&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/notification/?name={typename}&id={id}&filter={filter}&condition={condition}&changetype={changetype}&propertyname={propertyname}
+
 This method is manual
 
 **Kind**: static method of <code>[notification](#notification)</code>  

@@ -21,7 +21,9 @@
 <a name="binarydelete.id.get"></a>
 #### id.get([appendprivileges]) ⇒ <code>Promise.&lt;BinaryDelete&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydelete/{id}?privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[id](#binarydelete.id)</code>  
@@ -43,7 +45,9 @@ qrsApi.binarydelete.id(id).get(appendprivileges).then(function(BinaryDelete) {
 <a name="binarydelete.count.get"></a>
 #### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydelete/count?filter={filter}
+
 This method is generated
 
 **Kind**: static method of <code>[count](#binarydelete.count)</code>  
@@ -65,7 +69,9 @@ qrsApi.binarydelete.count.get(filter).then(function(int) {
 <a name="binarydelete.full.get"></a>
 #### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinaryDelete&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydelete/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[full](#binarydelete.full)</code>  
@@ -89,7 +95,9 @@ qrsApi.binarydelete.full.get(filter, orderby, appendprivileges).then(function(Ar
 <a name="binarydelete.table.post"></a>
 #### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydelete/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
 This method is generated
 
 **Kind**: static method of <code>[table](#binarydelete.table)</code>  
@@ -113,7 +121,9 @@ qrsApi.binarydelete.table.post(postParams, filter, skip, take, sortcolumn, order
 <a name="binarydelete.get"></a>
 ### binarydelete.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;BinaryDelete&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
+
 /qrs/binarydelete?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
 This method is generated
 
 **Kind**: static method of <code>[binarydelete](#binarydelete)</code>  
