@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="externalchangeinfo.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.id(id).get(appendprivileges).then(function(ExternalChangeInfo) {
-	console.log(ExternalChangeInfo)
+    console.log(ExternalChangeInfo)
 })
 ```
 <a name="externalchangeinfo.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.id(id).put(postParams, appendprivileges).then(function(ExternalChangeInfo) {
-	console.log(ExternalChangeInfo)
+    console.log(ExternalChangeInfo)
 })
 ```
 <a name="externalchangeinfo.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="externalchangeinfo.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.full.get(filter, orderby, appendprivileges).then(function(Array.<ExternalChangeInfo>) {
-	console.log(Array.<ExternalChangeInfo>)
+    console.log(Array.<ExternalChangeInfo>)
 })
 ```
 <a name="externalchangeinfo.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.many.post(postParams, appendprivileges).then(function(Array.<ExternalChangeInfo>) {
-	console.log(Array.<ExternalChangeInfo>)
+    console.log(Array.<ExternalChangeInfo>)
 })
 ```
 <a name="externalchangeinfo.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="externalchangeinfo.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="externalchangeinfo.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.get(filter, orderby, appendprivileges).then(function(Array.<ExternalChangeInfo>) {
-	console.log(Array.<ExternalChangeInfo>)
+    console.log(Array.<ExternalChangeInfo>)
 })
 ```
 <a name="externalchangeinfo.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalchangeinfo.post(postParams, appendprivileges).then(function(ExternalChangeInfo) {
-	console.log(ExternalChangeInfo)
+    console.log(ExternalChangeInfo)
 })
 ```

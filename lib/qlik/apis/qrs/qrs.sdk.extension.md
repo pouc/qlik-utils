@@ -66,7 +66,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.extension.extension(extension).deletecontent.delete(externalpath).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="extension.extension.uploadfile"></a>
@@ -92,7 +92,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.extension.extension(extension).uploadfile.post(postParams, externalpath, overwrite).then(function(String) {
-	console.log(String)
+    console.log(String)
 })
 ```
 <a name="extension.id"></a>
@@ -117,7 +117,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="extension.id.get"></a>
@@ -138,7 +138,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.id(id).get(appendprivileges).then(function(Extension) {
-	console.log(Extension)
+    console.log(Extension)
 })
 ```
 <a name="extension.id.put"></a>
@@ -160,7 +160,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.id(id).put(postParams, appendprivileges).then(function(Extension) {
-	console.log(Extension)
+    console.log(Extension)
 })
 ```
 <a name="extension.count"></a>
@@ -184,7 +184,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="extension.full"></a>
@@ -210,7 +210,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.full.get(filter, orderby, appendprivileges).then(function(Array.<Extension>) {
-	console.log(Array.<Extension>)
+    console.log(Array.<Extension>)
 })
 ```
 <a name="extension.many"></a>
@@ -235,7 +235,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.many.post(postParams, appendprivileges).then(function(Array.<Extension>) {
-	console.log(Array.<Extension>)
+    console.log(Array.<Extension>)
 })
 ```
 <a name="extension.name"></a>
@@ -268,7 +268,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.extension.name.extension(extension).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="extension.name.extension.post"></a>
@@ -290,7 +290,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.extension.name.extension(extension).post(postParams, appendprivileges).then(function(Extension) {
-	console.log(Extension)
+    console.log(Extension)
 })
 ```
 <a name="extension.previewcreateprivilege"></a>
@@ -314,7 +314,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="extension.schema"></a>
@@ -333,7 +333,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.extension.schema.get().then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="extension.table"></a>
@@ -362,7 +362,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="extension.upload"></a>
@@ -388,7 +388,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.extension.upload.post(postParams, password, appendprivileges).then(function(Array.<Extension>) {
-	console.log(Array.<Extension>)
+    console.log(Array.<Extension>)
 })
 ```
 <a name="extension.get"></a>
@@ -411,7 +411,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.get(filter, orderby, appendprivileges).then(function(Array.<Extension>) {
-	console.log(Array.<Extension>)
+    console.log(Array.<Extension>)
 })
 ```
 <a name="extension.post"></a>
@@ -433,6 +433,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.extension.post(postParams, appendprivileges).then(function(Extension) {
-	console.log(Extension)
+    console.log(Extension)
 })
 ```

@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="externalprogramtask.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.id(id).get(appendprivileges).then(function(ExternalProgramTask) {
-	console.log(ExternalProgramTask)
+    console.log(ExternalProgramTask)
 })
 ```
 <a name="externalprogramtask.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.id(id).put(postParams, appendprivileges).then(function(ExternalProgramTask) {
-	console.log(ExternalProgramTask)
+    console.log(ExternalProgramTask)
 })
 ```
 <a name="externalprogramtask.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="externalprogramtask.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.full.get(filter, orderby, appendprivileges).then(function(Array.<ExternalProgramTask>) {
-	console.log(Array.<ExternalProgramTask>)
+    console.log(Array.<ExternalProgramTask>)
 })
 ```
 <a name="externalprogramtask.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.many.post(postParams, appendprivileges).then(function(Array.<ExternalProgramTask>) {
-	console.log(Array.<ExternalProgramTask>)
+    console.log(Array.<ExternalProgramTask>)
 })
 ```
 <a name="externalprogramtask.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="externalprogramtask.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="externalprogramtask.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.get(filter, orderby, appendprivileges).then(function(Array.<ExternalProgramTask>) {
-	console.log(Array.<ExternalProgramTask>)
+    console.log(Array.<ExternalProgramTask>)
 })
 ```
 <a name="externalprogramtask.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtask.post(postParams, appendprivileges).then(function(ExternalProgramTask) {
-	console.log(ExternalProgramTask)
+    console.log(ExternalProgramTask)
 })
 ```

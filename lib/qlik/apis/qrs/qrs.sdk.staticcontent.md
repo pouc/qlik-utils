@@ -29,6 +29,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.staticcontent.enumeratefiles.get(path).then(function(Array.<EnumerateFilesResult>) {
-	console.log(Array.<EnumerateFilesResult>)
+    console.log(Array.<EnumerateFilesResult>)
 })
 ```

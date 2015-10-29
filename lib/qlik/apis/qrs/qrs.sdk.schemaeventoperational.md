@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="schemaeventoperational.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.id(id).get(appendprivileges).then(function(SchemaEventOperational) {
-	console.log(SchemaEventOperational)
+    console.log(SchemaEventOperational)
 })
 ```
 <a name="schemaeventoperational.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.id(id).put(postParams, appendprivileges).then(function(SchemaEventOperational) {
-	console.log(SchemaEventOperational)
+    console.log(SchemaEventOperational)
 })
 ```
 <a name="schemaeventoperational.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="schemaeventoperational.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.full.get(filter, orderby, appendprivileges).then(function(Array.<SchemaEventOperational>) {
-	console.log(Array.<SchemaEventOperational>)
+    console.log(Array.<SchemaEventOperational>)
 })
 ```
 <a name="schemaeventoperational.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.many.post(postParams, appendprivileges).then(function(Array.<SchemaEventOperational>) {
-	console.log(Array.<SchemaEventOperational>)
+    console.log(Array.<SchemaEventOperational>)
 })
 ```
 <a name="schemaeventoperational.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="schemaeventoperational.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="schemaeventoperational.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.get(filter, orderby, appendprivileges).then(function(Array.<SchemaEventOperational>) {
-	console.log(Array.<SchemaEventOperational>)
+    console.log(Array.<SchemaEventOperational>)
 })
 ```
 <a name="schemaeventoperational.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schemaeventoperational.post(postParams, appendprivileges).then(function(SchemaEventOperational) {
-	console.log(SchemaEventOperational)
+    console.log(SchemaEventOperational)
 })
 ```

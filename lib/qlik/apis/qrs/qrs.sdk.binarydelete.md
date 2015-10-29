@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydelete.id(id).get(appendprivileges).then(function(BinaryDelete) {
-	console.log(BinaryDelete)
+    console.log(BinaryDelete)
 })
 ```
 <a name="binarydelete.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydelete.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="binarydelete.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydelete.full.get(filter, orderby, appendprivileges).then(function(Array.<BinaryDelete>) {
-	console.log(Array.<BinaryDelete>)
+    console.log(Array.<BinaryDelete>)
 })
 ```
 <a name="binarydelete.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydelete.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="binarydelete.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydelete.get(filter, orderby, appendprivileges).then(function(Array.<BinaryDelete>) {
-	console.log(Array.<BinaryDelete>)
+    console.log(Array.<BinaryDelete>)
 })
 ```

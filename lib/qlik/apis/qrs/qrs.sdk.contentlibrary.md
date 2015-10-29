@@ -49,7 +49,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="contentlibrary.id.get"></a>
@@ -70,7 +70,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.id(id).get(appendprivileges).then(function(ContentLibrary) {
-	console.log(ContentLibrary)
+    console.log(ContentLibrary)
 })
 ```
 <a name="contentlibrary.id.put"></a>
@@ -92,7 +92,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.id(id).put(postParams, appendprivileges).then(function(ContentLibrary) {
-	console.log(ContentLibrary)
+    console.log(ContentLibrary)
 })
 ```
 <a name="contentlibrary.libname"></a>
@@ -126,7 +126,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.contentlibrary.libname(libname).deletecontent.delete(externalpath).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="contentlibrary.libname.uploadfile"></a>
@@ -152,7 +152,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.contentlibrary.libname(libname).uploadfile.post(postParams, externalpath, overwrite).then(function(String) {
-	console.log(String)
+    console.log(String)
 })
 ```
 <a name="contentlibrary.count"></a>
@@ -176,7 +176,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="contentlibrary.full"></a>
@@ -202,7 +202,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.full.get(filter, orderby, appendprivileges).then(function(Array.<ContentLibrary>) {
-	console.log(Array.<ContentLibrary>)
+    console.log(Array.<ContentLibrary>)
 })
 ```
 <a name="contentlibrary.many"></a>
@@ -227,7 +227,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.many.post(postParams, appendprivileges).then(function(Array.<ContentLibrary>) {
-	console.log(Array.<ContentLibrary>)
+    console.log(Array.<ContentLibrary>)
 })
 ```
 <a name="contentlibrary.previewcreateprivilege"></a>
@@ -251,7 +251,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="contentlibrary.table"></a>
@@ -280,7 +280,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="contentlibrary.get"></a>
@@ -303,7 +303,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.get(filter, orderby, appendprivileges).then(function(Array.<ContentLibrary>) {
-	console.log(Array.<ContentLibrary>)
+    console.log(Array.<ContentLibrary>)
 })
 ```
 <a name="contentlibrary.post"></a>
@@ -325,6 +325,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.contentlibrary.post(postParams, appendprivileges).then(function(ContentLibrary) {
-	console.log(ContentLibrary)
+    console.log(ContentLibrary)
 })
 ```

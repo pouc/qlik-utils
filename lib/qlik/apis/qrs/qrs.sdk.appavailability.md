@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appavailability.id(id).get(appendprivileges).then(function(AppAvailability) {
-	console.log(AppAvailability)
+    console.log(AppAvailability)
 })
 ```
 <a name="appavailability.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appavailability.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="appavailability.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appavailability.full.get(filter, orderby, appendprivileges).then(function(Array.<AppAvailability>) {
-	console.log(Array.<AppAvailability>)
+    console.log(Array.<AppAvailability>)
 })
 ```
 <a name="appavailability.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appavailability.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="appavailability.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appavailability.get(filter, orderby, appendprivileges).then(function(Array.<AppAvailability>) {
-	console.log(Array.<AppAvailability>)
+    console.log(Array.<AppAvailability>)
 })
 ```

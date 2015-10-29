@@ -21,6 +21,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.applicationlog.post(postParams).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```

@@ -61,7 +61,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="executionresult.id.get"></a>
@@ -82,7 +82,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.id(id).get(appendprivileges).then(function(ExecutionResult) {
-	console.log(ExecutionResult)
+    console.log(ExecutionResult)
 })
 ```
 <a name="executionresult.id.put"></a>
@@ -104,7 +104,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.id(id).put(postParams, appendprivileges).then(function(ExecutionResult) {
-	console.log(ExecutionResult)
+    console.log(ExecutionResult)
 })
 ```
 <a name="executionresult.count"></a>
@@ -128,7 +128,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="executionresult.detail"></a>
@@ -175,7 +175,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="executionresult.detail.id.get"></a>
@@ -196,7 +196,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.id(id).get(appendprivileges).then(function(ExecutionResultDetail) {
-	console.log(ExecutionResultDetail)
+    console.log(ExecutionResultDetail)
 })
 ```
 <a name="executionresult.detail.id.put"></a>
@@ -218,7 +218,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.id(id).put(postParams, appendprivileges).then(function(ExecutionResultDetail) {
-	console.log(ExecutionResultDetail)
+    console.log(ExecutionResultDetail)
 })
 ```
 <a name="executionresult.detail.count"></a>
@@ -242,7 +242,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="executionresult.detail.full"></a>
@@ -268,7 +268,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.full.get(filter, orderby, appendprivileges).then(function(Array.<ExecutionResultDetail>) {
-	console.log(Array.<ExecutionResultDetail>)
+    console.log(Array.<ExecutionResultDetail>)
 })
 ```
 <a name="executionresult.detail.many"></a>
@@ -293,7 +293,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.many.post(postParams, appendprivileges).then(function(Array.<ExecutionResultDetail>) {
-	console.log(Array.<ExecutionResultDetail>)
+    console.log(Array.<ExecutionResultDetail>)
 })
 ```
 <a name="executionresult.detail.previewcreateprivilege"></a>
@@ -317,7 +317,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="executionresult.detail.table"></a>
@@ -346,7 +346,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="executionresult.detail.get"></a>
@@ -369,7 +369,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.get(filter, orderby, appendprivileges).then(function(Array.<ExecutionResultDetail>) {
-	console.log(Array.<ExecutionResultDetail>)
+    console.log(Array.<ExecutionResultDetail>)
 })
 ```
 <a name="executionresult.detail.post"></a>
@@ -391,7 +391,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.detail.post(postParams, appendprivileges).then(function(ExecutionResultDetail) {
-	console.log(ExecutionResultDetail)
+    console.log(ExecutionResultDetail)
 })
 ```
 <a name="executionresult.full"></a>
@@ -417,7 +417,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.full.get(filter, orderby, appendprivileges).then(function(Array.<ExecutionResult>) {
-	console.log(Array.<ExecutionResult>)
+    console.log(Array.<ExecutionResult>)
 })
 ```
 <a name="executionresult.many"></a>
@@ -442,7 +442,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.many.post(postParams, appendprivileges).then(function(Array.<ExecutionResult>) {
-	console.log(Array.<ExecutionResult>)
+    console.log(Array.<ExecutionResult>)
 })
 ```
 <a name="executionresult.previewcreateprivilege"></a>
@@ -466,7 +466,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="executionresult.table"></a>
@@ -495,7 +495,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="executionresult.get"></a>
@@ -518,7 +518,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.get(filter, orderby, appendprivileges).then(function(Array.<ExecutionResult>) {
-	console.log(Array.<ExecutionResult>)
+    console.log(Array.<ExecutionResult>)
 })
 ```
 <a name="executionresult.post"></a>
@@ -540,6 +540,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionresult.post(postParams, appendprivileges).then(function(ExecutionResult) {
-	console.log(ExecutionResult)
+    console.log(ExecutionResult)
 })
 ```

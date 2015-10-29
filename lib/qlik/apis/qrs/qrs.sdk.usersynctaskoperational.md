@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="usersynctaskoperational.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.id(id).get(appendprivileges).then(function(UserSyncTaskOperational) {
-	console.log(UserSyncTaskOperational)
+    console.log(UserSyncTaskOperational)
 })
 ```
 <a name="usersynctaskoperational.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.id(id).put(postParams, appendprivileges).then(function(UserSyncTaskOperational) {
-	console.log(UserSyncTaskOperational)
+    console.log(UserSyncTaskOperational)
 })
 ```
 <a name="usersynctaskoperational.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="usersynctaskoperational.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.full.get(filter, orderby, appendprivileges).then(function(Array.<UserSyncTaskOperational>) {
-	console.log(Array.<UserSyncTaskOperational>)
+    console.log(Array.<UserSyncTaskOperational>)
 })
 ```
 <a name="usersynctaskoperational.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.many.post(postParams, appendprivileges).then(function(Array.<UserSyncTaskOperational>) {
-	console.log(Array.<UserSyncTaskOperational>)
+    console.log(Array.<UserSyncTaskOperational>)
 })
 ```
 <a name="usersynctaskoperational.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="usersynctaskoperational.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="usersynctaskoperational.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.get(filter, orderby, appendprivileges).then(function(Array.<UserSyncTaskOperational>) {
-	console.log(Array.<UserSyncTaskOperational>)
+    console.log(Array.<UserSyncTaskOperational>)
 })
 ```
 <a name="usersynctaskoperational.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctaskoperational.post(postParams, appendprivileges).then(function(UserSyncTaskOperational) {
-	console.log(UserSyncTaskOperational)
+    console.log(UserSyncTaskOperational)
 })
 ```

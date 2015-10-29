@@ -48,7 +48,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="virtualproxyconfig.id.get"></a>
@@ -69,7 +69,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.id(id).get(appendprivileges).then(function(VirtualProxyConfig) {
-	console.log(VirtualProxyConfig)
+    console.log(VirtualProxyConfig)
 })
 ```
 <a name="virtualproxyconfig.id.put"></a>
@@ -91,7 +91,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.id(id).put(postParams, appendprivileges).then(function(VirtualProxyConfig) {
-	console.log(VirtualProxyConfig)
+    console.log(VirtualProxyConfig)
 })
 ```
 <a name="virtualproxyconfig.vpid"></a>
@@ -127,7 +127,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.vpid(vpid).generate.samlmetadata.get().then(function(Guid) {
-	console.log(Guid)
+    console.log(Guid)
 })
 ```
 <a name="virtualproxyconfig.count"></a>
@@ -151,7 +151,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="virtualproxyconfig.full"></a>
@@ -177,7 +177,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.full.get(filter, orderby, appendprivileges).then(function(Array.<VirtualProxyConfig>) {
-	console.log(Array.<VirtualProxyConfig>)
+    console.log(Array.<VirtualProxyConfig>)
 })
 ```
 <a name="virtualproxyconfig.many"></a>
@@ -202,7 +202,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.many.post(postParams, appendprivileges).then(function(Array.<VirtualProxyConfig>) {
-	console.log(Array.<VirtualProxyConfig>)
+    console.log(Array.<VirtualProxyConfig>)
 })
 ```
 <a name="virtualproxyconfig.previewcreateprivilege"></a>
@@ -226,7 +226,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="virtualproxyconfig.table"></a>
@@ -255,7 +255,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="virtualproxyconfig.get"></a>
@@ -278,7 +278,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.get(filter, orderby, appendprivileges).then(function(Array.<VirtualProxyConfig>) {
-	console.log(Array.<VirtualProxyConfig>)
+    console.log(Array.<VirtualProxyConfig>)
 })
 ```
 <a name="virtualproxyconfig.post"></a>
@@ -300,6 +300,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.virtualproxyconfig.post(postParams, appendprivileges).then(function(VirtualProxyConfig) {
-	console.log(VirtualProxyConfig)
+    console.log(VirtualProxyConfig)
 })
 ```

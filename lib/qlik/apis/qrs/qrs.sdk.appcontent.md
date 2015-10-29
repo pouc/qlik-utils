@@ -42,7 +42,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.appcontent.appid(appid).deletecontent.delete(externalpath).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="appcontent.appid.uploadfile"></a>
@@ -68,6 +68,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.appcontent.appid(appid).uploadfile.post(postParams, externalpath, overwrite).then(function(String) {
-	console.log(String)
+    console.log(String)
 })
 ```

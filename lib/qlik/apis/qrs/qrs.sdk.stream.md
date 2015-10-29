@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="stream.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.id(id).get(appendprivileges).then(function(Stream) {
-	console.log(Stream)
+    console.log(Stream)
 })
 ```
 <a name="stream.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.id(id).put(postParams, appendprivileges).then(function(Stream) {
-	console.log(Stream)
+    console.log(Stream)
 })
 ```
 <a name="stream.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="stream.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.full.get(filter, orderby, appendprivileges).then(function(Array.<Stream>) {
-	console.log(Array.<Stream>)
+    console.log(Array.<Stream>)
 })
 ```
 <a name="stream.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.many.post(postParams, appendprivileges).then(function(Array.<Stream>) {
-	console.log(Array.<Stream>)
+    console.log(Array.<Stream>)
 })
 ```
 <a name="stream.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="stream.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="stream.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.get(filter, orderby, appendprivileges).then(function(Array.<Stream>) {
-	console.log(Array.<Stream>)
+    console.log(Array.<Stream>)
 })
 ```
 <a name="stream.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.stream.post(postParams, appendprivileges).then(function(Stream) {
-	console.log(Stream)
+    console.log(Stream)
 })
 ```

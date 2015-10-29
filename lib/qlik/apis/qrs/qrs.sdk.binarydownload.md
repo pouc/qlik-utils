@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydownload.id(id).get(appendprivileges).then(function(BinaryDownload) {
-	console.log(BinaryDownload)
+    console.log(BinaryDownload)
 })
 ```
 <a name="binarydownload.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydownload.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="binarydownload.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydownload.full.get(filter, orderby, appendprivileges).then(function(Array.<BinaryDownload>) {
-	console.log(Array.<BinaryDownload>)
+    console.log(Array.<BinaryDownload>)
 })
 ```
 <a name="binarydownload.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydownload.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="binarydownload.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarydownload.get(filter, orderby, appendprivileges).then(function(Array.<BinaryDownload>) {
-	console.log(Array.<BinaryDownload>)
+    console.log(Array.<BinaryDownload>)
 })
 ```

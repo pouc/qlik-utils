@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarysyncruleevaluation.id(id).get(appendprivileges).then(function(BinarySyncRuleEvaluation) {
-	console.log(BinarySyncRuleEvaluation)
+    console.log(BinarySyncRuleEvaluation)
 })
 ```
 <a name="binarysyncruleevaluation.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarysyncruleevaluation.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="binarysyncruleevaluation.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarysyncruleevaluation.full.get(filter, orderby, appendprivileges).then(function(Array.<BinarySyncRuleEvaluation>) {
-	console.log(Array.<BinarySyncRuleEvaluation>)
+    console.log(Array.<BinarySyncRuleEvaluation>)
 })
 ```
 <a name="binarysyncruleevaluation.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarysyncruleevaluation.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="binarysyncruleevaluation.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.binarysyncruleevaluation.get(filter, orderby, appendprivileges).then(function(Array.<BinarySyncRuleEvaluation>) {
-	console.log(Array.<BinarySyncRuleEvaluation>)
+    console.log(Array.<BinarySyncRuleEvaluation>)
 })
 ```

@@ -62,7 +62,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.download.app.id(id).exportticketid(exportticketid).localfilename(localfilename).get().then(function(FileDownloadInfo) {
-	console.log(FileDownloadInfo)
+    console.log(FileDownloadInfo)
 })
 ```
 <a name="download.reloadtask"></a>
@@ -98,7 +98,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.download.reloadtask.downloadticketid(downloadticketid).localfilename(localfilename).get().then(function(FileDownloadInfo) {
-	console.log(FileDownloadInfo)
+    console.log(FileDownloadInfo)
 })
 ```
 <a name="download.samlmetadata"></a>
@@ -134,6 +134,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.download.samlmetadata.exportticketid(exportticketid).localfilename(localfilename).get().then(function(FileDownloadInfo) {
-	console.log(FileDownloadInfo)
+    console.log(FileDownloadInfo)
 })
 ```

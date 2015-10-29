@@ -61,7 +61,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.id(id).get(appendprivileges).then(function(SchedulerService) {
-	console.log(SchedulerService)
+    console.log(SchedulerService)
 })
 ```
 <a name="schedulerservice.id.put"></a>
@@ -83,7 +83,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.id(id).put(postParams, appendprivileges).then(function(SchedulerService) {
-	console.log(SchedulerService)
+    console.log(SchedulerService)
 })
 ```
 <a name="schedulerservice.count"></a>
@@ -107,7 +107,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="schedulerservice.full"></a>
@@ -133,7 +133,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.full.get(filter, orderby, appendprivileges).then(function(Array.<SchedulerService>) {
-	console.log(Array.<SchedulerService>)
+    console.log(Array.<SchedulerService>)
 })
 ```
 <a name="schedulerservice.local"></a>
@@ -152,7 +152,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.schedulerservice.local.get().then(function(SchedulerService) {
-	console.log(SchedulerService)
+    console.log(SchedulerService)
 })
 ```
 <a name="schedulerservice.table"></a>
@@ -181,7 +181,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="schedulerservice.template"></a>
@@ -228,7 +228,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="schedulerservice.template.id.get"></a>
@@ -249,7 +249,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.id(id).get(appendprivileges).then(function(SchedulerServiceTemplate) {
-	console.log(SchedulerServiceTemplate)
+    console.log(SchedulerServiceTemplate)
 })
 ```
 <a name="schedulerservice.template.id.put"></a>
@@ -271,7 +271,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.id(id).put(postParams, appendprivileges).then(function(SchedulerServiceTemplate) {
-	console.log(SchedulerServiceTemplate)
+    console.log(SchedulerServiceTemplate)
 })
 ```
 <a name="schedulerservice.template.count"></a>
@@ -295,7 +295,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="schedulerservice.template.full"></a>
@@ -321,7 +321,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.full.get(filter, orderby, appendprivileges).then(function(Array.<SchedulerServiceTemplate>) {
-	console.log(Array.<SchedulerServiceTemplate>)
+    console.log(Array.<SchedulerServiceTemplate>)
 })
 ```
 <a name="schedulerservice.template.many"></a>
@@ -346,7 +346,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.many.post(postParams, appendprivileges).then(function(Array.<SchedulerServiceTemplate>) {
-	console.log(Array.<SchedulerServiceTemplate>)
+    console.log(Array.<SchedulerServiceTemplate>)
 })
 ```
 <a name="schedulerservice.template.previewcreateprivilege"></a>
@@ -370,7 +370,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="schedulerservice.template.table"></a>
@@ -399,7 +399,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="schedulerservice.template.get"></a>
@@ -422,7 +422,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.get(filter, orderby, appendprivileges).then(function(Array.<SchedulerServiceTemplate>) {
-	console.log(Array.<SchedulerServiceTemplate>)
+    console.log(Array.<SchedulerServiceTemplate>)
 })
 ```
 <a name="schedulerservice.template.post"></a>
@@ -444,7 +444,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.template.post(postParams, appendprivileges).then(function(SchedulerServiceTemplate) {
-	console.log(SchedulerServiceTemplate)
+    console.log(SchedulerServiceTemplate)
 })
 ```
 <a name="schedulerservice.get"></a>
@@ -467,6 +467,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.schedulerservice.get(filter, orderby, appendprivileges).then(function(Array.<SchedulerService>) {
-	console.log(Array.<SchedulerService>)
+    console.log(Array.<SchedulerService>)
 })
 ```

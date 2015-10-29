@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appstatus.id(id).get(appendprivileges).then(function(AppStatus) {
-	console.log(AppStatus)
+    console.log(AppStatus)
 })
 ```
 <a name="appstatus.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appstatus.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="appstatus.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appstatus.full.get(filter, orderby, appendprivileges).then(function(Array.<AppStatus>) {
-	console.log(Array.<AppStatus>)
+    console.log(Array.<AppStatus>)
 })
 ```
 <a name="appstatus.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appstatus.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="appstatus.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appstatus.get(filter, orderby, appendprivileges).then(function(Array.<AppStatus>) {
-	console.log(Array.<AppStatus>)
+    console.log(Array.<AppStatus>)
 })
 ```

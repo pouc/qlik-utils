@@ -42,7 +42,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appcontentquota.id(id).get(appendprivileges).then(function(AppContentQuota) {
-	console.log(AppContentQuota)
+    console.log(AppContentQuota)
 })
 ```
 <a name="appcontentquota.id.put"></a>
@@ -64,7 +64,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appcontentquota.id(id).put(postParams, appendprivileges).then(function(AppContentQuota) {
-	console.log(AppContentQuota)
+    console.log(AppContentQuota)
 })
 ```
 <a name="appcontentquota.count"></a>
@@ -88,7 +88,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appcontentquota.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="appcontentquota.full"></a>
@@ -114,7 +114,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appcontentquota.full.get(filter, orderby, appendprivileges).then(function(Array.<AppContentQuota>) {
-	console.log(Array.<AppContentQuota>)
+    console.log(Array.<AppContentQuota>)
 })
 ```
 <a name="appcontentquota.table"></a>
@@ -143,7 +143,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appcontentquota.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="appcontentquota.get"></a>
@@ -166,6 +166,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appcontentquota.get(filter, orderby, appendprivileges).then(function(Array.<AppContentQuota>) {
-	console.log(Array.<AppContentQuota>)
+    console.log(Array.<AppContentQuota>)
 })
 ```

@@ -59,7 +59,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.id(id).get(appendprivileges).then(function(RepositoryService) {
-	console.log(RepositoryService)
+    console.log(RepositoryService)
 })
 ```
 <a name="repositoryservice.id.put"></a>
@@ -81,7 +81,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.id(id).put(postParams, appendprivileges).then(function(RepositoryService) {
-	console.log(RepositoryService)
+    console.log(RepositoryService)
 })
 ```
 <a name="repositoryservice.count"></a>
@@ -105,7 +105,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="repositoryservice.full"></a>
@@ -131,7 +131,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.full.get(filter, orderby, appendprivileges).then(function(Array.<RepositoryService>) {
-	console.log(Array.<RepositoryService>)
+    console.log(Array.<RepositoryService>)
 })
 ```
 <a name="repositoryservice.table"></a>
@@ -160,7 +160,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="repositoryservice.template"></a>
@@ -207,7 +207,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="repositoryservice.template.id.get"></a>
@@ -228,7 +228,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.id(id).get(appendprivileges).then(function(RepositoryServiceTemplate) {
-	console.log(RepositoryServiceTemplate)
+    console.log(RepositoryServiceTemplate)
 })
 ```
 <a name="repositoryservice.template.id.put"></a>
@@ -250,7 +250,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.id(id).put(postParams, appendprivileges).then(function(RepositoryServiceTemplate) {
-	console.log(RepositoryServiceTemplate)
+    console.log(RepositoryServiceTemplate)
 })
 ```
 <a name="repositoryservice.template.count"></a>
@@ -274,7 +274,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="repositoryservice.template.full"></a>
@@ -300,7 +300,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.full.get(filter, orderby, appendprivileges).then(function(Array.<RepositoryServiceTemplate>) {
-	console.log(Array.<RepositoryServiceTemplate>)
+    console.log(Array.<RepositoryServiceTemplate>)
 })
 ```
 <a name="repositoryservice.template.many"></a>
@@ -325,7 +325,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.many.post(postParams, appendprivileges).then(function(Array.<RepositoryServiceTemplate>) {
-	console.log(Array.<RepositoryServiceTemplate>)
+    console.log(Array.<RepositoryServiceTemplate>)
 })
 ```
 <a name="repositoryservice.template.previewcreateprivilege"></a>
@@ -349,7 +349,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="repositoryservice.template.table"></a>
@@ -378,7 +378,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="repositoryservice.template.get"></a>
@@ -401,7 +401,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.get(filter, orderby, appendprivileges).then(function(Array.<RepositoryServiceTemplate>) {
-	console.log(Array.<RepositoryServiceTemplate>)
+    console.log(Array.<RepositoryServiceTemplate>)
 })
 ```
 <a name="repositoryservice.template.post"></a>
@@ -423,7 +423,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.template.post(postParams, appendprivileges).then(function(RepositoryServiceTemplate) {
-	console.log(RepositoryServiceTemplate)
+    console.log(RepositoryServiceTemplate)
 })
 ```
 <a name="repositoryservice.get"></a>
@@ -446,6 +446,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.repositoryservice.get(filter, orderby, appendprivileges).then(function(Array.<RepositoryService>) {
-	console.log(Array.<RepositoryService>)
+    console.log(Array.<RepositoryService>)
 })
 ```

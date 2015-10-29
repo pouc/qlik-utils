@@ -61,7 +61,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.id(id).get(appendprivileges).then(function(ProxyService) {
-	console.log(ProxyService)
+    console.log(ProxyService)
 })
 ```
 <a name="proxyservice.id.put"></a>
@@ -83,7 +83,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.id(id).put(postParams, appendprivileges).then(function(ProxyService) {
-	console.log(ProxyService)
+    console.log(ProxyService)
 })
 ```
 <a name="proxyservice.count"></a>
@@ -107,7 +107,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="proxyservice.full"></a>
@@ -133,7 +133,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.full.get(filter, orderby, appendprivileges).then(function(Array.<ProxyService>) {
-	console.log(Array.<ProxyService>)
+    console.log(Array.<ProxyService>)
 })
 ```
 <a name="proxyservice.local"></a>
@@ -152,7 +152,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.proxyservice.local.get().then(function(ProxyService) {
-	console.log(ProxyService)
+    console.log(ProxyService)
 })
 ```
 <a name="proxyservice.table"></a>
@@ -181,7 +181,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="proxyservice.template"></a>
@@ -228,7 +228,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="proxyservice.template.id.get"></a>
@@ -249,7 +249,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.id(id).get(appendprivileges).then(function(ProxyServiceTemplate) {
-	console.log(ProxyServiceTemplate)
+    console.log(ProxyServiceTemplate)
 })
 ```
 <a name="proxyservice.template.id.put"></a>
@@ -271,7 +271,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.id(id).put(postParams, appendprivileges).then(function(ProxyServiceTemplate) {
-	console.log(ProxyServiceTemplate)
+    console.log(ProxyServiceTemplate)
 })
 ```
 <a name="proxyservice.template.count"></a>
@@ -295,7 +295,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="proxyservice.template.full"></a>
@@ -321,7 +321,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.full.get(filter, orderby, appendprivileges).then(function(Array.<ProxyServiceTemplate>) {
-	console.log(Array.<ProxyServiceTemplate>)
+    console.log(Array.<ProxyServiceTemplate>)
 })
 ```
 <a name="proxyservice.template.many"></a>
@@ -346,7 +346,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.many.post(postParams, appendprivileges).then(function(Array.<ProxyServiceTemplate>) {
-	console.log(Array.<ProxyServiceTemplate>)
+    console.log(Array.<ProxyServiceTemplate>)
 })
 ```
 <a name="proxyservice.template.previewcreateprivilege"></a>
@@ -370,7 +370,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="proxyservice.template.table"></a>
@@ -399,7 +399,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="proxyservice.template.get"></a>
@@ -422,7 +422,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.get(filter, orderby, appendprivileges).then(function(Array.<ProxyServiceTemplate>) {
-	console.log(Array.<ProxyServiceTemplate>)
+    console.log(Array.<ProxyServiceTemplate>)
 })
 ```
 <a name="proxyservice.template.post"></a>
@@ -444,7 +444,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.template.post(postParams, appendprivileges).then(function(ProxyServiceTemplate) {
-	console.log(ProxyServiceTemplate)
+    console.log(ProxyServiceTemplate)
 })
 ```
 <a name="proxyservice.get"></a>
@@ -467,6 +467,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.proxyservice.get(filter, orderby, appendprivileges).then(function(Array.<ProxyService>) {
-	console.log(Array.<ProxyService>)
+    console.log(Array.<ProxyService>)
 })
 ```

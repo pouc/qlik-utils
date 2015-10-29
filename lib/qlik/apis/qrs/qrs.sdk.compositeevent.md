@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="compositeevent.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.id(id).get(appendprivileges).then(function(CompositeEvent) {
-	console.log(CompositeEvent)
+    console.log(CompositeEvent)
 })
 ```
 <a name="compositeevent.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.id(id).put(postParams, appendprivileges).then(function(CompositeEvent) {
-	console.log(CompositeEvent)
+    console.log(CompositeEvent)
 })
 ```
 <a name="compositeevent.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="compositeevent.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.full.get(filter, orderby, appendprivileges).then(function(Array.<CompositeEvent>) {
-	console.log(Array.<CompositeEvent>)
+    console.log(Array.<CompositeEvent>)
 })
 ```
 <a name="compositeevent.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.many.post(postParams, appendprivileges).then(function(Array.<CompositeEvent>) {
-	console.log(Array.<CompositeEvent>)
+    console.log(Array.<CompositeEvent>)
 })
 ```
 <a name="compositeevent.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="compositeevent.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="compositeevent.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.get(filter, orderby, appendprivileges).then(function(Array.<CompositeEvent>) {
-	console.log(Array.<CompositeEvent>)
+    console.log(Array.<CompositeEvent>)
 })
 ```
 <a name="compositeevent.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeevent.post(postParams, appendprivileges).then(function(CompositeEvent) {
-	console.log(CompositeEvent)
+    console.log(CompositeEvent)
 })
 ```

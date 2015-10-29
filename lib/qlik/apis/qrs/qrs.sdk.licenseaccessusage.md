@@ -34,7 +34,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.licenseaccessusage.full.get(filter, orderby, appendprivileges).then(function(Array.<ILicenseAccessUsage>) {
-	console.log(Array.<ILicenseAccessUsage>)
+    console.log(Array.<ILicenseAccessUsage>)
 })
 ```
 <a name="licenseaccessusage.table"></a>
@@ -63,7 +63,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.licenseaccessusage.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="licenseaccessusage.get"></a>
@@ -86,6 +86,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.licenseaccessusage.get(filter, orderby, appendprivileges).then(function(Array.<ILicenseAccessUsage>) {
-	console.log(Array.<ILicenseAccessUsage>)
+    console.log(Array.<ILicenseAccessUsage>)
 })
 ```

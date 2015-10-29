@@ -34,7 +34,7 @@ Wrapper for helper functions for Qlik Sense APIs.
         * [.get(id)](#Qlik.apis.qps.session.get) ⇒ <code>Promise.&lt;Session&gt;</code>
         * [.post(postParams)](#Qlik.apis.qps.session.post) ⇒ <code>Promise.&lt;Session&gt;</code>
         * [.delete(id)](#Qlik.apis.qps.session.delete) ⇒ <code>Promise.&lt;Session&gt;</code>
-  * [.getTicket(params, options)](#Qlik.getTicket) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
+  * [.getTicket(options, params)](#Qlik.getTicket) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
   * [.addToWhiteList(ip, options)](#Qlik.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
   * [.dynamicAppClone(options)](#Qlik.dynamicAppClone) ⇒ <code>Promise</code>
   * [.generateXrfKey([size], [chars])](#Qlik.generateXrfKey) ⇒ <code>string</code>
@@ -69,7 +69,7 @@ Wrapper for helper functions for Qlik Sense APIs.
 #### apis.qps : <code>object</code>
 **Kind**: static namespace of <code>[apis](#Qlik.apis)</code>  
 **Example**  
-```javascriptvar qpsApi = utils.Qlik.apis.qps({    restUri: 'https://localhost:4242',    virtualProxy: 'test',    pfx: pfx,    UserId: 'qlikservice',    UserDirectory: '2008R2-0'});```
+```javascriptvar qpsApi = utils.Qlik.apis.qps({    restUri: 'https://localhost:4242',    prefix: 'test',    pfx: pfx,    UserId: 'qlikservice',    UserDirectory: '2008R2-0'});```
 
 * [.qps](#Qlik.apis.qps) : <code>object</code>
   * [.ticket](#Qlik.apis.qps.ticket) : <code>object</code>
@@ -183,7 +183,7 @@ This deletes the proxy session identified by {id} and returns it as a session st
 **Example**  
 ```javascriptqpsApi.session.delete(id).then(function(Session) {	console.log(Session)})```
 <a name="Qlik.getTicket"></a>
-### Qlik.getTicket(params, options) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
+### Qlik.getTicket(options, params) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
 Generates a ticket on Qlik Sense QRS Api. If the targetId is not correctthen the ticket will redirect to the hub
 
 **Kind**: static method of <code>[Qlik](#Qlik)</code>  
@@ -191,8 +191,8 @@ Generates a ticket on Qlik Sense QRS Api. If the targetId is not correctthen th
 
 | Param | Type | Description |
 | --- | --- | --- |
-| params | <code>[ticketParams](#ticketParams)</code> | the ticket parameters |
 | options | <code>[options](#options)</code> | the options to connect to the ticket API endpoint |
+| params | <code>[ticketParams](#ticketParams)</code> | the ticket parameters |
 
 **Example**  
 ```javascriptutils.Qlik.getTicket({     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''}, {     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}).then(function(retVal) {     console.log(retVal);});```

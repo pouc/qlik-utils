@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tempcontent.id(id).get(appendprivileges).then(function(TempContent) {
-	console.log(TempContent)
+    console.log(TempContent)
 })
 ```
 <a name="tempcontent.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tempcontent.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="tempcontent.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tempcontent.full.get(filter, orderby, appendprivileges).then(function(Array.<TempContent>) {
-	console.log(Array.<TempContent>)
+    console.log(Array.<TempContent>)
 })
 ```
 <a name="tempcontent.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tempcontent.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="tempcontent.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tempcontent.get(filter, orderby, appendprivileges).then(function(Array.<TempContent>) {
-	console.log(Array.<TempContent>)
+    console.log(Array.<TempContent>)
 })
 ```

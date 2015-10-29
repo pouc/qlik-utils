@@ -34,7 +34,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.event.full.get(filter, orderby, appendprivileges).then(function(Array.<IEvent>) {
-	console.log(Array.<IEvent>)
+    console.log(Array.<IEvent>)
 })
 ```
 <a name="event.table"></a>
@@ -63,7 +63,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.event.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="event.get"></a>
@@ -86,6 +86,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.event.get(filter, orderby, appendprivileges).then(function(Array.<IEvent>) {
-	console.log(Array.<IEvent>)
+    console.log(Array.<IEvent>)
 })
 ```

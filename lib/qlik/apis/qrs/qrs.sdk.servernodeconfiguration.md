@@ -42,7 +42,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servernodeconfiguration.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="servernodeconfiguration.id.get"></a>
@@ -63,7 +63,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servernodeconfiguration.id(id).get(appendprivileges).then(function(ServerNodeConfiguration) {
-	console.log(ServerNodeConfiguration)
+    console.log(ServerNodeConfiguration)
 })
 ```
 <a name="servernodeconfiguration.id.put"></a>
@@ -85,7 +85,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.servernodeconfiguration.id(id).put(postParams, appendprivileges).then(function(ServerNodeConfiguration) {
-	console.log(ServerNodeConfiguration)
+    console.log(ServerNodeConfiguration)
 })
 ```
 <a name="servernodeconfiguration.container"></a>
@@ -109,7 +109,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.servernodeconfiguration.container.get().then(function(ServerNodeCreationContainer) {
-	console.log(ServerNodeCreationContainer)
+    console.log(ServerNodeCreationContainer)
 })
 ```
 <a name="servernodeconfiguration.container.post"></a>
@@ -131,7 +131,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.servernodeconfiguration.container.post(postParams, appendprivileges).then(function(ServerNodeResultContainer) {
-	console.log(ServerNodeResultContainer)
+    console.log(ServerNodeResultContainer)
 })
 ```
 <a name="servernodeconfiguration.count"></a>
@@ -155,7 +155,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servernodeconfiguration.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="servernodeconfiguration.full"></a>
@@ -181,7 +181,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servernodeconfiguration.full.get(filter, orderby, appendprivileges).then(function(Array.<ServerNodeConfiguration>) {
-	console.log(Array.<ServerNodeConfiguration>)
+    console.log(Array.<ServerNodeConfiguration>)
 })
 ```
 <a name="servernodeconfiguration.table"></a>
@@ -210,7 +210,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servernodeconfiguration.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="servernodeconfiguration.get"></a>
@@ -233,6 +233,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servernodeconfiguration.get(filter, orderby, appendprivileges).then(function(Array.<ServerNodeConfiguration>) {
-	console.log(Array.<ServerNodeConfiguration>)
+    console.log(Array.<ServerNodeConfiguration>)
 })
 ```

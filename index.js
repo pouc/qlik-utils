@@ -46,9 +46,7 @@ module.exports = {
      */
     Qlik: require('./lib/qlik').Qlik
 
-
 };
-
 
 /**
  * Deprecated since version 2.0. Use Core.ifNotUndef instead
@@ -127,6 +125,3 @@ module.exports.dynamicAppClone = function(options, templateAppId, scriptMarker, 
     options.task = task;
     return module.exports.Qlik.dynamicAppClone.apply(this, arguments);
 };
-
-
-

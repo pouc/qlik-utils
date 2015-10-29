@@ -34,7 +34,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.userdirectoryconnector.deleteudandusers.delete(userdirectoryid).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="userdirectoryconnector.refreshudctypes"></a>
@@ -53,7 +53,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.userdirectoryconnector.refreshudctypes.post().then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="userdirectoryconnector.syncuserdirectories"></a>
@@ -77,7 +77,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.userdirectoryconnector.syncuserdirectories.post(postParams).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="userdirectoryconnector.get"></a>
@@ -93,6 +93,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.userdirectoryconnector.get().then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```

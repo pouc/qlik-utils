@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="compositeeventruleoperational.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.id(id).get(appendprivileges).then(function(CompositeEventRuleOperational) {
-	console.log(CompositeEventRuleOperational)
+    console.log(CompositeEventRuleOperational)
 })
 ```
 <a name="compositeeventruleoperational.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.id(id).put(postParams, appendprivileges).then(function(CompositeEventRuleOperational) {
-	console.log(CompositeEventRuleOperational)
+    console.log(CompositeEventRuleOperational)
 })
 ```
 <a name="compositeeventruleoperational.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="compositeeventruleoperational.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.full.get(filter, orderby, appendprivileges).then(function(Array.<CompositeEventRuleOperational>) {
-	console.log(Array.<CompositeEventRuleOperational>)
+    console.log(Array.<CompositeEventRuleOperational>)
 })
 ```
 <a name="compositeeventruleoperational.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.many.post(postParams, appendprivileges).then(function(Array.<CompositeEventRuleOperational>) {
-	console.log(Array.<CompositeEventRuleOperational>)
+    console.log(Array.<CompositeEventRuleOperational>)
 })
 ```
 <a name="compositeeventruleoperational.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="compositeeventruleoperational.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="compositeeventruleoperational.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.get(filter, orderby, appendprivileges).then(function(Array.<CompositeEventRuleOperational>) {
-	console.log(Array.<CompositeEventRuleOperational>)
+    console.log(Array.<CompositeEventRuleOperational>)
 })
 ```
 <a name="compositeeventruleoperational.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.compositeeventruleoperational.post(postParams, appendprivileges).then(function(CompositeEventRuleOperational) {
-	console.log(CompositeEventRuleOperational)
+    console.log(CompositeEventRuleOperational)
 })
 ```

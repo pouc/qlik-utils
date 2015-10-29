@@ -32,7 +32,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.notification.changes.get(since, types).then(function(Array.<ChangesSinceOutput>) {
-	console.log(Array.<ChangesSinceOutput>)
+    console.log(Array.<ChangesSinceOutput>)
 })
 ```
 <a name="notification.delete"></a>
@@ -53,7 +53,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.notification.delete(handle).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="notification.post"></a>
@@ -80,6 +80,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.notification.post(postParams, typename, id, filter, condition, changetype, propertyname).then(function(Guid) {
-	console.log(Guid)
+    console.log(Guid)
 })
 ```

@@ -34,7 +34,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appcomponent.full.get(filter, orderby, appendprivileges).then(function(Array.<IAppComponent>) {
-	console.log(Array.<IAppComponent>)
+    console.log(Array.<IAppComponent>)
 })
 ```
 <a name="appcomponent.table"></a>
@@ -63,7 +63,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appcomponent.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="appcomponent.get"></a>
@@ -86,6 +86,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appcomponent.get(filter, orderby, appendprivileges).then(function(Array.<IAppComponent>) {
-	console.log(Array.<IAppComponent>)
+    console.log(Array.<IAppComponent>)
 })
 ```

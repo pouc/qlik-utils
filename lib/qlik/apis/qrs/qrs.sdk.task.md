@@ -64,7 +64,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.task.id(id).start.synchronous.post().then(function(Guid) {
-	console.log(Guid)
+    console.log(Guid)
 })
 ```
 <a name="task.id.start.post"></a>
@@ -80,7 +80,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.task.id(id).start.post().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="task.id.stop"></a>
@@ -99,7 +99,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.task.id(id).stop.post().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="task.full"></a>
@@ -125,7 +125,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.task.full.get(filter, orderby, appendprivileges).then(function(Array.<ITask>) {
-	console.log(Array.<ITask>)
+    console.log(Array.<ITask>)
 })
 ```
 <a name="task.start"></a>
@@ -160,7 +160,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.task.start.many.post(postParams).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="task.start.synchronous"></a>
@@ -184,7 +184,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.task.start.synchronous.post(name).then(function(Guid) {
-	console.log(Guid)
+    console.log(Guid)
 })
 ```
 <a name="task.start.post"></a>
@@ -205,7 +205,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.task.start.post(name).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="task.stop"></a>
@@ -237,7 +237,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.task.stop.many.post(postParams).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="task.table"></a>
@@ -266,7 +266,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.task.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="task.get"></a>
@@ -289,6 +289,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.task.get(filter, orderby, appendprivileges).then(function(Array.<ITask>) {
-	console.log(Array.<ITask>)
+    console.log(Array.<ITask>)
 })
 ```

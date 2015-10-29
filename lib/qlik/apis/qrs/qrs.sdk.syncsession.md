@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.syncsession.id(id).get(appendprivileges).then(function(SyncSession) {
-	console.log(SyncSession)
+    console.log(SyncSession)
 })
 ```
 <a name="syncsession.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.syncsession.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="syncsession.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.syncsession.full.get(filter, orderby, appendprivileges).then(function(Array.<SyncSession>) {
-	console.log(Array.<SyncSession>)
+    console.log(Array.<SyncSession>)
 })
 ```
 <a name="syncsession.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.syncsession.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="syncsession.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.syncsession.get(filter, orderby, appendprivileges).then(function(Array.<SyncSession>) {
-	console.log(Array.<SyncSession>)
+    console.log(Array.<SyncSession>)
 })
 ```

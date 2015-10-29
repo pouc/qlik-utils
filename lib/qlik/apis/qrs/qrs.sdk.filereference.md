@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.filereference.id(id).get(appendprivileges).then(function(FileReference) {
-	console.log(FileReference)
+    console.log(FileReference)
 })
 ```
 <a name="filereference.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.filereference.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="filereference.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.filereference.full.get(filter, orderby, appendprivileges).then(function(Array.<FileReference>) {
-	console.log(Array.<FileReference>)
+    console.log(Array.<FileReference>)
 })
 ```
 <a name="filereference.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.filereference.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="filereference.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.filereference.get(filter, orderby, appendprivileges).then(function(Array.<FileReference>) {
-	console.log(Array.<FileReference>)
+    console.log(Array.<FileReference>)
 })
 ```

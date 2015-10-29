@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.staticcontentreference.id(id).get(appendprivileges).then(function(StaticContentReference) {
-	console.log(StaticContentReference)
+    console.log(StaticContentReference)
 })
 ```
 <a name="staticcontentreference.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.staticcontentreference.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="staticcontentreference.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.staticcontentreference.full.get(filter, orderby, appendprivileges).then(function(Array.<StaticContentReference>) {
-	console.log(Array.<StaticContentReference>)
+    console.log(Array.<StaticContentReference>)
 })
 ```
 <a name="staticcontentreference.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.staticcontentreference.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="staticcontentreference.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.staticcontentreference.get(filter, orderby, appendprivileges).then(function(Array.<StaticContentReference>) {
-	console.log(Array.<StaticContentReference>)
+    console.log(Array.<StaticContentReference>)
 })
 ```

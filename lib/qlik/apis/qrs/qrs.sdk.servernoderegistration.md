@@ -33,6 +33,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.servernoderegistration.start.servernodeconfigurationid(servernodeconfigurationid).get().then(function(String) {
-	console.log(String)
+    console.log(String)
 })
 ```

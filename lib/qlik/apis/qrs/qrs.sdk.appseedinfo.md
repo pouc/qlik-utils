@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appseedinfo.id(id).get(appendprivileges).then(function(AppSeedInfo) {
-	console.log(AppSeedInfo)
+    console.log(AppSeedInfo)
 })
 ```
 <a name="appseedinfo.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appseedinfo.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="appseedinfo.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appseedinfo.full.get(filter, orderby, appendprivileges).then(function(Array.<AppSeedInfo>) {
-	console.log(Array.<AppSeedInfo>)
+    console.log(Array.<AppSeedInfo>)
 })
 ```
 <a name="appseedinfo.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appseedinfo.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="appseedinfo.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.appseedinfo.get(filter, orderby, appendprivileges).then(function(Array.<AppSeedInfo>) {
-	console.log(Array.<AppSeedInfo>)
+    console.log(Array.<AppSeedInfo>)
 })
 ```

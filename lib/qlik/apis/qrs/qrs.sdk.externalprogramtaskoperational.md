@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="externalprogramtaskoperational.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.id(id).get(appendprivileges).then(function(ExternalProgramTaskOperational) {
-	console.log(ExternalProgramTaskOperational)
+    console.log(ExternalProgramTaskOperational)
 })
 ```
 <a name="externalprogramtaskoperational.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.id(id).put(postParams, appendprivileges).then(function(ExternalProgramTaskOperational) {
-	console.log(ExternalProgramTaskOperational)
+    console.log(ExternalProgramTaskOperational)
 })
 ```
 <a name="externalprogramtaskoperational.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="externalprogramtaskoperational.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.full.get(filter, orderby, appendprivileges).then(function(Array.<ExternalProgramTaskOperational>) {
-	console.log(Array.<ExternalProgramTaskOperational>)
+    console.log(Array.<ExternalProgramTaskOperational>)
 })
 ```
 <a name="externalprogramtaskoperational.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.many.post(postParams, appendprivileges).then(function(Array.<ExternalProgramTaskOperational>) {
-	console.log(Array.<ExternalProgramTaskOperational>)
+    console.log(Array.<ExternalProgramTaskOperational>)
 })
 ```
 <a name="externalprogramtaskoperational.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="externalprogramtaskoperational.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="externalprogramtaskoperational.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.get(filter, orderby, appendprivileges).then(function(Array.<ExternalProgramTaskOperational>) {
-	console.log(Array.<ExternalProgramTaskOperational>)
+    console.log(Array.<ExternalProgramTaskOperational>)
 })
 ```
 <a name="externalprogramtaskoperational.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.externalprogramtaskoperational.post(postParams, appendprivileges).then(function(ExternalProgramTaskOperational) {
-	console.log(ExternalProgramTaskOperational)
+    console.log(ExternalProgramTaskOperational)
 })
 ```

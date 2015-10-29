@@ -16,6 +16,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.cache.delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```

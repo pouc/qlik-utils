@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="executionsession.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.id(id).get(appendprivileges).then(function(ExecutionSession) {
-	console.log(ExecutionSession)
+    console.log(ExecutionSession)
 })
 ```
 <a name="executionsession.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.id(id).put(postParams, appendprivileges).then(function(ExecutionSession) {
-	console.log(ExecutionSession)
+    console.log(ExecutionSession)
 })
 ```
 <a name="executionsession.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="executionsession.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.full.get(filter, orderby, appendprivileges).then(function(Array.<ExecutionSession>) {
-	console.log(Array.<ExecutionSession>)
+    console.log(Array.<ExecutionSession>)
 })
 ```
 <a name="executionsession.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.many.post(postParams, appendprivileges).then(function(Array.<ExecutionSession>) {
-	console.log(Array.<ExecutionSession>)
+    console.log(Array.<ExecutionSession>)
 })
 ```
 <a name="executionsession.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="executionsession.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="executionsession.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.get(filter, orderby, appendprivileges).then(function(Array.<ExecutionSession>) {
-	console.log(Array.<ExecutionSession>)
+    console.log(Array.<ExecutionSession>)
 })
 ```
 <a name="executionsession.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.executionsession.post(postParams, appendprivileges).then(function(ExecutionSession) {
-	console.log(ExecutionSession)
+    console.log(ExecutionSession)
 })
 ```

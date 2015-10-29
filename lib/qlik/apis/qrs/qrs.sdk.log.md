@@ -41,7 +41,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.log.archive.logrootsubfolder(logrootsubfolder).post(postParams).then(function(Guid) {
-	console.log(Guid)
+    console.log(Guid)
 })
 ```
 <a name="log.rolled"></a>
@@ -73,6 +73,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.log.rolled.logrootsubfolder(logrootsubfolder).post(postParams).then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```

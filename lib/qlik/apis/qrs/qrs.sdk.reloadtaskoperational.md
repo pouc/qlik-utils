@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="reloadtaskoperational.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.id(id).get(appendprivileges).then(function(ReloadTaskOperational) {
-	console.log(ReloadTaskOperational)
+    console.log(ReloadTaskOperational)
 })
 ```
 <a name="reloadtaskoperational.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.id(id).put(postParams, appendprivileges).then(function(ReloadTaskOperational) {
-	console.log(ReloadTaskOperational)
+    console.log(ReloadTaskOperational)
 })
 ```
 <a name="reloadtaskoperational.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="reloadtaskoperational.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.full.get(filter, orderby, appendprivileges).then(function(Array.<ReloadTaskOperational>) {
-	console.log(Array.<ReloadTaskOperational>)
+    console.log(Array.<ReloadTaskOperational>)
 })
 ```
 <a name="reloadtaskoperational.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.many.post(postParams, appendprivileges).then(function(Array.<ReloadTaskOperational>) {
-	console.log(Array.<ReloadTaskOperational>)
+    console.log(Array.<ReloadTaskOperational>)
 })
 ```
 <a name="reloadtaskoperational.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="reloadtaskoperational.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="reloadtaskoperational.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.get(filter, orderby, appendprivileges).then(function(Array.<ReloadTaskOperational>) {
-	console.log(Array.<ReloadTaskOperational>)
+    console.log(Array.<ReloadTaskOperational>)
 })
 ```
 <a name="reloadtaskoperational.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.reloadtaskoperational.post(postParams, appendprivileges).then(function(ReloadTaskOperational) {
-	console.log(ReloadTaskOperational)
+    console.log(ReloadTaskOperational)
 })
 ```

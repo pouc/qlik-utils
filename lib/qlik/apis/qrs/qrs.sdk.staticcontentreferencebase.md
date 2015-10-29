@@ -34,7 +34,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.staticcontentreferencebase.full.get(filter, orderby, appendprivileges).then(function(Array.<IStaticContentReferenceBase>) {
-	console.log(Array.<IStaticContentReferenceBase>)
+    console.log(Array.<IStaticContentReferenceBase>)
 })
 ```
 <a name="staticcontentreferencebase.table"></a>
@@ -63,7 +63,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.staticcontentreferencebase.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="staticcontentreferencebase.get"></a>
@@ -86,6 +86,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.staticcontentreferencebase.get(filter, orderby, appendprivileges).then(function(Array.<IStaticContentReferenceBase>) {
-	console.log(Array.<IStaticContentReferenceBase>)
+    console.log(Array.<IStaticContentReferenceBase>)
 })
 ```

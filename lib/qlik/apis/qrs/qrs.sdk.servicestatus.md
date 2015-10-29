@@ -36,7 +36,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servicestatus.id(id).get(appendprivileges).then(function(ServiceStatus) {
-	console.log(ServiceStatus)
+    console.log(ServiceStatus)
 })
 ```
 <a name="servicestatus.count"></a>
@@ -60,7 +60,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servicestatus.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="servicestatus.full"></a>
@@ -86,7 +86,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servicestatus.full.get(filter, orderby, appendprivileges).then(function(Array.<ServiceStatus>) {
-	console.log(Array.<ServiceStatus>)
+    console.log(Array.<ServiceStatus>)
 })
 ```
 <a name="servicestatus.table"></a>
@@ -115,7 +115,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servicestatus.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="servicestatus.get"></a>
@@ -138,6 +138,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.servicestatus.get(filter, orderby, appendprivileges).then(function(Array.<ServiceStatus>) {
-	console.log(Array.<ServiceStatus>)
+    console.log(Array.<ServiceStatus>)
 })
 ```

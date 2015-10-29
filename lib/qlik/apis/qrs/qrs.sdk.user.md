@@ -84,7 +84,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="user.id.get"></a>
@@ -105,7 +105,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.id(id).get(appendprivileges).then(function(User) {
-	console.log(User)
+    console.log(User)
 })
 ```
 <a name="user.id.put"></a>
@@ -127,7 +127,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.id(id).put(postParams, appendprivileges).then(function(User) {
-	console.log(User)
+    console.log(User)
 })
 ```
 <a name="user.count"></a>
@@ -151,7 +151,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="user.followingapp"></a>
@@ -198,7 +198,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="user.followingapp.id.get"></a>
@@ -219,7 +219,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.id(id).get(appendprivileges).then(function(UserFollowingApp) {
-	console.log(UserFollowingApp)
+    console.log(UserFollowingApp)
 })
 ```
 <a name="user.followingapp.id.put"></a>
@@ -241,7 +241,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.id(id).put(postParams, appendprivileges).then(function(UserFollowingApp) {
-	console.log(UserFollowingApp)
+    console.log(UserFollowingApp)
 })
 ```
 <a name="user.followingapp.count"></a>
@@ -265,7 +265,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="user.followingapp.full"></a>
@@ -291,7 +291,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.full.get(filter, orderby, appendprivileges).then(function(Array.<UserFollowingApp>) {
-	console.log(Array.<UserFollowingApp>)
+    console.log(Array.<UserFollowingApp>)
 })
 ```
 <a name="user.followingapp.many"></a>
@@ -316,7 +316,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.many.post(postParams, appendprivileges).then(function(Array.<UserFollowingApp>) {
-	console.log(Array.<UserFollowingApp>)
+    console.log(Array.<UserFollowingApp>)
 })
 ```
 <a name="user.followingapp.previewcreateprivilege"></a>
@@ -340,7 +340,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="user.followingapp.table"></a>
@@ -369,7 +369,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="user.followingapp.get"></a>
@@ -392,7 +392,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.get(filter, orderby, appendprivileges).then(function(Array.<UserFollowingApp>) {
-	console.log(Array.<UserFollowingApp>)
+    console.log(Array.<UserFollowingApp>)
 })
 ```
 <a name="user.followingapp.post"></a>
@@ -414,7 +414,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.followingapp.post(postParams, appendprivileges).then(function(UserFollowingApp) {
-	console.log(UserFollowingApp)
+    console.log(UserFollowingApp)
 })
 ```
 <a name="user.full"></a>
@@ -440,7 +440,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.full.get(filter, orderby, appendprivileges).then(function(Array.<User>) {
-	console.log(Array.<User>)
+    console.log(Array.<User>)
 })
 ```
 <a name="user.many"></a>
@@ -465,7 +465,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.many.post(postParams, appendprivileges).then(function(Array.<User>) {
-	console.log(Array.<User>)
+    console.log(Array.<User>)
 })
 ```
 <a name="user.ownedresources"></a>
@@ -492,7 +492,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.user.ownedresources.get(selectionid, limit, filter, appendprivileges).then(function(Array.<OwnedResourceResult>) {
-	console.log(Array.<OwnedResourceResult>)
+    console.log(Array.<OwnedResourceResult>)
 })
 ```
 <a name="user.previewcreateprivilege"></a>
@@ -516,7 +516,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="user.recentapp"></a>
@@ -563,7 +563,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="user.recentapp.id.get"></a>
@@ -584,7 +584,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.id(id).get(appendprivileges).then(function(UserRecentApp) {
-	console.log(UserRecentApp)
+    console.log(UserRecentApp)
 })
 ```
 <a name="user.recentapp.id.put"></a>
@@ -606,7 +606,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.id(id).put(postParams, appendprivileges).then(function(UserRecentApp) {
-	console.log(UserRecentApp)
+    console.log(UserRecentApp)
 })
 ```
 <a name="user.recentapp.count"></a>
@@ -630,7 +630,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="user.recentapp.full"></a>
@@ -656,7 +656,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.full.get(filter, orderby, appendprivileges).then(function(Array.<UserRecentApp>) {
-	console.log(Array.<UserRecentApp>)
+    console.log(Array.<UserRecentApp>)
 })
 ```
 <a name="user.recentapp.many"></a>
@@ -681,7 +681,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.many.post(postParams, appendprivileges).then(function(Array.<UserRecentApp>) {
-	console.log(Array.<UserRecentApp>)
+    console.log(Array.<UserRecentApp>)
 })
 ```
 <a name="user.recentapp.previewcreateprivilege"></a>
@@ -705,7 +705,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="user.recentapp.table"></a>
@@ -734,7 +734,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="user.recentapp.get"></a>
@@ -757,7 +757,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.get(filter, orderby, appendprivileges).then(function(Array.<UserRecentApp>) {
-	console.log(Array.<UserRecentApp>)
+    console.log(Array.<UserRecentApp>)
 })
 ```
 <a name="user.recentapp.post"></a>
@@ -779,7 +779,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.recentapp.post(postParams, appendprivileges).then(function(UserRecentApp) {
-	console.log(UserRecentApp)
+    console.log(UserRecentApp)
 })
 ```
 <a name="user.sync"></a>
@@ -815,7 +815,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.user.sync.userdirectory(userdirectory).userid(userid).get().then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="user.table"></a>
@@ -844,7 +844,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="user.get"></a>
@@ -867,7 +867,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.get(filter, orderby, appendprivileges).then(function(Array.<User>) {
-	console.log(Array.<User>)
+    console.log(Array.<User>)
 })
 ```
 <a name="user.post"></a>
@@ -889,6 +889,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.user.post(postParams, appendprivileges).then(function(User) {
-	console.log(User)
+    console.log(User)
 })
 ```

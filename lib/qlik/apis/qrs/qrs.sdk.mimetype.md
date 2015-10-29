@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="mimetype.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.id(id).get(appendprivileges).then(function(MimeType) {
-	console.log(MimeType)
+    console.log(MimeType)
 })
 ```
 <a name="mimetype.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.id(id).put(postParams, appendprivileges).then(function(MimeType) {
-	console.log(MimeType)
+    console.log(MimeType)
 })
 ```
 <a name="mimetype.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="mimetype.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.full.get(filter, orderby, appendprivileges).then(function(Array.<MimeType>) {
-	console.log(Array.<MimeType>)
+    console.log(Array.<MimeType>)
 })
 ```
 <a name="mimetype.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.many.post(postParams, appendprivileges).then(function(Array.<MimeType>) {
-	console.log(Array.<MimeType>)
+    console.log(Array.<MimeType>)
 })
 ```
 <a name="mimetype.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="mimetype.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="mimetype.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.get(filter, orderby, appendprivileges).then(function(Array.<MimeType>) {
-	console.log(Array.<MimeType>)
+    console.log(Array.<MimeType>)
 })
 ```
 <a name="mimetype.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.mimetype.post(postParams, appendprivileges).then(function(MimeType) {
-	console.log(MimeType)
+    console.log(MimeType)
 })
 ```

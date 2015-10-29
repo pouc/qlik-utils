@@ -61,7 +61,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="userdirectory.id.get"></a>
@@ -82,7 +82,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.id(id).get(appendprivileges).then(function(UserDirectory) {
-	console.log(UserDirectory)
+    console.log(UserDirectory)
 })
 ```
 <a name="userdirectory.id.put"></a>
@@ -104,7 +104,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.id(id).put(postParams, appendprivileges).then(function(UserDirectory) {
-	console.log(UserDirectory)
+    console.log(UserDirectory)
 })
 ```
 <a name="userdirectory.count"></a>
@@ -128,7 +128,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="userdirectory.full"></a>
@@ -154,7 +154,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.full.get(filter, orderby, appendprivileges).then(function(Array.<UserDirectory>) {
-	console.log(Array.<UserDirectory>)
+    console.log(Array.<UserDirectory>)
 })
 ```
 <a name="userdirectory.many"></a>
@@ -179,7 +179,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.many.post(postParams, appendprivileges).then(function(Array.<UserDirectory>) {
-	console.log(Array.<UserDirectory>)
+    console.log(Array.<UserDirectory>)
 })
 ```
 <a name="userdirectory.previewcreateprivilege"></a>
@@ -203,7 +203,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="userdirectory.table"></a>
@@ -232,7 +232,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="userdirectory.template"></a>
@@ -279,7 +279,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="userdirectory.template.id.get"></a>
@@ -300,7 +300,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.id(id).get(appendprivileges).then(function(UserDirectoryTemplate) {
-	console.log(UserDirectoryTemplate)
+    console.log(UserDirectoryTemplate)
 })
 ```
 <a name="userdirectory.template.id.put"></a>
@@ -322,7 +322,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.id(id).put(postParams, appendprivileges).then(function(UserDirectoryTemplate) {
-	console.log(UserDirectoryTemplate)
+    console.log(UserDirectoryTemplate)
 })
 ```
 <a name="userdirectory.template.count"></a>
@@ -346,7 +346,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="userdirectory.template.full"></a>
@@ -372,7 +372,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.full.get(filter, orderby, appendprivileges).then(function(Array.<UserDirectoryTemplate>) {
-	console.log(Array.<UserDirectoryTemplate>)
+    console.log(Array.<UserDirectoryTemplate>)
 })
 ```
 <a name="userdirectory.template.many"></a>
@@ -397,7 +397,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.many.post(postParams, appendprivileges).then(function(Array.<UserDirectoryTemplate>) {
-	console.log(Array.<UserDirectoryTemplate>)
+    console.log(Array.<UserDirectoryTemplate>)
 })
 ```
 <a name="userdirectory.template.previewcreateprivilege"></a>
@@ -421,7 +421,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="userdirectory.template.table"></a>
@@ -450,7 +450,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="userdirectory.template.get"></a>
@@ -473,7 +473,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.get(filter, orderby, appendprivileges).then(function(Array.<UserDirectoryTemplate>) {
-	console.log(Array.<UserDirectoryTemplate>)
+    console.log(Array.<UserDirectoryTemplate>)
 })
 ```
 <a name="userdirectory.template.post"></a>
@@ -495,7 +495,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.template.post(postParams, appendprivileges).then(function(UserDirectoryTemplate) {
-	console.log(UserDirectoryTemplate)
+    console.log(UserDirectoryTemplate)
 })
 ```
 <a name="userdirectory.get"></a>
@@ -518,7 +518,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.get(filter, orderby, appendprivileges).then(function(Array.<UserDirectory>) {
-	console.log(Array.<UserDirectory>)
+    console.log(Array.<UserDirectory>)
 })
 ```
 <a name="userdirectory.post"></a>
@@ -540,6 +540,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.userdirectory.post(postParams, appendprivileges).then(function(UserDirectory) {
-	console.log(UserDirectory)
+    console.log(UserDirectory)
 })
 ```

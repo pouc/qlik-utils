@@ -34,7 +34,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.taskoperational.full.get(filter, orderby, appendprivileges).then(function(Array.<ITaskOperational>) {
-	console.log(Array.<ITaskOperational>)
+    console.log(Array.<ITaskOperational>)
 })
 ```
 <a name="taskoperational.table"></a>
@@ -63,7 +63,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.taskoperational.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="taskoperational.get"></a>
@@ -86,6 +86,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.taskoperational.get(filter, orderby, appendprivileges).then(function(Array.<ITaskOperational>) {
-	console.log(Array.<ITaskOperational>)
+    console.log(Array.<ITaskOperational>)
 })
 ```

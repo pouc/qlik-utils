@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="usersynctask.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.id(id).get(appendprivileges).then(function(UserSyncTask) {
-	console.log(UserSyncTask)
+    console.log(UserSyncTask)
 })
 ```
 <a name="usersynctask.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.id(id).put(postParams, appendprivileges).then(function(UserSyncTask) {
-	console.log(UserSyncTask)
+    console.log(UserSyncTask)
 })
 ```
 <a name="usersynctask.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="usersynctask.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.full.get(filter, orderby, appendprivileges).then(function(Array.<UserSyncTask>) {
-	console.log(Array.<UserSyncTask>)
+    console.log(Array.<UserSyncTask>)
 })
 ```
 <a name="usersynctask.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.many.post(postParams, appendprivileges).then(function(Array.<UserSyncTask>) {
-	console.log(Array.<UserSyncTask>)
+    console.log(Array.<UserSyncTask>)
 })
 ```
 <a name="usersynctask.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="usersynctask.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="usersynctask.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.get(filter, orderby, appendprivileges).then(function(Array.<UserSyncTask>) {
-	console.log(Array.<UserSyncTask>)
+    console.log(Array.<UserSyncTask>)
 })
 ```
 <a name="usersynctask.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.usersynctask.post(postParams, appendprivileges).then(function(UserSyncTask) {
-	console.log(UserSyncTask)
+    console.log(UserSyncTask)
 })
 ```

@@ -40,7 +40,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.certificatedistribution.distributecertificate.servernodeconfigurationid(servernodeconfigurationid).get().then(function(String) {
-	console.log(String)
+    console.log(String)
 })
 ```
 <a name="certificatedistribution.exportcertificates"></a>
@@ -64,7 +64,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.certificatedistribution.exportcertificates.post(postParams).then(function(String) {
-	console.log(String)
+    console.log(String)
 })
 ```
 <a name="certificatedistribution.exportcertificatespath"></a>
@@ -83,7 +83,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.certificatedistribution.exportcertificatespath.get().then(function(String) {
-	console.log(String)
+    console.log(String)
 })
 ```
 <a name="certificatedistribution.redistributecertificate"></a>
@@ -110,6 +110,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.certificatedistribution.redistributecertificate.servernodeconfigurationid(servernodeconfigurationid).head().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```

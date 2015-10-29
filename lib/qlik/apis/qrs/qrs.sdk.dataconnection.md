@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="dataconnection.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.id(id).get(appendprivileges).then(function(DataConnection) {
-	console.log(DataConnection)
+    console.log(DataConnection)
 })
 ```
 <a name="dataconnection.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.id(id).put(postParams, appendprivileges).then(function(DataConnection) {
-	console.log(DataConnection)
+    console.log(DataConnection)
 })
 ```
 <a name="dataconnection.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="dataconnection.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.full.get(filter, orderby, appendprivileges).then(function(Array.<DataConnection>) {
-	console.log(Array.<DataConnection>)
+    console.log(Array.<DataConnection>)
 })
 ```
 <a name="dataconnection.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.many.post(postParams, appendprivileges).then(function(Array.<DataConnection>) {
-	console.log(Array.<DataConnection>)
+    console.log(Array.<DataConnection>)
 })
 ```
 <a name="dataconnection.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="dataconnection.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="dataconnection.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.get(filter, orderby, appendprivileges).then(function(Array.<DataConnection>) {
-	console.log(Array.<DataConnection>)
+    console.log(Array.<DataConnection>)
 })
 ```
 <a name="dataconnection.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.dataconnection.post(postParams, appendprivileges).then(function(DataConnection) {
-	console.log(DataConnection)
+    console.log(DataConnection)
 })
 ```

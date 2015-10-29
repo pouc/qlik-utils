@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="tag.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.id(id).get(appendprivileges).then(function(Tag) {
-	console.log(Tag)
+    console.log(Tag)
 })
 ```
 <a name="tag.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.id(id).put(postParams, appendprivileges).then(function(Tag) {
-	console.log(Tag)
+    console.log(Tag)
 })
 ```
 <a name="tag.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="tag.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.full.get(filter, orderby, appendprivileges).then(function(Array.<Tag>) {
-	console.log(Array.<Tag>)
+    console.log(Array.<Tag>)
 })
 ```
 <a name="tag.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.many.post(postParams, appendprivileges).then(function(Array.<Tag>) {
-	console.log(Array.<Tag>)
+    console.log(Array.<Tag>)
 })
 ```
 <a name="tag.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="tag.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="tag.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.get(filter, orderby, appendprivileges).then(function(Array.<Tag>) {
-	console.log(Array.<Tag>)
+    console.log(Array.<Tag>)
 })
 ```
 <a name="tag.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.tag.post(postParams, appendprivileges).then(function(Tag) {
-	console.log(Tag)
+    console.log(Tag)
 })
 ```

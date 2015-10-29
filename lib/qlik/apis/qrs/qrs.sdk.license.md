@@ -114,7 +114,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="license.id.put"></a>
@@ -137,7 +137,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.license.id(id).put(postParams, control, appendprivileges).then(function(License) {
-	console.log(License)
+    console.log(License)
 })
 ```
 <a name="license.accesstypeinfo"></a>
@@ -156,7 +156,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.license.accesstypeinfo.get().then(function(AccessTypesInfo) {
-	console.log(AccessTypesInfo)
+    console.log(AccessTypesInfo)
 })
 ```
 <a name="license.datamarket"></a>
@@ -192,7 +192,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.license.datamarket.id(id).put(postParams, control, appendprivileges).then(function(License) {
-	console.log(License)
+    console.log(License)
 })
 ```
 <a name="license.datamarket.post"></a>
@@ -215,7 +215,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.license.datamarket.post(postParams, control, appendprivileges).then(function(License) {
-	console.log(License)
+    console.log(License)
 })
 ```
 <a name="license.datamarket.get"></a>
@@ -236,7 +236,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.license.datamarket.get(appendprivileges).then(function(License) {
-	console.log(License)
+    console.log(License)
 })
 ```
 <a name="license.download"></a>
@@ -263,7 +263,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.license.download.get(serial, control, user, org).then(function(String) {
-	console.log(String)
+    console.log(String)
 })
 ```
 <a name="license.loginaccesstype"></a>
@@ -310,7 +310,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="license.loginaccesstype.id.get"></a>
@@ -331,7 +331,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.id(id).get(appendprivileges).then(function(LicenseLoginAccessType) {
-	console.log(LicenseLoginAccessType)
+    console.log(LicenseLoginAccessType)
 })
 ```
 <a name="license.loginaccesstype.id.put"></a>
@@ -353,7 +353,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.id(id).put(postParams, appendprivileges).then(function(LicenseLoginAccessType) {
-	console.log(LicenseLoginAccessType)
+    console.log(LicenseLoginAccessType)
 })
 ```
 <a name="license.loginaccesstype.count"></a>
@@ -377,7 +377,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="license.loginaccesstype.full"></a>
@@ -403,7 +403,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseLoginAccessType>) {
-	console.log(Array.<LicenseLoginAccessType>)
+    console.log(Array.<LicenseLoginAccessType>)
 })
 ```
 <a name="license.loginaccesstype.many"></a>
@@ -428,7 +428,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.many.post(postParams, appendprivileges).then(function(Array.<LicenseLoginAccessType>) {
-	console.log(Array.<LicenseLoginAccessType>)
+    console.log(Array.<LicenseLoginAccessType>)
 })
 ```
 <a name="license.loginaccesstype.previewcreateprivilege"></a>
@@ -452,7 +452,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="license.loginaccesstype.table"></a>
@@ -481,7 +481,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="license.loginaccesstype.get"></a>
@@ -504,7 +504,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.get(filter, orderby, appendprivileges).then(function(Array.<LicenseLoginAccessType>) {
-	console.log(Array.<LicenseLoginAccessType>)
+    console.log(Array.<LicenseLoginAccessType>)
 })
 ```
 <a name="license.loginaccesstype.post"></a>
@@ -526,7 +526,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccesstype.post(postParams, appendprivileges).then(function(LicenseLoginAccessType) {
-	console.log(LicenseLoginAccessType)
+    console.log(LicenseLoginAccessType)
 })
 ```
 <a name="license.loginaccessusage"></a>
@@ -565,7 +565,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccessusage.id(id).get(appendprivileges).then(function(LicenseLoginAccessUsage) {
-	console.log(LicenseLoginAccessUsage)
+    console.log(LicenseLoginAccessUsage)
 })
 ```
 <a name="license.loginaccessusage.count"></a>
@@ -589,7 +589,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccessusage.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="license.loginaccessusage.full"></a>
@@ -615,7 +615,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccessusage.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseLoginAccessUsage>) {
-	console.log(Array.<LicenseLoginAccessUsage>)
+    console.log(Array.<LicenseLoginAccessUsage>)
 })
 ```
 <a name="license.loginaccessusage.table"></a>
@@ -644,7 +644,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccessusage.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="license.loginaccessusage.get"></a>
@@ -667,7 +667,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.loginaccessusage.get(filter, orderby, appendprivileges).then(function(Array.<LicenseLoginAccessUsage>) {
-	console.log(Array.<LicenseLoginAccessUsage>)
+    console.log(Array.<LicenseLoginAccessUsage>)
 })
 ```
 <a name="license.requestaccesstype"></a>
@@ -691,7 +691,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.license.requestaccesstype.post(postParams).then(function(AccessTypeResult) {
-	console.log(AccessTypeResult)
+    console.log(AccessTypeResult)
 })
 ```
 <a name="license.useraccessgroup"></a>
@@ -738,7 +738,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="license.useraccessgroup.id.get"></a>
@@ -759,7 +759,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.id(id).get(appendprivileges).then(function(LicenseUserAccessGroup) {
-	console.log(LicenseUserAccessGroup)
+    console.log(LicenseUserAccessGroup)
 })
 ```
 <a name="license.useraccessgroup.id.put"></a>
@@ -781,7 +781,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.id(id).put(postParams, appendprivileges).then(function(LicenseUserAccessGroup) {
-	console.log(LicenseUserAccessGroup)
+    console.log(LicenseUserAccessGroup)
 })
 ```
 <a name="license.useraccessgroup.count"></a>
@@ -805,7 +805,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="license.useraccessgroup.full"></a>
@@ -831,7 +831,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseUserAccessGroup>) {
-	console.log(Array.<LicenseUserAccessGroup>)
+    console.log(Array.<LicenseUserAccessGroup>)
 })
 ```
 <a name="license.useraccessgroup.many"></a>
@@ -856,7 +856,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.many.post(postParams, appendprivileges).then(function(Array.<LicenseUserAccessGroup>) {
-	console.log(Array.<LicenseUserAccessGroup>)
+    console.log(Array.<LicenseUserAccessGroup>)
 })
 ```
 <a name="license.useraccessgroup.previewcreateprivilege"></a>
@@ -880,7 +880,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="license.useraccessgroup.table"></a>
@@ -909,7 +909,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="license.useraccessgroup.get"></a>
@@ -932,7 +932,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.get(filter, orderby, appendprivileges).then(function(Array.<LicenseUserAccessGroup>) {
-	console.log(Array.<LicenseUserAccessGroup>)
+    console.log(Array.<LicenseUserAccessGroup>)
 })
 ```
 <a name="license.useraccessgroup.post"></a>
@@ -954,7 +954,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessgroup.post(postParams, appendprivileges).then(function(LicenseUserAccessGroup) {
-	console.log(LicenseUserAccessGroup)
+    console.log(LicenseUserAccessGroup)
 })
 ```
 <a name="license.useraccesstype"></a>
@@ -1001,7 +1001,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="license.useraccesstype.id.get"></a>
@@ -1022,7 +1022,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.id(id).get(appendprivileges).then(function(LicenseUserAccessType) {
-	console.log(LicenseUserAccessType)
+    console.log(LicenseUserAccessType)
 })
 ```
 <a name="license.useraccesstype.id.put"></a>
@@ -1044,7 +1044,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.id(id).put(postParams, appendprivileges).then(function(LicenseUserAccessType) {
-	console.log(LicenseUserAccessType)
+    console.log(LicenseUserAccessType)
 })
 ```
 <a name="license.useraccesstype.count"></a>
@@ -1068,7 +1068,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="license.useraccesstype.full"></a>
@@ -1094,7 +1094,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseUserAccessType>) {
-	console.log(Array.<LicenseUserAccessType>)
+    console.log(Array.<LicenseUserAccessType>)
 })
 ```
 <a name="license.useraccesstype.many"></a>
@@ -1119,7 +1119,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.many.post(postParams, appendprivileges).then(function(Array.<LicenseUserAccessType>) {
-	console.log(Array.<LicenseUserAccessType>)
+    console.log(Array.<LicenseUserAccessType>)
 })
 ```
 <a name="license.useraccesstype.previewcreateprivilege"></a>
@@ -1143,7 +1143,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="license.useraccesstype.table"></a>
@@ -1172,7 +1172,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="license.useraccesstype.get"></a>
@@ -1195,7 +1195,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.get(filter, orderby, appendprivileges).then(function(Array.<LicenseUserAccessType>) {
-	console.log(Array.<LicenseUserAccessType>)
+    console.log(Array.<LicenseUserAccessType>)
 })
 ```
 <a name="license.useraccesstype.post"></a>
@@ -1217,7 +1217,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccesstype.post(postParams, appendprivileges).then(function(LicenseUserAccessType) {
-	console.log(LicenseUserAccessType)
+    console.log(LicenseUserAccessType)
 })
 ```
 <a name="license.useraccessusage"></a>
@@ -1256,7 +1256,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessusage.id(id).get(appendprivileges).then(function(LicenseUserAccessUsage) {
-	console.log(LicenseUserAccessUsage)
+    console.log(LicenseUserAccessUsage)
 })
 ```
 <a name="license.useraccessusage.count"></a>
@@ -1280,7 +1280,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessusage.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="license.useraccessusage.full"></a>
@@ -1306,7 +1306,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessusage.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseUserAccessUsage>) {
-	console.log(Array.<LicenseUserAccessUsage>)
+    console.log(Array.<LicenseUserAccessUsage>)
 })
 ```
 <a name="license.useraccessusage.table"></a>
@@ -1335,7 +1335,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessusage.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="license.useraccessusage.get"></a>
@@ -1358,7 +1358,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.license.useraccessusage.get(filter, orderby, appendprivileges).then(function(Array.<LicenseUserAccessUsage>) {
-	console.log(Array.<LicenseUserAccessUsage>)
+    console.log(Array.<LicenseUserAccessUsage>)
 })
 ```
 <a name="license.post"></a>
@@ -1381,7 +1381,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.license.post(postParams, control, appendprivileges).then(function(License) {
-	console.log(License)
+    console.log(License)
 })
 ```
 <a name="license.get"></a>
@@ -1402,6 +1402,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.license.get(appendprivileges).then(function(License) {
-	console.log(License)
+    console.log(License)
 })
 ```

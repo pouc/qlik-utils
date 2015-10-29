@@ -24,6 +24,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.sync.snapshot.post().then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```

@@ -61,7 +61,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.id(id).get(appendprivileges).then(function(PrintingService) {
-	console.log(PrintingService)
+    console.log(PrintingService)
 })
 ```
 <a name="printingservice.id.put"></a>
@@ -83,7 +83,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.id(id).put(postParams, appendprivileges).then(function(PrintingService) {
-	console.log(PrintingService)
+    console.log(PrintingService)
 })
 ```
 <a name="printingservice.count"></a>
@@ -107,7 +107,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="printingservice.full"></a>
@@ -133,7 +133,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.full.get(filter, orderby, appendprivileges).then(function(Array.<PrintingService>) {
-	console.log(Array.<PrintingService>)
+    console.log(Array.<PrintingService>)
 })
 ```
 <a name="printingservice.local"></a>
@@ -152,7 +152,7 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.printingservice.local.get().then(function(PrintingService) {
-	console.log(PrintingService)
+    console.log(PrintingService)
 })
 ```
 <a name="printingservice.table"></a>
@@ -181,7 +181,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="printingservice.template"></a>
@@ -228,7 +228,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="printingservice.template.id.get"></a>
@@ -249,7 +249,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.id(id).get(appendprivileges).then(function(PrintingServiceTemplate) {
-	console.log(PrintingServiceTemplate)
+    console.log(PrintingServiceTemplate)
 })
 ```
 <a name="printingservice.template.id.put"></a>
@@ -271,7 +271,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.id(id).put(postParams, appendprivileges).then(function(PrintingServiceTemplate) {
-	console.log(PrintingServiceTemplate)
+    console.log(PrintingServiceTemplate)
 })
 ```
 <a name="printingservice.template.count"></a>
@@ -295,7 +295,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="printingservice.template.full"></a>
@@ -321,7 +321,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.full.get(filter, orderby, appendprivileges).then(function(Array.<PrintingServiceTemplate>) {
-	console.log(Array.<PrintingServiceTemplate>)
+    console.log(Array.<PrintingServiceTemplate>)
 })
 ```
 <a name="printingservice.template.many"></a>
@@ -346,7 +346,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.many.post(postParams, appendprivileges).then(function(Array.<PrintingServiceTemplate>) {
-	console.log(Array.<PrintingServiceTemplate>)
+    console.log(Array.<PrintingServiceTemplate>)
 })
 ```
 <a name="printingservice.template.previewcreateprivilege"></a>
@@ -370,7 +370,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="printingservice.template.table"></a>
@@ -399,7 +399,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="printingservice.template.get"></a>
@@ -422,7 +422,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.get(filter, orderby, appendprivileges).then(function(Array.<PrintingServiceTemplate>) {
-	console.log(Array.<PrintingServiceTemplate>)
+    console.log(Array.<PrintingServiceTemplate>)
 })
 ```
 <a name="printingservice.template.post"></a>
@@ -444,7 +444,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.template.post(postParams, appendprivileges).then(function(PrintingServiceTemplate) {
-	console.log(PrintingServiceTemplate)
+    console.log(PrintingServiceTemplate)
 })
 ```
 <a name="printingservice.get"></a>
@@ -467,6 +467,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.printingservice.get(filter, orderby, appendprivileges).then(function(Array.<PrintingService>) {
-	console.log(Array.<PrintingService>)
+    console.log(Array.<PrintingService>)
 })
 ```

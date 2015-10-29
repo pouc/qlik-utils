@@ -17,6 +17,9 @@ var mkdirp = promise.denodeify(require('mkdirp'));
 var rmdir = promise.denodeify(require('rimraf'));
 
 var testQlikSenseIp = 'localhost';
+//var testQlikSenseVp = null;
+var testQlikSenseVp = 'testvirtualproxy';
+
 var testQlikSensePfx = __dirname + '/client.pfx';
 var testQlikSensePemDir = __dirname;
 
@@ -181,7 +184,7 @@ describe('request...', function() {
 
     it('should reject fake endpoints', function(done) {
         Q.all([
-            utils.Qlik.request({ restUri: 'ftp://localhost/qmc' }).should.be.rejectedWith('http/https is needed to make API call'), //.should.be.rejectedWith('http/https is needed to make API call'),
+            utils.Qlik.request({ restUri: 'ftp://localhost/qmc' }).should.be.rejectedWith('http/https is needed to make API call'),
             utils.Qlik.request({ restUri: 'https://192.168.123.123/qmc', timeout: 1000 }).should.be.rejected
         ]).should.notify(done)
     });
@@ -266,6 +269,7 @@ describe('getTicket...', function() {
             pfx.then(function(pfx) {
                 return utils.Qlik.getTicket({
                     restUri: 'https://' + testQlikSenseIp + ':4243',
+                    prefix: testQlikSenseVp,
                     pfx: pfx,
                     passPhrase: ''
                 }, {
@@ -294,8 +298,9 @@ describe('openSession...', function() {
     it('should open session', function(done) {
         Q.all([
             pfx.then(function(pfx) {
-                return utils.getTicket({
+                return utils.Qlik.getTicket({
                     restUri: 'https://' + testQlikSenseIp + ':4243',
+                    prefix: testQlikSenseVp,
                     pfx: pfx,
                     passPhrase: ''
                 }, {
@@ -304,8 +309,8 @@ describe('openSession...', function() {
                     'Attributes': []
                 });
             }).then(function(ticket) {
-                return utils.Qlik.openSession(ticket, 'https://' + testQlikSenseIp + '/qmc/')
-            }).should.eventually.match(/X-Qlik-Session=[a-f0-9\-]{36};/)
+                return utils.Qlik.openSession(ticket, 'https://' + testQlikSenseIp + utils.Core.ifNotUndef(testQlikSenseVp, '/' + testQlikSenseVp, '') + '/qmc/')
+            }).should.eventually.match(/X-Qlik-Session[^=]*=[a-f0-9\-]{36};/)
         ]).should.notify(done);
     });
 });
@@ -594,6 +599,7 @@ describe('dynamicAppClone...', function() {
 
             return utils.Qlik.dynamicAppClone({
                 restUri: 'https://' + testQlikSenseIp,
+                prefix: testQlikSenseVp,
                 pfx: pfx,
                 UserId: 'qlikservice',
                 UserDirectory: '2008R2-0',
@@ -832,8 +838,6 @@ describe('QPS SDK...', function() {
 
 
 });
-
-
 
 var testConfig;
 

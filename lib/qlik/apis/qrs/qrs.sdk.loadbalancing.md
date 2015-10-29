@@ -29,6 +29,6 @@ This method is manual
 **Example**  
 ```javascript
 qrsApi.loadbalancing.validengines.post(postParams).then(function(LoadBalancingResult) {
-	console.log(LoadBalancingResult)
+    console.log(LoadBalancingResult)
 })
 ```

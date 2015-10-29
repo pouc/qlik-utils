@@ -44,7 +44,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.id(id).delete().then(function() {
-	console.log('done')
+    console.log('done')
 })
 ```
 <a name="custompropertydefinition.id.get"></a>
@@ -65,7 +65,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.id(id).get(appendprivileges).then(function(CustomPropertyDefinition) {
-	console.log(CustomPropertyDefinition)
+    console.log(CustomPropertyDefinition)
 })
 ```
 <a name="custompropertydefinition.id.put"></a>
@@ -87,7 +87,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.id(id).put(postParams, appendprivileges).then(function(CustomPropertyDefinition) {
-	console.log(CustomPropertyDefinition)
+    console.log(CustomPropertyDefinition)
 })
 ```
 <a name="custompropertydefinition.count"></a>
@@ -111,7 +111,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.count.get(filter).then(function(int) {
-	console.log(int)
+    console.log(int)
 })
 ```
 <a name="custompropertydefinition.full"></a>
@@ -137,7 +137,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.full.get(filter, orderby, appendprivileges).then(function(Array.<CustomPropertyDefinition>) {
-	console.log(Array.<CustomPropertyDefinition>)
+    console.log(Array.<CustomPropertyDefinition>)
 })
 ```
 <a name="custompropertydefinition.many"></a>
@@ -162,7 +162,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.many.post(postParams, appendprivileges).then(function(Array.<CustomPropertyDefinition>) {
-	console.log(Array.<CustomPropertyDefinition>)
+    console.log(Array.<CustomPropertyDefinition>)
 })
 ```
 <a name="custompropertydefinition.previewcreateprivilege"></a>
@@ -186,7 +186,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.previewcreateprivilege.post(postParams).then(function(Boolean) {
-	console.log(Boolean)
+    console.log(Boolean)
 })
 ```
 <a name="custompropertydefinition.table"></a>
@@ -215,7 +215,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-	console.log(Object)
+    console.log(Object)
 })
 ```
 <a name="custompropertydefinition.get"></a>
@@ -238,7 +238,7 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.get(filter, orderby, appendprivileges).then(function(Array.<CustomPropertyDefinition>) {
-	console.log(Array.<CustomPropertyDefinition>)
+    console.log(Array.<CustomPropertyDefinition>)
 })
 ```
 <a name="custompropertydefinition.post"></a>
@@ -260,6 +260,6 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.custompropertydefinition.post(postParams, appendprivileges).then(function(CustomPropertyDefinition) {
-	console.log(CustomPropertyDefinition)
+    console.log(CustomPropertyDefinition)
 })
 ```
