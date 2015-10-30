@@ -1,5 +1,8 @@
 /**
+ * [![Coverage Status](https://coveralls.io/repos/pouc/qlik-utils/badge.svg?branch=master&service=github)](https://coveralls.io/github/pouc/qlik-utils?branch=master)
+ *
  * A set of utility functions / classes for simplifying the call to Qlik Sense APIs
+ *
  * @module qlik-utils
  * @typicalname utils
  * @author Loic Formont

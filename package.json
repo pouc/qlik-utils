@@ -1,6 +1,6 @@
 {
   "name": "qlik-utils",
-  "version": "2.0.19",
+  "version": "2.0.22",
   "description": "a set of utility functions to deal with Qlik APIs",
   "main": "index.js",
   "author": "pouc <pouc@pouc.fr> (https://github.com/pouc)",
@@ -8,6 +8,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/pouc/qlik-utils.git"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/test.js"
   },
   "bugs": "https://github.com/pouc/qlik-utils/issues",
   "dependencies": {
@@ -31,9 +34,17 @@
     "chai-things": "^0.2.0",
     "grunt": "^0.4.5",
     "grunt-bump": "*",
+    "grunt-coveralls": "^1.0.0",
     "grunt-jscs": "^2.2.0",
     "grunt-jsdoc-to-markdown": "^1.1.1",
+    "grunt-mocha": "^0.4.13",
+    "grunt-mocha-istanbul": "pouc/grunt-mocha-istanbul",
     "grunt-shell": "^1.1.2",
+    "grunt-simple-mocha": "^0.4.0",
+    "istanbul": "^0.4.0",
+    "jscs": "^2.4.0",
+    "mocha": "^2.3.3",
+    "mocha-jscs": "^4.0.0",
     "promise": "^7.0.4",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0"

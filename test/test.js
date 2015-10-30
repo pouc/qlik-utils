@@ -1,8 +1,8 @@
 var chai = require('chai');
-var sinon = require("sinon");
+var sinon = require('sinon');
 
 chai.use(require('chai-as-promised'));
-chai.use(require("sinon-chai"));
+chai.use(require('sinon-chai'));
 chai.use(require('chai-things'));
 
 var expect = chai.expect;
@@ -26,18 +26,20 @@ var testQlikSensePemDir = __dirname;
 var readFile = promise.denodeify(fs.readFile);
 var readdir = promise.denodeify(fs.readdir);
 
-function check( done, f ) {
+function check(done, f) {
     try {
         f();
-        done()
-    } catch(e) {
-        done(e)
+        done();
+    } catch (e) {
+        done(e);
     }
 }
 
-function randomInt (low, high) {
+function randomInt(low, high) {
     return Math.floor(Math.random() * (high - low) + low);
 }
+
+require('mocha-jscs')(['index.js', 'lib']);
 
 describe('ifnotundef...', function() {
 
@@ -83,15 +85,15 @@ describe('generateXrfkey...', function() {
 
         expect(key_0p_1).to.be.a('string');
         expect(key_0p_1).to.have.length(16);
-        expect(key_0p_1).to.match(/^[a-z0-9A-Z]*$/)
+        expect(key_0p_1).to.match(/^[a-z0-9A-Z]*$/);
 
         expect(key_0p_2).to.be.a('string');
         expect(key_0p_2).to.have.length(16);
-        expect(key_0p_2).to.match(/^[a-z0-9A-Z]*$/)
+        expect(key_0p_2).to.match(/^[a-z0-9A-Z]*$/);
 
         expect(key_0p_3).to.be.a('string');
         expect(key_0p_3).to.have.length(16);
-        expect(key_0p_3).to.match(/^[a-z0-9A-Z]*$/)
+        expect(key_0p_3).to.match(/^[a-z0-9A-Z]*$/);
 
         expect(key_0p_1).to.not.equal(key_0p_2);
         expect(key_0p_1).to.not.equal(key_0p_3);
@@ -107,15 +109,15 @@ describe('generateXrfkey...', function() {
 
         expect(key_1p_1).to.be.a('string');
         expect(key_1p_1).to.have.length(8);
-        expect(key_1p_1).to.match(/^[a-z0-9A-Z]*$/)
+        expect(key_1p_1).to.match(/^[a-z0-9A-Z]*$/);
 
         expect(key_1p_2).to.be.a('string');
         expect(key_1p_2).to.have.length(8);
-        expect(key_1p_2).to.match(/^[a-z0-9A-Z]*$/)
+        expect(key_1p_2).to.match(/^[a-z0-9A-Z]*$/);
 
         expect(key_1p_3).to.be.a('string');
         expect(key_1p_3).to.have.length(12);
-        expect(key_1p_3).to.match(/^[a-z0-9A-Z]*$/)
+        expect(key_1p_3).to.match(/^[a-z0-9A-Z]*$/);
 
         expect(key_1p_1).to.not.equal(key_1p_2);
 
@@ -129,15 +131,15 @@ describe('generateXrfkey...', function() {
 
         expect(key_2p_1).to.be.a('string');
         expect(key_2p_1).to.have.length(8);
-        expect(key_2p_1).to.match(/^[a-f]*$/)
+        expect(key_2p_1).to.match(/^[a-f]*$/);
 
         expect(key_2p_2).to.be.a('string');
         expect(key_2p_2).to.have.length(8);
-        expect(key_2p_2).to.match(/^[a-f]*$/)
+        expect(key_2p_2).to.match(/^[a-f]*$/);
 
         expect(key_2p_3).to.be.a('string');
         expect(key_2p_3).to.have.length(12);
-        expect(key_2p_3).to.match(/^[a-fG-L]*$/)
+        expect(key_2p_3).to.match(/^[a-fG-L]*$/);
 
         expect(key_2p_1).to.not.equal(key_2p_2);
 
@@ -152,11 +154,11 @@ describe('chunk...', function() {
     });
 
     it('should fail with wrong chunk size param', function() {
-        expect(utils.Array.chunk([ 1, 2, 3 ], -1)).to.be.undefined;
-        expect(utils.Array.chunk([ 1, 2, 3 ], 0)).to.be.undefined;
-        expect(utils.Array.chunk([ 1, 2, 3 ])).to.be.undefined;
-        expect(utils.Array.chunk([ 1, 2, 3 ], "aze")).to.be.undefined;
-        expect(utils.Array.chunk([ 1, 2, 3 ], function() { return 1; })).to.be.undefined;
+        expect(utils.Array.chunk([1, 2, 3], -1)).to.be.undefined;
+        expect(utils.Array.chunk([1, 2, 3], 0)).to.be.undefined;
+        expect(utils.Array.chunk([1, 2, 3])).to.be.undefined;
+        expect(utils.Array.chunk([1, 2, 3], 'aze')).to.be.undefined;
+        expect(utils.Array.chunk([1, 2, 3], function() { return 1; })).to.be.undefined;
     });
 
     it('should work with an empty array', function() {
@@ -165,13 +167,13 @@ describe('chunk...', function() {
     });
 
     it('should cut arrays in chunks', function() {
-        expect(utils.Array.chunk([ 1, 2, 3 ], 1)).to.deep.equal([ [1], [2], [3] ]);
-        expect(utils.Array.chunk([ 1, 2, 3 ], 2)).to.deep.equal([ [1, 2], [3] ]);
-        expect(utils.Array.chunk([ 1, 2, 3 ], 3)).to.deep.equal([ [1, 2, 3] ]);
-        expect(utils.Array.chunk([ 1, 2, 3 ], 4)).to.deep.equal([ [1, 2, 3] ]);
+        expect(utils.Array.chunk([1, 2, 3], 1)).to.deep.equal([[1], [2], [3]]);
+        expect(utils.Array.chunk([1, 2, 3], 2)).to.deep.equal([[1, 2], [3]]);
+        expect(utils.Array.chunk([1, 2, 3], 3)).to.deep.equal([[1, 2, 3]]);
+        expect(utils.Array.chunk([1, 2, 3], 4)).to.deep.equal([[1, 2, 3]]);
 
-        expect(utils.Array.chunk([ 1, 2, 3, 4, 5, 6, 7 ], 2)).to.deep.equal([ [1, 2], [3, 4], [5, 6], [7] ]);
-        expect(utils.Array.chunk([ 1, 2, 3, 4, 5, 6, 7 ], 4)).to.deep.equal([ [1, 2, 3, 4], [5, 6, 7] ]);
+        expect(utils.Array.chunk([1, 2, 3, 4, 5, 6, 7], 2)).to.deep.equal([[1, 2], [3, 4], [5, 6], [7]]);
+        expect(utils.Array.chunk([1, 2, 3, 4, 5, 6, 7], 4)).to.deep.equal([[1, 2, 3, 4], [5, 6, 7]]);
     });
 
 });
@@ -184,9 +186,9 @@ describe('request...', function() {
 
     it('should reject fake endpoints', function(done) {
         Q.all([
-            utils.Qlik.request({ restUri: 'ftp://localhost/qmc' }).should.be.rejectedWith('http/https is needed to make API call'),
-            utils.Qlik.request({ restUri: 'https://192.168.123.123/qmc', timeout: 1000 }).should.be.rejected
-        ]).should.notify(done)
+            utils.Qlik.request({restUri: 'ftp://localhost/qmc'}).should.be.rejectedWith('http/https is needed to make API call'),
+            utils.Qlik.request({restUri: 'https://192.168.123.123/qmc', timeout: 1000}).should.be.rejected
+        ]).should.notify(done);
     });
 
     var pfx = readFile(testQlikSensePfx);
@@ -203,7 +205,7 @@ describe('request...', function() {
                 method: 'GET',
                 'UserId': 'qlikservice',
                 'UserDirectory': '2008R2-0'
-            }).should.eventually.have.property("value").to.be.within(1, 3),
+            }).should.eventually.have.property('value').to.be.within(1, 3),
             pfx.then(function(pfx) {
                 return utils.Qlik.request({
                     restUri: 'https://' + testQlikSenseIp + ':4242/qrs/proxyservice/local',
@@ -213,8 +215,8 @@ describe('request...', function() {
                     pfx: pfx,
                     passPhrase: ''
                 })
-            }).should.eventually.have.property("id").to.match(/^[a-f\-0-9]*$/)
-        ]).should.notify(done)
+            }).should.eventually.have.property('id').to.match(/^[a-f\-0-9]*$/)
+        ]).should.notify(done);
     });
 
     var key = readFile(testQlikSensePemDir + '/client_key.pem');
@@ -583,7 +585,6 @@ describe('dynamicAppClone...', function() {
         task.start();
 
         task.bind(function(task) {
-            //console.log(task.val, task.detail);
             if(task.val == 'info') {
                 cb(task.val, task.detail);
             }
@@ -646,6 +647,8 @@ describe('createQrsApiSdk...', function() {
     var parsedSdk;
 
     it('should generate QRS API SDK', function(done) {
+
+        this.timeout(10000);
 
         Q.all([
             pfx.then(function(pfx) {
@@ -732,7 +735,12 @@ describe('createQrsApiSdk...', function() {
                 expect(qrs.filter(function(i) {return refQrs.indexOf(i) < 0;}).length).to.equal(0);
                 expect(refQrs.filter(function(i) {return qrs.indexOf(i) < 0;}).length).to.equal(0);
             })
-        ]).should.notify(done)
+        ]).then(function() {
+            done();
+        }, function(err) {
+            done(err);
+        });
+
     });
 
 });
@@ -750,6 +758,8 @@ describe('QRS SDK...', function() {
     });
 
     it('should implement QRS API', function(done) {
+
+        this.timeout(10000);
 
         var qrs = pfx.then(function(pfx) {
             return Q.all([

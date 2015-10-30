@@ -1,6 +1,6 @@
 <a name="module_qlik-utils"></a>
 ## qlik-utils
-A set of utility functions / classes for simplifying the call to Qlik Sense APIs
+[![Coverage Status](https://coveralls.io/repos/pouc/qlik-utils/badge.svg?branch=master&service=github)](https://coveralls.io/github/pouc/qlik-utils?branch=master)A set of utility functions / classes for simplifying the call to Qlik Sense APIs
 
 **Author:** Loic Formont  
 **License**: MIT Licensed  

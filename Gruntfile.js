@@ -92,6 +92,38 @@ module.exports = function(grunt) {
                 config: '.jscs.json'
             }
         },
+        simplemocha: {
+            options: {
+                ui: 'bdd',
+                reporter: 'tap'
+            },
+            all: {src: ['test/**/*.js']}
+        },
+        mocha_istanbul: {
+            coverage: {
+                src: 'test',
+                options: {
+                    mask: '*.js',
+                    coverageFolder: 'coverage',
+                    check: {
+                        statements: 20,
+                        branches: 70,
+                        functions: 10,
+                        lines: 20
+                    }
+                }
+            }
+        },
+        coveralls: {
+            options: {
+                force: false
+            },
+            default: {
+                src: 'coverage/*.info',
+                options: {
+                }
+            }
+        },
         bump: {
             options: {
                 push: true,
@@ -110,9 +142,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-jscs');
+    grunt.loadNpmTasks('grunt-simple-mocha');
+    grunt.loadNpmTasks('grunt-mocha-istanbul');
+    grunt.loadNpmTasks('grunt-coveralls');
 
     grunt.registerTask('release', 'Release a new version, push it and publish it', function() {
-        grunt.task.run('jscs', 'bump-only:patch', 'jsdoc2md:multipleOutputfiles', 'shell:publish');
+        grunt.task.run('jscs', 'simplemocha:all', 'mocha_istanbul:coverage', 'coveralls:default', 'jsdoc2md:multipleOutputfiles', 'bump-only:patch', 'shell:publish');
     });
 
 };
