@@ -17,8 +17,8 @@ var mkdirp = promise.denodeify(require('mkdirp'));
 var rmdir = promise.denodeify(require('rimraf'));
 
 var testQlikSenseIp = 'localhost';
-//var testQlikSenseVp = null;
-var testQlikSenseVp = 'testvirtualproxy';
+var testQlikSenseVp = null;
+//var testQlikSenseVp = 'testvirtualproxy';
 
 var testQlikSensePfx = __dirname + '/client.pfx';
 var testQlikSensePemDir = __dirname;
@@ -623,12 +623,292 @@ describe('dynamicAppClone...', function() {
         }).then(function() {
             check(done, function() {
                 expect(cbr).to.have.been.callCount(2).calledWithMatch(/^[a-f0-9\-]{36}$/);
-            })
+            });
         }, function(err) {
             done(err);
         });
     });
 
+
+});
+
+describe('export...', function() {
+
+    it('should be defined', function() {
+        expect(utils.Qlik.export).to.not.be.undefined;
+    });
+
+    var pfx = readFile(testQlikSensePfx);
+
+    it('should find certificate pfx file', function(done) {
+        expect(pfx).to.be.fulfilled.notify(done);
+    });
+
+    var sortArray = function(a, b) {
+        if (a[0] === b[0] && a[1] === b[1] && a[2] === b[2]) {
+            return 0;
+        } else if (a[0] === b[0] && a[1] === b[1] && a[2] < b[2]) {
+            return -1;
+        } else if (a[0] === b[0] && a[1] === b[1] && a[2] > b[2]) {
+            return 1;
+        } else if (a[0] === b[0] && a[1] < b[1]) {
+            return -1;
+        } else if (a[0] === b[0] && a[1] > b[1]) {
+            return 1;
+        } else if (a[0] < b[0]) {
+            return -1;
+        } else if (a[0] > b[0]) {
+            return 1;
+        }
+    };
+
+    var arr1 = [
+        ['B', 'd', 'X'],
+        ['B', 'd', 'Y'],
+        ['B', 'd', 'Z'],
+        ['B', 'c', 'X'],
+        ['B', 'c', 'Y'],
+        ['B', 'c', 'Z'],
+        ['C', 'e', 'X'],
+        ['C', 'e', 'Y'],
+        ['C', 'e', 'Z'],
+        ['C', 'f', 'X'],
+        ['C', 'f', 'Y'],
+        ['C', 'f', 'Z'],
+        ['A', 'b', 'X'],
+        ['A', 'b', 'Y'],
+        ['A', 'b', 'Z'],
+        ['A', 'a', 'X'],
+        ['A', 'a', 'Y'],
+        ['A', 'a', 'Z']
+    ].sort(sortArray);
+
+    var dimensions1 = {
+        d1: {name: 'Dim1', dimensionType: 'FIELD'},
+        d2: {name: 'Dim2', dimensionType: 'FIELD'},
+        d3: {name: 'Dim3', dimensionType: 'FIELD'}
+    };
+
+    it('should export a cube using only fields', function(done) {
+        this.timeout(100000);
+
+        var cb = sinon.spy();
+        var cbr = sinon.spy();
+
+        var task = new utils.Core.Task();
+        task.start();
+
+        task.bind(function(task) {
+            if (task.val == 'info') {
+                cb(task.val, task.detail);
+            }
+        });
+
+        task.bind(function(task) {
+            if (task.val == 'export') {
+                cbr(task.detail.sort(sortArray));
+            }
+        });
+
+        pfx.then(function(pfx) {
+
+            return utils.Qlik.export({
+                restUri: 'https://' + testQlikSenseIp,
+                prefix: testQlikSenseVp,
+                pfx: pfx,
+                UserId: 'demoqlik',
+                UserDirectory: 'WIN-OP0IIK2CDFA',
+                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
+                dimensions: dimensions1,
+                task: task
+            });
+
+        }).then(function() {
+            check(done, function() {
+                expect(cbr).to.have.been.callCount(1).calledWith(arr1);
+            });
+        }, function(err) {
+            done(err);
+        });
+    });
+
+    var arr2 = [
+        ['A', 'a', 'X', '2325206', '13466', '4645,59551'],
+        ['A', 'a', 'Y', '2321714', '13503', '4634,60176'],
+        ['A', 'a', 'Z', '2318576', '13523', '4642,16457'],
+        ['A', 'b', 'X', '6997390', '63627', '13908,37812'],
+        ['A', 'b', 'Y', '6931246', '62885', '13808,15937'],
+        ['A', 'b', 'Z', '6945431', '63380', '13872,42418'],
+        ['B', 'c', 'X', '11582103', '111134', '23128,82882'],
+        ['B', 'c', 'Y', '11578814', '111219', '23211,16164'],
+        ['B', 'c', 'Z', '11628780', '112259', '23206,20282'],
+        ['B', 'd', 'X', '16174016', '158831', '32337,26930'],
+        ['B', 'd', 'Y', '16213261', '157979', '32235,85601'],
+        ['B', 'd', 'Z', '16294624', '159030', '32447,24854'],
+        ['C', 'e', 'X', '20898858', '204819', '41651,82124'],
+        ['C', 'e', 'Y', '20702060', '205612', '41484,60753'],
+        ['C', 'e', 'Z', '20816009', '206011', '41729,54181'],
+        ['C', 'f', 'X', '25677934', '251476', '50933,14668'],
+        ['C', 'f', 'Y', '25666302', '253664', '51146,68189'],
+        ['C', 'f', 'Z', '25450612', '251072', '50844,56150']
+    ].sort(sortArray);
+
+    var dimensions2 = dimensions1;
+
+    var measures2 = {
+        m1: {name: 'M1', measureType: 'FIELD', formula: '=SUM(Expression1)'},
+        m2: {name: 'M2', measureType: 'FIELD', formula: '=SUM(Expression2)'},
+        m3: {name: 'M3', measureType: 'FIELD', formula: '=SUM(Expression3)'}
+    };
+
+    it('should export a cube using only fields & formulas', function(done) {
+        this.timeout(100000);
+
+        var cb = sinon.spy();
+        var cbr = sinon.spy();
+
+        var task = new utils.Core.Task();
+        task.start();
+
+        task.bind(function(task) {
+            if (task.val == 'info') {
+                cb(task.val, task.detail);
+            }
+        });
+
+        task.bind(function(task) {
+            if (task.val == 'export') {
+                cbr(task.detail.sort(sortArray));
+            }
+        });
+
+        pfx.then(function(pfx) {
+
+            return utils.Qlik.export({
+                restUri: 'https://' + testQlikSenseIp,
+                prefix: testQlikSenseVp,
+                pfx: pfx,
+                UserId: 'demoqlik',
+                UserDirectory: 'WIN-OP0IIK2CDFA',
+                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
+                dimensions: dimensions2,
+                measures: measures2,
+                task: task
+            });
+
+        }).then(function() {
+            check(done, function() {
+                expect(cbr).to.have.been.callCount(1).calledWith(arr2);
+            });
+        }, function(err) {
+            done(err);
+        });
+    });
+
+    var arr3 = arr1;
+
+    var dimensions3 = {
+        d1: {name: 'Dimension 1', dimensionType: 'MASTER'},
+        d2: {name: 'Dim2', dimensionType: 'FIELD'},
+        d3: {name: 'Dim3', dimensionType: 'FIELD'}
+    };
+
+    it('should export a cube using 1 master item & fields', function(done) {
+        this.timeout(100000);
+
+        var cb = sinon.spy();
+        var cbr = sinon.spy();
+
+        var task = new utils.Core.Task();
+        task.start();
+
+        task.bind(function(task) {
+            if (task.val == 'info') {
+                cb(task.val, task.detail);
+            }
+        });
+
+        task.bind(function(task) {
+            if (task.val == 'export') {
+                cbr(task.detail.sort(sortArray));
+            }
+        });
+
+        pfx.then(function(pfx) {
+
+            return utils.Qlik.export({
+                restUri: 'https://' + testQlikSenseIp,
+                prefix: testQlikSenseVp,
+                pfx: pfx,
+                UserId: 'demoqlik',
+                UserDirectory: 'WIN-OP0IIK2CDFA',
+                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
+                dimensions: dimensions3,
+                task: task
+            });
+
+        }).then(function() {
+            check(done, function() {
+                expect(cbr).to.have.been.callCount(1).calledWith(arr3);
+            });
+        }, function(err) {
+            done(err);
+        });
+    });
+
+    var arr4 = arr2;
+
+    var dimensions4 = dimensions3;
+
+    var measures4 = {
+        m1: {name: 'exp1', measureType: 'MASTER'},
+        m2: {name: 'M2', measureType: 'FIELD', formula: '=SUM(Expression2)'},
+        m3: {name: 'M3', measureType: 'FIELD', formula: '=SUM(Expression3)'}
+    };
+
+    it('should export a cube using 1 master item, fields, 1 measure master item & formulas', function(done) {
+        this.timeout(100000);
+
+        var cb = sinon.spy();
+        var cbr = sinon.spy();
+
+        var task = new utils.Core.Task();
+        task.start();
+
+        task.bind(function(task) {
+            if (task.val == 'info') {
+                cb(task.val, task.detail);
+            }
+        });
+
+        task.bind(function(task) {
+            if (task.val == 'export') {
+                cbr(task.detail.sort(sortArray));
+            }
+        });
+
+        pfx.then(function(pfx) {
+
+            return utils.Qlik.export({
+                restUri: 'https://' + testQlikSenseIp,
+                prefix: testQlikSenseVp,
+                pfx: pfx,
+                UserId: 'demoqlik',
+                UserDirectory: 'WIN-OP0IIK2CDFA',
+                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
+                dimensions: dimensions4,
+                measures: measures4,
+                task: task
+            });
+
+        }).then(function() {
+            check(done, function() {
+                expect(cbr).to.have.been.callCount(1).calledWith(arr4);
+            });
+        }, function(err) {
+            done(err);
+        });
+    });
 
 });
 
