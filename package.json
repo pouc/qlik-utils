@@ -1,6 +1,6 @@
 {
   "name": "qlik-utils",
-  "version": "2.0.29",
+  "version": "2.0.30",
   "description": "a set of utility functions to deal with Qlik APIs",
   "main": "index.js",
   "author": "pouc <pouc@pouc.fr> (https://github.com/pouc)",
