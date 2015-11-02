@@ -147,7 +147,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-coveralls');
 
     grunt.registerTask('release', 'Release a new version, push it and publish it', function() {
-        grunt.task.run('jscs', 'simplemocha:all', 'mocha_istanbul:coverage', 'coveralls:default', 'jsdoc2md:multipleOutputfiles', 'bump-only:patch', 'shell:publish');
+        grunt.task.run('jscs', 'simplemocha:all', 'mocha_istanbul:coverage', 'jsdoc2md:multipleOutputfiles', 'bump:patch', 'shell:publish', 'coveralls:default');
     });
 
 };

@@ -39,8 +39,6 @@ function randomInt(low, high) {
     return Math.floor(Math.random() * (high - low) + low);
 }
 
-require('mocha-jscs')(['index.js', 'lib']);
-
 describe('ifnotundef...', function() {
 
     it('should be defined', function() {
@@ -198,6 +196,7 @@ describe('request...', function() {
     });
 
     it('should accept real endpoints', function(done) {
+        this.timeout(15000);
 
         Q.all([
             utils.Qlik.request({
@@ -216,7 +215,11 @@ describe('request...', function() {
                     passPhrase: ''
                 })
             }).should.eventually.have.property('id').to.match(/^[a-f\-0-9]*$/)
-        ]).should.notify(done);
+        ]).then(function() {
+            done();
+        }, function(err) {
+            done(err);
+        })
     });
 
     var key = readFile(testQlikSensePemDir + '/client_key.pem');
@@ -232,6 +235,7 @@ describe('request...', function() {
     });
 
     it('should accept real endpoints using pems', function(done) {
+        this.timeout(15000);
 
         Q.all([
             key,
@@ -273,11 +277,12 @@ describe('getTicket...', function() {
                     restUri: 'https://' + testQlikSenseIp + ':4243',
                     prefix: testQlikSenseVp,
                     pfx: pfx,
-                    passPhrase: ''
-                }, {
-                    'UserId': 'qlikservice',
-                    'UserDirectory': '2008R2-0',
-                    'Attributes': []
+                    passPhrase: '',
+                    params: {
+                        'UserId': 'qlikservice',
+                        'UserDirectory': '2008R2-0',
+                        'Attributes': []
+                    }
                 });
             }).should.eventually.have.property("Ticket").to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16)
         ]).should.notify(done)
@@ -304,11 +309,12 @@ describe('openSession...', function() {
                     restUri: 'https://' + testQlikSenseIp + ':4243',
                     prefix: testQlikSenseVp,
                     pfx: pfx,
-                    passPhrase: ''
-                }, {
-                    'UserId': 'qlikservice',
-                    'UserDirectory': '2008R2-0',
-                    'Attributes': []
+                    passPhrase: '',
+                    params: {
+                        'UserId': 'qlikservice',
+                        'UserDirectory': '2008R2-0',
+                        'Attributes': []
+                    }
                 });
             }).then(function(ticket) {
                 return utils.Qlik.openSession(ticket, 'https://' + testQlikSenseIp + utils.Core.ifNotUndef(testQlikSenseVp, '/' + testQlikSenseVp, '') + '/qmc/')
@@ -451,12 +457,15 @@ describe('addToWhiteList...', function() {
 
         Q.all([
             pfx.then(function(pfx) {
-                return utils.Qlik.addToWhiteList(randomIp, {
+                return utils.Qlik.addToWhiteList({
                     restUri: 'https://' + testQlikSenseIp + ':4242',
                     pfx: pfx,
                     passPhrase: '',
                     UserId: 'qlikservice',
-                    UserDirectory: '2008R2-0'
+                    UserDirectory: '2008R2-0',
+                    params: {
+                        ip: randomIp
+                    }
                 });
             }).should.eventually.have.property("websocketCrossOriginWhiteList").to.include(randomIp)
         ]).then(function(pfx) {
@@ -604,20 +613,22 @@ describe('dynamicAppClone...', function() {
                 pfx: pfx,
                 UserId: 'qlikservice',
                 UserDirectory: '2008R2-0',
-                templateAppId: '4bfd343b-759b-4931-a9f0-32205f1cf663',
-                templateMaxParDup: 2,
-                scriptMarker: '%Replace me!%',
-                scriptReplaces: [
-                    randomLoop, { replace: randomLoop, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]', publishStreamId: '140c11bd-4c63-4ef1-8d95-458f7b8f2644' },
-//                    randomLoop + 1, { replace: randomLoop + 1, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]' },
-//                    randomLoop + 2, { replace: randomLoop + 2, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]' },
-//                    randomLoop + 3, { replace: randomLoop + 3, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]' },
-//                    randomLoop + 4, { replace: randomLoop + 4, oldAppName: '%(newAppName)s', newAppName: '%(templateName)s [%(replace)s]' }
-                ],
-                scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,
-//                publishStreamId: '140c11bd-4c63-4ef1-8d95-458f7b8f2644',
-                publishReplace: true,
-                task: task
+                params: {
+                    templateAppId: '4bfd343b-759b-4931-a9f0-32205f1cf663',
+                    templateMaxParDup: 2,
+                    scriptMarker: '%Replace me!%',
+                    scriptReplaces: [
+                        randomLoop, {
+                            replace: randomLoop,
+                            oldAppName: '%(newAppName)s',
+                            newAppName: '%(templateName)s [%(replace)s]',
+                            publishStreamId: '140c11bd-4c63-4ef1-8d95-458f7b8f2644'
+                        }
+                    ],
+                    scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,
+                    publishReplace: true,
+                    task: task
+                }
             });
 
         }).then(function() {
@@ -718,9 +729,12 @@ describe('export...', function() {
                 pfx: pfx,
                 UserId: 'demoqlik',
                 UserDirectory: 'WIN-OP0IIK2CDFA',
-                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                dimensions: dimensions1,
-                task: task
+                params: {
+                    appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
+                    dimensions: dimensions1,
+                    task: task
+                },
+
             });
 
         }).then(function() {
@@ -790,10 +804,12 @@ describe('export...', function() {
                 pfx: pfx,
                 UserId: 'demoqlik',
                 UserDirectory: 'WIN-OP0IIK2CDFA',
-                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                dimensions: dimensions2,
-                measures: measures2,
-                task: task
+                params: {
+                    appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
+                    dimensions: dimensions2,
+                    measures: measures2,
+                    task: task
+                }
             });
 
         }).then(function() {
@@ -842,9 +858,11 @@ describe('export...', function() {
                 pfx: pfx,
                 UserId: 'demoqlik',
                 UserDirectory: 'WIN-OP0IIK2CDFA',
-                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                dimensions: dimensions3,
-                task: task
+                params: {
+                    appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
+                    dimensions: dimensions3,
+                    task: task
+                }
             });
 
         }).then(function() {
@@ -895,10 +913,12 @@ describe('export...', function() {
                 pfx: pfx,
                 UserId: 'demoqlik',
                 UserDirectory: 'WIN-OP0IIK2CDFA',
-                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                dimensions: dimensions4,
-                measures: measures4,
-                task: task
+                params: {
+                    appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
+                    dimensions: dimensions4,
+                    measures: measures4,
+                    task: task
+                }
             });
 
         }).then(function() {
@@ -928,7 +948,7 @@ describe('createQrsApiSdk...', function() {
 
     it('should generate QRS API SDK', function(done) {
 
-        this.timeout(10000);
+        this.timeout(30000);
 
         Q.all([
             pfx.then(function(pfx) {
@@ -1039,7 +1059,7 @@ describe('QRS SDK...', function() {
 
     it('should implement QRS API', function(done) {
 
-        this.timeout(10000);
+        this.timeout(30000);
 
         var qrs = pfx.then(function(pfx) {
             return Q.all([
@@ -1074,6 +1094,7 @@ describe('QRS SDK...', function() {
     });
 
     it('about API description should work', function(done) {
+        this.timeout(30000);
 
         pfx.then(function(pfx) {
             return utils.Qlik.apis.qrs({
@@ -1106,6 +1127,7 @@ describe('QPS SDK...', function() {
     });
 
     it('get ticket should work', function(done) {
+        this.timeout(30000);
 
         pfx.then(function(pfx) {
             return utils.Qlik.apis.qps({
