@@ -34,8 +34,8 @@ Wrapper for helper functions for Qlik Sense APIs.
         * [.get(id)](#Qlik.apis.qps.session.get) ⇒ <code>Promise.&lt;Session&gt;</code>
         * [.post(postParams)](#Qlik.apis.qps.session.post) ⇒ <code>Promise.&lt;Session&gt;</code>
         * [.delete(id)](#Qlik.apis.qps.session.delete) ⇒ <code>Promise.&lt;Session&gt;</code>
-  * [.getTicket(options, params)](#Qlik.getTicket) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
-  * [.addToWhiteList(ip, options)](#Qlik.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.getTicket(options)](#Qlik.getTicket) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
+  * [.addToWhiteList(options)](#Qlik.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
   * [.dynamicAppClone(options)](#Qlik.dynamicAppClone) ⇒ <code>Promise</code>
   * [.generateXrfKey([size], [chars])](#Qlik.generateXrfKey) ⇒ <code>string</code>
   * [.request(options, [params])](#Qlik.request) ⇒ <code>Promise</code>
@@ -183,7 +183,7 @@ This deletes the proxy session identified by {id} and returns it as a session st
 **Example**  
 ```javascriptqpsApi.session.delete(id).then(function(Session) {	console.log(Session)})```
 <a name="Qlik.getTicket"></a>
-### Qlik.getTicket(options, params) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
+### Qlik.getTicket(options) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
 Generates a ticket on Qlik Sense QRS Api. If the targetId is not correctthen the ticket will redirect to the hub
 
 **Kind**: static method of <code>[Qlik](#Qlik)</code>  
@@ -192,12 +192,12 @@ Generates a ticket on Qlik Sense QRS Api. If the targetId is not correctthen th
 | Param | Type | Description |
 | --- | --- | --- |
 | options | <code>[options](#options)</code> | the options to connect to the ticket API endpoint |
-| params | <code>[ticketParams](#ticketParams)</code> | the ticket parameters |
+| options.params | <code>[ticketParams](#ticketParams)</code> | the ticket parameters |
 
 **Example**  
-```javascriptutils.Qlik.getTicket({     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''}, {     'UserId': 'qlikservice',     'UserDirectory': '2008R2-0',     'Attributes': []}).then(function(retVal) {     console.log(retVal);});```
+```javascriptutils.Qlik.getTicket({     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''     params: {         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         Attributes: []     }}).then(function(retVal) {     console.log(retVal);});```
 <a name="Qlik.addToWhiteList"></a>
-### Qlik.addToWhiteList(ip, options) ⇒ <code>Promise.&lt;Object&gt;</code>
+### Qlik.addToWhiteList(options) ⇒ <code>Promise.&lt;Object&gt;</code>
 Adds the given ip address to the websocket whitelist of the given virtual proxy.Be careful: this restarts the proxy. The restart can take 1-2 seconds. All subsequent APIcalls within this restart will fail miserably with various random & useless error messages.
 
 **Kind**: static method of <code>[Qlik](#Qlik)</code>  
@@ -205,11 +205,11 @@ Adds the given ip address to the websocket whitelist of the given virtual proxy.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ip | <code>string</code> | the ip to add |
 | options | <code>[options](#options)</code> | the endpoint to add the ip to |
+| options.params.ip | <code>string</code> | the ip to add |
 
 **Example**  
-```javascriptreadFile('./client.pfx').then(function(certif) {     return utils.Qlik.addToWhiteList('10.76.224.72', {         restUri: 'https://10.76.224.72:4242',         pfx: certif,         passPhrase: '',         UserId: 'qlikservice',         UserDirectory: '2008R2-0'     });}).then(function(ret) {     console.log(ret);}, function(ret) {     console.log(ret);});```
+```javascriptreadFile('./client.pfx').then(function(certif) {     return utils.Qlik.addToWhiteList({         restUri: 'https://10.76.224.72:4242',         pfx: certif,         passPhrase: '',         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         params: {             ip: '10.76.224.72'         }     });}).then(function(ret) {     console.log(ret);}, function(ret) {     console.log(ret);});```
 <a name="Qlik.dynamicAppClone"></a>
 ### Qlik.dynamicAppClone(options) ⇒ <code>Promise</code>
 Duplicates a template app, updates its script, reloads it and publishes it
@@ -220,17 +220,17 @@ Duplicates a template app, updates its script, reloads it and publishes it
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | options | <code>[options](#options)</code> |  | Uri to the Qlik Sense endpoint |
-| options.templateAppId | <code>string</code> |  | id of the template application |
-| [options.templateMaxParDup] | <code>int</code> | <code>5</code> | maximum number of // operations (opened sockets & QRS API queries) |
-| [options.scriptMarker=] | <code>string</code> |  | marker to be found in the script and replaced during the duplication. If this parameter is null, the script is not updated. |
-| options.scriptReplaces | <code>Array.&lt;(string\|replaceDef)&gt;</code> |  | replace value of the marker above for each array value |
-| [options.scriptRegex=] | <code>RegExp</code> |  | regex to track in the script trace. If this parameter is null (or scriptMarker parameter above is null), then the app is not reloaded |
-| [options.publishStreamId=] | <code>string</code> |  | id of the stream to publish into. If this parameter is null, then the app is not published |
-| options.publishReplace | <code>boolean</code> |  | boolean telling wether to replace the app if an app with the same name was already published in the same stream |
-| options.task | <code>Task</code> |  | task that will trace the cloning progress |
+| options.params.templateAppId | <code>string</code> |  | id of the template application |
+| [options.params.templateMaxParDup] | <code>int</code> | <code>5</code> | maximum number of // operations (opened sockets & QRS API queries) |
+| [options.params.scriptMarker=] | <code>string</code> |  | marker to be found in the script and replaced during the duplication. If this parameter is null, the script is not updated. |
+| options.params.scriptReplaces | <code>Array.&lt;(string\|replaceDef)&gt;</code> |  | replace value of the marker above for each array value |
+| [options.params.scriptRegex=] | <code>RegExp</code> |  | regex to track in the script trace. If this parameter is null (or scriptMarker parameter above is null), then the app is not reloaded |
+| [options.params.publishStreamId=] | <code>string</code> |  | id of the stream to publish into. If this parameter is null, then the app is not published |
+| options.params.publishReplace | <code>boolean</code> |  | boolean telling wether to replace the app if an app with the same name was already published in the same stream |
+| options.params.task | <code>Task</code> |  | task that will trace the cloning progress |
 
 **Example**  
-```javascriptvar task = new utils.Core.Task();task.start();task.bind(function(task) {     console.log(task.val, task.detail);});readFile(testQlikSensePfx).then(function(pfx) {     task.running('info', 'certificate loaded...');     return utils.Qlik.dynamicAppClone({         restUri: 'http://10.20.30.40',         pfx: pfx,         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         templateAppId: '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',         templateMaxParDup: 5,         scriptMarker: '%Replace me!%',         scriptReplaces: [ 'Employees.qvd' ],         scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,         publishStreamId: 'aaec8d41-5201-43ab-809f-3063750dfafd',         publishReplace: true,         task: task     });});```
+```javascriptvar task = new utils.Core.Task();task.start();task.bind(function(task) {     console.log(task.val, task.detail);});readFile(testQlikSensePfx).then(function(pfx) {     task.running('info', 'certificate loaded...');     return utils.Qlik.dynamicAppClone({         restUri: 'http://10.20.30.40',         pfx: pfx,         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         params: {             templateAppId: '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',             templateMaxParDup: 5,             scriptMarker: '%Replace me!%',             scriptReplaces: [ 'Employees.qvd' ],             scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,             publishStreamId: 'aaec8d41-5201-43ab-809f-3063750dfafd',             publishReplace: true,             task: task         }     });});```
 <a name="Qlik.generateXrfKey"></a>
 ### Qlik.generateXrfKey([size], [chars]) ⇒ <code>string</code>
 Generates a random Xrf key of a given size within a set of given chars
