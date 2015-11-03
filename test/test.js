@@ -602,6 +602,27 @@ describe('Object', function() {
 
     });
 
+    describe('getParamNames', function() {
+
+        it('should be defined', function() {
+            expect(utils.Object.getParamNames).to.not.be.undefined;
+        });
+
+        it('should fail with wrong params', function() {
+            expect(utils.Object.getParamNames(undefined)).to.be.undefined;
+            expect(utils.Object.getParamNames('toto')).to.be.undefined;
+            expect(utils.Object.getParamNames(2)).to.be.undefined;
+        });
+
+        it('should return parameter names', function() {
+            expect(utils.Object.getParamNames(function() {})).to.deep.equal([]);
+            expect(utils.Object.getParamNames(utils.Object.getParamNames)).to.deep.equal(['func']);
+            expect(utils.Object.getParamNames(function(a, b, c) {})).to.deep.equal(['a', 'b', 'c']);
+            expect(utils.Object.getParamNames(function(a, /* b,*/ c) {})).to.deep.equal(['a', 'c']);
+        });
+
+    });
+
 });
 
 describe('Qlik', function() {

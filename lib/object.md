@@ -6,6 +6,7 @@ Wrapper for helper functions for objects.
 
 * [Object](#Object) : <code>object</code>
   * [.map(obj, f)](#Object.map) ⇒ <code>[Object](#Object)</code>
+  * [.getPropCI(obj, prop)](#Object.getPropCI) ⇒ <code>\*</code>
   * [.keys(obj)](#Object.keys) ⇒ <code>Array</code>
   * [.values(obj)](#Object.values) ⇒ <code>Array</code>
 
@@ -21,6 +22,20 @@ Map function for objects
 | obj | <code>[Object](#Object)</code> | an object |
 | f | <code>function</code> | a function to apply to each property of obj |
 
+<a name="Object.getPropCI"></a>
+### Object.getPropCI(obj, prop) ⇒ <code>\*</code>
+Gets an object property in case insensitive mode
+
+**Kind**: static method of <code>[Object](#Object)</code>  
+**Returns**: <code>\*</code> - the property value  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>object</code> | the object to get the property from |
+| prop | <code>string</code> | the property to get in a case insensitive mode |
+
+**Example**  
+```javascriptvar obj = {Name: 'toto'};console.log(utils.Object.getPropCI(obj, 'name')) // > toto```
 <a name="Object.keys"></a>
 ### Object.keys(obj) ⇒ <code>Array</code>
 Gets an object's keys into an array
