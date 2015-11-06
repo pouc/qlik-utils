@@ -1253,7 +1253,7 @@ describe('Qlik', function() {
 
         });
 
-        describe.only('loopAndReduce', function() {
+        describe('loopAndReduce', function() {
 
             it('should be defined', function() {
                 expect(utils.Qlik.loopAndReduce).to.not.be.undefined;
@@ -1290,8 +1290,12 @@ describe('Qlik', function() {
                         },
                         task);
 
-                }).then(function() {
-                    done();
+                }).then(function(reply) {
+                    check(done, function() {
+                        reply.forEach(function(item) {
+                            expect(item).to.match(/^[a-f0-9\-]{36}$/);
+                        });
+                    });
                 }, function(err) {
                     done(err);
                 });
