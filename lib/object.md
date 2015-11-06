@@ -8,6 +8,7 @@ Wrapper for helper functions for objects.
   * [.map(obj, f)](#Object.map) ⇒ <code>[Object](#Object)</code>
   * [.getPropCI(obj, prop)](#Object.getPropCI) ⇒ <code>\*</code>
   * [.keys(obj)](#Object.keys) ⇒ <code>Array</code>
+  * [.getParamNames(func)](#Object.getParamNames) ⇒ <code>Array</code>
   * [.values(obj)](#Object.values) ⇒ <code>Array</code>
 
 <a name="Object.map"></a>
@@ -46,6 +47,17 @@ Gets an object's keys into an array
 | Param | Type | Description |
 | --- | --- | --- |
 | obj | <code>[Object](#Object)</code> | the object to get keys from |
+
+<a name="Object.getParamNames"></a>
+### Object.getParamNames(func) ⇒ <code>Array</code>
+Gets a function parameters names as an array
+
+**Kind**: static method of <code>[Object](#Object)</code>  
+**Returns**: <code>Array</code> - an array with the names of the parameters of func  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| func | <code>function</code> | the function |
 
 <a name="Object.values"></a>
 ### Object.values(obj) ⇒ <code>Array</code>

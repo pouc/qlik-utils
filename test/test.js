@@ -778,7 +778,7 @@ describe('Qlik', function() {
                                 'Attributes': []
                             }
                         });
-                    }).should.eventually.have.property("Ticket").to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16)
+                    }).should.eventually.have.property('Ticket').to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16)
                 ]).should.notify(done)
             });
 
@@ -813,7 +813,7 @@ describe('Qlik', function() {
                                 ip: randomIp
                             }
                         });
-                    }).should.eventually.have.property("websocketCrossOriginWhiteList").to.include(randomIp)
+                    }).should.eventually.have.property('websocketCrossOriginWhiteList').to.include(randomIp)
                 ]).then(function(pfx) {
                     // Wait for proxy to restart before continuing tests ...
                     return utils.Core.setTimeout2Promise(5000);
@@ -867,7 +867,7 @@ describe('Qlik', function() {
                         UserDirectory: '2008R2-0',
                         params: {
                             templateAppId: '4bfd343b-759b-4931-a9f0-32205f1cf663',
-                            templateMaxParDup: 2,
+                            templateMaxParDup: 1,
                             scriptMarker: '%Replace me!%',
                             scriptReplaces: [
                                 randomLoop, {
@@ -878,10 +878,11 @@ describe('Qlik', function() {
                                 }
                             ],
                             scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,
-                            publishReplace: true,
-                            task: task
+                            publishReplace: true
                         }
-                    });
+                    },
+                    task
+                    );
 
                 }).then(function() {
                     check(done, function() {
@@ -891,7 +892,6 @@ describe('Qlik', function() {
                     done(err);
                 });
             });
-
 
         });
 
@@ -983,11 +983,10 @@ describe('Qlik', function() {
                         UserDirectory: 'WIN-OP0IIK2CDFA',
                         params: {
                             appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                            dimensions: dimensions1,
-                            task: task
-                        },
-
-                    });
+                            dimensions: dimensions1
+                        }
+                    },
+                    task);
 
                 }).then(function() {
                     check(done, function() {
@@ -1059,10 +1058,10 @@ describe('Qlik', function() {
                         params: {
                             appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
                             dimensions: dimensions2,
-                            measures: measures2,
-                            task: task
+                            measures: measures2
                         }
-                    });
+                    },
+                    task);
 
                 }).then(function() {
                     check(done, function() {
@@ -1112,10 +1111,10 @@ describe('Qlik', function() {
                         UserDirectory: 'WIN-OP0IIK2CDFA',
                         params: {
                             appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                            dimensions: dimensions3,
-                            task: task
+                            dimensions: dimensions3
                         }
-                    });
+                    },
+                    task);
 
                 }).then(function() {
                     check(done, function() {
@@ -1168,15 +1167,131 @@ describe('Qlik', function() {
                         params: {
                             appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
                             dimensions: dimensions4,
-                            measures: measures4,
-                            task: task
+                            measures: measures4
                         }
-                    });
+                    },
+                    task);
 
                 }).then(function() {
                     check(done, function() {
                         expect(cbr).to.have.been.callCount(1).calledWith(arr4);
                     });
+                }, function(err) {
+                    done(err);
+                });
+            });
+
+            var arr5 = [
+                ['A', '-', 'X', '-', '77093', '18553,97363'],
+                ['A', '-', 'Y', '-', '76388', '18442,76113'],
+                ['A', '-', 'Z', '-', '76903', '18514,58875'],
+                ['B', '-', 'X', '-', '269965', '55466,09812'],
+                ['B', '-', 'Y', '-', '269198', '55447,01765'],
+                ['B', '-', 'Z', '-', '271289', '55653,45136'],
+                ['C', '-', 'X', '-', '456295', '92584,96792'],
+                ['C', '-', 'Y', '-', '459276', '92631,28942'],
+                ['C', '-', 'Z', '-', '457083', '92574,10331']
+            ].sort(sortArray);
+
+            var dimensions5 = {
+                d1: {name: 'Dimension 1', dimensionType: 'MASTER'},
+                d2: {name: 'Dim2', dimensionType: 'IGNORE'},
+                d3: {name: 'Dim3', dimensionType: 'FIELD'}
+            };
+
+            var measures5 = {
+                m1: {name: 'exp1', measureType: 'IGNORE'},
+                m2: {name: 'M2', measureType: 'FIELD', formula: '=SUM(Expression2)'},
+                m3: {name: 'M3', measureType: 'FIELD', formula: '=SUM(Expression3)'}
+            };
+
+            it('should export a cube using ignoring a dimension and a measure', function(done) {
+                this.timeout(100000);
+
+                var cb = sinon.spy();
+                var cbr = sinon.spy();
+
+                var task = new utils.Core.Task();
+                task.start();
+
+                task.bind(function(task) {
+                    if (task.val == 'info') {
+                        cb(task.val, task.detail);
+                    }
+                });
+
+                task.bind(function(task) {
+                    if (task.val == 'export') {
+                        cbr(task.detail.sort(sortArray));
+                    }
+                });
+
+                pfx.then(function(pfx) {
+
+                    return utils.Qlik.export({
+                            restUri: 'https://' + testQlikSenseIp,
+                            prefix: testQlikSenseVp,
+                            pfx: pfx,
+                            UserId: 'demoqlik',
+                            UserDirectory: 'WIN-OP0IIK2CDFA',
+                            params: {
+                                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
+                                dimensions: dimensions5,
+                                measures: measures5
+                            }
+                        },
+                        task);
+
+                }).then(function() {
+                    check(done, function() {
+                        expect(cbr).to.have.been.callCount(1).calledWith(arr5);
+                    });
+                }, function(err) {
+                    done(err);
+                });
+            });
+
+        });
+
+        describe.only('loopAndReduce', function() {
+
+            it('should be defined', function() {
+                expect(utils.Qlik.loopAndReduce).to.not.be.undefined;
+            });
+
+            var pfx = readFile(testQlikSensePfx);
+
+            it('should find certificate pfx file', function(done) {
+                expect(pfx).to.be.fulfilled.notify(done);
+            });
+
+            it('should loop and reduce using default name and without publishing', function(done) {
+                this.timeout(1000000);
+
+                var task = new utils.Core.Task();
+                task.start();
+
+                pfx.then(function(pfx) {
+
+                    return utils.Qlik.loopAndReduce({
+                            restUri: 'https://' + testQlikSenseIp,
+                            prefix: testQlikSenseVp,
+                            pfx: pfx,
+                            UserId: 'qlikservice',
+                            UserDirectory: 'WIN-OP0IIK2CDFA',
+                            params: {
+                                appId: '9486d248-7e71-497a-bb6a-a5a4f9a74900',
+                                loopReduceAppId: '4bfd343b-759b-4931-a9f0-32205f1cf663',
+                                loopColum: 'Client',
+                                reduceColumn: 'Client',
+                                nameColumn: 'AppName',
+                                publishColumn: 'Stream'
+                            }
+                        },
+                        task);
+
+                }).then(function() {
+                    done();
                 }, function(err) {
                     done(err);
                 });
@@ -1335,7 +1450,7 @@ describe('Qlik', function() {
                         }).then(function(sdk) {
                             return sdk.objects.map(function(item) { return item.key; });
                         })
-                    ])
+                    ]);
                 }).then(function(reply) {
                     var qrs = reply[0];
                     var qrsRef = reply[1];
