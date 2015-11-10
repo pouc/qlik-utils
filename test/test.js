@@ -784,6 +784,36 @@ describe('Qlik', function() {
 
         });
 
+        describe.only('openWebSocket...', function() {
+
+            it('should be defined', function() {
+                expect(utils.Qlik.openWebSocket).to.not.be.undefined;
+            });
+
+            var pfx = readFile(testQlikSensePfx);
+
+            it('should find certificate pfx file', function(done) {
+                expect(pfx).to.be.fulfilled.notify(done);
+            });
+
+            it('should get ticket', function(done) {
+
+                pfx.then(function(pfx) {
+                    return utils.Qlik.openWebSocket({
+                        restUri: 'https://' + testQlikSenseIp,
+                        pfx: pfx,
+                        passPhrase: '',
+                        UserId: 'qlikservice',
+                        UserDirectory: '2008R2-0'
+                    });
+                }).then(function(reply) {
+                    console.log(reply);
+                });
+
+            });
+
+        });
+
         describe('addToWhiteList...', function() {
 
             it('should be defined', function() {
@@ -1253,7 +1283,7 @@ describe('Qlik', function() {
 
         });
 
-        describe('loopAndReduce', function() {
+        describe('loopAndReduce...', function() {
 
             it('should be defined', function() {
                 expect(utils.Qlik.loopAndReduce).to.not.be.undefined;
@@ -1531,4 +1561,3 @@ describe('Qlik', function() {
     });
 
 });
-

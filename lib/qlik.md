@@ -35,8 +35,8 @@ Wrapper for helper functions for Qlik Sense APIs.
         * [.post(postParams)](#Qlik.apis.qps.session.post) ⇒ <code>Promise.&lt;Session&gt;</code>
         * [.delete(id)](#Qlik.apis.qps.session.delete) ⇒ <code>Promise.&lt;Session&gt;</code>
   * [.getTicket(options)](#Qlik.getTicket) ⇒ <code>[Promise.&lt;ticket&gt;](#ticket)</code>
-  * [.addToWhiteList(options)](#Qlik.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.dynamicAppClone(options)](#Qlik.dynamicAppClone) ⇒ <code>Promise</code>
+  * [.addToWhiteList(options, task)](#Qlik.addToWhiteList) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.dynamicAppClone(options, task)](#Qlik.dynamicAppClone) ⇒ <code>Promise</code>
   * [.generateXrfKey([size], [chars])](#Qlik.generateXrfKey) ⇒ <code>string</code>
   * [.request(options, [params])](#Qlik.request) ⇒ <code>Promise</code>
   * [.openSession(ticket, hostUri)](#Qlik.openSession) ⇒ <code>Promise.&lt;string&gt;</code>
@@ -197,7 +197,7 @@ Generates a ticket on Qlik Sense QRS Api. If the targetId is not correctthen th
 **Example**  
 ```javascriptutils.Qlik.getTicket({     restUri: 'https://10.76.224.72:4243',     pfx: pfx,     passPhrase: ''     params: {         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         Attributes: []     }}).then(function(retVal) {     console.log(retVal);});```
 <a name="Qlik.addToWhiteList"></a>
-### Qlik.addToWhiteList(options) ⇒ <code>Promise.&lt;Object&gt;</code>
+### Qlik.addToWhiteList(options, task) ⇒ <code>Promise.&lt;Object&gt;</code>
 Adds the given ip address to the websocket whitelist of the given virtual proxy.Be careful: this restarts the proxy. The restart can take 1-2 seconds. All subsequent APIcalls within this restart will fail miserably with various random & useless error messages.
 
 **Kind**: static method of <code>[Qlik](#Qlik)</code>  
@@ -207,11 +207,12 @@ Adds the given ip address to the websocket whitelist of the given virtual proxy.
 | --- | --- | --- |
 | options | <code>[options](#options)</code> | the endpoint to add the ip to |
 | options.params.ip | <code>string</code> | the ip to add |
+| task | <code>Task</code> |  |
 
 **Example**  
 ```javascriptreadFile('./client.pfx').then(function(certif) {     return utils.Qlik.addToWhiteList({         restUri: 'https://10.76.224.72:4242',         pfx: certif,         passPhrase: '',         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         params: {             ip: '10.76.224.72'         }     });}).then(function(ret) {     console.log(ret);}, function(ret) {     console.log(ret);});```
 <a name="Qlik.dynamicAppClone"></a>
-### Qlik.dynamicAppClone(options) ⇒ <code>Promise</code>
+### Qlik.dynamicAppClone(options, task) ⇒ <code>Promise</code>
 Duplicates a template app, updates its script, reloads it and publishes it
 
 **Kind**: static method of <code>[Qlik](#Qlik)</code>  
@@ -227,7 +228,7 @@ Duplicates a template app, updates its script, reloads it and publishes it
 | [options.params.scriptRegex=] | <code>RegExp</code> |  | regex to track in the script trace. If this parameter is null (or scriptMarker parameter above is null), then the app is not reloaded |
 | [options.params.publishStreamId=] | <code>string</code> |  | id of the stream to publish into. If this parameter is null, then the app is not published |
 | options.params.publishReplace | <code>boolean</code> |  | boolean telling wether to replace the app if an app with the same name was already published in the same stream |
-| options.params.task | <code>Task</code> |  | task that will trace the cloning progress |
+| task | <code>Task</code> |  | task that will trace the cloning progress |
 
 **Example**  
 ```javascriptvar task = new utils.Core.Task();task.start();task.bind(function(task) {     console.log(task.val, task.detail);});readFile(testQlikSensePfx).then(function(pfx) {     task.running('info', 'certificate loaded...');     return utils.Qlik.dynamicAppClone({         restUri: 'http://10.20.30.40',         pfx: pfx,         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         params: {             templateAppId: '3bcb8ed0-7ac5-4cd0-8913-37d1255d67c3',             templateMaxParDup: 5,             scriptMarker: '%Replace me!%',             scriptReplaces: [ 'Employees.qvd' ],             scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,             publishStreamId: 'aaec8d41-5201-43ab-809f-3063750dfafd',             publishReplace: true,             task: task         }     });});```
