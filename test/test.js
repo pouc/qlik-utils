@@ -708,7 +708,7 @@ describe('Qlik', function() {
                         cert: reply[1],
                         ca: reply[2]
                     })
-                }).should.eventually.have.property("id").to.match(/^[a-f\-0-9]*$/).should.notify(done)
+                }).should.eventually.have.property('id').to.match(/^[a-f\-0-9]*$/).should.notify(done)
 
             });
 
@@ -796,9 +796,11 @@ describe('Qlik', function() {
                 expect(pfx).to.be.fulfilled.notify(done);
             });
 
-            it('should get ticket', function(done) {
+            var cookie = undefined;
 
-                /*pfx.then(function(pfx) {
+            it('should open web socket', function(done) {
+
+                pfx.then(function(pfx) {
                     return utils.Qlik.openWebSocket({
                         restUri: 'https://' + testQlikSenseIp,
                         pfx: pfx,
@@ -807,10 +809,51 @@ describe('Qlik', function() {
                         UserDirectory: '2008R2-0'
                     });
                 }).then(function(reply) {
-                    console.log(reply);
-                });*/
+                    check(done, function() {
+                        expect(reply).to.have.deep.property('connection.cookie').to.match(/X-Qlik-Session[^=]*=[a-f0-9\-]{36};/);
+                        cookie = reply.connection.cookie;
+                    });
+                });
 
-                done();
+            });
+
+            it('should open web socket using same cookie', function(done) {
+
+                pfx.then(function(pfx) {
+                    return utils.Qlik.openWebSocket({
+                        restUri: 'https://' + testQlikSenseIp,
+                        pfx: pfx,
+                        passPhrase: '',
+                        cookie: cookie,
+                        UserId: 'qlikservice',
+                        UserDirectory: '2008R2-0'
+                    });
+                }).then(function(reply) {
+                    check(done, function() {
+                        expect(reply).to.have.deep.property('connection.cookie').to.equal(cookie);
+                    });
+                });
+
+            });
+
+            it('should open web socket regenerating a ticket if cookie expired', function(done) {
+
+                pfx.then(function(pfx) {
+                    cookie = 'X-Qlik-Session=12345678-1234-1234-1234-123456789012; Path=/; HttpOnly; Secure'
+
+                    return utils.Qlik.openWebSocket({
+                        restUri: 'https://' + testQlikSenseIp,
+                        pfx: pfx,
+                        passPhrase: '',
+                        cookie: cookie,
+                        UserId: 'qlikservice',
+                        UserDirectory: '2008R2-0'
+                    });
+                }).then(function(reply) {
+                    check(done, function() {
+                        expect(reply).to.have.deep.property('connection.cookie').to.match(/X-Qlik-Session[^=]*=[a-f0-9\-]{36};/).to.not.equal(cookie);
+                    });
+                });
 
             });
 
@@ -878,14 +921,14 @@ describe('Qlik', function() {
                 task.start();
 
                 task.bind(function(task) {
-                    if(task.val == 'info') {
+                    if (task.val == 'info') {
                         cb(task.val, task.detail);
                     }
                 });
 
                 task.bind(function(task) {
-                    if(task.val == 'redirect') {
-                        cbr(task.detail)
+                    if (task.val == 'redirect') {
+                        cbr(task.detail);
                     }
                 });
 
