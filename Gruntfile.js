@@ -3,6 +3,9 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+
+
         jsdoc2md: {
             oneOutputFile: {
                 src: ['index.js', 'lib/**/*.js'],
@@ -86,6 +89,8 @@ module.exports = function(grunt) {
                 ]
             }
         },
+
+
         jscs: {
             src: ['index.js', 'lib/**/*.js'],
             options: {
@@ -145,6 +150,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-mocha-istanbul');
     grunt.loadNpmTasks('grunt-coveralls');
+
+    grunt.registerTask('patch', 'patch', function() {
+        grunt.task.run('bump:patch', 'shell:publish');
+    });
 
     grunt.registerTask('release', 'Release a new version, push it and publish it', function() {
         grunt.task.run('jscs', 'simplemocha:all', 'mocha_istanbul:coverage', 'jsdoc2md:multipleOutputfiles', 'bump:patch', 'shell:publish', 'coveralls:default');

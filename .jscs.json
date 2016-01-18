@@ -2,7 +2,8 @@
   "preset": "google",
   "maxErrors" : 5000,
   "validateIndentation": 4,
-  "maximumLineLength": 256,
+  "maximumLineLength": 512,
+  "requireCurlyBraces": false,
   "jsDoc": {
     "checkAnnotations": {
       "preset": "closurecompiler",

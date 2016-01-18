@@ -26,6 +26,15 @@ var testQlikSensePemDir = __dirname;
 var readFile = promise.denodeify(fs.readFile);
 var readdir = promise.denodeify(fs.readdir);
 
+var options = {
+    restUri: 'https://' + testQlikSenseIp,
+    prefix: testQlikSenseVp,
+    pfx: fs.readFileSync(testQlikSensePfx),
+    passPhrase: '',
+    UserId: 'qlikservice',
+    UserDirectory: 'WIN-OP0IIK2CDFA'
+};
+
 function check(done, f) {
     try {
         f();
@@ -229,6 +238,15 @@ describe('Core', function() {
 
             expect(task.val).to.equal('aze');
             expect(task.detail).to.equal('rty');
+
+        });
+
+        it('should store printf status', function() {
+
+            task.running('aze', 'rty %s', 'toto');
+
+            expect(task.val).to.equal('aze');
+            expect(task.detail).to.equal('rty toto');
 
         });
 
@@ -646,12 +664,6 @@ describe('Qlik', function() {
                 ]).should.notify(done);
             });
 
-            var pfx = readFile(testQlikSensePfx);
-
-            it('should find certificate pfx file', function(done) {
-                expect(pfx).to.be.fulfilled.notify(done);
-            });
-
             it('should accept real endpoints', function(done) {
                 this.timeout(15000);
 
@@ -659,24 +671,22 @@ describe('Qlik', function() {
                     utils.Qlik.request({
                         restUri: 'http://' + testQlikSenseIp + ':4444/status/servicestate',
                         method: 'GET',
-                        'UserId': 'qlikservice',
-                        'UserDirectory': '2008R2-0'
+                        UserId: options.UserId,
+                        UserDirectory: options.UserDirectory
                     }).should.eventually.have.property('value').to.be.within(1, 3),
-                    pfx.then(function(pfx) {
-                        return utils.Qlik.request({
-                            restUri: 'https://' + testQlikSenseIp + ':4242/qrs/proxyservice/local',
-                            method: 'GET',
-                            'UserId': 'qlikservice',
-                            'UserDirectory': '2008R2-0',
-                            pfx: pfx,
-                            passPhrase: ''
-                        })
+                    utils.Qlik.request({
+                        restUri: 'https://' + testQlikSenseIp + ':4242/qrs/proxyservice/local',
+                        method: 'GET',
+                        UserId: options.UserId,
+                        UserDirectory: options.UserDirectory,
+                        pfx: options.pfx,
+                        passPhrase: ''
                     }).should.eventually.have.property('id').to.match(/^[a-f\-0-9]*$/)
                 ]).then(function() {
                     done();
                 }, function(err) {
                     done(err);
-                })
+                });
             });
 
             var key = readFile(testQlikSensePemDir + '/client_key.pem');
@@ -702,8 +712,8 @@ describe('Qlik', function() {
                     return utils.Qlik.request({
                         restUri: 'https://' + testQlikSenseIp + ':4242/qrs/proxyservice/local',
                         method: 'GET',
-                        'UserId': 'qlikservice',
-                        'UserDirectory': '2008R2-0',
+                        UserId: options.UserId,
+                        UserDirectory: options.UserDirectory,
                         key: reply[0],
                         cert: reply[1],
                         ca: reply[2]
@@ -720,30 +730,14 @@ describe('Qlik', function() {
                 expect(utils.Qlik.openSession).to.not.be.undefined;
             });
 
-            var pfx = readFile(testQlikSensePfx);
-
-            it('should find certificate pfx file', function(done) {
-                expect(pfx).to.be.fulfilled.notify(done);
-            });
-
             it('should open session', function(done) {
-                Q.all([
-                    pfx.then(function(pfx) {
-                        return utils.Qlik.getTicket({
-                            restUri: 'https://' + testQlikSenseIp + ':4243',
-                            prefix: testQlikSenseVp,
-                            pfx: pfx,
-                            passPhrase: '',
-                            params: {
-                                'UserId': 'qlikservice',
-                                'UserDirectory': '2008R2-0',
-                                'Attributes': []
-                            }
-                        });
-                    }).then(function(ticket) {
-                        return utils.Qlik.openSession(ticket, 'https://' + testQlikSenseIp + utils.Core.ifNotUndef(testQlikSenseVp, '/' + testQlikSenseVp, '') + '/qmc/')
-                    }).should.eventually.match(/X-Qlik-Session[^=]*=[a-f0-9\-]{36};/)
-                ]).should.notify(done);
+                return utils.Qlik.getTicket(options, {
+                    UserId: options.UserId,
+                    UserDirectory: options.UserDirectory,
+                    Attributes: []
+                }).then(function(ticket) {
+                    return utils.Qlik.openSession(ticket, 'https://' + testQlikSenseIp + utils.Core.ifNotUndef(testQlikSenseVp, '/' + testQlikSenseVp, '') + '/qmc/');
+                }).should.eventually.match(/X-Qlik-Session[^=]*=[a-f0-9\-]{36};/).should.notify(done);
             });
         });
 
@@ -757,29 +751,12 @@ describe('Qlik', function() {
                 expect(utils.Qlik.getTicket).to.not.be.undefined;
             });
 
-            var pfx = readFile(testQlikSensePfx);
-
-            it('should find certificate pfx file', function(done) {
-                expect(pfx).to.be.fulfilled.notify(done);
-            });
-
             it('should get ticket', function(done) {
-
-                Q.all([
-                    pfx.then(function(pfx) {
-                        return utils.Qlik.getTicket({
-                            restUri: 'https://' + testQlikSenseIp + ':4243',
-                            prefix: testQlikSenseVp,
-                            pfx: pfx,
-                            passPhrase: '',
-                            params: {
-                                'UserId': 'qlikservice',
-                                'UserDirectory': '2008R2-0',
-                                'Attributes': []
-                            }
-                        });
-                    }).should.eventually.have.property('Ticket').to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16)
-                ]).should.notify(done)
+                utils.Qlik.getTicket(options, {
+                    UserId: options.UserId,
+                    UserDirectory: options.UserDirectory,
+                    Attributes: []
+                }).should.eventually.have.property('Ticket').to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16).should.notify(done);
             });
 
         });
@@ -790,66 +767,37 @@ describe('Qlik', function() {
                 expect(utils.Qlik.openWebSocket).to.not.be.undefined;
             });
 
-            var pfx = readFile(testQlikSensePfx);
+            var task = new utils.Core.Task();
+            task.start();
 
-            it('should find certificate pfx file', function(done) {
-                expect(pfx).to.be.fulfilled.notify(done);
+            task.bind(function(task) {
+                console.log(task.val, task.detail);
             });
 
-            var cookie = undefined;
-
             it('should open web socket', function(done) {
-
-                pfx.then(function(pfx) {
-                    return utils.Qlik.openWebSocket({
-                        restUri: 'https://' + testQlikSenseIp,
-                        pfx: pfx,
-                        passPhrase: '',
-                        UserId: 'qlikservice',
-                        UserDirectory: '2008R2-0'
-                    });
-                }).then(function(reply) {
+                options.cookie = undefined;
+                utils.Qlik.openWebSocket(options, task).then(function(reply) {
                     check(done, function() {
                         expect(reply).to.have.deep.property('connection.cookie').to.match(/X-Qlik-Session[^=]*=[a-f0-9\-]{36};/);
-                        cookie = reply.connection.cookie;
                     });
                 });
 
             });
 
             it('should open web socket using same cookie', function(done) {
-
-                pfx.then(function(pfx) {
-                    return utils.Qlik.openWebSocket({
-                        restUri: 'https://' + testQlikSenseIp,
-                        pfx: pfx,
-                        passPhrase: '',
-                        cookie: cookie,
-                        UserId: 'qlikservice',
-                        UserDirectory: '2008R2-0'
-                    });
-                }).then(function(reply) {
+                utils.Qlik.openWebSocket(options, task).then(function(reply) {
                     check(done, function() {
-                        expect(reply).to.have.deep.property('connection.cookie').to.equal(cookie);
+                        expect(reply).to.have.deep.property('connection.cookie').to.match(/X-Qlik-Session[^=]*=[a-f0-9\-]{36};/);
+                        expect(options).to.have.deep.property('cookie').to.equal(reply.connection.cookie);
                     });
                 });
 
             });
 
             it('should open web socket regenerating a ticket if cookie expired', function(done) {
-
-                pfx.then(function(pfx) {
-                    cookie = 'X-Qlik-Session=12345678-1234-1234-1234-123456789012; Path=/; HttpOnly; Secure'
-
-                    return utils.Qlik.openWebSocket({
-                        restUri: 'https://' + testQlikSenseIp,
-                        pfx: pfx,
-                        passPhrase: '',
-                        cookie: cookie,
-                        UserId: 'qlikservice',
-                        UserDirectory: '2008R2-0'
-                    });
-                }).then(function(reply) {
+                var cookie = options.cookie;
+                options.cookie = 'X-Qlik-Session=12345678-1234-1234-1234-123456789012; Path=/; HttpOnly; Secure'
+                return utils.Qlik.openWebSocket(options, task).then(function(reply) {
                     check(done, function() {
                         expect(reply).to.have.deep.property('connection.cookie').to.match(/X-Qlik-Session[^=]*=[a-f0-9\-]{36};/).to.not.equal(cookie);
                     });
@@ -865,52 +813,35 @@ describe('Qlik', function() {
                 expect(utils.Qlik.addToWhiteList).to.not.be.undefined;
             });
 
-            var pfx = readFile(testQlikSensePfx);
-
-            it('should find certificate pfx file', function(done) {
-                expect(pfx).to.be.fulfilled.notify(done);
-            });
-
             it('should add to whitelist', function(done) {
                 this.timeout(15000);
 
                 var randomIp = util.format('10.0.%s.%s', randomInt(0, 254), randomInt(0, 254));
 
-                Q.all([
-                    pfx.then(function(pfx) {
-                        return utils.Qlik.addToWhiteList({
-                            restUri: 'https://' + testQlikSenseIp + ':4242',
-                            pfx: pfx,
-                            passPhrase: '',
-                            UserId: 'qlikservice',
-                            UserDirectory: '2008R2-0',
-                            params: {
-                                ip: randomIp
-                            }
-                        });
-                    }).should.eventually.have.property('websocketCrossOriginWhiteList').to.include(randomIp)
-                ]).then(function(pfx) {
+                utils.Qlik.addToWhiteList(options, {
+                    ip: randomIp
+                }).then(function(reply) {
+                    reply.should.all.have.property('websocketCrossOriginWhiteList');
+                    reply.forEach(function(item) {
+                        if (typeof item.websocketCrossOriginWhiteList !== 'undefined') {
+                            item.websocketCrossOriginWhiteList.should.include(randomIp);
+                        }
+                    });
+
                     // Wait for proxy to restart before continuing tests ...
                     return utils.Core.setTimeout2Promise(5000);
-                }).should.notify(done)
-
+                }).should.notify(done);
             });
 
         });
 
-        describe('dynamicAppClone...', function() {
+        describe.only('dynamicAppClone...', function() {
 
             it('should be defined', function() {
                 expect(utils.Qlik.dynamicAppClone).to.not.be.undefined;
             });
 
-            var pfx = readFile(testQlikSensePfx);
-
-            it('should find certificate pfx file', function(done) {
-                expect(pfx).to.be.fulfilled.notify(done);
-            });
-
-            var randomLoop = randomInt(3, 10);
+            var randomLoop = 3; //randomInt(3, 10);
             it('should clone app', function(done) {
                 this.timeout(100000);
 
@@ -921,6 +852,7 @@ describe('Qlik', function() {
                 task.start();
 
                 task.bind(function(task) {
+                    console.log(task.val, task.detail);
                     if (task.val == 'info') {
                         cb(task.val, task.detail);
                     }
@@ -932,36 +864,18 @@ describe('Qlik', function() {
                     }
                 });
 
-                pfx.then(function(pfx) {
-
-                    return utils.Qlik.dynamicAppClone({
-                        restUri: 'https://' + testQlikSenseIp,
-                        prefix: testQlikSenseVp,
-                        pfx: pfx,
-                        UserId: 'qlikservice',
-                        UserDirectory: '2008R2-0',
-                        params: {
-                            templateAppId: '4bfd343b-759b-4931-a9f0-32205f1cf663',
-                            templateMaxParDup: 1,
-                            scriptMarker: '%Replace me!%',
-                            scriptReplaces: [
-                                randomLoop, {
-                                    replace: randomLoop,
-                                    oldAppName: '%(newAppName)s',
-                                    newAppName: '%(templateName)s [%(replace)s]',
-                                    publishStreamId: '140c11bd-4c63-4ef1-8d95-458f7b8f2644'
-                                }
-                            ],
-                            scriptRegex: /(.*) << (.*) ([0-9,]+) Lines fetched/g,
-                            publishReplace: true
-                        }
+                utils.Qlik.dynamicAppClone(options, {
+                        templateApp: '4bfd343b-759b-4931-a9f0-32205f1cf663',
+                        maxParDup: 1,
+                        replacesDef: {marker: '%Replace me!%', value: randomLoop},
+                        publishStream: '140c11bd-4c63-4ef1-8d95-458f7b8f2644',
+                        overwriteApp: false,
+                        keepApp: false
                     },
                     task
-                    );
-
-                }).then(function() {
+                ).then(function() {
                     check(done, function() {
-                        expect(cbr).to.have.been.callCount(2).calledWithMatch(/^[a-f0-9\-]{36}$/);
+                        expect(cbr).to.have.been.callCount(1).calledWithMatch(/^[a-f0-9\-]{36}$/);
                     });
                 }, function(err) {
                     done(err);
