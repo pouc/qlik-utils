@@ -4,8 +4,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-
-
         jsdoc2md: {
             oneOutputFile: {
                 src: ['index.js', 'lib/**/*.js'],
@@ -89,7 +87,6 @@ module.exports = function(grunt) {
                 ]
             }
         },
-
 
         jscs: {
             src: ['index.js', 'lib/**/*.js'],

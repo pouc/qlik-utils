@@ -20,8 +20,15 @@ var testQlikSenseIp = 'localhost';
 var testQlikSenseVp = null;
 //var testQlikSenseVp = 'testvirtualproxy';
 
-var testQlikSensePfx = __dirname + '/client.pfx';
-var testQlikSensePemDir = __dirname;
+var testQlikSensePfx = __dirname + '/2.2.1/client.pfx';
+var testQlikSensePemDir = __dirname + '/2.2.1';
+
+var templateApp = '88d34732-a563-4df8-9484-2e84c171aed2';
+var exportApp = 'dc18f7e6-d0f7-4ac2-ba6a-129648fa0ec7';
+var loopReduceApp = '3ddf7160-e8b1-428d-b53e-81aea543a998';
+
+var sourceStream = '546dc5af-6561-40c2-9f1a-6c90105cd649';
+var publishStream = '2b9bfc5e-44a8-48ff-9ff2-f9a848375189';
 
 var readFile = promise.denodeify(fs.readFile);
 var readdir = promise.denodeify(fs.readdir);
@@ -835,7 +842,7 @@ describe('Qlik', function() {
 
         });
 
-        describe.only('dynamicAppClone...', function() {
+        describe('dynamicAppClone...', function() {
 
             it('should be defined', function() {
                 expect(utils.Qlik.dynamicAppClone).to.not.be.undefined;
@@ -852,30 +859,26 @@ describe('Qlik', function() {
                 task.start();
 
                 task.bind(function(task) {
-                    console.log(task.val, task.detail);
-                    if (task.val == 'info') {
-                        cb(task.val, task.detail);
-                    }
-                });
-
-                task.bind(function(task) {
+                    console.log(task.detail)
                     if (task.val == 'redirect') {
                         cbr(task.detail);
                     }
                 });
 
                 utils.Qlik.dynamicAppClone(options, {
-                        templateApp: '4bfd343b-759b-4931-a9f0-32205f1cf663',
+                        templateApp: templateApp,
                         maxParDup: 1,
-                        replacesDef: {marker: '%Replace me!%', value: randomLoop},
-                        publishStream: '140c11bd-4c63-4ef1-8d95-458f7b8f2644',
-                        overwriteApp: false,
-                        keepApp: false
+                        replacesDef: {marker: '%Replace me!%', value: [1, 2, 3, 4, 5, 6]},
+                        publishStream: publishStream,
+                        overwriteApp: true,
+                        keepApp: true,
+                        createReloadTask: true,
+                        customProperties: [{name: 'Test', values: ['test %(replace.value)s']}]
                     },
                     task
                 ).then(function() {
                     check(done, function() {
-                        expect(cbr).to.have.been.callCount(1).calledWithMatch(/^[a-f0-9\-]{36}$/);
+                        expect(cbr).to.have.been.callCount(6).calledWithMatch(/^[a-f0-9\-]{36}$/);
                     });
                 }, function(err) {
                     done(err);
@@ -888,12 +891,6 @@ describe('Qlik', function() {
 
             it('should be defined', function() {
                 expect(utils.Qlik.export).to.not.be.undefined;
-            });
-
-            var pfx = readFile(testQlikSensePfx);
-
-            it('should find certificate pfx file', function(done) {
-                expect(pfx).to.be.fulfilled.notify(done);
             });
 
             var sortArray = function(a, b) {
@@ -951,29 +948,16 @@ describe('Qlik', function() {
                 task.start();
 
                 task.bind(function(task) {
-                    if (task.val == 'info') {
-                        cb(task.val, task.detail);
-                    }
-                });
-
-                task.bind(function(task) {
                     if (task.val == 'export') {
                         cbr(task.detail.sort(sortArray));
                     }
                 });
 
-                pfx.then(function(pfx) {
+                Q().then(function(pfx) {
 
-                    return utils.Qlik.export({
-                        restUri: 'https://' + testQlikSenseIp,
-                        prefix: testQlikSenseVp,
-                        pfx: pfx,
-                        UserId: 'demoqlik',
-                        UserDirectory: 'WIN-OP0IIK2CDFA',
-                        params: {
-                            appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                            dimensions: dimensions1
-                        }
+                    return utils.Qlik.export(options, {
+                        appId: exportApp,
+                        dimensions: dimensions1
                     },
                     task);
 
@@ -1025,30 +1009,17 @@ describe('Qlik', function() {
                 task.start();
 
                 task.bind(function(task) {
-                    if (task.val == 'info') {
-                        cb(task.val, task.detail);
-                    }
-                });
-
-                task.bind(function(task) {
                     if (task.val == 'export') {
                         cbr(task.detail.sort(sortArray));
                     }
                 });
 
-                pfx.then(function(pfx) {
+                Q().then(function(pfx) {
 
-                    return utils.Qlik.export({
-                        restUri: 'https://' + testQlikSenseIp,
-                        prefix: testQlikSenseVp,
-                        pfx: pfx,
-                        UserId: 'demoqlik',
-                        UserDirectory: 'WIN-OP0IIK2CDFA',
-                        params: {
-                            appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                            dimensions: dimensions2,
-                            measures: measures2
-                        }
+                    return utils.Qlik.export(options, {
+                        appId: exportApp,
+                        dimensions: dimensions2,
+                        measures: measures2
                     },
                     task);
 
@@ -1090,18 +1061,11 @@ describe('Qlik', function() {
                     }
                 });
 
-                pfx.then(function(pfx) {
+                Q().then(function(pfx) {
 
-                    return utils.Qlik.export({
-                        restUri: 'https://' + testQlikSenseIp,
-                        prefix: testQlikSenseVp,
-                        pfx: pfx,
-                        UserId: 'demoqlik',
-                        UserDirectory: 'WIN-OP0IIK2CDFA',
-                        params: {
-                            appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                            dimensions: dimensions3
-                        }
+                    return utils.Qlik.export(options, {
+                        appId: exportApp,
+                        dimensions: dimensions3
                     },
                     task);
 
@@ -1145,19 +1109,12 @@ describe('Qlik', function() {
                     }
                 });
 
-                pfx.then(function(pfx) {
+                Q().then(function(pfx) {
 
-                    return utils.Qlik.export({
-                        restUri: 'https://' + testQlikSenseIp,
-                        prefix: testQlikSenseVp,
-                        pfx: pfx,
-                        UserId: 'demoqlik',
-                        UserDirectory: 'WIN-OP0IIK2CDFA',
-                        params: {
-                            appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                            dimensions: dimensions4,
-                            measures: measures4
-                        }
+                    return utils.Qlik.export(options, {
+                        appId: exportApp,
+                        dimensions: dimensions4,
+                        measures: measures4
                     },
                     task);
 
@@ -1215,19 +1172,12 @@ describe('Qlik', function() {
                     }
                 });
 
-                pfx.then(function(pfx) {
+                Q().then(function(pfx) {
 
-                    return utils.Qlik.export({
-                            restUri: 'https://' + testQlikSenseIp,
-                            prefix: testQlikSenseVp,
-                            pfx: pfx,
-                            UserId: 'demoqlik',
-                            UserDirectory: 'WIN-OP0IIK2CDFA',
-                            params: {
-                                appId: 'a4fe6c7d-a535-438a-b56f-8e0c105271b6',
-                                dimensions: dimensions5,
-                                measures: measures5
-                            }
+                    return utils.Qlik.export(options, {
+                            appId: exportApp,
+                            dimensions: dimensions5,
+                            measures: measures5
                         },
                         task);
 
@@ -1248,33 +1198,31 @@ describe('Qlik', function() {
                 expect(utils.Qlik.loopAndReduce).to.not.be.undefined;
             });
 
-            var pfx = readFile(testQlikSensePfx);
-
-            it('should find certificate pfx file', function(done) {
-                expect(pfx).to.be.fulfilled.notify(done);
-            });
-
             it('should loop and reduce using default name and without publishing', function(done) {
                 this.timeout(1000000);
 
                 var task = new utils.Core.Task();
                 task.start();
 
-                pfx.then(function(pfx) {
+                task.bind(function(task) {
+                    console.log(task.val, task.detail);
+                });
 
-                    return utils.Qlik.loopAndReduce({
-                            restUri: 'https://' + testQlikSenseIp,
-                            prefix: testQlikSenseVp,
-                            pfx: pfx,
-                            UserId: 'qlikservice',
-                            UserDirectory: 'WIN-OP0IIK2CDFA',
-                            params: {
-                                appId: '9486d248-7e71-497a-bb6a-a5a4f9a74900',
-                                loopReduceAppId: '4bfd343b-759b-4931-a9f0-32205f1cf663',
+                Q().then(function(pfx) {
+
+                    return utils.Qlik.loopAndReduce(options, {
+                            loop: {
+                                appId: loopReduceApp,
                                 loopColum: 'Client',
                                 reduceColumn: 'Client',
                                 nameColumn: 'AppName',
                                 publishColumn: 'Stream'
+                            },
+                            reduce: {
+                                app: templateApp,
+                                maxParDup: 5,
+                                overwriteApp: true,
+                                keepApp: true
                             }
                         },
                         task);
@@ -1322,11 +1270,13 @@ describe('Qlik', function() {
                             passPhrase: '',
                             UserId: 'qlikservice',
                             UserDirectory: '2008R2-0'
-                        })
+                        });
                     }).then(function(sdk) {
                         return sdk.objects.map(function(item) { return item.key; });
                     }).then(function(qrs) {
                         var refQrs = [
+                            "proxyservicecertificate",
+                            "systeminfo",
                             "about",
                             "app",
                             "appavailability",
@@ -1396,8 +1346,8 @@ describe('Qlik', function() {
                             "usersynctaskoperational",
                             "virtualproxyconfig"
                         ];
-                        expect(qrs.filter(function(i) {return refQrs.indexOf(i) < 0;}).length).to.equal(0);
-                        expect(refQrs.filter(function(i) {return qrs.indexOf(i) < 0;}).length).to.equal(0);
+                        expect(qrs.filter(function(i) {return refQrs.indexOf(i) < 0;})).to.deep.equal([]);
+                        expect(refQrs.filter(function(i) {return qrs.indexOf(i) < 0;})).to.deep.equal([]);
                     })
                 ]).then(function() {
                     done();
@@ -1451,8 +1401,8 @@ describe('Qlik', function() {
                     var qrsEP = Object.keys(qrs);
                     var qrsRefEp = qrsRef;
 
-                    expect(qrsEP.filter(function(i) {return qrsRefEp.indexOf(i) < 0;}).length).to.equal(0);
-                    expect(qrsRefEp.filter(function(i) {return qrsEP.indexOf(i) < 0;}).length).to.equal(0);
+                    expect(qrsEP.filter(function(i) {return qrsRefEp.indexOf(i) < 0;})).to.deep.equal([]);
+                    expect(qrsRefEp.filter(function(i) {return qrsEP.indexOf(i) < 0;})).to.deep.equal([]);
 
                 }).should.notify(done);
             });
