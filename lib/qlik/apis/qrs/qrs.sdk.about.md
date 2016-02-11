@@ -13,6 +13,12 @@
         * [.get([listentries])](#about.api.default.appavailability.get) ⇒ <code>Promise.&lt;AppAvailability&gt;</code>
       * [.appcontentquota](#about.api.default.appcontentquota) : <code>object</code>
         * [.get([listentries])](#about.api.default.appcontentquota.get) ⇒ <code>Promise.&lt;AppContentQuota&gt;</code>
+      * [.applicationaccessgroup](#about.api.default.applicationaccessgroup) : <code>object</code>
+        * [.get([listentries])](#about.api.default.applicationaccessgroup.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+      * [.applicationaccesstype](#about.api.default.applicationaccesstype) : <code>object</code>
+        * [.get([listentries])](#about.api.default.applicationaccesstype.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+      * [.applicationaccessusage](#about.api.default.applicationaccessusage) : <code>object</code>
+        * [.get([listentries])](#about.api.default.applicationaccessusage.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessUsage&gt;</code>
       * [.appseedinfo](#about.api.default.appseedinfo) : <code>object</code>
         * [.get([listentries])](#about.api.default.appseedinfo.get) ⇒ <code>Promise.&lt;AppSeedInfo&gt;</code>
       * [.appstatus](#about.api.default.appstatus) : <code>object</code>
@@ -43,8 +49,6 @@
         * [.get([listentries])](#about.api.default.detail.get) ⇒ <code>Promise.&lt;ExecutionResultDetail&gt;</code>
       * [.engineservice](#about.api.default.engineservice) : <code>object</code>
         * [.get([listentries])](#about.api.default.engineservice.get) ⇒ <code>Promise.&lt;EngineService&gt;</code>
-      * [.engineservicetemplate](#about.api.default.engineservicetemplate) : <code>object</code>
-        * [.get([listentries])](#about.api.default.engineservicetemplate.get) ⇒ <code>Promise.&lt;EngineServiceTemplate&gt;</code>
       * [.executionresult](#about.api.default.executionresult) : <code>object</code>
         * [.get([listentries])](#about.api.default.executionresult.get) ⇒ <code>Promise.&lt;ExecutionResult&gt;</code>
       * [.executionsession](#about.api.default.executionsession) : <code>object</code>
@@ -59,8 +63,6 @@
         * [.get([listentries])](#about.api.default.externalprogramtaskoperational.get) ⇒ <code>Promise.&lt;ExternalProgramTaskOperational&gt;</code>
       * [.filereference](#about.api.default.filereference) : <code>object</code>
         * [.get([listentries])](#about.api.default.filereference.get) ⇒ <code>Promise.&lt;FileReference&gt;</code>
-      * [.followingapp](#about.api.default.followingapp) : <code>object</code>
-        * [.get([listentries])](#about.api.default.followingapp.get) ⇒ <code>Promise.&lt;UserFollowingApp&gt;</code>
       * [.internal](#about.api.default.internal) : <code>object</code>
         * [.get([listentries])](#about.api.default.internal.get) ⇒ <code>Promise.&lt;AppInternal&gt;</code>
       * [.license](#about.api.default.license) : <code>object</code>
@@ -77,14 +79,10 @@
         * [.get([listentries])](#about.api.default.object.get) ⇒ <code>Promise.&lt;AppObject&gt;</code>
       * [.printingservice](#about.api.default.printingservice) : <code>object</code>
         * [.get([listentries])](#about.api.default.printingservice.get) ⇒ <code>Promise.&lt;PrintingService&gt;</code>
-      * [.printingservicetemplate](#about.api.default.printingservicetemplate) : <code>object</code>
-        * [.get([listentries])](#about.api.default.printingservicetemplate.get) ⇒ <code>Promise.&lt;PrintingServiceTemplate&gt;</code>
       * [.proxyservice](#about.api.default.proxyservice) : <code>object</code>
         * [.get([listentries])](#about.api.default.proxyservice.get) ⇒ <code>Promise.&lt;ProxyService&gt;</code>
-      * [.proxyservicetemplate](#about.api.default.proxyservicetemplate) : <code>object</code>
-        * [.get([listentries])](#about.api.default.proxyservicetemplate.get) ⇒ <code>Promise.&lt;ProxyServiceTemplate&gt;</code>
-      * [.recentapp](#about.api.default.recentapp) : <code>object</code>
-        * [.get([listentries])](#about.api.default.recentapp.get) ⇒ <code>Promise.&lt;UserRecentApp&gt;</code>
+      * [.proxyservicecertificate](#about.api.default.proxyservicecertificate) : <code>object</code>
+        * [.get([listentries])](#about.api.default.proxyservicecertificate.get) ⇒ <code>Promise.&lt;ProxyServiceCertificate&gt;</code>
       * [.reloadtask](#about.api.default.reloadtask) : <code>object</code>
         * [.get([listentries])](#about.api.default.reloadtask.get) ⇒ <code>Promise.&lt;ReloadTask&gt;</code>
       * [.reloadtaskoperational](#about.api.default.reloadtaskoperational) : <code>object</code>
@@ -93,12 +91,8 @@
         * [.get([listentries])](#about.api.default.removedsystemrule.get) ⇒ <code>Promise.&lt;RemovedSystemRule&gt;</code>
       * [.repositoryservice](#about.api.default.repositoryservice) : <code>object</code>
         * [.get([listentries])](#about.api.default.repositoryservice.get) ⇒ <code>Promise.&lt;RepositoryService&gt;</code>
-      * [.repositoryservicetemplate](#about.api.default.repositoryservicetemplate) : <code>object</code>
-        * [.get([listentries])](#about.api.default.repositoryservicetemplate.get) ⇒ <code>Promise.&lt;RepositoryServiceTemplate&gt;</code>
       * [.schedulerservice](#about.api.default.schedulerservice) : <code>object</code>
         * [.get([listentries])](#about.api.default.schedulerservice.get) ⇒ <code>Promise.&lt;SchedulerService&gt;</code>
-      * [.schedulerservicetemplate](#about.api.default.schedulerservicetemplate) : <code>object</code>
-        * [.get([listentries])](#about.api.default.schedulerservicetemplate.get) ⇒ <code>Promise.&lt;SchedulerServiceTemplate&gt;</code>
       * [.schemaevent](#about.api.default.schemaevent) : <code>object</code>
         * [.get([listentries])](#about.api.default.schemaevent.get) ⇒ <code>Promise.&lt;SchemaEvent&gt;</code>
       * [.schemaeventoperational](#about.api.default.schemaeventoperational) : <code>object</code>
@@ -137,8 +131,6 @@
         * [.get([listentries])](#about.api.default.useraccessusage.get) ⇒ <code>Promise.&lt;LicenseUserAccessUsage&gt;</code>
       * [.userdirectory](#about.api.default.userdirectory) : <code>object</code>
         * [.get([listentries])](#about.api.default.userdirectory.get) ⇒ <code>Promise.&lt;UserDirectory&gt;</code>
-      * [.userdirectorytemplate](#about.api.default.userdirectorytemplate) : <code>object</code>
-        * [.get([listentries])](#about.api.default.userdirectorytemplate.get) ⇒ <code>Promise.&lt;UserDirectoryTemplate&gt;</code>
       * [.usersynctask](#about.api.default.usersynctask) : <code>object</code>
         * [.get([listentries])](#about.api.default.usersynctask.get) ⇒ <code>Promise.&lt;UserSyncTask&gt;</code>
       * [.usersynctaskoperational](#about.api.default.usersynctaskoperational) : <code>object</code>
@@ -166,6 +158,12 @@
       * [.get([listentries])](#about.api.default.appavailability.get) ⇒ <code>Promise.&lt;AppAvailability&gt;</code>
     * [.appcontentquota](#about.api.default.appcontentquota) : <code>object</code>
       * [.get([listentries])](#about.api.default.appcontentquota.get) ⇒ <code>Promise.&lt;AppContentQuota&gt;</code>
+    * [.applicationaccessgroup](#about.api.default.applicationaccessgroup) : <code>object</code>
+      * [.get([listentries])](#about.api.default.applicationaccessgroup.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+    * [.applicationaccesstype](#about.api.default.applicationaccesstype) : <code>object</code>
+      * [.get([listentries])](#about.api.default.applicationaccesstype.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+    * [.applicationaccessusage](#about.api.default.applicationaccessusage) : <code>object</code>
+      * [.get([listentries])](#about.api.default.applicationaccessusage.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessUsage&gt;</code>
     * [.appseedinfo](#about.api.default.appseedinfo) : <code>object</code>
       * [.get([listentries])](#about.api.default.appseedinfo.get) ⇒ <code>Promise.&lt;AppSeedInfo&gt;</code>
     * [.appstatus](#about.api.default.appstatus) : <code>object</code>
@@ -196,8 +194,6 @@
       * [.get([listentries])](#about.api.default.detail.get) ⇒ <code>Promise.&lt;ExecutionResultDetail&gt;</code>
     * [.engineservice](#about.api.default.engineservice) : <code>object</code>
       * [.get([listentries])](#about.api.default.engineservice.get) ⇒ <code>Promise.&lt;EngineService&gt;</code>
-    * [.engineservicetemplate](#about.api.default.engineservicetemplate) : <code>object</code>
-      * [.get([listentries])](#about.api.default.engineservicetemplate.get) ⇒ <code>Promise.&lt;EngineServiceTemplate&gt;</code>
     * [.executionresult](#about.api.default.executionresult) : <code>object</code>
       * [.get([listentries])](#about.api.default.executionresult.get) ⇒ <code>Promise.&lt;ExecutionResult&gt;</code>
     * [.executionsession](#about.api.default.executionsession) : <code>object</code>
@@ -212,8 +208,6 @@
       * [.get([listentries])](#about.api.default.externalprogramtaskoperational.get) ⇒ <code>Promise.&lt;ExternalProgramTaskOperational&gt;</code>
     * [.filereference](#about.api.default.filereference) : <code>object</code>
       * [.get([listentries])](#about.api.default.filereference.get) ⇒ <code>Promise.&lt;FileReference&gt;</code>
-    * [.followingapp](#about.api.default.followingapp) : <code>object</code>
-      * [.get([listentries])](#about.api.default.followingapp.get) ⇒ <code>Promise.&lt;UserFollowingApp&gt;</code>
     * [.internal](#about.api.default.internal) : <code>object</code>
       * [.get([listentries])](#about.api.default.internal.get) ⇒ <code>Promise.&lt;AppInternal&gt;</code>
     * [.license](#about.api.default.license) : <code>object</code>
@@ -230,14 +224,10 @@
       * [.get([listentries])](#about.api.default.object.get) ⇒ <code>Promise.&lt;AppObject&gt;</code>
     * [.printingservice](#about.api.default.printingservice) : <code>object</code>
       * [.get([listentries])](#about.api.default.printingservice.get) ⇒ <code>Promise.&lt;PrintingService&gt;</code>
-    * [.printingservicetemplate](#about.api.default.printingservicetemplate) : <code>object</code>
-      * [.get([listentries])](#about.api.default.printingservicetemplate.get) ⇒ <code>Promise.&lt;PrintingServiceTemplate&gt;</code>
     * [.proxyservice](#about.api.default.proxyservice) : <code>object</code>
       * [.get([listentries])](#about.api.default.proxyservice.get) ⇒ <code>Promise.&lt;ProxyService&gt;</code>
-    * [.proxyservicetemplate](#about.api.default.proxyservicetemplate) : <code>object</code>
-      * [.get([listentries])](#about.api.default.proxyservicetemplate.get) ⇒ <code>Promise.&lt;ProxyServiceTemplate&gt;</code>
-    * [.recentapp](#about.api.default.recentapp) : <code>object</code>
-      * [.get([listentries])](#about.api.default.recentapp.get) ⇒ <code>Promise.&lt;UserRecentApp&gt;</code>
+    * [.proxyservicecertificate](#about.api.default.proxyservicecertificate) : <code>object</code>
+      * [.get([listentries])](#about.api.default.proxyservicecertificate.get) ⇒ <code>Promise.&lt;ProxyServiceCertificate&gt;</code>
     * [.reloadtask](#about.api.default.reloadtask) : <code>object</code>
       * [.get([listentries])](#about.api.default.reloadtask.get) ⇒ <code>Promise.&lt;ReloadTask&gt;</code>
     * [.reloadtaskoperational](#about.api.default.reloadtaskoperational) : <code>object</code>
@@ -246,12 +236,8 @@
       * [.get([listentries])](#about.api.default.removedsystemrule.get) ⇒ <code>Promise.&lt;RemovedSystemRule&gt;</code>
     * [.repositoryservice](#about.api.default.repositoryservice) : <code>object</code>
       * [.get([listentries])](#about.api.default.repositoryservice.get) ⇒ <code>Promise.&lt;RepositoryService&gt;</code>
-    * [.repositoryservicetemplate](#about.api.default.repositoryservicetemplate) : <code>object</code>
-      * [.get([listentries])](#about.api.default.repositoryservicetemplate.get) ⇒ <code>Promise.&lt;RepositoryServiceTemplate&gt;</code>
     * [.schedulerservice](#about.api.default.schedulerservice) : <code>object</code>
       * [.get([listentries])](#about.api.default.schedulerservice.get) ⇒ <code>Promise.&lt;SchedulerService&gt;</code>
-    * [.schedulerservicetemplate](#about.api.default.schedulerservicetemplate) : <code>object</code>
-      * [.get([listentries])](#about.api.default.schedulerservicetemplate.get) ⇒ <code>Promise.&lt;SchedulerServiceTemplate&gt;</code>
     * [.schemaevent](#about.api.default.schemaevent) : <code>object</code>
       * [.get([listentries])](#about.api.default.schemaevent.get) ⇒ <code>Promise.&lt;SchemaEvent&gt;</code>
     * [.schemaeventoperational](#about.api.default.schemaeventoperational) : <code>object</code>
@@ -290,8 +276,6 @@
       * [.get([listentries])](#about.api.default.useraccessusage.get) ⇒ <code>Promise.&lt;LicenseUserAccessUsage&gt;</code>
     * [.userdirectory](#about.api.default.userdirectory) : <code>object</code>
       * [.get([listentries])](#about.api.default.userdirectory.get) ⇒ <code>Promise.&lt;UserDirectory&gt;</code>
-    * [.userdirectorytemplate](#about.api.default.userdirectorytemplate) : <code>object</code>
-      * [.get([listentries])](#about.api.default.userdirectorytemplate.get) ⇒ <code>Promise.&lt;UserDirectoryTemplate&gt;</code>
     * [.usersynctask](#about.api.default.usersynctask) : <code>object</code>
       * [.get([listentries])](#about.api.default.usersynctask.get) ⇒ <code>Promise.&lt;UserSyncTask&gt;</code>
     * [.usersynctaskoperational](#about.api.default.usersynctaskoperational) : <code>object</code>
@@ -317,6 +301,12 @@
     * [.get([listentries])](#about.api.default.appavailability.get) ⇒ <code>Promise.&lt;AppAvailability&gt;</code>
   * [.appcontentquota](#about.api.default.appcontentquota) : <code>object</code>
     * [.get([listentries])](#about.api.default.appcontentquota.get) ⇒ <code>Promise.&lt;AppContentQuota&gt;</code>
+  * [.applicationaccessgroup](#about.api.default.applicationaccessgroup) : <code>object</code>
+    * [.get([listentries])](#about.api.default.applicationaccessgroup.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+  * [.applicationaccesstype](#about.api.default.applicationaccesstype) : <code>object</code>
+    * [.get([listentries])](#about.api.default.applicationaccesstype.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+  * [.applicationaccessusage](#about.api.default.applicationaccessusage) : <code>object</code>
+    * [.get([listentries])](#about.api.default.applicationaccessusage.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessUsage&gt;</code>
   * [.appseedinfo](#about.api.default.appseedinfo) : <code>object</code>
     * [.get([listentries])](#about.api.default.appseedinfo.get) ⇒ <code>Promise.&lt;AppSeedInfo&gt;</code>
   * [.appstatus](#about.api.default.appstatus) : <code>object</code>
@@ -347,8 +337,6 @@
     * [.get([listentries])](#about.api.default.detail.get) ⇒ <code>Promise.&lt;ExecutionResultDetail&gt;</code>
   * [.engineservice](#about.api.default.engineservice) : <code>object</code>
     * [.get([listentries])](#about.api.default.engineservice.get) ⇒ <code>Promise.&lt;EngineService&gt;</code>
-  * [.engineservicetemplate](#about.api.default.engineservicetemplate) : <code>object</code>
-    * [.get([listentries])](#about.api.default.engineservicetemplate.get) ⇒ <code>Promise.&lt;EngineServiceTemplate&gt;</code>
   * [.executionresult](#about.api.default.executionresult) : <code>object</code>
     * [.get([listentries])](#about.api.default.executionresult.get) ⇒ <code>Promise.&lt;ExecutionResult&gt;</code>
   * [.executionsession](#about.api.default.executionsession) : <code>object</code>
@@ -363,8 +351,6 @@
     * [.get([listentries])](#about.api.default.externalprogramtaskoperational.get) ⇒ <code>Promise.&lt;ExternalProgramTaskOperational&gt;</code>
   * [.filereference](#about.api.default.filereference) : <code>object</code>
     * [.get([listentries])](#about.api.default.filereference.get) ⇒ <code>Promise.&lt;FileReference&gt;</code>
-  * [.followingapp](#about.api.default.followingapp) : <code>object</code>
-    * [.get([listentries])](#about.api.default.followingapp.get) ⇒ <code>Promise.&lt;UserFollowingApp&gt;</code>
   * [.internal](#about.api.default.internal) : <code>object</code>
     * [.get([listentries])](#about.api.default.internal.get) ⇒ <code>Promise.&lt;AppInternal&gt;</code>
   * [.license](#about.api.default.license) : <code>object</code>
@@ -381,14 +367,10 @@
     * [.get([listentries])](#about.api.default.object.get) ⇒ <code>Promise.&lt;AppObject&gt;</code>
   * [.printingservice](#about.api.default.printingservice) : <code>object</code>
     * [.get([listentries])](#about.api.default.printingservice.get) ⇒ <code>Promise.&lt;PrintingService&gt;</code>
-  * [.printingservicetemplate](#about.api.default.printingservicetemplate) : <code>object</code>
-    * [.get([listentries])](#about.api.default.printingservicetemplate.get) ⇒ <code>Promise.&lt;PrintingServiceTemplate&gt;</code>
   * [.proxyservice](#about.api.default.proxyservice) : <code>object</code>
     * [.get([listentries])](#about.api.default.proxyservice.get) ⇒ <code>Promise.&lt;ProxyService&gt;</code>
-  * [.proxyservicetemplate](#about.api.default.proxyservicetemplate) : <code>object</code>
-    * [.get([listentries])](#about.api.default.proxyservicetemplate.get) ⇒ <code>Promise.&lt;ProxyServiceTemplate&gt;</code>
-  * [.recentapp](#about.api.default.recentapp) : <code>object</code>
-    * [.get([listentries])](#about.api.default.recentapp.get) ⇒ <code>Promise.&lt;UserRecentApp&gt;</code>
+  * [.proxyservicecertificate](#about.api.default.proxyservicecertificate) : <code>object</code>
+    * [.get([listentries])](#about.api.default.proxyservicecertificate.get) ⇒ <code>Promise.&lt;ProxyServiceCertificate&gt;</code>
   * [.reloadtask](#about.api.default.reloadtask) : <code>object</code>
     * [.get([listentries])](#about.api.default.reloadtask.get) ⇒ <code>Promise.&lt;ReloadTask&gt;</code>
   * [.reloadtaskoperational](#about.api.default.reloadtaskoperational) : <code>object</code>
@@ -397,12 +379,8 @@
     * [.get([listentries])](#about.api.default.removedsystemrule.get) ⇒ <code>Promise.&lt;RemovedSystemRule&gt;</code>
   * [.repositoryservice](#about.api.default.repositoryservice) : <code>object</code>
     * [.get([listentries])](#about.api.default.repositoryservice.get) ⇒ <code>Promise.&lt;RepositoryService&gt;</code>
-  * [.repositoryservicetemplate](#about.api.default.repositoryservicetemplate) : <code>object</code>
-    * [.get([listentries])](#about.api.default.repositoryservicetemplate.get) ⇒ <code>Promise.&lt;RepositoryServiceTemplate&gt;</code>
   * [.schedulerservice](#about.api.default.schedulerservice) : <code>object</code>
     * [.get([listentries])](#about.api.default.schedulerservice.get) ⇒ <code>Promise.&lt;SchedulerService&gt;</code>
-  * [.schedulerservicetemplate](#about.api.default.schedulerservicetemplate) : <code>object</code>
-    * [.get([listentries])](#about.api.default.schedulerservicetemplate.get) ⇒ <code>Promise.&lt;SchedulerServiceTemplate&gt;</code>
   * [.schemaevent](#about.api.default.schemaevent) : <code>object</code>
     * [.get([listentries])](#about.api.default.schemaevent.get) ⇒ <code>Promise.&lt;SchemaEvent&gt;</code>
   * [.schemaeventoperational](#about.api.default.schemaeventoperational) : <code>object</code>
@@ -441,8 +419,6 @@
     * [.get([listentries])](#about.api.default.useraccessusage.get) ⇒ <code>Promise.&lt;LicenseUserAccessUsage&gt;</code>
   * [.userdirectory](#about.api.default.userdirectory) : <code>object</code>
     * [.get([listentries])](#about.api.default.userdirectory.get) ⇒ <code>Promise.&lt;UserDirectory&gt;</code>
-  * [.userdirectorytemplate](#about.api.default.userdirectorytemplate) : <code>object</code>
-    * [.get([listentries])](#about.api.default.userdirectorytemplate.get) ⇒ <code>Promise.&lt;UserDirectoryTemplate&gt;</code>
   * [.usersynctask](#about.api.default.usersynctask) : <code>object</code>
     * [.get([listentries])](#about.api.default.usersynctask.get) ⇒ <code>Promise.&lt;UserSyncTask&gt;</code>
   * [.usersynctaskoperational](#about.api.default.usersynctaskoperational) : <code>object</code>
@@ -521,6 +497,78 @@ This method is manual
 ```javascript
 qrsApi.about.api.default.appcontentquota.get(listentries).then(function(AppContentQuota) {
     console.log(AppContentQuota)
+})
+```
+<a name="about.api.default.applicationaccessgroup"></a>
+##### default.applicationaccessgroup : <code>object</code>
+**Kind**: static namespace of <code>[default](#about.api.default)</code>  
+<a name="about.api.default.applicationaccessgroup.get"></a>
+###### applicationaccessgroup.get([listentries]) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/about/api/default/applicationaccessgroup?listentries={listentries}
+
+This method is manual
+
+**Kind**: static method of <code>[applicationaccessgroup](#about.api.default.applicationaccessgroup)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [listentries] | <code>string</code> | the listentries parameter |
+
+**Example**  
+```javascript
+qrsApi.about.api.default.applicationaccessgroup.get(listentries).then(function(LicenseApplicationAccessGroup) {
+    console.log(LicenseApplicationAccessGroup)
+})
+```
+<a name="about.api.default.applicationaccesstype"></a>
+##### default.applicationaccesstype : <code>object</code>
+**Kind**: static namespace of <code>[default](#about.api.default)</code>  
+<a name="about.api.default.applicationaccesstype.get"></a>
+###### applicationaccesstype.get([listentries]) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/about/api/default/applicationaccesstype?listentries={listentries}
+
+This method is manual
+
+**Kind**: static method of <code>[applicationaccesstype](#about.api.default.applicationaccesstype)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessType&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [listentries] | <code>string</code> | the listentries parameter |
+
+**Example**  
+```javascript
+qrsApi.about.api.default.applicationaccesstype.get(listentries).then(function(LicenseApplicationAccessType) {
+    console.log(LicenseApplicationAccessType)
+})
+```
+<a name="about.api.default.applicationaccessusage"></a>
+##### default.applicationaccessusage : <code>object</code>
+**Kind**: static namespace of <code>[default](#about.api.default)</code>  
+<a name="about.api.default.applicationaccessusage.get"></a>
+###### applicationaccessusage.get([listentries]) ⇒ <code>Promise.&lt;LicenseApplicationAccessUsage&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/about/api/default/applicationaccessusage?listentries={listentries}
+
+This method is manual
+
+**Kind**: static method of <code>[applicationaccessusage](#about.api.default.applicationaccessusage)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessUsage&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [listentries] | <code>string</code> | the listentries parameter |
+
+**Example**  
+```javascript
+qrsApi.about.api.default.applicationaccessusage.get(listentries).then(function(LicenseApplicationAccessUsage) {
+    console.log(LicenseApplicationAccessUsage)
 })
 ```
 <a name="about.api.default.appseedinfo"></a>
@@ -883,30 +931,6 @@ qrsApi.about.api.default.engineservice.get(listentries).then(function(EngineServ
     console.log(EngineService)
 })
 ```
-<a name="about.api.default.engineservicetemplate"></a>
-##### default.engineservicetemplate : <code>object</code>
-**Kind**: static namespace of <code>[default](#about.api.default)</code>  
-<a name="about.api.default.engineservicetemplate.get"></a>
-###### engineservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;EngineServiceTemplate&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/about/api/default/engineservicetemplate?listentries={listentries}
-
-This method is manual
-
-**Kind**: static method of <code>[engineservicetemplate](#about.api.default.engineservicetemplate)</code>  
-**Returns**: <code>Promise.&lt;EngineServiceTemplate&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [listentries] | <code>string</code> | the listentries parameter |
-
-**Example**  
-```javascript
-qrsApi.about.api.default.engineservicetemplate.get(listentries).then(function(EngineServiceTemplate) {
-    console.log(EngineServiceTemplate)
-})
-```
 <a name="about.api.default.executionresult"></a>
 ##### default.executionresult : <code>object</code>
 **Kind**: static namespace of <code>[default](#about.api.default)</code>  
@@ -1073,30 +1097,6 @@ This method is manual
 ```javascript
 qrsApi.about.api.default.filereference.get(listentries).then(function(FileReference) {
     console.log(FileReference)
-})
-```
-<a name="about.api.default.followingapp"></a>
-##### default.followingapp : <code>object</code>
-**Kind**: static namespace of <code>[default](#about.api.default)</code>  
-<a name="about.api.default.followingapp.get"></a>
-###### followingapp.get([listentries]) ⇒ <code>Promise.&lt;UserFollowingApp&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/about/api/default/followingapp?listentries={listentries}
-
-This method is manual
-
-**Kind**: static method of <code>[followingapp](#about.api.default.followingapp)</code>  
-**Returns**: <code>Promise.&lt;UserFollowingApp&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [listentries] | <code>string</code> | the listentries parameter |
-
-**Example**  
-```javascript
-qrsApi.about.api.default.followingapp.get(listentries).then(function(UserFollowingApp) {
-    console.log(UserFollowingApp)
 })
 ```
 <a name="about.api.default.internal"></a>
@@ -1291,30 +1291,6 @@ qrsApi.about.api.default.printingservice.get(listentries).then(function(Printing
     console.log(PrintingService)
 })
 ```
-<a name="about.api.default.printingservicetemplate"></a>
-##### default.printingservicetemplate : <code>object</code>
-**Kind**: static namespace of <code>[default](#about.api.default)</code>  
-<a name="about.api.default.printingservicetemplate.get"></a>
-###### printingservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;PrintingServiceTemplate&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/about/api/default/printingservicetemplate?listentries={listentries}
-
-This method is manual
-
-**Kind**: static method of <code>[printingservicetemplate](#about.api.default.printingservicetemplate)</code>  
-**Returns**: <code>Promise.&lt;PrintingServiceTemplate&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [listentries] | <code>string</code> | the listentries parameter |
-
-**Example**  
-```javascript
-qrsApi.about.api.default.printingservicetemplate.get(listentries).then(function(PrintingServiceTemplate) {
-    console.log(PrintingServiceTemplate)
-})
-```
 <a name="about.api.default.proxyservice"></a>
 ##### default.proxyservice : <code>object</code>
 **Kind**: static namespace of <code>[default](#about.api.default)</code>  
@@ -1339,19 +1315,19 @@ qrsApi.about.api.default.proxyservice.get(listentries).then(function(ProxyServic
     console.log(ProxyService)
 })
 ```
-<a name="about.api.default.proxyservicetemplate"></a>
-##### default.proxyservicetemplate : <code>object</code>
+<a name="about.api.default.proxyservicecertificate"></a>
+##### default.proxyservicecertificate : <code>object</code>
 **Kind**: static namespace of <code>[default](#about.api.default)</code>  
-<a name="about.api.default.proxyservicetemplate.get"></a>
-###### proxyservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;ProxyServiceTemplate&gt;</code>
+<a name="about.api.default.proxyservicecertificate.get"></a>
+###### proxyservicecertificate.get([listentries]) ⇒ <code>Promise.&lt;ProxyServiceCertificate&gt;</code>
 Makes a request on the Qlik Sense QRS API:
 
-/qrs/about/api/default/proxyservicetemplate?listentries={listentries}
+/qrs/about/api/default/proxyservicecertificate?listentries={listentries}
 
 This method is manual
 
-**Kind**: static method of <code>[proxyservicetemplate](#about.api.default.proxyservicetemplate)</code>  
-**Returns**: <code>Promise.&lt;ProxyServiceTemplate&gt;</code> - a promise resolving to the response to the request  
+**Kind**: static method of <code>[proxyservicecertificate](#about.api.default.proxyservicecertificate)</code>  
+**Returns**: <code>Promise.&lt;ProxyServiceCertificate&gt;</code> - a promise resolving to the response to the request  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -1359,32 +1335,8 @@ This method is manual
 
 **Example**  
 ```javascript
-qrsApi.about.api.default.proxyservicetemplate.get(listentries).then(function(ProxyServiceTemplate) {
-    console.log(ProxyServiceTemplate)
-})
-```
-<a name="about.api.default.recentapp"></a>
-##### default.recentapp : <code>object</code>
-**Kind**: static namespace of <code>[default](#about.api.default)</code>  
-<a name="about.api.default.recentapp.get"></a>
-###### recentapp.get([listentries]) ⇒ <code>Promise.&lt;UserRecentApp&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/about/api/default/recentapp?listentries={listentries}
-
-This method is manual
-
-**Kind**: static method of <code>[recentapp](#about.api.default.recentapp)</code>  
-**Returns**: <code>Promise.&lt;UserRecentApp&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [listentries] | <code>string</code> | the listentries parameter |
-
-**Example**  
-```javascript
-qrsApi.about.api.default.recentapp.get(listentries).then(function(UserRecentApp) {
-    console.log(UserRecentApp)
+qrsApi.about.api.default.proxyservicecertificate.get(listentries).then(function(ProxyServiceCertificate) {
+    console.log(ProxyServiceCertificate)
 })
 ```
 <a name="about.api.default.reloadtask"></a>
@@ -1483,30 +1435,6 @@ qrsApi.about.api.default.repositoryservice.get(listentries).then(function(Reposi
     console.log(RepositoryService)
 })
 ```
-<a name="about.api.default.repositoryservicetemplate"></a>
-##### default.repositoryservicetemplate : <code>object</code>
-**Kind**: static namespace of <code>[default](#about.api.default)</code>  
-<a name="about.api.default.repositoryservicetemplate.get"></a>
-###### repositoryservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;RepositoryServiceTemplate&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/about/api/default/repositoryservicetemplate?listentries={listentries}
-
-This method is manual
-
-**Kind**: static method of <code>[repositoryservicetemplate](#about.api.default.repositoryservicetemplate)</code>  
-**Returns**: <code>Promise.&lt;RepositoryServiceTemplate&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [listentries] | <code>string</code> | the listentries parameter |
-
-**Example**  
-```javascript
-qrsApi.about.api.default.repositoryservicetemplate.get(listentries).then(function(RepositoryServiceTemplate) {
-    console.log(RepositoryServiceTemplate)
-})
-```
 <a name="about.api.default.schedulerservice"></a>
 ##### default.schedulerservice : <code>object</code>
 **Kind**: static namespace of <code>[default](#about.api.default)</code>  
@@ -1529,30 +1457,6 @@ This method is manual
 ```javascript
 qrsApi.about.api.default.schedulerservice.get(listentries).then(function(SchedulerService) {
     console.log(SchedulerService)
-})
-```
-<a name="about.api.default.schedulerservicetemplate"></a>
-##### default.schedulerservicetemplate : <code>object</code>
-**Kind**: static namespace of <code>[default](#about.api.default)</code>  
-<a name="about.api.default.schedulerservicetemplate.get"></a>
-###### schedulerservicetemplate.get([listentries]) ⇒ <code>Promise.&lt;SchedulerServiceTemplate&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/about/api/default/schedulerservicetemplate?listentries={listentries}
-
-This method is manual
-
-**Kind**: static method of <code>[schedulerservicetemplate](#about.api.default.schedulerservicetemplate)</code>  
-**Returns**: <code>Promise.&lt;SchedulerServiceTemplate&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [listentries] | <code>string</code> | the listentries parameter |
-
-**Example**  
-```javascript
-qrsApi.about.api.default.schedulerservicetemplate.get(listentries).then(function(SchedulerServiceTemplate) {
-    console.log(SchedulerServiceTemplate)
 })
 ```
 <a name="about.api.default.schemaevent"></a>
@@ -2009,30 +1913,6 @@ This method is manual
 ```javascript
 qrsApi.about.api.default.userdirectory.get(listentries).then(function(UserDirectory) {
     console.log(UserDirectory)
-})
-```
-<a name="about.api.default.userdirectorytemplate"></a>
-##### default.userdirectorytemplate : <code>object</code>
-**Kind**: static namespace of <code>[default](#about.api.default)</code>  
-<a name="about.api.default.userdirectorytemplate.get"></a>
-###### userdirectorytemplate.get([listentries]) ⇒ <code>Promise.&lt;UserDirectoryTemplate&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/about/api/default/userdirectorytemplate?listentries={listentries}
-
-This method is manual
-
-**Kind**: static method of <code>[userdirectorytemplate](#about.api.default.userdirectorytemplate)</code>  
-**Returns**: <code>Promise.&lt;UserDirectoryTemplate&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [listentries] | <code>string</code> | the listentries parameter |
-
-**Example**  
-```javascript
-qrsApi.about.api.default.userdirectorytemplate.get(listentries).then(function(UserDirectoryTemplate) {
-    console.log(UserDirectoryTemplate)
 })
 ```
 <a name="about.api.default.usersynctask"></a>

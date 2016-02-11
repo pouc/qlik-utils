@@ -16,6 +16,10 @@
     * [.get([filter])](#servernodeconfiguration.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
   * [.full](#servernodeconfiguration.full) : <code>object</code>
     * [.get([filter], [orderby], [appendprivileges])](#servernodeconfiguration.full.get) ⇒ <code>Promise.&lt;Array.&lt;ServerNodeConfiguration&gt;&gt;</code>
+  * [.local](#servernodeconfiguration.local) : <code>object</code>
+    * [.get()](#servernodeconfiguration.local.get) ⇒ <code>Promise.&lt;ServerNodeConfiguration&gt;</code>
+  * [.previewcreateprivilege](#servernodeconfiguration.previewcreateprivilege) : <code>object</code>
+    * [.post(postParams)](#servernodeconfiguration.previewcreateprivilege.post) ⇒ <code>Promise.&lt;Boolean&gt;</code>
   * [.table](#servernodeconfiguration.table) : <code>object</code>
     * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#servernodeconfiguration.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
   * [.get([filter], [orderby], [appendprivileges])](#servernodeconfiguration.get) ⇒ <code>Promise.&lt;Array.&lt;ServerNodeConfiguration&gt;&gt;</code>
@@ -182,6 +186,49 @@ This method is generated
 ```javascript
 qrsApi.servernodeconfiguration.full.get(filter, orderby, appendprivileges).then(function(Array.<ServerNodeConfiguration>) {
     console.log(Array.<ServerNodeConfiguration>)
+})
+```
+<a name="servernodeconfiguration.local"></a>
+### servernodeconfiguration.local : <code>object</code>
+**Kind**: static namespace of <code>[servernodeconfiguration](#servernodeconfiguration)</code>  
+<a name="servernodeconfiguration.local.get"></a>
+#### local.get() ⇒ <code>Promise.&lt;ServerNodeConfiguration&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/servernodeconfiguration/local
+
+This method is manual
+
+**Kind**: static method of <code>[local](#servernodeconfiguration.local)</code>  
+**Returns**: <code>Promise.&lt;ServerNodeConfiguration&gt;</code> - a promise resolving to the response to the request  
+**Example**  
+```javascript
+qrsApi.servernodeconfiguration.local.get().then(function(ServerNodeConfiguration) {
+    console.log(ServerNodeConfiguration)
+})
+```
+<a name="servernodeconfiguration.previewcreateprivilege"></a>
+### servernodeconfiguration.previewcreateprivilege : <code>object</code>
+**Kind**: static namespace of <code>[servernodeconfiguration](#servernodeconfiguration)</code>  
+<a name="servernodeconfiguration.previewcreateprivilege.post"></a>
+#### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/servernodeconfiguration/previewcreateprivilege
+
+This method is manual
+
+**Kind**: static method of <code>[previewcreateprivilege](#servernodeconfiguration.previewcreateprivilege)</code>  
+**Returns**: <code>Promise.&lt;Boolean&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>ServerNodeConfiguration</code> | the parameters to send as request body to the API endpoint |
+
+**Example**  
+```javascript
+qrsApi.servernodeconfiguration.previewcreateprivilege.post(postParams).then(function(Boolean) {
+    console.log(Boolean)
 })
 ```
 <a name="servernodeconfiguration.table"></a>

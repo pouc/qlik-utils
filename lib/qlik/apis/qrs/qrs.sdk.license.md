@@ -10,6 +10,50 @@
     * [.put(postParams, [control], [appendprivileges])](#license.id.put) ⇒ <code>Promise.&lt;License&gt;</code>
   * [.accesstypeinfo](#license.accesstypeinfo) : <code>object</code>
     * [.get()](#license.accesstypeinfo.get) ⇒ <code>Promise.&lt;AccessTypesInfo&gt;</code>
+  * [.applicationaccessgroup](#license.applicationaccessgroup) : <code>object</code>
+    * [.id](#license.applicationaccessgroup.id) : <code>object</code>
+      * [.delete()](#license.applicationaccessgroup.id.delete) ⇒ <code>Promise</code>
+      * [.get([appendprivileges])](#license.applicationaccessgroup.id.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+      * [.put(postParams, [appendprivileges])](#license.applicationaccessgroup.id.put) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+    * [.count](#license.applicationaccessgroup.count) : <code>object</code>
+      * [.get([filter])](#license.applicationaccessgroup.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+    * [.full](#license.applicationaccessgroup.full) : <code>object</code>
+      * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccessgroup.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+    * [.many](#license.applicationaccessgroup.many) : <code>object</code>
+      * [.post(postParams, [appendprivileges])](#license.applicationaccessgroup.many.post) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+    * [.previewcreateprivilege](#license.applicationaccessgroup.previewcreateprivilege) : <code>object</code>
+      * [.post(postParams)](#license.applicationaccessgroup.previewcreateprivilege.post) ⇒ <code>Promise.&lt;Boolean&gt;</code>
+    * [.table](#license.applicationaccessgroup.table) : <code>object</code>
+      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#license.applicationaccessgroup.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccessgroup.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+    * [.post(postParams, [appendprivileges])](#license.applicationaccessgroup.post) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+  * [.applicationaccesstype](#license.applicationaccesstype) : <code>object</code>
+    * [.id](#license.applicationaccesstype.id) : <code>object</code>
+      * [.delete()](#license.applicationaccesstype.id.delete) ⇒ <code>Promise</code>
+      * [.get([appendprivileges])](#license.applicationaccesstype.id.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+      * [.put(postParams, [appendprivileges])](#license.applicationaccesstype.id.put) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+    * [.count](#license.applicationaccesstype.count) : <code>object</code>
+      * [.get([filter])](#license.applicationaccesstype.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+    * [.full](#license.applicationaccesstype.full) : <code>object</code>
+      * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccesstype.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+    * [.many](#license.applicationaccesstype.many) : <code>object</code>
+      * [.post(postParams, [appendprivileges])](#license.applicationaccesstype.many.post) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+    * [.previewcreateprivilege](#license.applicationaccesstype.previewcreateprivilege) : <code>object</code>
+      * [.post(postParams)](#license.applicationaccesstype.previewcreateprivilege.post) ⇒ <code>Promise.&lt;Boolean&gt;</code>
+    * [.table](#license.applicationaccesstype.table) : <code>object</code>
+      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#license.applicationaccesstype.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccesstype.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+    * [.post(postParams, [appendprivileges])](#license.applicationaccesstype.post) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+  * [.applicationaccessusage](#license.applicationaccessusage) : <code>object</code>
+    * [.id](#license.applicationaccessusage.id) : <code>object</code>
+      * [.get([appendprivileges])](#license.applicationaccessusage.id.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessUsage&gt;</code>
+    * [.count](#license.applicationaccessusage.count) : <code>object</code>
+      * [.get([filter])](#license.applicationaccessusage.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+    * [.full](#license.applicationaccessusage.full) : <code>object</code>
+      * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccessusage.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+    * [.table](#license.applicationaccessusage.table) : <code>object</code>
+      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#license.applicationaccessusage.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccessusage.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
   * [.datamarket](#license.datamarket) : <code>object</code>
     * [.id](#license.datamarket.id) : <code>object</code>
       * [.put(postParams, [control], [appendprivileges])](#license.datamarket.id.put) ⇒ <code>Promise.&lt;License&gt;</code>
@@ -44,8 +88,6 @@
     * [.table](#license.loginaccessusage.table) : <code>object</code>
       * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#license.loginaccessusage.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
     * [.get([filter], [orderby], [appendprivileges])](#license.loginaccessusage.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseLoginAccessUsage&gt;&gt;</code>
-  * [.requestaccesstype](#license.requestaccesstype) : <code>object</code>
-    * [.post(postParams)](#license.requestaccesstype.post) ⇒ <code>Promise.&lt;AccessTypeResult&gt;</code>
   * [.useraccessgroup](#license.useraccessgroup) : <code>object</code>
     * [.id](#license.useraccessgroup.id) : <code>object</code>
       * [.delete()](#license.useraccessgroup.id.delete) ⇒ <code>Promise</code>
@@ -157,6 +199,673 @@ This method is manual
 ```javascript
 qrsApi.license.accesstypeinfo.get().then(function(AccessTypesInfo) {
     console.log(AccessTypesInfo)
+})
+```
+<a name="license.applicationaccessgroup"></a>
+### license.applicationaccessgroup : <code>object</code>
+**Kind**: static namespace of <code>[license](#license)</code>  
+
+* [.applicationaccessgroup](#license.applicationaccessgroup) : <code>object</code>
+  * [.id](#license.applicationaccessgroup.id) : <code>object</code>
+    * [.delete()](#license.applicationaccessgroup.id.delete) ⇒ <code>Promise</code>
+    * [.get([appendprivileges])](#license.applicationaccessgroup.id.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+    * [.put(postParams, [appendprivileges])](#license.applicationaccessgroup.id.put) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+  * [.count](#license.applicationaccessgroup.count) : <code>object</code>
+    * [.get([filter])](#license.applicationaccessgroup.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+  * [.full](#license.applicationaccessgroup.full) : <code>object</code>
+    * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccessgroup.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+  * [.many](#license.applicationaccessgroup.many) : <code>object</code>
+    * [.post(postParams, [appendprivileges])](#license.applicationaccessgroup.many.post) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+  * [.previewcreateprivilege](#license.applicationaccessgroup.previewcreateprivilege) : <code>object</code>
+    * [.post(postParams)](#license.applicationaccessgroup.previewcreateprivilege.post) ⇒ <code>Promise.&lt;Boolean&gt;</code>
+  * [.table](#license.applicationaccessgroup.table) : <code>object</code>
+    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#license.applicationaccessgroup.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccessgroup.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+  * [.post(postParams, [appendprivileges])](#license.applicationaccessgroup.post) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+
+<a name="license.applicationaccessgroup.id"></a>
+#### applicationaccessgroup.id : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#license.applicationaccessgroup)</code>  
+
+* [.id](#license.applicationaccessgroup.id) : <code>object</code>
+  * [.delete()](#license.applicationaccessgroup.id.delete) ⇒ <code>Promise</code>
+  * [.get([appendprivileges])](#license.applicationaccessgroup.id.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+  * [.put(postParams, [appendprivileges])](#license.applicationaccessgroup.id.put) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+
+<a name="license.applicationaccessgroup.id.delete"></a>
+##### id.delete() ⇒ <code>Promise</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup/{id}
+
+This method is generated
+
+**Kind**: static method of <code>[id](#license.applicationaccessgroup.id)</code>  
+**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.id(id).delete().then(function() {
+    console.log('done')
+})
+```
+<a name="license.applicationaccessgroup.id.get"></a>
+##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup/{id}?privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[id](#license.applicationaccessgroup.id)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.id(id).get(appendprivileges).then(function(LicenseApplicationAccessGroup) {
+    console.log(LicenseApplicationAccessGroup)
+})
+```
+<a name="license.applicationaccessgroup.id.put"></a>
+##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup/{id}?privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[id](#license.applicationaccessgroup.id)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>LicenseApplicationAccessGroup</code> | the parameters to send as request body to the API endpoint |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.id(id).put(postParams, appendprivileges).then(function(LicenseApplicationAccessGroup) {
+    console.log(LicenseApplicationAccessGroup)
+})
+```
+<a name="license.applicationaccessgroup.count"></a>
+#### applicationaccessgroup.count : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#license.applicationaccessgroup)</code>  
+<a name="license.applicationaccessgroup.count.get"></a>
+##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup/count?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[count](#license.applicationaccessgroup.count)</code>  
+**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.count.get(filter).then(function(int) {
+    console.log(int)
+})
+```
+<a name="license.applicationaccessgroup.full"></a>
+#### applicationaccessgroup.full : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#license.applicationaccessgroup)</code>  
+<a name="license.applicationaccessgroup.full.get"></a>
+##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[full](#license.applicationaccessgroup.full)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessGroup>) {
+    console.log(Array.<LicenseApplicationAccessGroup>)
+})
+```
+<a name="license.applicationaccessgroup.many"></a>
+#### applicationaccessgroup.many : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#license.applicationaccessgroup)</code>  
+<a name="license.applicationaccessgroup.many.post"></a>
+##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup/many?privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[many](#license.applicationaccessgroup.many)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>List.&lt;LicenseApplicationAccessGroup&gt;</code> | the parameters to send as request body to the API endpoint |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.many.post(postParams, appendprivileges).then(function(Array.<LicenseApplicationAccessGroup>) {
+    console.log(Array.<LicenseApplicationAccessGroup>)
+})
+```
+<a name="license.applicationaccessgroup.previewcreateprivilege"></a>
+#### applicationaccessgroup.previewcreateprivilege : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#license.applicationaccessgroup)</code>  
+<a name="license.applicationaccessgroup.previewcreateprivilege.post"></a>
+##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup/previewcreateprivilege
+
+This method is generated
+
+**Kind**: static method of <code>[previewcreateprivilege](#license.applicationaccessgroup.previewcreateprivilege)</code>  
+**Returns**: <code>Promise.&lt;Boolean&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>LicenseApplicationAccessGroup</code> | the parameters to send as request body to the API endpoint |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.previewcreateprivilege.post(postParams).then(function(Boolean) {
+    console.log(Boolean)
+})
+```
+<a name="license.applicationaccessgroup.table"></a>
+#### applicationaccessgroup.table : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#license.applicationaccessgroup)</code>  
+<a name="license.applicationaccessgroup.table.post"></a>
+##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
+This method is generated
+
+**Kind**: static method of <code>[table](#license.applicationaccessgroup.table)</code>  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+| [skip] | <code>string</code> | the skip parameter |
+| [take] | <code>string</code> | the take parameter |
+| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
+| [orderascending] | <code>string</code> | the orderascending parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
+    console.log(Object)
+})
+```
+<a name="license.applicationaccessgroup.get"></a>
+#### applicationaccessgroup.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccessgroup](#license.applicationaccessgroup)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessGroup>) {
+    console.log(Array.<LicenseApplicationAccessGroup>)
+})
+```
+<a name="license.applicationaccessgroup.post"></a>
+#### applicationaccessgroup.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessgroup?privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccessgroup](#license.applicationaccessgroup)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessGroup&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>LicenseApplicationAccessGroup</code> | the parameters to send as request body to the API endpoint |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessgroup.post(postParams, appendprivileges).then(function(LicenseApplicationAccessGroup) {
+    console.log(LicenseApplicationAccessGroup)
+})
+```
+<a name="license.applicationaccesstype"></a>
+### license.applicationaccesstype : <code>object</code>
+**Kind**: static namespace of <code>[license](#license)</code>  
+
+* [.applicationaccesstype](#license.applicationaccesstype) : <code>object</code>
+  * [.id](#license.applicationaccesstype.id) : <code>object</code>
+    * [.delete()](#license.applicationaccesstype.id.delete) ⇒ <code>Promise</code>
+    * [.get([appendprivileges])](#license.applicationaccesstype.id.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+    * [.put(postParams, [appendprivileges])](#license.applicationaccesstype.id.put) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+  * [.count](#license.applicationaccesstype.count) : <code>object</code>
+    * [.get([filter])](#license.applicationaccesstype.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+  * [.full](#license.applicationaccesstype.full) : <code>object</code>
+    * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccesstype.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+  * [.many](#license.applicationaccesstype.many) : <code>object</code>
+    * [.post(postParams, [appendprivileges])](#license.applicationaccesstype.many.post) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+  * [.previewcreateprivilege](#license.applicationaccesstype.previewcreateprivilege) : <code>object</code>
+    * [.post(postParams)](#license.applicationaccesstype.previewcreateprivilege.post) ⇒ <code>Promise.&lt;Boolean&gt;</code>
+  * [.table](#license.applicationaccesstype.table) : <code>object</code>
+    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#license.applicationaccesstype.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccesstype.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+  * [.post(postParams, [appendprivileges])](#license.applicationaccesstype.post) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+
+<a name="license.applicationaccesstype.id"></a>
+#### applicationaccesstype.id : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#license.applicationaccesstype)</code>  
+
+* [.id](#license.applicationaccesstype.id) : <code>object</code>
+  * [.delete()](#license.applicationaccesstype.id.delete) ⇒ <code>Promise</code>
+  * [.get([appendprivileges])](#license.applicationaccesstype.id.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+  * [.put(postParams, [appendprivileges])](#license.applicationaccesstype.id.put) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+
+<a name="license.applicationaccesstype.id.delete"></a>
+##### id.delete() ⇒ <code>Promise</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype/{id}
+
+This method is generated
+
+**Kind**: static method of <code>[id](#license.applicationaccesstype.id)</code>  
+**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.id(id).delete().then(function() {
+    console.log('done')
+})
+```
+<a name="license.applicationaccesstype.id.get"></a>
+##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype/{id}?privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[id](#license.applicationaccesstype.id)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessType&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.id(id).get(appendprivileges).then(function(LicenseApplicationAccessType) {
+    console.log(LicenseApplicationAccessType)
+})
+```
+<a name="license.applicationaccesstype.id.put"></a>
+##### id.put(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype/{id}?privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[id](#license.applicationaccesstype.id)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessType&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>LicenseApplicationAccessType</code> | the parameters to send as request body to the API endpoint |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.id(id).put(postParams, appendprivileges).then(function(LicenseApplicationAccessType) {
+    console.log(LicenseApplicationAccessType)
+})
+```
+<a name="license.applicationaccesstype.count"></a>
+#### applicationaccesstype.count : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#license.applicationaccesstype)</code>  
+<a name="license.applicationaccesstype.count.get"></a>
+##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype/count?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[count](#license.applicationaccesstype.count)</code>  
+**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.count.get(filter).then(function(int) {
+    console.log(int)
+})
+```
+<a name="license.applicationaccesstype.full"></a>
+#### applicationaccesstype.full : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#license.applicationaccesstype)</code>  
+<a name="license.applicationaccesstype.full.get"></a>
+##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[full](#license.applicationaccesstype.full)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessType>) {
+    console.log(Array.<LicenseApplicationAccessType>)
+})
+```
+<a name="license.applicationaccesstype.many"></a>
+#### applicationaccesstype.many : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#license.applicationaccesstype)</code>  
+<a name="license.applicationaccesstype.many.post"></a>
+##### many.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype/many?privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[many](#license.applicationaccesstype.many)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>List.&lt;LicenseApplicationAccessType&gt;</code> | the parameters to send as request body to the API endpoint |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.many.post(postParams, appendprivileges).then(function(Array.<LicenseApplicationAccessType>) {
+    console.log(Array.<LicenseApplicationAccessType>)
+})
+```
+<a name="license.applicationaccesstype.previewcreateprivilege"></a>
+#### applicationaccesstype.previewcreateprivilege : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#license.applicationaccesstype)</code>  
+<a name="license.applicationaccesstype.previewcreateprivilege.post"></a>
+##### previewcreateprivilege.post(postParams) ⇒ <code>Promise.&lt;Boolean&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype/previewcreateprivilege
+
+This method is generated
+
+**Kind**: static method of <code>[previewcreateprivilege](#license.applicationaccesstype.previewcreateprivilege)</code>  
+**Returns**: <code>Promise.&lt;Boolean&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>LicenseApplicationAccessType</code> | the parameters to send as request body to the API endpoint |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.previewcreateprivilege.post(postParams).then(function(Boolean) {
+    console.log(Boolean)
+})
+```
+<a name="license.applicationaccesstype.table"></a>
+#### applicationaccesstype.table : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#license.applicationaccesstype)</code>  
+<a name="license.applicationaccesstype.table.post"></a>
+##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
+This method is generated
+
+**Kind**: static method of <code>[table](#license.applicationaccesstype.table)</code>  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+| [skip] | <code>string</code> | the skip parameter |
+| [take] | <code>string</code> | the take parameter |
+| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
+| [orderascending] | <code>string</code> | the orderascending parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
+    console.log(Object)
+})
+```
+<a name="license.applicationaccesstype.get"></a>
+#### applicationaccesstype.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccesstype](#license.applicationaccesstype)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessType>) {
+    console.log(Array.<LicenseApplicationAccessType>)
+})
+```
+<a name="license.applicationaccesstype.post"></a>
+#### applicationaccesstype.post(postParams, [appendprivileges]) ⇒ <code>Promise.&lt;LicenseApplicationAccessType&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccesstype?privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccesstype](#license.applicationaccesstype)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessType&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>LicenseApplicationAccessType</code> | the parameters to send as request body to the API endpoint |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccesstype.post(postParams, appendprivileges).then(function(LicenseApplicationAccessType) {
+    console.log(LicenseApplicationAccessType)
+})
+```
+<a name="license.applicationaccessusage"></a>
+### license.applicationaccessusage : <code>object</code>
+**Kind**: static namespace of <code>[license](#license)</code>  
+
+* [.applicationaccessusage](#license.applicationaccessusage) : <code>object</code>
+  * [.id](#license.applicationaccessusage.id) : <code>object</code>
+    * [.get([appendprivileges])](#license.applicationaccessusage.id.get) ⇒ <code>Promise.&lt;LicenseApplicationAccessUsage&gt;</code>
+  * [.count](#license.applicationaccessusage.count) : <code>object</code>
+    * [.get([filter])](#license.applicationaccessusage.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+  * [.full](#license.applicationaccessusage.full) : <code>object</code>
+    * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccessusage.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+  * [.table](#license.applicationaccessusage.table) : <code>object</code>
+    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#license.applicationaccessusage.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.get([filter], [orderby], [appendprivileges])](#license.applicationaccessusage.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+
+<a name="license.applicationaccessusage.id"></a>
+#### applicationaccessusage.id : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessusage](#license.applicationaccessusage)</code>  
+<a name="license.applicationaccessusage.id.get"></a>
+##### id.get([appendprivileges]) ⇒ <code>Promise.&lt;LicenseApplicationAccessUsage&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessusage/{id}?privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[id](#license.applicationaccessusage.id)</code>  
+**Returns**: <code>Promise.&lt;LicenseApplicationAccessUsage&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessusage.id(id).get(appendprivileges).then(function(LicenseApplicationAccessUsage) {
+    console.log(LicenseApplicationAccessUsage)
+})
+```
+<a name="license.applicationaccessusage.count"></a>
+#### applicationaccessusage.count : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessusage](#license.applicationaccessusage)</code>  
+<a name="license.applicationaccessusage.count.get"></a>
+##### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessusage/count?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[count](#license.applicationaccessusage.count)</code>  
+**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessusage.count.get(filter).then(function(int) {
+    console.log(int)
+})
+```
+<a name="license.applicationaccessusage.full"></a>
+#### applicationaccessusage.full : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessusage](#license.applicationaccessusage)</code>  
+<a name="license.applicationaccessusage.full.get"></a>
+##### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessusage/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[full](#license.applicationaccessusage.full)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessusage.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessUsage>) {
+    console.log(Array.<LicenseApplicationAccessUsage>)
+})
+```
+<a name="license.applicationaccessusage.table"></a>
+#### applicationaccessusage.table : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessusage](#license.applicationaccessusage)</code>  
+<a name="license.applicationaccessusage.table.post"></a>
+##### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessusage/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
+This method is generated
+
+**Kind**: static method of <code>[table](#license.applicationaccessusage.table)</code>  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+| [skip] | <code>string</code> | the skip parameter |
+| [take] | <code>string</code> | the take parameter |
+| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
+| [orderascending] | <code>string</code> | the orderascending parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessusage.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
+    console.log(Object)
+})
+```
+<a name="license.applicationaccessusage.get"></a>
+#### applicationaccessusage.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/license/applicationaccessusage?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccessusage](#license.applicationaccessusage)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.license.applicationaccessusage.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessUsage>) {
+    console.log(Array.<LicenseApplicationAccessUsage>)
 })
 ```
 <a name="license.datamarket"></a>
@@ -668,30 +1377,6 @@ This method is generated
 ```javascript
 qrsApi.license.loginaccessusage.get(filter, orderby, appendprivileges).then(function(Array.<LicenseLoginAccessUsage>) {
     console.log(Array.<LicenseLoginAccessUsage>)
-})
-```
-<a name="license.requestaccesstype"></a>
-### license.requestaccesstype : <code>object</code>
-**Kind**: static namespace of <code>[license](#license)</code>  
-<a name="license.requestaccesstype.post"></a>
-#### requestaccesstype.post(postParams) ⇒ <code>Promise.&lt;AccessTypeResult&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/license/requestaccesstype
-
-This method is manual
-
-**Kind**: static method of <code>[requestaccesstype](#license.requestaccesstype)</code>  
-**Returns**: <code>Promise.&lt;AccessTypeResult&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>AccessTypeRequest</code> | the parameters to send as request body to the API endpoint |
-
-**Example**  
-```javascript
-qrsApi.license.requestaccesstype.post(postParams).then(function(AccessTypeResult) {
-    console.log(AccessTypeResult)
 })
 ```
 <a name="license.useraccessgroup"></a>

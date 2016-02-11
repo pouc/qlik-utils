@@ -45,6 +45,7 @@ Wrapper for helper functions for Qlik Sense QRS API.[See parent documentation](
   * [.notification](#qrs.notification) : <code>object</code>
   * [.printingservice](#qrs.printingservice) : <code>object</code>
   * [.proxyservice](#qrs.proxyservice) : <code>object</code>
+  * [.proxyservicecertificate](#qrs.proxyservicecertificate) : <code>object</code>
   * [.reloadtask](#qrs.reloadtask) : <code>object</code>
   * [.reloadtaskoperational](#qrs.reloadtaskoperational) : <code>object</code>
   * [.repositoryservice](#qrs.repositoryservice) : <code>object</code>
@@ -61,6 +62,7 @@ Wrapper for helper functions for Qlik Sense QRS API.[See parent documentation](
   * [.stream](#qrs.stream) : <code>object</code>
   * [.sync](#qrs.sync) : <code>object</code>
   * [.syncsession](#qrs.syncsession) : <code>object</code>
+  * [.systeminfo](#qrs.systeminfo) : <code>object</code>
   * [.systemrule](#qrs.systemrule) : <code>object</code>
   * [.tag](#qrs.tag) : <code>object</code>
   * [.task](#qrs.task) : <code>object</code>
@@ -353,6 +355,13 @@ proxyservice endpoint[See documentation](qrs.sdk.proxyservice.md)
 **Kind**: static namespace of <code>[qrs](#qrs)</code>  
 **Example**  
 ```javascriptvar proxyservice = qrsApi.proxyservice;```
+<a name="qrs.proxyservicecertificate"></a>
+### qrs.proxyservicecertificate : <code>object</code>
+proxyservicecertificate endpoint[See documentation](qrs.sdk.proxyservicecertificate.md)
+
+**Kind**: static namespace of <code>[qrs](#qrs)</code>  
+**Example**  
+```javascriptvar proxyservicecertificate = qrsApi.proxyservicecertificate;```
 <a name="qrs.reloadtask"></a>
 ### qrs.reloadtask : <code>object</code>
 reloadtask endpoint[See documentation](qrs.sdk.reloadtask.md)
@@ -465,6 +474,13 @@ syncsession endpoint[See documentation](qrs.sdk.syncsession.md)
 **Kind**: static namespace of <code>[qrs](#qrs)</code>  
 **Example**  
 ```javascriptvar syncsession = qrsApi.syncsession;```
+<a name="qrs.systeminfo"></a>
+### qrs.systeminfo : <code>object</code>
+systeminfo endpoint[See documentation](qrs.sdk.systeminfo.md)
+
+**Kind**: static namespace of <code>[qrs](#qrs)</code>  
+**Example**  
+```javascriptvar systeminfo = qrsApi.systeminfo;```
 <a name="qrs.systemrule"></a>
 ### qrs.systemrule : <code>object</code>
 systemrule endpoint[See documentation](qrs.sdk.systemrule.md)

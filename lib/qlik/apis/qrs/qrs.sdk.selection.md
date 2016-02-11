@@ -217,18 +217,6 @@
         * [.get([filter], [appendprivileges])](#selection.id.engineservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
       * [.table](#selection.id.engineservice.table) : <code>object</code>
         * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.engineservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.template](#selection.id.engineservice.template) : <code>object</code>
-        * [.count](#selection.id.engineservice.template.count) : <code>object</code>
-          * [.get([filter])](#selection.id.engineservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-        * [.full](#selection.id.engineservice.template.full) : <code>object</code>
-          * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
-        * [.synthetic](#selection.id.engineservice.template.synthetic) : <code>object</code>
-          * [.put(postParams, [filter])](#selection.id.engineservice.template.synthetic.put) ⇒ <code>Promise</code>
-          * [.get([filter], [appendprivileges])](#selection.id.engineservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-        * [.table](#selection.id.engineservice.template.table) : <code>object</code>
-          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.engineservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-        * [.delete([filter])](#selection.id.engineservice.template.delete) ⇒ <code>Promise</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
       * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.get) ⇒ <code>Promise.&lt;Array.&lt;EngineService&gt;&gt;</code>
     * [.event](#selection.id.event) : <code>object</code>
       * [.full](#selection.id.event.full) : <code>object</code>
@@ -333,6 +321,40 @@
         * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.filereference.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
       * [.get([filter], [orderby], [appendprivileges])](#selection.id.filereference.get) ⇒ <code>Promise.&lt;Array.&lt;FileReference&gt;&gt;</code>
     * [.license](#selection.id.license) : <code>object</code>
+      * [.applicationaccessgroup](#selection.id.license.applicationaccessgroup) : <code>object</code>
+        * [.count](#selection.id.license.applicationaccessgroup.count) : <code>object</code>
+          * [.get([filter])](#selection.id.license.applicationaccessgroup.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+        * [.full](#selection.id.license.applicationaccessgroup.full) : <code>object</code>
+          * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessgroup.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+        * [.synthetic](#selection.id.license.applicationaccessgroup.synthetic) : <code>object</code>
+          * [.put(postParams, [filter])](#selection.id.license.applicationaccessgroup.synthetic.put) ⇒ <code>Promise</code>
+          * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccessgroup.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+        * [.table](#selection.id.license.applicationaccessgroup.table) : <code>object</code>
+          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccessgroup.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+        * [.delete([filter])](#selection.id.license.applicationaccessgroup.delete) ⇒ <code>Promise</code>
+        * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessgroup.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+      * [.applicationaccesstype](#selection.id.license.applicationaccesstype) : <code>object</code>
+        * [.count](#selection.id.license.applicationaccesstype.count) : <code>object</code>
+          * [.get([filter])](#selection.id.license.applicationaccesstype.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+        * [.full](#selection.id.license.applicationaccesstype.full) : <code>object</code>
+          * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccesstype.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+        * [.synthetic](#selection.id.license.applicationaccesstype.synthetic) : <code>object</code>
+          * [.put(postParams, [filter])](#selection.id.license.applicationaccesstype.synthetic.put) ⇒ <code>Promise</code>
+          * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccesstype.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+        * [.table](#selection.id.license.applicationaccesstype.table) : <code>object</code>
+          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccesstype.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+        * [.delete([filter])](#selection.id.license.applicationaccesstype.delete) ⇒ <code>Promise</code>
+        * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccesstype.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+      * [.applicationaccessusage](#selection.id.license.applicationaccessusage) : <code>object</code>
+        * [.count](#selection.id.license.applicationaccessusage.count) : <code>object</code>
+          * [.get([filter])](#selection.id.license.applicationaccessusage.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+        * [.full](#selection.id.license.applicationaccessusage.full) : <code>object</code>
+          * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessusage.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+        * [.synthetic](#selection.id.license.applicationaccessusage.synthetic) : <code>object</code>
+          * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccessusage.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+        * [.table](#selection.id.license.applicationaccessusage.table) : <code>object</code>
+          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccessusage.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+        * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessusage.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
       * [.loginaccesstype](#selection.id.license.loginaccesstype) : <code>object</code>
         * [.count](#selection.id.license.loginaccesstype.count) : <code>object</code>
           * [.get([filter])](#selection.id.license.loginaccesstype.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
@@ -416,18 +438,6 @@
         * [.get([filter], [appendprivileges])](#selection.id.printingservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
       * [.table](#selection.id.printingservice.table) : <code>object</code>
         * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.printingservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.template](#selection.id.printingservice.template) : <code>object</code>
-        * [.count](#selection.id.printingservice.template.count) : <code>object</code>
-          * [.get([filter])](#selection.id.printingservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-        * [.full](#selection.id.printingservice.template.full) : <code>object</code>
-          * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
-        * [.synthetic](#selection.id.printingservice.template.synthetic) : <code>object</code>
-          * [.put(postParams, [filter])](#selection.id.printingservice.template.synthetic.put) ⇒ <code>Promise</code>
-          * [.get([filter], [appendprivileges])](#selection.id.printingservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-        * [.table](#selection.id.printingservice.template.table) : <code>object</code>
-          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.printingservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-        * [.delete([filter])](#selection.id.printingservice.template.delete) ⇒ <code>Promise</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
       * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingService&gt;&gt;</code>
     * [.proxyservice](#selection.id.proxyservice) : <code>object</code>
       * [.count](#selection.id.proxyservice.count) : <code>object</code>
@@ -439,19 +449,19 @@
         * [.get([filter], [appendprivileges])](#selection.id.proxyservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
       * [.table](#selection.id.proxyservice.table) : <code>object</code>
         * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.template](#selection.id.proxyservice.template) : <code>object</code>
-        * [.count](#selection.id.proxyservice.template.count) : <code>object</code>
-          * [.get([filter])](#selection.id.proxyservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-        * [.full](#selection.id.proxyservice.template.full) : <code>object</code>
-          * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
-        * [.synthetic](#selection.id.proxyservice.template.synthetic) : <code>object</code>
-          * [.put(postParams, [filter])](#selection.id.proxyservice.template.synthetic.put) ⇒ <code>Promise</code>
-          * [.get([filter], [appendprivileges])](#selection.id.proxyservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-        * [.table](#selection.id.proxyservice.template.table) : <code>object</code>
-          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-        * [.delete([filter])](#selection.id.proxyservice.template.delete) ⇒ <code>Promise</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
       * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyService&gt;&gt;</code>
+    * [.proxyservicecertificate](#selection.id.proxyservicecertificate) : <code>object</code>
+      * [.count](#selection.id.proxyservicecertificate.count) : <code>object</code>
+        * [.get([filter])](#selection.id.proxyservicecertificate.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+      * [.full](#selection.id.proxyservicecertificate.full) : <code>object</code>
+        * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservicecertificate.full.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code>
+      * [.synthetic](#selection.id.proxyservicecertificate.synthetic) : <code>object</code>
+        * [.put(postParams, [filter])](#selection.id.proxyservicecertificate.synthetic.put) ⇒ <code>Promise</code>
+        * [.get([filter], [appendprivileges])](#selection.id.proxyservicecertificate.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+      * [.table](#selection.id.proxyservicecertificate.table) : <code>object</code>
+        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservicecertificate.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+      * [.delete([filter])](#selection.id.proxyservicecertificate.delete) ⇒ <code>Promise</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservicecertificate.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code>
     * [.reloadtask](#selection.id.reloadtask) : <code>object</code>
       * [.count](#selection.id.reloadtask.count) : <code>object</code>
         * [.get([filter])](#selection.id.reloadtask.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
@@ -486,18 +496,6 @@
         * [.get([filter], [appendprivileges])](#selection.id.repositoryservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
       * [.table](#selection.id.repositoryservice.table) : <code>object</code>
         * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.repositoryservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.template](#selection.id.repositoryservice.template) : <code>object</code>
-        * [.count](#selection.id.repositoryservice.template.count) : <code>object</code>
-          * [.get([filter])](#selection.id.repositoryservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-        * [.full](#selection.id.repositoryservice.template.full) : <code>object</code>
-          * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
-        * [.synthetic](#selection.id.repositoryservice.template.synthetic) : <code>object</code>
-          * [.put(postParams, [filter])](#selection.id.repositoryservice.template.synthetic.put) ⇒ <code>Promise</code>
-          * [.get([filter], [appendprivileges])](#selection.id.repositoryservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-        * [.table](#selection.id.repositoryservice.template.table) : <code>object</code>
-          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.repositoryservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-        * [.delete([filter])](#selection.id.repositoryservice.template.delete) ⇒ <code>Promise</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
       * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryService&gt;&gt;</code>
     * [.schedulerservice](#selection.id.schedulerservice) : <code>object</code>
       * [.count](#selection.id.schedulerservice.count) : <code>object</code>
@@ -509,18 +507,6 @@
         * [.get([filter], [appendprivileges])](#selection.id.schedulerservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
       * [.table](#selection.id.schedulerservice.table) : <code>object</code>
         * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.schedulerservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.template](#selection.id.schedulerservice.template) : <code>object</code>
-        * [.count](#selection.id.schedulerservice.template.count) : <code>object</code>
-          * [.get([filter])](#selection.id.schedulerservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-        * [.full](#selection.id.schedulerservice.template.full) : <code>object</code>
-          * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
-        * [.synthetic](#selection.id.schedulerservice.template.synthetic) : <code>object</code>
-          * [.put(postParams, [filter])](#selection.id.schedulerservice.template.synthetic.put) ⇒ <code>Promise</code>
-          * [.get([filter], [appendprivileges])](#selection.id.schedulerservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-        * [.table](#selection.id.schedulerservice.template.table) : <code>object</code>
-          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.schedulerservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-        * [.delete([filter])](#selection.id.schedulerservice.template.delete) ⇒ <code>Promise</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
       * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerService&gt;&gt;</code>
     * [.schemaevent](#selection.id.schemaevent) : <code>object</code>
       * [.count](#selection.id.schemaevent.count) : <code>object</code>
@@ -604,6 +590,14 @@
       * [.table](#selection.id.syncsession.table) : <code>object</code>
         * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.syncsession.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
       * [.get([filter], [orderby], [appendprivileges])](#selection.id.syncsession.get) ⇒ <code>Promise.&lt;Array.&lt;SyncSession&gt;&gt;</code>
+    * [.systeminfo](#selection.id.systeminfo) : <code>object</code>
+      * [.full](#selection.id.systeminfo.full) : <code>object</code>
+        * [.get([filter], [orderby], [appendprivileges])](#selection.id.systeminfo.full.get) ⇒ <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code>
+      * [.synthetic](#selection.id.systeminfo.synthetic) : <code>object</code>
+        * [.get([filter], [appendprivileges])](#selection.id.systeminfo.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+      * [.table](#selection.id.systeminfo.table) : <code>object</code>
+        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.systeminfo.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.systeminfo.get) ⇒ <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code>
     * [.systemrule](#selection.id.systemrule) : <code>object</code>
       * [.count](#selection.id.systemrule.count) : <code>object</code>
         * [.get([filter])](#selection.id.systemrule.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
@@ -649,35 +643,8 @@
     * [.user](#selection.id.user) : <code>object</code>
       * [.count](#selection.id.user.count) : <code>object</code>
         * [.get([filter])](#selection.id.user.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-      * [.followingapp](#selection.id.user.followingapp) : <code>object</code>
-        * [.count](#selection.id.user.followingapp.count) : <code>object</code>
-          * [.get([filter])](#selection.id.user.followingapp.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-        * [.full](#selection.id.user.followingapp.full) : <code>object</code>
-          * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.followingapp.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
-        * [.synthetic](#selection.id.user.followingapp.synthetic) : <code>object</code>
-          * [.put(postParams, [filter])](#selection.id.user.followingapp.synthetic.put) ⇒ <code>Promise</code>
-          * [.get([filter], [appendprivileges])](#selection.id.user.followingapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-        * [.table](#selection.id.user.followingapp.table) : <code>object</code>
-          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.user.followingapp.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-        * [.delete([filter])](#selection.id.user.followingapp.delete) ⇒ <code>Promise</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.followingapp.get) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
       * [.full](#selection.id.user.full) : <code>object</code>
         * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.full.get) ⇒ <code>Promise.&lt;Array.&lt;User&gt;&gt;</code>
-      * [.license](#selection.id.user.license) : <code>object</code>
-        * [.useraccesstype](#selection.id.user.license.useraccesstype) : <code>object</code>
-          * [.post(postParams)](#selection.id.user.license.useraccesstype.post) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
-      * [.recentapp](#selection.id.user.recentapp) : <code>object</code>
-        * [.count](#selection.id.user.recentapp.count) : <code>object</code>
-          * [.get([filter])](#selection.id.user.recentapp.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-        * [.full](#selection.id.user.recentapp.full) : <code>object</code>
-          * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.recentapp.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
-        * [.synthetic](#selection.id.user.recentapp.synthetic) : <code>object</code>
-          * [.put(postParams, [filter])](#selection.id.user.recentapp.synthetic.put) ⇒ <code>Promise</code>
-          * [.get([filter], [appendprivileges])](#selection.id.user.recentapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-        * [.table](#selection.id.user.recentapp.table) : <code>object</code>
-          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.user.recentapp.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-        * [.delete([filter])](#selection.id.user.recentapp.delete) ⇒ <code>Promise</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.recentapp.get) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
       * [.synthetic](#selection.id.user.synthetic) : <code>object</code>
         * [.put(postParams, [filter])](#selection.id.user.synthetic.put) ⇒ <code>Promise</code>
         * [.get([filter], [appendprivileges])](#selection.id.user.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
@@ -695,18 +662,6 @@
         * [.get([filter], [appendprivileges])](#selection.id.userdirectory.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
       * [.table](#selection.id.userdirectory.table) : <code>object</code>
         * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.userdirectory.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.template](#selection.id.userdirectory.template) : <code>object</code>
-        * [.count](#selection.id.userdirectory.template.count) : <code>object</code>
-          * [.get([filter])](#selection.id.userdirectory.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-        * [.full](#selection.id.userdirectory.template.full) : <code>object</code>
-          * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
-        * [.synthetic](#selection.id.userdirectory.template.synthetic) : <code>object</code>
-          * [.put(postParams, [filter])](#selection.id.userdirectory.template.synthetic.put) ⇒ <code>Promise</code>
-          * [.get([filter], [appendprivileges])](#selection.id.userdirectory.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-        * [.table](#selection.id.userdirectory.template.table) : <code>object</code>
-          * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.userdirectory.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-        * [.delete([filter])](#selection.id.userdirectory.template.delete) ⇒ <code>Promise</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.template.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
       * [.delete([filter])](#selection.id.userdirectory.delete) ⇒ <code>Promise</code>
       * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectory&gt;&gt;</code>
     * [.usersynctask](#selection.id.usersynctask) : <code>object</code>
@@ -809,8 +764,6 @@
   * [.dataconnection](#selection.dataconnection) : <code>object</code>
     * [.post([filter])](#selection.dataconnection.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.engineservice](#selection.engineservice) : <code>object</code>
-    * [.template](#selection.engineservice.template) : <code>object</code>
-      * [.post([filter])](#selection.engineservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
     * [.post([filter])](#selection.engineservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.executionresult](#selection.executionresult) : <code>object</code>
     * [.detail](#selection.executionresult.detail) : <code>object</code>
@@ -831,6 +784,12 @@
   * [.full](#selection.full) : <code>object</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.full.get) ⇒ <code>Promise.&lt;Array.&lt;Selection&gt;&gt;</code>
   * [.license](#selection.license) : <code>object</code>
+    * [.applicationaccessgroup](#selection.license.applicationaccessgroup) : <code>object</code>
+      * [.post([filter])](#selection.license.applicationaccessgroup.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
+    * [.applicationaccesstype](#selection.license.applicationaccesstype) : <code>object</code>
+      * [.post([filter])](#selection.license.applicationaccesstype.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
+    * [.applicationaccessusage](#selection.license.applicationaccessusage) : <code>object</code>
+      * [.post([filter])](#selection.license.applicationaccessusage.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
     * [.loginaccesstype](#selection.license.loginaccesstype) : <code>object</code>
       * [.post([filter])](#selection.license.loginaccesstype.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
     * [.loginaccessusage](#selection.license.loginaccessusage) : <code>object</code>
@@ -848,24 +807,18 @@
   * [.previewcreateprivilege](#selection.previewcreateprivilege) : <code>object</code>
     * [.post(postParams)](#selection.previewcreateprivilege.post) ⇒ <code>Promise.&lt;Boolean&gt;</code>
   * [.printingservice](#selection.printingservice) : <code>object</code>
-    * [.template](#selection.printingservice.template) : <code>object</code>
-      * [.post([filter])](#selection.printingservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
     * [.post([filter])](#selection.printingservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.proxyservice](#selection.proxyservice) : <code>object</code>
-    * [.template](#selection.proxyservice.template) : <code>object</code>
-      * [.post([filter])](#selection.proxyservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
     * [.post([filter])](#selection.proxyservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
+  * [.proxyservicecertificate](#selection.proxyservicecertificate) : <code>object</code>
+    * [.post([filter])](#selection.proxyservicecertificate.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.reloadtask](#selection.reloadtask) : <code>object</code>
     * [.post([filter])](#selection.reloadtask.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.reloadtaskoperational](#selection.reloadtaskoperational) : <code>object</code>
     * [.post([filter])](#selection.reloadtaskoperational.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.repositoryservice](#selection.repositoryservice) : <code>object</code>
-    * [.template](#selection.repositoryservice.template) : <code>object</code>
-      * [.post([filter])](#selection.repositoryservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
     * [.post([filter])](#selection.repositoryservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.schedulerservice](#selection.schedulerservice) : <code>object</code>
-    * [.template](#selection.schedulerservice.template) : <code>object</code>
-      * [.post([filter])](#selection.schedulerservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
     * [.post([filter])](#selection.schedulerservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.schemaevent](#selection.schemaevent) : <code>object</code>
     * [.post([filter])](#selection.schemaevent.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
@@ -881,6 +834,8 @@
     * [.post([filter])](#selection.stream.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.syncsession](#selection.syncsession) : <code>object</code>
     * [.post([filter])](#selection.syncsession.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
+  * [.systeminfo](#selection.systeminfo) : <code>object</code>
+    * [.post([filter])](#selection.systeminfo.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.systemrule](#selection.systemrule) : <code>object</code>
     * [.post([filter])](#selection.systemrule.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.tag](#selection.tag) : <code>object</code>
@@ -888,14 +843,8 @@
   * [.tempcontent](#selection.tempcontent) : <code>object</code>
     * [.post([filter])](#selection.tempcontent.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.user](#selection.user) : <code>object</code>
-    * [.followingapp](#selection.user.followingapp) : <code>object</code>
-      * [.post([filter])](#selection.user.followingapp.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-    * [.recentapp](#selection.user.recentapp) : <code>object</code>
-      * [.post([filter])](#selection.user.recentapp.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
     * [.post([filter])](#selection.user.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.userdirectory](#selection.userdirectory) : <code>object</code>
-    * [.template](#selection.userdirectory.template) : <code>object</code>
-      * [.post([filter])](#selection.userdirectory.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
     * [.post([filter])](#selection.userdirectory.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.usersynctask](#selection.usersynctask) : <code>object</code>
     * [.post([filter])](#selection.usersynctask.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
@@ -1122,18 +1071,6 @@
       * [.get([filter], [appendprivileges])](#selection.id.engineservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
     * [.table](#selection.id.engineservice.table) : <code>object</code>
       * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.engineservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.template](#selection.id.engineservice.template) : <code>object</code>
-      * [.count](#selection.id.engineservice.template.count) : <code>object</code>
-        * [.get([filter])](#selection.id.engineservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-      * [.full](#selection.id.engineservice.template.full) : <code>object</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
-      * [.synthetic](#selection.id.engineservice.template.synthetic) : <code>object</code>
-        * [.put(postParams, [filter])](#selection.id.engineservice.template.synthetic.put) ⇒ <code>Promise</code>
-        * [.get([filter], [appendprivileges])](#selection.id.engineservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-      * [.table](#selection.id.engineservice.template.table) : <code>object</code>
-        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.engineservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.delete([filter])](#selection.id.engineservice.template.delete) ⇒ <code>Promise</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.get) ⇒ <code>Promise.&lt;Array.&lt;EngineService&gt;&gt;</code>
   * [.event](#selection.id.event) : <code>object</code>
     * [.full](#selection.id.event.full) : <code>object</code>
@@ -1238,6 +1175,40 @@
       * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.filereference.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.filereference.get) ⇒ <code>Promise.&lt;Array.&lt;FileReference&gt;&gt;</code>
   * [.license](#selection.id.license) : <code>object</code>
+    * [.applicationaccessgroup](#selection.id.license.applicationaccessgroup) : <code>object</code>
+      * [.count](#selection.id.license.applicationaccessgroup.count) : <code>object</code>
+        * [.get([filter])](#selection.id.license.applicationaccessgroup.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+      * [.full](#selection.id.license.applicationaccessgroup.full) : <code>object</code>
+        * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessgroup.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+      * [.synthetic](#selection.id.license.applicationaccessgroup.synthetic) : <code>object</code>
+        * [.put(postParams, [filter])](#selection.id.license.applicationaccessgroup.synthetic.put) ⇒ <code>Promise</code>
+        * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccessgroup.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+      * [.table](#selection.id.license.applicationaccessgroup.table) : <code>object</code>
+        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccessgroup.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+      * [.delete([filter])](#selection.id.license.applicationaccessgroup.delete) ⇒ <code>Promise</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessgroup.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+    * [.applicationaccesstype](#selection.id.license.applicationaccesstype) : <code>object</code>
+      * [.count](#selection.id.license.applicationaccesstype.count) : <code>object</code>
+        * [.get([filter])](#selection.id.license.applicationaccesstype.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+      * [.full](#selection.id.license.applicationaccesstype.full) : <code>object</code>
+        * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccesstype.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+      * [.synthetic](#selection.id.license.applicationaccesstype.synthetic) : <code>object</code>
+        * [.put(postParams, [filter])](#selection.id.license.applicationaccesstype.synthetic.put) ⇒ <code>Promise</code>
+        * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccesstype.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+      * [.table](#selection.id.license.applicationaccesstype.table) : <code>object</code>
+        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccesstype.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+      * [.delete([filter])](#selection.id.license.applicationaccesstype.delete) ⇒ <code>Promise</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccesstype.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+    * [.applicationaccessusage](#selection.id.license.applicationaccessusage) : <code>object</code>
+      * [.count](#selection.id.license.applicationaccessusage.count) : <code>object</code>
+        * [.get([filter])](#selection.id.license.applicationaccessusage.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+      * [.full](#selection.id.license.applicationaccessusage.full) : <code>object</code>
+        * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessusage.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+      * [.synthetic](#selection.id.license.applicationaccessusage.synthetic) : <code>object</code>
+        * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccessusage.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+      * [.table](#selection.id.license.applicationaccessusage.table) : <code>object</code>
+        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccessusage.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessusage.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
     * [.loginaccesstype](#selection.id.license.loginaccesstype) : <code>object</code>
       * [.count](#selection.id.license.loginaccesstype.count) : <code>object</code>
         * [.get([filter])](#selection.id.license.loginaccesstype.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
@@ -1321,18 +1292,6 @@
       * [.get([filter], [appendprivileges])](#selection.id.printingservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
     * [.table](#selection.id.printingservice.table) : <code>object</code>
       * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.printingservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.template](#selection.id.printingservice.template) : <code>object</code>
-      * [.count](#selection.id.printingservice.template.count) : <code>object</code>
-        * [.get([filter])](#selection.id.printingservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-      * [.full](#selection.id.printingservice.template.full) : <code>object</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
-      * [.synthetic](#selection.id.printingservice.template.synthetic) : <code>object</code>
-        * [.put(postParams, [filter])](#selection.id.printingservice.template.synthetic.put) ⇒ <code>Promise</code>
-        * [.get([filter], [appendprivileges])](#selection.id.printingservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-      * [.table](#selection.id.printingservice.template.table) : <code>object</code>
-        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.printingservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.delete([filter])](#selection.id.printingservice.template.delete) ⇒ <code>Promise</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingService&gt;&gt;</code>
   * [.proxyservice](#selection.id.proxyservice) : <code>object</code>
     * [.count](#selection.id.proxyservice.count) : <code>object</code>
@@ -1344,19 +1303,19 @@
       * [.get([filter], [appendprivileges])](#selection.id.proxyservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
     * [.table](#selection.id.proxyservice.table) : <code>object</code>
       * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.template](#selection.id.proxyservice.template) : <code>object</code>
-      * [.count](#selection.id.proxyservice.template.count) : <code>object</code>
-        * [.get([filter])](#selection.id.proxyservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-      * [.full](#selection.id.proxyservice.template.full) : <code>object</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
-      * [.synthetic](#selection.id.proxyservice.template.synthetic) : <code>object</code>
-        * [.put(postParams, [filter])](#selection.id.proxyservice.template.synthetic.put) ⇒ <code>Promise</code>
-        * [.get([filter], [appendprivileges])](#selection.id.proxyservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-      * [.table](#selection.id.proxyservice.template.table) : <code>object</code>
-        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.delete([filter])](#selection.id.proxyservice.template.delete) ⇒ <code>Promise</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyService&gt;&gt;</code>
+  * [.proxyservicecertificate](#selection.id.proxyservicecertificate) : <code>object</code>
+    * [.count](#selection.id.proxyservicecertificate.count) : <code>object</code>
+      * [.get([filter])](#selection.id.proxyservicecertificate.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+    * [.full](#selection.id.proxyservicecertificate.full) : <code>object</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservicecertificate.full.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code>
+    * [.synthetic](#selection.id.proxyservicecertificate.synthetic) : <code>object</code>
+      * [.put(postParams, [filter])](#selection.id.proxyservicecertificate.synthetic.put) ⇒ <code>Promise</code>
+      * [.get([filter], [appendprivileges])](#selection.id.proxyservicecertificate.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+    * [.table](#selection.id.proxyservicecertificate.table) : <code>object</code>
+      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservicecertificate.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.delete([filter])](#selection.id.proxyservicecertificate.delete) ⇒ <code>Promise</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservicecertificate.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code>
   * [.reloadtask](#selection.id.reloadtask) : <code>object</code>
     * [.count](#selection.id.reloadtask.count) : <code>object</code>
       * [.get([filter])](#selection.id.reloadtask.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
@@ -1391,18 +1350,6 @@
       * [.get([filter], [appendprivileges])](#selection.id.repositoryservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
     * [.table](#selection.id.repositoryservice.table) : <code>object</code>
       * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.repositoryservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.template](#selection.id.repositoryservice.template) : <code>object</code>
-      * [.count](#selection.id.repositoryservice.template.count) : <code>object</code>
-        * [.get([filter])](#selection.id.repositoryservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-      * [.full](#selection.id.repositoryservice.template.full) : <code>object</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
-      * [.synthetic](#selection.id.repositoryservice.template.synthetic) : <code>object</code>
-        * [.put(postParams, [filter])](#selection.id.repositoryservice.template.synthetic.put) ⇒ <code>Promise</code>
-        * [.get([filter], [appendprivileges])](#selection.id.repositoryservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-      * [.table](#selection.id.repositoryservice.template.table) : <code>object</code>
-        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.repositoryservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.delete([filter])](#selection.id.repositoryservice.template.delete) ⇒ <code>Promise</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryService&gt;&gt;</code>
   * [.schedulerservice](#selection.id.schedulerservice) : <code>object</code>
     * [.count](#selection.id.schedulerservice.count) : <code>object</code>
@@ -1414,18 +1361,6 @@
       * [.get([filter], [appendprivileges])](#selection.id.schedulerservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
     * [.table](#selection.id.schedulerservice.table) : <code>object</code>
       * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.schedulerservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.template](#selection.id.schedulerservice.template) : <code>object</code>
-      * [.count](#selection.id.schedulerservice.template.count) : <code>object</code>
-        * [.get([filter])](#selection.id.schedulerservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-      * [.full](#selection.id.schedulerservice.template.full) : <code>object</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
-      * [.synthetic](#selection.id.schedulerservice.template.synthetic) : <code>object</code>
-        * [.put(postParams, [filter])](#selection.id.schedulerservice.template.synthetic.put) ⇒ <code>Promise</code>
-        * [.get([filter], [appendprivileges])](#selection.id.schedulerservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-      * [.table](#selection.id.schedulerservice.template.table) : <code>object</code>
-        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.schedulerservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.delete([filter])](#selection.id.schedulerservice.template.delete) ⇒ <code>Promise</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerService&gt;&gt;</code>
   * [.schemaevent](#selection.id.schemaevent) : <code>object</code>
     * [.count](#selection.id.schemaevent.count) : <code>object</code>
@@ -1509,6 +1444,14 @@
     * [.table](#selection.id.syncsession.table) : <code>object</code>
       * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.syncsession.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.syncsession.get) ⇒ <code>Promise.&lt;Array.&lt;SyncSession&gt;&gt;</code>
+  * [.systeminfo](#selection.id.systeminfo) : <code>object</code>
+    * [.full](#selection.id.systeminfo.full) : <code>object</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.systeminfo.full.get) ⇒ <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code>
+    * [.synthetic](#selection.id.systeminfo.synthetic) : <code>object</code>
+      * [.get([filter], [appendprivileges])](#selection.id.systeminfo.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+    * [.table](#selection.id.systeminfo.table) : <code>object</code>
+      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.systeminfo.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.systeminfo.get) ⇒ <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code>
   * [.systemrule](#selection.id.systemrule) : <code>object</code>
     * [.count](#selection.id.systemrule.count) : <code>object</code>
       * [.get([filter])](#selection.id.systemrule.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
@@ -1554,35 +1497,8 @@
   * [.user](#selection.id.user) : <code>object</code>
     * [.count](#selection.id.user.count) : <code>object</code>
       * [.get([filter])](#selection.id.user.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-    * [.followingapp](#selection.id.user.followingapp) : <code>object</code>
-      * [.count](#selection.id.user.followingapp.count) : <code>object</code>
-        * [.get([filter])](#selection.id.user.followingapp.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-      * [.full](#selection.id.user.followingapp.full) : <code>object</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.followingapp.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
-      * [.synthetic](#selection.id.user.followingapp.synthetic) : <code>object</code>
-        * [.put(postParams, [filter])](#selection.id.user.followingapp.synthetic.put) ⇒ <code>Promise</code>
-        * [.get([filter], [appendprivileges])](#selection.id.user.followingapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-      * [.table](#selection.id.user.followingapp.table) : <code>object</code>
-        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.user.followingapp.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.delete([filter])](#selection.id.user.followingapp.delete) ⇒ <code>Promise</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.followingapp.get) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
     * [.full](#selection.id.user.full) : <code>object</code>
       * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.full.get) ⇒ <code>Promise.&lt;Array.&lt;User&gt;&gt;</code>
-    * [.license](#selection.id.user.license) : <code>object</code>
-      * [.useraccesstype](#selection.id.user.license.useraccesstype) : <code>object</code>
-        * [.post(postParams)](#selection.id.user.license.useraccesstype.post) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
-    * [.recentapp](#selection.id.user.recentapp) : <code>object</code>
-      * [.count](#selection.id.user.recentapp.count) : <code>object</code>
-        * [.get([filter])](#selection.id.user.recentapp.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-      * [.full](#selection.id.user.recentapp.full) : <code>object</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.recentapp.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
-      * [.synthetic](#selection.id.user.recentapp.synthetic) : <code>object</code>
-        * [.put(postParams, [filter])](#selection.id.user.recentapp.synthetic.put) ⇒ <code>Promise</code>
-        * [.get([filter], [appendprivileges])](#selection.id.user.recentapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-      * [.table](#selection.id.user.recentapp.table) : <code>object</code>
-        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.user.recentapp.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.delete([filter])](#selection.id.user.recentapp.delete) ⇒ <code>Promise</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.recentapp.get) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
     * [.synthetic](#selection.id.user.synthetic) : <code>object</code>
       * [.put(postParams, [filter])](#selection.id.user.synthetic.put) ⇒ <code>Promise</code>
       * [.get([filter], [appendprivileges])](#selection.id.user.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
@@ -1600,18 +1516,6 @@
       * [.get([filter], [appendprivileges])](#selection.id.userdirectory.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
     * [.table](#selection.id.userdirectory.table) : <code>object</code>
       * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.userdirectory.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.template](#selection.id.userdirectory.template) : <code>object</code>
-      * [.count](#selection.id.userdirectory.template.count) : <code>object</code>
-        * [.get([filter])](#selection.id.userdirectory.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-      * [.full](#selection.id.userdirectory.template.full) : <code>object</code>
-        * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
-      * [.synthetic](#selection.id.userdirectory.template.synthetic) : <code>object</code>
-        * [.put(postParams, [filter])](#selection.id.userdirectory.template.synthetic.put) ⇒ <code>Promise</code>
-        * [.get([filter], [appendprivileges])](#selection.id.userdirectory.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-      * [.table](#selection.id.userdirectory.template.table) : <code>object</code>
-        * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.userdirectory.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-      * [.delete([filter])](#selection.id.userdirectory.template.delete) ⇒ <code>Promise</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.template.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
     * [.delete([filter])](#selection.id.userdirectory.delete) ⇒ <code>Promise</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectory&gt;&gt;</code>
   * [.usersynctask](#selection.id.usersynctask) : <code>object</code>
@@ -4752,18 +4656,6 @@ qrsApi.selection.id(id).dataconnection.get(filter, orderby, appendprivileges).th
     * [.get([filter], [appendprivileges])](#selection.id.engineservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
   * [.table](#selection.id.engineservice.table) : <code>object</code>
     * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.engineservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.template](#selection.id.engineservice.template) : <code>object</code>
-    * [.count](#selection.id.engineservice.template.count) : <code>object</code>
-      * [.get([filter])](#selection.id.engineservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-    * [.full](#selection.id.engineservice.template.full) : <code>object</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
-    * [.synthetic](#selection.id.engineservice.template.synthetic) : <code>object</code>
-      * [.put(postParams, [filter])](#selection.id.engineservice.template.synthetic.put) ⇒ <code>Promise</code>
-      * [.get([filter], [appendprivileges])](#selection.id.engineservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-    * [.table](#selection.id.engineservice.template.table) : <code>object</code>
-      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.engineservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.delete([filter])](#selection.id.engineservice.template.delete) ⇒ <code>Promise</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
   * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.get) ⇒ <code>Promise.&lt;Array.&lt;EngineService&gt;&gt;</code>
 
 <a name="selection.id.engineservice.count"></a>
@@ -4895,198 +4787,6 @@ This method is generated
 ```javascript
 qrsApi.selection.id(id).engineservice.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
     console.log(Object)
-})
-```
-<a name="selection.id.engineservice.template"></a>
-##### engineservice.template : <code>object</code>
-**Kind**: static namespace of <code>[engineservice](#selection.id.engineservice)</code>  
-
-* [.template](#selection.id.engineservice.template) : <code>object</code>
-  * [.count](#selection.id.engineservice.template.count) : <code>object</code>
-    * [.get([filter])](#selection.id.engineservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-  * [.full](#selection.id.engineservice.template.full) : <code>object</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
-  * [.synthetic](#selection.id.engineservice.template.synthetic) : <code>object</code>
-    * [.put(postParams, [filter])](#selection.id.engineservice.template.synthetic.put) ⇒ <code>Promise</code>
-    * [.get([filter], [appendprivileges])](#selection.id.engineservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-  * [.table](#selection.id.engineservice.template.table) : <code>object</code>
-    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.engineservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.delete([filter])](#selection.id.engineservice.template.delete) ⇒ <code>Promise</code>
-  * [.get([filter], [orderby], [appendprivileges])](#selection.id.engineservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
-
-<a name="selection.id.engineservice.template.count"></a>
-###### template.count : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.engineservice.template)</code>  
-<a name="selection.id.engineservice.template.count.get"></a>
-####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/engineservice/template/count?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[count](#selection.id.engineservice.template.count)</code>  
-**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).engineservice.template.count.get(filter).then(function(int) {
-    console.log(int)
-})
-```
-<a name="selection.id.engineservice.template.full"></a>
-###### template.full : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.engineservice.template)</code>  
-<a name="selection.id.engineservice.template.full.get"></a>
-####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/engineservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[full](#selection.id.engineservice.template.full)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).engineservice.template.full.get(filter, orderby, appendprivileges).then(function(Array.<EngineServiceTemplate>) {
-    console.log(Array.<EngineServiceTemplate>)
-})
-```
-<a name="selection.id.engineservice.template.synthetic"></a>
-###### template.synthetic : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.engineservice.template)</code>  
-
-* [.synthetic](#selection.id.engineservice.template.synthetic) : <code>object</code>
-  * [.put(postParams, [filter])](#selection.id.engineservice.template.synthetic.put) ⇒ <code>Promise</code>
-  * [.get([filter], [appendprivileges])](#selection.id.engineservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-
-<a name="selection.id.engineservice.template.synthetic.put"></a>
-####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/engineservice/template/synthetic?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.engineservice.template.synthetic)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).engineservice.template.synthetic.put(postParams, filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.engineservice.template.synthetic.get"></a>
-####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/engineservice/template/synthetic?filter={filter}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.engineservice.template.synthetic)</code>  
-**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).engineservice.template.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
-    console.log(SyntheticEntity)
-})
-```
-<a name="selection.id.engineservice.template.table"></a>
-###### template.table : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.engineservice.template)</code>  
-<a name="selection.id.engineservice.template.table.post"></a>
-####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/engineservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
-
-This method is generated
-
-**Kind**: static method of <code>[table](#selection.id.engineservice.template.table)</code>  
-**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-| [skip] | <code>string</code> | the skip parameter |
-| [take] | <code>string</code> | the take parameter |
-| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
-| [orderascending] | <code>string</code> | the orderascending parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).engineservice.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-    console.log(Object)
-})
-```
-<a name="selection.id.engineservice.template.delete"></a>
-###### template.delete([filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/engineservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.engineservice.template)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).engineservice.template.delete(filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.engineservice.template.get"></a>
-###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/engineservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.engineservice.template)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;EngineServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).engineservice.template.get(filter, orderby, appendprivileges).then(function(Array.<EngineServiceTemplate>) {
-    console.log(Array.<EngineServiceTemplate>)
 })
 ```
 <a name="selection.id.engineservice.get"></a>
@@ -6731,6 +6431,40 @@ qrsApi.selection.id(id).filereference.get(filter, orderby, appendprivileges).the
 **Kind**: static namespace of <code>[id](#selection.id)</code>  
 
 * [.license](#selection.id.license) : <code>object</code>
+  * [.applicationaccessgroup](#selection.id.license.applicationaccessgroup) : <code>object</code>
+    * [.count](#selection.id.license.applicationaccessgroup.count) : <code>object</code>
+      * [.get([filter])](#selection.id.license.applicationaccessgroup.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+    * [.full](#selection.id.license.applicationaccessgroup.full) : <code>object</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessgroup.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+    * [.synthetic](#selection.id.license.applicationaccessgroup.synthetic) : <code>object</code>
+      * [.put(postParams, [filter])](#selection.id.license.applicationaccessgroup.synthetic.put) ⇒ <code>Promise</code>
+      * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccessgroup.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+    * [.table](#selection.id.license.applicationaccessgroup.table) : <code>object</code>
+      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccessgroup.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.delete([filter])](#selection.id.license.applicationaccessgroup.delete) ⇒ <code>Promise</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessgroup.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+  * [.applicationaccesstype](#selection.id.license.applicationaccesstype) : <code>object</code>
+    * [.count](#selection.id.license.applicationaccesstype.count) : <code>object</code>
+      * [.get([filter])](#selection.id.license.applicationaccesstype.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+    * [.full](#selection.id.license.applicationaccesstype.full) : <code>object</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccesstype.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+    * [.synthetic](#selection.id.license.applicationaccesstype.synthetic) : <code>object</code>
+      * [.put(postParams, [filter])](#selection.id.license.applicationaccesstype.synthetic.put) ⇒ <code>Promise</code>
+      * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccesstype.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+    * [.table](#selection.id.license.applicationaccesstype.table) : <code>object</code>
+      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccesstype.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.delete([filter])](#selection.id.license.applicationaccesstype.delete) ⇒ <code>Promise</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccesstype.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+  * [.applicationaccessusage](#selection.id.license.applicationaccessusage) : <code>object</code>
+    * [.count](#selection.id.license.applicationaccessusage.count) : <code>object</code>
+      * [.get([filter])](#selection.id.license.applicationaccessusage.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+    * [.full](#selection.id.license.applicationaccessusage.full) : <code>object</code>
+      * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessusage.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+    * [.synthetic](#selection.id.license.applicationaccessusage.synthetic) : <code>object</code>
+      * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccessusage.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+    * [.table](#selection.id.license.applicationaccessusage.table) : <code>object</code>
+      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccessusage.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessusage.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
   * [.loginaccesstype](#selection.id.license.loginaccesstype) : <code>object</code>
     * [.count](#selection.id.license.loginaccesstype.count) : <code>object</code>
       * [.get([filter])](#selection.id.license.loginaccesstype.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
@@ -6789,6 +6523,532 @@ qrsApi.selection.id(id).filereference.get(filter, orderby, appendprivileges).the
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.useraccessusage.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessUsage&gt;&gt;</code>
   * [.delete([filter])](#selection.id.license.delete) ⇒ <code>Promise</code>
 
+<a name="selection.id.license.applicationaccessgroup"></a>
+##### license.applicationaccessgroup : <code>object</code>
+**Kind**: static namespace of <code>[license](#selection.id.license)</code>  
+
+* [.applicationaccessgroup](#selection.id.license.applicationaccessgroup) : <code>object</code>
+  * [.count](#selection.id.license.applicationaccessgroup.count) : <code>object</code>
+    * [.get([filter])](#selection.id.license.applicationaccessgroup.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+  * [.full](#selection.id.license.applicationaccessgroup.full) : <code>object</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessgroup.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+  * [.synthetic](#selection.id.license.applicationaccessgroup.synthetic) : <code>object</code>
+    * [.put(postParams, [filter])](#selection.id.license.applicationaccessgroup.synthetic.put) ⇒ <code>Promise</code>
+    * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccessgroup.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+  * [.table](#selection.id.license.applicationaccessgroup.table) : <code>object</code>
+    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccessgroup.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.delete([filter])](#selection.id.license.applicationaccessgroup.delete) ⇒ <code>Promise</code>
+  * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessgroup.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+
+<a name="selection.id.license.applicationaccessgroup.count"></a>
+###### applicationaccessgroup.count : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#selection.id.license.applicationaccessgroup)</code>  
+<a name="selection.id.license.applicationaccessgroup.count.get"></a>
+####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessgroup/count?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[count](#selection.id.license.applicationaccessgroup.count)</code>  
+**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessgroup.count.get(filter).then(function(int) {
+    console.log(int)
+})
+```
+<a name="selection.id.license.applicationaccessgroup.full"></a>
+###### applicationaccessgroup.full : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#selection.id.license.applicationaccessgroup)</code>  
+<a name="selection.id.license.applicationaccessgroup.full.get"></a>
+####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessgroup/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[full](#selection.id.license.applicationaccessgroup.full)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessgroup.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessGroup>) {
+    console.log(Array.<LicenseApplicationAccessGroup>)
+})
+```
+<a name="selection.id.license.applicationaccessgroup.synthetic"></a>
+###### applicationaccessgroup.synthetic : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#selection.id.license.applicationaccessgroup)</code>  
+
+* [.synthetic](#selection.id.license.applicationaccessgroup.synthetic) : <code>object</code>
+  * [.put(postParams, [filter])](#selection.id.license.applicationaccessgroup.synthetic.put) ⇒ <code>Promise</code>
+  * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccessgroup.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+
+<a name="selection.id.license.applicationaccessgroup.synthetic.put"></a>
+####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessgroup/synthetic?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[synthetic](#selection.id.license.applicationaccessgroup.synthetic)</code>  
+**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessgroup.synthetic.put(postParams, filter).then(function() {
+    console.log('done')
+})
+```
+<a name="selection.id.license.applicationaccessgroup.synthetic.get"></a>
+####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessgroup/synthetic?filter={filter}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[synthetic](#selection.id.license.applicationaccessgroup.synthetic)</code>  
+**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessgroup.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
+    console.log(SyntheticEntity)
+})
+```
+<a name="selection.id.license.applicationaccessgroup.table"></a>
+###### applicationaccessgroup.table : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessgroup](#selection.id.license.applicationaccessgroup)</code>  
+<a name="selection.id.license.applicationaccessgroup.table.post"></a>
+####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessgroup/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
+This method is generated
+
+**Kind**: static method of <code>[table](#selection.id.license.applicationaccessgroup.table)</code>  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+| [skip] | <code>string</code> | the skip parameter |
+| [take] | <code>string</code> | the take parameter |
+| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
+| [orderascending] | <code>string</code> | the orderascending parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessgroup.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
+    console.log(Object)
+})
+```
+<a name="selection.id.license.applicationaccessgroup.delete"></a>
+###### applicationaccessgroup.delete([filter]) ⇒ <code>Promise</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessgroup?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccessgroup](#selection.id.license.applicationaccessgroup)</code>  
+**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessgroup.delete(filter).then(function() {
+    console.log('done')
+})
+```
+<a name="selection.id.license.applicationaccessgroup.get"></a>
+###### applicationaccessgroup.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessgroup?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccessgroup](#selection.id.license.applicationaccessgroup)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessGroup&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessgroup.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessGroup>) {
+    console.log(Array.<LicenseApplicationAccessGroup>)
+})
+```
+<a name="selection.id.license.applicationaccesstype"></a>
+##### license.applicationaccesstype : <code>object</code>
+**Kind**: static namespace of <code>[license](#selection.id.license)</code>  
+
+* [.applicationaccesstype](#selection.id.license.applicationaccesstype) : <code>object</code>
+  * [.count](#selection.id.license.applicationaccesstype.count) : <code>object</code>
+    * [.get([filter])](#selection.id.license.applicationaccesstype.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+  * [.full](#selection.id.license.applicationaccesstype.full) : <code>object</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccesstype.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+  * [.synthetic](#selection.id.license.applicationaccesstype.synthetic) : <code>object</code>
+    * [.put(postParams, [filter])](#selection.id.license.applicationaccesstype.synthetic.put) ⇒ <code>Promise</code>
+    * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccesstype.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+  * [.table](#selection.id.license.applicationaccesstype.table) : <code>object</code>
+    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccesstype.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.delete([filter])](#selection.id.license.applicationaccesstype.delete) ⇒ <code>Promise</code>
+  * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccesstype.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+
+<a name="selection.id.license.applicationaccesstype.count"></a>
+###### applicationaccesstype.count : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#selection.id.license.applicationaccesstype)</code>  
+<a name="selection.id.license.applicationaccesstype.count.get"></a>
+####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccesstype/count?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[count](#selection.id.license.applicationaccesstype.count)</code>  
+**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccesstype.count.get(filter).then(function(int) {
+    console.log(int)
+})
+```
+<a name="selection.id.license.applicationaccesstype.full"></a>
+###### applicationaccesstype.full : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#selection.id.license.applicationaccesstype)</code>  
+<a name="selection.id.license.applicationaccesstype.full.get"></a>
+####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccesstype/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[full](#selection.id.license.applicationaccesstype.full)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccesstype.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessType>) {
+    console.log(Array.<LicenseApplicationAccessType>)
+})
+```
+<a name="selection.id.license.applicationaccesstype.synthetic"></a>
+###### applicationaccesstype.synthetic : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#selection.id.license.applicationaccesstype)</code>  
+
+* [.synthetic](#selection.id.license.applicationaccesstype.synthetic) : <code>object</code>
+  * [.put(postParams, [filter])](#selection.id.license.applicationaccesstype.synthetic.put) ⇒ <code>Promise</code>
+  * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccesstype.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+
+<a name="selection.id.license.applicationaccesstype.synthetic.put"></a>
+####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccesstype/synthetic?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[synthetic](#selection.id.license.applicationaccesstype.synthetic)</code>  
+**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccesstype.synthetic.put(postParams, filter).then(function() {
+    console.log('done')
+})
+```
+<a name="selection.id.license.applicationaccesstype.synthetic.get"></a>
+####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccesstype/synthetic?filter={filter}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[synthetic](#selection.id.license.applicationaccesstype.synthetic)</code>  
+**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccesstype.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
+    console.log(SyntheticEntity)
+})
+```
+<a name="selection.id.license.applicationaccesstype.table"></a>
+###### applicationaccesstype.table : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccesstype](#selection.id.license.applicationaccesstype)</code>  
+<a name="selection.id.license.applicationaccesstype.table.post"></a>
+####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccesstype/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
+This method is generated
+
+**Kind**: static method of <code>[table](#selection.id.license.applicationaccesstype.table)</code>  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+| [skip] | <code>string</code> | the skip parameter |
+| [take] | <code>string</code> | the take parameter |
+| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
+| [orderascending] | <code>string</code> | the orderascending parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccesstype.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
+    console.log(Object)
+})
+```
+<a name="selection.id.license.applicationaccesstype.delete"></a>
+###### applicationaccesstype.delete([filter]) ⇒ <code>Promise</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccesstype?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccesstype](#selection.id.license.applicationaccesstype)</code>  
+**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccesstype.delete(filter).then(function() {
+    console.log('done')
+})
+```
+<a name="selection.id.license.applicationaccesstype.get"></a>
+###### applicationaccesstype.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccesstype?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccesstype](#selection.id.license.applicationaccesstype)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessType&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccesstype.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessType>) {
+    console.log(Array.<LicenseApplicationAccessType>)
+})
+```
+<a name="selection.id.license.applicationaccessusage"></a>
+##### license.applicationaccessusage : <code>object</code>
+**Kind**: static namespace of <code>[license](#selection.id.license)</code>  
+
+* [.applicationaccessusage](#selection.id.license.applicationaccessusage) : <code>object</code>
+  * [.count](#selection.id.license.applicationaccessusage.count) : <code>object</code>
+    * [.get([filter])](#selection.id.license.applicationaccessusage.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+  * [.full](#selection.id.license.applicationaccessusage.full) : <code>object</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessusage.full.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+  * [.synthetic](#selection.id.license.applicationaccessusage.synthetic) : <code>object</code>
+    * [.get([filter], [appendprivileges])](#selection.id.license.applicationaccessusage.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+  * [.table](#selection.id.license.applicationaccessusage.table) : <code>object</code>
+    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.license.applicationaccessusage.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.get([filter], [orderby], [appendprivileges])](#selection.id.license.applicationaccessusage.get) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+
+<a name="selection.id.license.applicationaccessusage.count"></a>
+###### applicationaccessusage.count : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessusage](#selection.id.license.applicationaccessusage)</code>  
+<a name="selection.id.license.applicationaccessusage.count.get"></a>
+####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessusage/count?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[count](#selection.id.license.applicationaccessusage.count)</code>  
+**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessusage.count.get(filter).then(function(int) {
+    console.log(int)
+})
+```
+<a name="selection.id.license.applicationaccessusage.full"></a>
+###### applicationaccessusage.full : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessusage](#selection.id.license.applicationaccessusage)</code>  
+<a name="selection.id.license.applicationaccessusage.full.get"></a>
+####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessusage/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[full](#selection.id.license.applicationaccessusage.full)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessusage.full.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessUsage>) {
+    console.log(Array.<LicenseApplicationAccessUsage>)
+})
+```
+<a name="selection.id.license.applicationaccessusage.synthetic"></a>
+###### applicationaccessusage.synthetic : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessusage](#selection.id.license.applicationaccessusage)</code>  
+<a name="selection.id.license.applicationaccessusage.synthetic.get"></a>
+####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessusage/synthetic?filter={filter}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[synthetic](#selection.id.license.applicationaccessusage.synthetic)</code>  
+**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessusage.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
+    console.log(SyntheticEntity)
+})
+```
+<a name="selection.id.license.applicationaccessusage.table"></a>
+###### applicationaccessusage.table : <code>object</code>
+**Kind**: static namespace of <code>[applicationaccessusage](#selection.id.license.applicationaccessusage)</code>  
+<a name="selection.id.license.applicationaccessusage.table.post"></a>
+####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessusage/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
+This method is generated
+
+**Kind**: static method of <code>[table](#selection.id.license.applicationaccessusage.table)</code>  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+| [skip] | <code>string</code> | the skip parameter |
+| [take] | <code>string</code> | the take parameter |
+| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
+| [orderascending] | <code>string</code> | the orderascending parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessusage.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
+    console.log(Object)
+})
+```
+<a name="selection.id.license.applicationaccessusage.get"></a>
+###### applicationaccessusage.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/license/applicationaccessusage?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccessusage](#selection.id.license.applicationaccessusage)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;LicenseApplicationAccessUsage&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).license.applicationaccessusage.get(filter, orderby, appendprivileges).then(function(Array.<LicenseApplicationAccessUsage>) {
+    console.log(Array.<LicenseApplicationAccessUsage>)
+})
+```
 <a name="selection.id.license.loginaccesstype"></a>
 ##### license.loginaccesstype : <code>object</code>
 **Kind**: static namespace of <code>[license](#selection.id.license)</code>  
@@ -7934,18 +8194,6 @@ qrsApi.selection.id(id).mimetype.get(filter, orderby, appendprivileges).then(fun
     * [.get([filter], [appendprivileges])](#selection.id.printingservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
   * [.table](#selection.id.printingservice.table) : <code>object</code>
     * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.printingservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.template](#selection.id.printingservice.template) : <code>object</code>
-    * [.count](#selection.id.printingservice.template.count) : <code>object</code>
-      * [.get([filter])](#selection.id.printingservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-    * [.full](#selection.id.printingservice.template.full) : <code>object</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
-    * [.synthetic](#selection.id.printingservice.template.synthetic) : <code>object</code>
-      * [.put(postParams, [filter])](#selection.id.printingservice.template.synthetic.put) ⇒ <code>Promise</code>
-      * [.get([filter], [appendprivileges])](#selection.id.printingservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-    * [.table](#selection.id.printingservice.template.table) : <code>object</code>
-      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.printingservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.delete([filter])](#selection.id.printingservice.template.delete) ⇒ <code>Promise</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
   * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingService&gt;&gt;</code>
 
 <a name="selection.id.printingservice.count"></a>
@@ -8079,198 +8327,6 @@ qrsApi.selection.id(id).printingservice.table.post(postParams, filter, skip, tak
     console.log(Object)
 })
 ```
-<a name="selection.id.printingservice.template"></a>
-##### printingservice.template : <code>object</code>
-**Kind**: static namespace of <code>[printingservice](#selection.id.printingservice)</code>  
-
-* [.template](#selection.id.printingservice.template) : <code>object</code>
-  * [.count](#selection.id.printingservice.template.count) : <code>object</code>
-    * [.get([filter])](#selection.id.printingservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-  * [.full](#selection.id.printingservice.template.full) : <code>object</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
-  * [.synthetic](#selection.id.printingservice.template.synthetic) : <code>object</code>
-    * [.put(postParams, [filter])](#selection.id.printingservice.template.synthetic.put) ⇒ <code>Promise</code>
-    * [.get([filter], [appendprivileges])](#selection.id.printingservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-  * [.table](#selection.id.printingservice.template.table) : <code>object</code>
-    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.printingservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.delete([filter])](#selection.id.printingservice.template.delete) ⇒ <code>Promise</code>
-  * [.get([filter], [orderby], [appendprivileges])](#selection.id.printingservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
-
-<a name="selection.id.printingservice.template.count"></a>
-###### template.count : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.printingservice.template)</code>  
-<a name="selection.id.printingservice.template.count.get"></a>
-####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/printingservice/template/count?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[count](#selection.id.printingservice.template.count)</code>  
-**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).printingservice.template.count.get(filter).then(function(int) {
-    console.log(int)
-})
-```
-<a name="selection.id.printingservice.template.full"></a>
-###### template.full : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.printingservice.template)</code>  
-<a name="selection.id.printingservice.template.full.get"></a>
-####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/printingservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[full](#selection.id.printingservice.template.full)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).printingservice.template.full.get(filter, orderby, appendprivileges).then(function(Array.<PrintingServiceTemplate>) {
-    console.log(Array.<PrintingServiceTemplate>)
-})
-```
-<a name="selection.id.printingservice.template.synthetic"></a>
-###### template.synthetic : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.printingservice.template)</code>  
-
-* [.synthetic](#selection.id.printingservice.template.synthetic) : <code>object</code>
-  * [.put(postParams, [filter])](#selection.id.printingservice.template.synthetic.put) ⇒ <code>Promise</code>
-  * [.get([filter], [appendprivileges])](#selection.id.printingservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-
-<a name="selection.id.printingservice.template.synthetic.put"></a>
-####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/printingservice/template/synthetic?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.printingservice.template.synthetic)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).printingservice.template.synthetic.put(postParams, filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.printingservice.template.synthetic.get"></a>
-####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/printingservice/template/synthetic?filter={filter}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.printingservice.template.synthetic)</code>  
-**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).printingservice.template.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
-    console.log(SyntheticEntity)
-})
-```
-<a name="selection.id.printingservice.template.table"></a>
-###### template.table : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.printingservice.template)</code>  
-<a name="selection.id.printingservice.template.table.post"></a>
-####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/printingservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
-
-This method is generated
-
-**Kind**: static method of <code>[table](#selection.id.printingservice.template.table)</code>  
-**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-| [skip] | <code>string</code> | the skip parameter |
-| [take] | <code>string</code> | the take parameter |
-| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
-| [orderascending] | <code>string</code> | the orderascending parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).printingservice.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-    console.log(Object)
-})
-```
-<a name="selection.id.printingservice.template.delete"></a>
-###### template.delete([filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/printingservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.printingservice.template)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).printingservice.template.delete(filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.printingservice.template.get"></a>
-###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/printingservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.printingservice.template)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;PrintingServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).printingservice.template.get(filter, orderby, appendprivileges).then(function(Array.<PrintingServiceTemplate>) {
-    console.log(Array.<PrintingServiceTemplate>)
-})
-```
 <a name="selection.id.printingservice.get"></a>
 ##### printingservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;PrintingService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
@@ -8308,18 +8364,6 @@ qrsApi.selection.id(id).printingservice.get(filter, orderby, appendprivileges).t
     * [.get([filter], [appendprivileges])](#selection.id.proxyservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
   * [.table](#selection.id.proxyservice.table) : <code>object</code>
     * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.template](#selection.id.proxyservice.template) : <code>object</code>
-    * [.count](#selection.id.proxyservice.template.count) : <code>object</code>
-      * [.get([filter])](#selection.id.proxyservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-    * [.full](#selection.id.proxyservice.template.full) : <code>object</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
-    * [.synthetic](#selection.id.proxyservice.template.synthetic) : <code>object</code>
-      * [.put(postParams, [filter])](#selection.id.proxyservice.template.synthetic.put) ⇒ <code>Promise</code>
-      * [.get([filter], [appendprivileges])](#selection.id.proxyservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-    * [.table](#selection.id.proxyservice.template.table) : <code>object</code>
-      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.delete([filter])](#selection.id.proxyservice.template.delete) ⇒ <code>Promise</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
   * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyService&gt;&gt;</code>
 
 <a name="selection.id.proxyservice.count"></a>
@@ -8453,198 +8497,6 @@ qrsApi.selection.id(id).proxyservice.table.post(postParams, filter, skip, take, 
     console.log(Object)
 })
 ```
-<a name="selection.id.proxyservice.template"></a>
-##### proxyservice.template : <code>object</code>
-**Kind**: static namespace of <code>[proxyservice](#selection.id.proxyservice)</code>  
-
-* [.template](#selection.id.proxyservice.template) : <code>object</code>
-  * [.count](#selection.id.proxyservice.template.count) : <code>object</code>
-    * [.get([filter])](#selection.id.proxyservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-  * [.full](#selection.id.proxyservice.template.full) : <code>object</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
-  * [.synthetic](#selection.id.proxyservice.template.synthetic) : <code>object</code>
-    * [.put(postParams, [filter])](#selection.id.proxyservice.template.synthetic.put) ⇒ <code>Promise</code>
-    * [.get([filter], [appendprivileges])](#selection.id.proxyservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-  * [.table](#selection.id.proxyservice.template.table) : <code>object</code>
-    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.delete([filter])](#selection.id.proxyservice.template.delete) ⇒ <code>Promise</code>
-  * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
-
-<a name="selection.id.proxyservice.template.count"></a>
-###### template.count : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.proxyservice.template)</code>  
-<a name="selection.id.proxyservice.template.count.get"></a>
-####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/proxyservice/template/count?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[count](#selection.id.proxyservice.template.count)</code>  
-**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).proxyservice.template.count.get(filter).then(function(int) {
-    console.log(int)
-})
-```
-<a name="selection.id.proxyservice.template.full"></a>
-###### template.full : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.proxyservice.template)</code>  
-<a name="selection.id.proxyservice.template.full.get"></a>
-####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/proxyservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[full](#selection.id.proxyservice.template.full)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).proxyservice.template.full.get(filter, orderby, appendprivileges).then(function(Array.<ProxyServiceTemplate>) {
-    console.log(Array.<ProxyServiceTemplate>)
-})
-```
-<a name="selection.id.proxyservice.template.synthetic"></a>
-###### template.synthetic : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.proxyservice.template)</code>  
-
-* [.synthetic](#selection.id.proxyservice.template.synthetic) : <code>object</code>
-  * [.put(postParams, [filter])](#selection.id.proxyservice.template.synthetic.put) ⇒ <code>Promise</code>
-  * [.get([filter], [appendprivileges])](#selection.id.proxyservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-
-<a name="selection.id.proxyservice.template.synthetic.put"></a>
-####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/proxyservice/template/synthetic?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.proxyservice.template.synthetic)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).proxyservice.template.synthetic.put(postParams, filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.proxyservice.template.synthetic.get"></a>
-####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/proxyservice/template/synthetic?filter={filter}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.proxyservice.template.synthetic)</code>  
-**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).proxyservice.template.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
-    console.log(SyntheticEntity)
-})
-```
-<a name="selection.id.proxyservice.template.table"></a>
-###### template.table : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.proxyservice.template)</code>  
-<a name="selection.id.proxyservice.template.table.post"></a>
-####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/proxyservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
-
-This method is generated
-
-**Kind**: static method of <code>[table](#selection.id.proxyservice.template.table)</code>  
-**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-| [skip] | <code>string</code> | the skip parameter |
-| [take] | <code>string</code> | the take parameter |
-| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
-| [orderascending] | <code>string</code> | the orderascending parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).proxyservice.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-    console.log(Object)
-})
-```
-<a name="selection.id.proxyservice.template.delete"></a>
-###### template.delete([filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/proxyservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.proxyservice.template)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).proxyservice.template.delete(filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.proxyservice.template.get"></a>
-###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/proxyservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.proxyservice.template)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;ProxyServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).proxyservice.template.get(filter, orderby, appendprivileges).then(function(Array.<ProxyServiceTemplate>) {
-    console.log(Array.<ProxyServiceTemplate>)
-})
-```
 <a name="selection.id.proxyservice.get"></a>
 ##### proxyservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
@@ -8666,6 +8518,198 @@ This method is generated
 ```javascript
 qrsApi.selection.id(id).proxyservice.get(filter, orderby, appendprivileges).then(function(Array.<ProxyService>) {
     console.log(Array.<ProxyService>)
+})
+```
+<a name="selection.id.proxyservicecertificate"></a>
+#### id.proxyservicecertificate : <code>object</code>
+**Kind**: static namespace of <code>[id](#selection.id)</code>  
+
+* [.proxyservicecertificate](#selection.id.proxyservicecertificate) : <code>object</code>
+  * [.count](#selection.id.proxyservicecertificate.count) : <code>object</code>
+    * [.get([filter])](#selection.id.proxyservicecertificate.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
+  * [.full](#selection.id.proxyservicecertificate.full) : <code>object</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservicecertificate.full.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code>
+  * [.synthetic](#selection.id.proxyservicecertificate.synthetic) : <code>object</code>
+    * [.put(postParams, [filter])](#selection.id.proxyservicecertificate.synthetic.put) ⇒ <code>Promise</code>
+    * [.get([filter], [appendprivileges])](#selection.id.proxyservicecertificate.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+  * [.table](#selection.id.proxyservicecertificate.table) : <code>object</code>
+    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.proxyservicecertificate.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.delete([filter])](#selection.id.proxyservicecertificate.delete) ⇒ <code>Promise</code>
+  * [.get([filter], [orderby], [appendprivileges])](#selection.id.proxyservicecertificate.get) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code>
+
+<a name="selection.id.proxyservicecertificate.count"></a>
+##### proxyservicecertificate.count : <code>object</code>
+**Kind**: static namespace of <code>[proxyservicecertificate](#selection.id.proxyservicecertificate)</code>  
+<a name="selection.id.proxyservicecertificate.count.get"></a>
+###### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/proxyservicecertificate/count?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[count](#selection.id.proxyservicecertificate.count)</code>  
+**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).proxyservicecertificate.count.get(filter).then(function(int) {
+    console.log(int)
+})
+```
+<a name="selection.id.proxyservicecertificate.full"></a>
+##### proxyservicecertificate.full : <code>object</code>
+**Kind**: static namespace of <code>[proxyservicecertificate](#selection.id.proxyservicecertificate)</code>  
+<a name="selection.id.proxyservicecertificate.full.get"></a>
+###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/proxyservicecertificate/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[full](#selection.id.proxyservicecertificate.full)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).proxyservicecertificate.full.get(filter, orderby, appendprivileges).then(function(Array.<ProxyServiceCertificate>) {
+    console.log(Array.<ProxyServiceCertificate>)
+})
+```
+<a name="selection.id.proxyservicecertificate.synthetic"></a>
+##### proxyservicecertificate.synthetic : <code>object</code>
+**Kind**: static namespace of <code>[proxyservicecertificate](#selection.id.proxyservicecertificate)</code>  
+
+* [.synthetic](#selection.id.proxyservicecertificate.synthetic) : <code>object</code>
+  * [.put(postParams, [filter])](#selection.id.proxyservicecertificate.synthetic.put) ⇒ <code>Promise</code>
+  * [.get([filter], [appendprivileges])](#selection.id.proxyservicecertificate.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+
+<a name="selection.id.proxyservicecertificate.synthetic.put"></a>
+###### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/proxyservicecertificate/synthetic?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[synthetic](#selection.id.proxyservicecertificate.synthetic)</code>  
+**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).proxyservicecertificate.synthetic.put(postParams, filter).then(function() {
+    console.log('done')
+})
+```
+<a name="selection.id.proxyservicecertificate.synthetic.get"></a>
+###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/proxyservicecertificate/synthetic?filter={filter}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[synthetic](#selection.id.proxyservicecertificate.synthetic)</code>  
+**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).proxyservicecertificate.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
+    console.log(SyntheticEntity)
+})
+```
+<a name="selection.id.proxyservicecertificate.table"></a>
+##### proxyservicecertificate.table : <code>object</code>
+**Kind**: static namespace of <code>[proxyservicecertificate](#selection.id.proxyservicecertificate)</code>  
+<a name="selection.id.proxyservicecertificate.table.post"></a>
+###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/proxyservicecertificate/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
+This method is generated
+
+**Kind**: static method of <code>[table](#selection.id.proxyservicecertificate.table)</code>  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+| [skip] | <code>string</code> | the skip parameter |
+| [take] | <code>string</code> | the take parameter |
+| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
+| [orderascending] | <code>string</code> | the orderascending parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).proxyservicecertificate.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
+    console.log(Object)
+})
+```
+<a name="selection.id.proxyservicecertificate.delete"></a>
+##### proxyservicecertificate.delete([filter]) ⇒ <code>Promise</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/proxyservicecertificate?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[proxyservicecertificate](#selection.id.proxyservicecertificate)</code>  
+**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).proxyservicecertificate.delete(filter).then(function() {
+    console.log('done')
+})
+```
+<a name="selection.id.proxyservicecertificate.get"></a>
+##### proxyservicecertificate.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/proxyservicecertificate?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[proxyservicecertificate](#selection.id.proxyservicecertificate)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;ProxyServiceCertificate&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).proxyservicecertificate.get(filter, orderby, appendprivileges).then(function(Array.<ProxyServiceCertificate>) {
+    console.log(Array.<ProxyServiceCertificate>)
 })
 ```
 <a name="selection.id.reloadtask"></a>
@@ -9066,18 +9110,6 @@ qrsApi.selection.id(id).reloadtaskoperational.get(filter, orderby, appendprivile
     * [.get([filter], [appendprivileges])](#selection.id.repositoryservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
   * [.table](#selection.id.repositoryservice.table) : <code>object</code>
     * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.repositoryservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.template](#selection.id.repositoryservice.template) : <code>object</code>
-    * [.count](#selection.id.repositoryservice.template.count) : <code>object</code>
-      * [.get([filter])](#selection.id.repositoryservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-    * [.full](#selection.id.repositoryservice.template.full) : <code>object</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
-    * [.synthetic](#selection.id.repositoryservice.template.synthetic) : <code>object</code>
-      * [.put(postParams, [filter])](#selection.id.repositoryservice.template.synthetic.put) ⇒ <code>Promise</code>
-      * [.get([filter], [appendprivileges])](#selection.id.repositoryservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-    * [.table](#selection.id.repositoryservice.template.table) : <code>object</code>
-      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.repositoryservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.delete([filter])](#selection.id.repositoryservice.template.delete) ⇒ <code>Promise</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
   * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryService&gt;&gt;</code>
 
 <a name="selection.id.repositoryservice.count"></a>
@@ -9211,198 +9243,6 @@ qrsApi.selection.id(id).repositoryservice.table.post(postParams, filter, skip, t
     console.log(Object)
 })
 ```
-<a name="selection.id.repositoryservice.template"></a>
-##### repositoryservice.template : <code>object</code>
-**Kind**: static namespace of <code>[repositoryservice](#selection.id.repositoryservice)</code>  
-
-* [.template](#selection.id.repositoryservice.template) : <code>object</code>
-  * [.count](#selection.id.repositoryservice.template.count) : <code>object</code>
-    * [.get([filter])](#selection.id.repositoryservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-  * [.full](#selection.id.repositoryservice.template.full) : <code>object</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
-  * [.synthetic](#selection.id.repositoryservice.template.synthetic) : <code>object</code>
-    * [.put(postParams, [filter])](#selection.id.repositoryservice.template.synthetic.put) ⇒ <code>Promise</code>
-    * [.get([filter], [appendprivileges])](#selection.id.repositoryservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-  * [.table](#selection.id.repositoryservice.template.table) : <code>object</code>
-    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.repositoryservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.delete([filter])](#selection.id.repositoryservice.template.delete) ⇒ <code>Promise</code>
-  * [.get([filter], [orderby], [appendprivileges])](#selection.id.repositoryservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
-
-<a name="selection.id.repositoryservice.template.count"></a>
-###### template.count : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.repositoryservice.template)</code>  
-<a name="selection.id.repositoryservice.template.count.get"></a>
-####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/repositoryservice/template/count?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[count](#selection.id.repositoryservice.template.count)</code>  
-**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).repositoryservice.template.count.get(filter).then(function(int) {
-    console.log(int)
-})
-```
-<a name="selection.id.repositoryservice.template.full"></a>
-###### template.full : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.repositoryservice.template)</code>  
-<a name="selection.id.repositoryservice.template.full.get"></a>
-####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/repositoryservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[full](#selection.id.repositoryservice.template.full)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).repositoryservice.template.full.get(filter, orderby, appendprivileges).then(function(Array.<RepositoryServiceTemplate>) {
-    console.log(Array.<RepositoryServiceTemplate>)
-})
-```
-<a name="selection.id.repositoryservice.template.synthetic"></a>
-###### template.synthetic : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.repositoryservice.template)</code>  
-
-* [.synthetic](#selection.id.repositoryservice.template.synthetic) : <code>object</code>
-  * [.put(postParams, [filter])](#selection.id.repositoryservice.template.synthetic.put) ⇒ <code>Promise</code>
-  * [.get([filter], [appendprivileges])](#selection.id.repositoryservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-
-<a name="selection.id.repositoryservice.template.synthetic.put"></a>
-####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/repositoryservice/template/synthetic?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.repositoryservice.template.synthetic)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).repositoryservice.template.synthetic.put(postParams, filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.repositoryservice.template.synthetic.get"></a>
-####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/repositoryservice/template/synthetic?filter={filter}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.repositoryservice.template.synthetic)</code>  
-**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).repositoryservice.template.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
-    console.log(SyntheticEntity)
-})
-```
-<a name="selection.id.repositoryservice.template.table"></a>
-###### template.table : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.repositoryservice.template)</code>  
-<a name="selection.id.repositoryservice.template.table.post"></a>
-####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/repositoryservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
-
-This method is generated
-
-**Kind**: static method of <code>[table](#selection.id.repositoryservice.template.table)</code>  
-**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-| [skip] | <code>string</code> | the skip parameter |
-| [take] | <code>string</code> | the take parameter |
-| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
-| [orderascending] | <code>string</code> | the orderascending parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).repositoryservice.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-    console.log(Object)
-})
-```
-<a name="selection.id.repositoryservice.template.delete"></a>
-###### template.delete([filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/repositoryservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.repositoryservice.template)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).repositoryservice.template.delete(filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.repositoryservice.template.get"></a>
-###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/repositoryservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.repositoryservice.template)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;RepositoryServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).repositoryservice.template.get(filter, orderby, appendprivileges).then(function(Array.<RepositoryServiceTemplate>) {
-    console.log(Array.<RepositoryServiceTemplate>)
-})
-```
 <a name="selection.id.repositoryservice.get"></a>
 ##### repositoryservice.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;RepositoryService&gt;&gt;</code>
 Makes a request on the Qlik Sense QRS API:
@@ -9440,18 +9280,6 @@ qrsApi.selection.id(id).repositoryservice.get(filter, orderby, appendprivileges)
     * [.get([filter], [appendprivileges])](#selection.id.schedulerservice.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
   * [.table](#selection.id.schedulerservice.table) : <code>object</code>
     * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.schedulerservice.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.template](#selection.id.schedulerservice.template) : <code>object</code>
-    * [.count](#selection.id.schedulerservice.template.count) : <code>object</code>
-      * [.get([filter])](#selection.id.schedulerservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-    * [.full](#selection.id.schedulerservice.template.full) : <code>object</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
-    * [.synthetic](#selection.id.schedulerservice.template.synthetic) : <code>object</code>
-      * [.put(postParams, [filter])](#selection.id.schedulerservice.template.synthetic.put) ⇒ <code>Promise</code>
-      * [.get([filter], [appendprivileges])](#selection.id.schedulerservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-    * [.table](#selection.id.schedulerservice.template.table) : <code>object</code>
-      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.schedulerservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.delete([filter])](#selection.id.schedulerservice.template.delete) ⇒ <code>Promise</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
   * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerService&gt;&gt;</code>
 
 <a name="selection.id.schedulerservice.count"></a>
@@ -9583,198 +9411,6 @@ This method is generated
 ```javascript
 qrsApi.selection.id(id).schedulerservice.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
     console.log(Object)
-})
-```
-<a name="selection.id.schedulerservice.template"></a>
-##### schedulerservice.template : <code>object</code>
-**Kind**: static namespace of <code>[schedulerservice](#selection.id.schedulerservice)</code>  
-
-* [.template](#selection.id.schedulerservice.template) : <code>object</code>
-  * [.count](#selection.id.schedulerservice.template.count) : <code>object</code>
-    * [.get([filter])](#selection.id.schedulerservice.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-  * [.full](#selection.id.schedulerservice.template.full) : <code>object</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
-  * [.synthetic](#selection.id.schedulerservice.template.synthetic) : <code>object</code>
-    * [.put(postParams, [filter])](#selection.id.schedulerservice.template.synthetic.put) ⇒ <code>Promise</code>
-    * [.get([filter], [appendprivileges])](#selection.id.schedulerservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-  * [.table](#selection.id.schedulerservice.template.table) : <code>object</code>
-    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.schedulerservice.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.delete([filter])](#selection.id.schedulerservice.template.delete) ⇒ <code>Promise</code>
-  * [.get([filter], [orderby], [appendprivileges])](#selection.id.schedulerservice.template.get) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
-
-<a name="selection.id.schedulerservice.template.count"></a>
-###### template.count : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.schedulerservice.template)</code>  
-<a name="selection.id.schedulerservice.template.count.get"></a>
-####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/schedulerservice/template/count?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[count](#selection.id.schedulerservice.template.count)</code>  
-**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).schedulerservice.template.count.get(filter).then(function(int) {
-    console.log(int)
-})
-```
-<a name="selection.id.schedulerservice.template.full"></a>
-###### template.full : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.schedulerservice.template)</code>  
-<a name="selection.id.schedulerservice.template.full.get"></a>
-####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/schedulerservice/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[full](#selection.id.schedulerservice.template.full)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).schedulerservice.template.full.get(filter, orderby, appendprivileges).then(function(Array.<SchedulerServiceTemplate>) {
-    console.log(Array.<SchedulerServiceTemplate>)
-})
-```
-<a name="selection.id.schedulerservice.template.synthetic"></a>
-###### template.synthetic : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.schedulerservice.template)</code>  
-
-* [.synthetic](#selection.id.schedulerservice.template.synthetic) : <code>object</code>
-  * [.put(postParams, [filter])](#selection.id.schedulerservice.template.synthetic.put) ⇒ <code>Promise</code>
-  * [.get([filter], [appendprivileges])](#selection.id.schedulerservice.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-
-<a name="selection.id.schedulerservice.template.synthetic.put"></a>
-####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/schedulerservice/template/synthetic?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.schedulerservice.template.synthetic)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).schedulerservice.template.synthetic.put(postParams, filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.schedulerservice.template.synthetic.get"></a>
-####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/schedulerservice/template/synthetic?filter={filter}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.schedulerservice.template.synthetic)</code>  
-**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).schedulerservice.template.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
-    console.log(SyntheticEntity)
-})
-```
-<a name="selection.id.schedulerservice.template.table"></a>
-###### template.table : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.schedulerservice.template)</code>  
-<a name="selection.id.schedulerservice.template.table.post"></a>
-####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/schedulerservice/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
-
-This method is generated
-
-**Kind**: static method of <code>[table](#selection.id.schedulerservice.template.table)</code>  
-**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-| [skip] | <code>string</code> | the skip parameter |
-| [take] | <code>string</code> | the take parameter |
-| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
-| [orderascending] | <code>string</code> | the orderascending parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).schedulerservice.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-    console.log(Object)
-})
-```
-<a name="selection.id.schedulerservice.template.delete"></a>
-###### template.delete([filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/schedulerservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.schedulerservice.template)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).schedulerservice.template.delete(filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.schedulerservice.template.get"></a>
-###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/schedulerservice/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.schedulerservice.template)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;SchedulerServiceTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).schedulerservice.template.get(filter, orderby, appendprivileges).then(function(Array.<SchedulerServiceTemplate>) {
-    console.log(Array.<SchedulerServiceTemplate>)
 })
 ```
 <a name="selection.id.schedulerservice.get"></a>
@@ -11052,6 +10688,122 @@ qrsApi.selection.id(id).syncsession.get(filter, orderby, appendprivileges).then(
     console.log(Array.<SyncSession>)
 })
 ```
+<a name="selection.id.systeminfo"></a>
+#### id.systeminfo : <code>object</code>
+**Kind**: static namespace of <code>[id](#selection.id)</code>  
+
+* [.systeminfo](#selection.id.systeminfo) : <code>object</code>
+  * [.full](#selection.id.systeminfo.full) : <code>object</code>
+    * [.get([filter], [orderby], [appendprivileges])](#selection.id.systeminfo.full.get) ⇒ <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code>
+  * [.synthetic](#selection.id.systeminfo.synthetic) : <code>object</code>
+    * [.get([filter], [appendprivileges])](#selection.id.systeminfo.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+  * [.table](#selection.id.systeminfo.table) : <code>object</code>
+    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.systeminfo.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
+  * [.get([filter], [orderby], [appendprivileges])](#selection.id.systeminfo.get) ⇒ <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code>
+
+<a name="selection.id.systeminfo.full"></a>
+##### systeminfo.full : <code>object</code>
+**Kind**: static namespace of <code>[systeminfo](#selection.id.systeminfo)</code>  
+<a name="selection.id.systeminfo.full.get"></a>
+###### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/systeminfo/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[full](#selection.id.systeminfo.full)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).systeminfo.full.get(filter, orderby, appendprivileges).then(function(Array.<SystemInfo>) {
+    console.log(Array.<SystemInfo>)
+})
+```
+<a name="selection.id.systeminfo.synthetic"></a>
+##### systeminfo.synthetic : <code>object</code>
+**Kind**: static namespace of <code>[systeminfo](#selection.id.systeminfo)</code>  
+<a name="selection.id.systeminfo.synthetic.get"></a>
+###### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/systeminfo/synthetic?filter={filter}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[synthetic](#selection.id.systeminfo.synthetic)</code>  
+**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).systeminfo.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
+    console.log(SyntheticEntity)
+})
+```
+<a name="selection.id.systeminfo.table"></a>
+##### systeminfo.table : <code>object</code>
+**Kind**: static namespace of <code>[systeminfo](#selection.id.systeminfo)</code>  
+<a name="selection.id.systeminfo.table.post"></a>
+###### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/systeminfo/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
+
+This method is generated
+
+**Kind**: static method of <code>[table](#selection.id.systeminfo.table)</code>  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
+| [filter] | <code>string</code> | the filter parameter |
+| [skip] | <code>string</code> | the skip parameter |
+| [take] | <code>string</code> | the take parameter |
+| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
+| [orderascending] | <code>string</code> | the orderascending parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).systeminfo.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
+    console.log(Object)
+})
+```
+<a name="selection.id.systeminfo.get"></a>
+##### systeminfo.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/{id}/systeminfo?filter={filter}&orderby={orderby}&privileges={appendprivileges}
+
+This method is generated
+
+**Kind**: static method of <code>[systeminfo](#selection.id.systeminfo)</code>  
+**Returns**: <code>Promise.&lt;Array.&lt;SystemInfo&gt;&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+| [orderby] | <code>string</code> | the orderby parameter |
+| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.id(id).systeminfo.get(filter, orderby, appendprivileges).then(function(Array.<SystemInfo>) {
+    console.log(Array.<SystemInfo>)
+})
+```
 <a name="selection.id.systemrule"></a>
 #### id.systemrule : <code>object</code>
 **Kind**: static namespace of <code>[id](#selection.id)</code>  
@@ -11701,35 +11453,8 @@ qrsApi.selection.id(id).tempcontent.get(filter, orderby, appendprivileges).then(
 * [.user](#selection.id.user) : <code>object</code>
   * [.count](#selection.id.user.count) : <code>object</code>
     * [.get([filter])](#selection.id.user.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-  * [.followingapp](#selection.id.user.followingapp) : <code>object</code>
-    * [.count](#selection.id.user.followingapp.count) : <code>object</code>
-      * [.get([filter])](#selection.id.user.followingapp.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-    * [.full](#selection.id.user.followingapp.full) : <code>object</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.followingapp.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
-    * [.synthetic](#selection.id.user.followingapp.synthetic) : <code>object</code>
-      * [.put(postParams, [filter])](#selection.id.user.followingapp.synthetic.put) ⇒ <code>Promise</code>
-      * [.get([filter], [appendprivileges])](#selection.id.user.followingapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-    * [.table](#selection.id.user.followingapp.table) : <code>object</code>
-      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.user.followingapp.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.delete([filter])](#selection.id.user.followingapp.delete) ⇒ <code>Promise</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.followingapp.get) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
   * [.full](#selection.id.user.full) : <code>object</code>
     * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.full.get) ⇒ <code>Promise.&lt;Array.&lt;User&gt;&gt;</code>
-  * [.license](#selection.id.user.license) : <code>object</code>
-    * [.useraccesstype](#selection.id.user.license.useraccesstype) : <code>object</code>
-      * [.post(postParams)](#selection.id.user.license.useraccesstype.post) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
-  * [.recentapp](#selection.id.user.recentapp) : <code>object</code>
-    * [.count](#selection.id.user.recentapp.count) : <code>object</code>
-      * [.get([filter])](#selection.id.user.recentapp.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-    * [.full](#selection.id.user.recentapp.full) : <code>object</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.recentapp.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
-    * [.synthetic](#selection.id.user.recentapp.synthetic) : <code>object</code>
-      * [.put(postParams, [filter])](#selection.id.user.recentapp.synthetic.put) ⇒ <code>Promise</code>
-      * [.get([filter], [appendprivileges])](#selection.id.user.recentapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-    * [.table](#selection.id.user.recentapp.table) : <code>object</code>
-      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.user.recentapp.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.delete([filter])](#selection.id.user.recentapp.delete) ⇒ <code>Promise</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.recentapp.get) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
   * [.synthetic](#selection.id.user.synthetic) : <code>object</code>
     * [.put(postParams, [filter])](#selection.id.user.synthetic.put) ⇒ <code>Promise</code>
     * [.get([filter], [appendprivileges])](#selection.id.user.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
@@ -11762,198 +11487,6 @@ qrsApi.selection.id(id).user.count.get(filter).then(function(int) {
     console.log(int)
 })
 ```
-<a name="selection.id.user.followingapp"></a>
-##### user.followingapp : <code>object</code>
-**Kind**: static namespace of <code>[user](#selection.id.user)</code>  
-
-* [.followingapp](#selection.id.user.followingapp) : <code>object</code>
-  * [.count](#selection.id.user.followingapp.count) : <code>object</code>
-    * [.get([filter])](#selection.id.user.followingapp.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-  * [.full](#selection.id.user.followingapp.full) : <code>object</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.followingapp.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
-  * [.synthetic](#selection.id.user.followingapp.synthetic) : <code>object</code>
-    * [.put(postParams, [filter])](#selection.id.user.followingapp.synthetic.put) ⇒ <code>Promise</code>
-    * [.get([filter], [appendprivileges])](#selection.id.user.followingapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-  * [.table](#selection.id.user.followingapp.table) : <code>object</code>
-    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.user.followingapp.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.delete([filter])](#selection.id.user.followingapp.delete) ⇒ <code>Promise</code>
-  * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.followingapp.get) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
-
-<a name="selection.id.user.followingapp.count"></a>
-###### followingapp.count : <code>object</code>
-**Kind**: static namespace of <code>[followingapp](#selection.id.user.followingapp)</code>  
-<a name="selection.id.user.followingapp.count.get"></a>
-####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/followingapp/count?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[count](#selection.id.user.followingapp.count)</code>  
-**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.followingapp.count.get(filter).then(function(int) {
-    console.log(int)
-})
-```
-<a name="selection.id.user.followingapp.full"></a>
-###### followingapp.full : <code>object</code>
-**Kind**: static namespace of <code>[followingapp](#selection.id.user.followingapp)</code>  
-<a name="selection.id.user.followingapp.full.get"></a>
-####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/followingapp/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[full](#selection.id.user.followingapp.full)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.followingapp.full.get(filter, orderby, appendprivileges).then(function(Array.<UserFollowingApp>) {
-    console.log(Array.<UserFollowingApp>)
-})
-```
-<a name="selection.id.user.followingapp.synthetic"></a>
-###### followingapp.synthetic : <code>object</code>
-**Kind**: static namespace of <code>[followingapp](#selection.id.user.followingapp)</code>  
-
-* [.synthetic](#selection.id.user.followingapp.synthetic) : <code>object</code>
-  * [.put(postParams, [filter])](#selection.id.user.followingapp.synthetic.put) ⇒ <code>Promise</code>
-  * [.get([filter], [appendprivileges])](#selection.id.user.followingapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-
-<a name="selection.id.user.followingapp.synthetic.put"></a>
-####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/followingapp/synthetic?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.user.followingapp.synthetic)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.followingapp.synthetic.put(postParams, filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.user.followingapp.synthetic.get"></a>
-####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/followingapp/synthetic?filter={filter}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.user.followingapp.synthetic)</code>  
-**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.followingapp.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
-    console.log(SyntheticEntity)
-})
-```
-<a name="selection.id.user.followingapp.table"></a>
-###### followingapp.table : <code>object</code>
-**Kind**: static namespace of <code>[followingapp](#selection.id.user.followingapp)</code>  
-<a name="selection.id.user.followingapp.table.post"></a>
-####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/followingapp/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
-
-This method is generated
-
-**Kind**: static method of <code>[table](#selection.id.user.followingapp.table)</code>  
-**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-| [skip] | <code>string</code> | the skip parameter |
-| [take] | <code>string</code> | the take parameter |
-| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
-| [orderascending] | <code>string</code> | the orderascending parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.followingapp.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-    console.log(Object)
-})
-```
-<a name="selection.id.user.followingapp.delete"></a>
-###### followingapp.delete([filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/followingapp?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[followingapp](#selection.id.user.followingapp)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.followingapp.delete(filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.user.followingapp.get"></a>
-###### followingapp.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/followingapp?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[followingapp](#selection.id.user.followingapp)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;UserFollowingApp&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.followingapp.get(filter, orderby, appendprivileges).then(function(Array.<UserFollowingApp>) {
-    console.log(Array.<UserFollowingApp>)
-})
-```
 <a name="selection.id.user.full"></a>
 ##### user.full : <code>object</code>
 **Kind**: static namespace of <code>[user](#selection.id.user)</code>  
@@ -11978,230 +11511,6 @@ This method is generated
 ```javascript
 qrsApi.selection.id(id).user.full.get(filter, orderby, appendprivileges).then(function(Array.<User>) {
     console.log(Array.<User>)
-})
-```
-<a name="selection.id.user.license"></a>
-##### user.license : <code>object</code>
-**Kind**: static namespace of <code>[user](#selection.id.user)</code>  
-
-* [.license](#selection.id.user.license) : <code>object</code>
-  * [.useraccesstype](#selection.id.user.license.useraccesstype) : <code>object</code>
-    * [.post(postParams)](#selection.id.user.license.useraccesstype.post) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
-
-<a name="selection.id.user.license.useraccesstype"></a>
-###### license.useraccesstype : <code>object</code>
-**Kind**: static namespace of <code>[license](#selection.id.user.license)</code>  
-<a name="selection.id.user.license.useraccesstype.post"></a>
-####### useraccesstype.post(postParams) ⇒ <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/license/useraccesstype
-
-This method is manual
-
-**Kind**: static method of <code>[useraccesstype](#selection.id.user.license.useraccesstype)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;LicenseUserAccessType&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>LicenseUserAccessType</code> | the parameters to send as request body to the API endpoint |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.license.useraccesstype.post(postParams).then(function(Array.<LicenseUserAccessType>) {
-    console.log(Array.<LicenseUserAccessType>)
-})
-```
-<a name="selection.id.user.recentapp"></a>
-##### user.recentapp : <code>object</code>
-**Kind**: static namespace of <code>[user](#selection.id.user)</code>  
-
-* [.recentapp](#selection.id.user.recentapp) : <code>object</code>
-  * [.count](#selection.id.user.recentapp.count) : <code>object</code>
-    * [.get([filter])](#selection.id.user.recentapp.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-  * [.full](#selection.id.user.recentapp.full) : <code>object</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.recentapp.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
-  * [.synthetic](#selection.id.user.recentapp.synthetic) : <code>object</code>
-    * [.put(postParams, [filter])](#selection.id.user.recentapp.synthetic.put) ⇒ <code>Promise</code>
-    * [.get([filter], [appendprivileges])](#selection.id.user.recentapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-  * [.table](#selection.id.user.recentapp.table) : <code>object</code>
-    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.user.recentapp.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.delete([filter])](#selection.id.user.recentapp.delete) ⇒ <code>Promise</code>
-  * [.get([filter], [orderby], [appendprivileges])](#selection.id.user.recentapp.get) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
-
-<a name="selection.id.user.recentapp.count"></a>
-###### recentapp.count : <code>object</code>
-**Kind**: static namespace of <code>[recentapp](#selection.id.user.recentapp)</code>  
-<a name="selection.id.user.recentapp.count.get"></a>
-####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/recentapp/count?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[count](#selection.id.user.recentapp.count)</code>  
-**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.recentapp.count.get(filter).then(function(int) {
-    console.log(int)
-})
-```
-<a name="selection.id.user.recentapp.full"></a>
-###### recentapp.full : <code>object</code>
-**Kind**: static namespace of <code>[recentapp](#selection.id.user.recentapp)</code>  
-<a name="selection.id.user.recentapp.full.get"></a>
-####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/recentapp/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[full](#selection.id.user.recentapp.full)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.recentapp.full.get(filter, orderby, appendprivileges).then(function(Array.<UserRecentApp>) {
-    console.log(Array.<UserRecentApp>)
-})
-```
-<a name="selection.id.user.recentapp.synthetic"></a>
-###### recentapp.synthetic : <code>object</code>
-**Kind**: static namespace of <code>[recentapp](#selection.id.user.recentapp)</code>  
-
-* [.synthetic](#selection.id.user.recentapp.synthetic) : <code>object</code>
-  * [.put(postParams, [filter])](#selection.id.user.recentapp.synthetic.put) ⇒ <code>Promise</code>
-  * [.get([filter], [appendprivileges])](#selection.id.user.recentapp.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-
-<a name="selection.id.user.recentapp.synthetic.put"></a>
-####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/recentapp/synthetic?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.user.recentapp.synthetic)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.recentapp.synthetic.put(postParams, filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.user.recentapp.synthetic.get"></a>
-####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/recentapp/synthetic?filter={filter}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.user.recentapp.synthetic)</code>  
-**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.recentapp.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
-    console.log(SyntheticEntity)
-})
-```
-<a name="selection.id.user.recentapp.table"></a>
-###### recentapp.table : <code>object</code>
-**Kind**: static namespace of <code>[recentapp](#selection.id.user.recentapp)</code>  
-<a name="selection.id.user.recentapp.table.post"></a>
-####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/recentapp/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
-
-This method is generated
-
-**Kind**: static method of <code>[table](#selection.id.user.recentapp.table)</code>  
-**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-| [skip] | <code>string</code> | the skip parameter |
-| [take] | <code>string</code> | the take parameter |
-| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
-| [orderascending] | <code>string</code> | the orderascending parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.recentapp.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-    console.log(Object)
-})
-```
-<a name="selection.id.user.recentapp.delete"></a>
-###### recentapp.delete([filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/recentapp?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[recentapp](#selection.id.user.recentapp)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.recentapp.delete(filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.user.recentapp.get"></a>
-###### recentapp.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/user/recentapp?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[recentapp](#selection.id.user.recentapp)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;UserRecentApp&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).user.recentapp.get(filter, orderby, appendprivileges).then(function(Array.<UserRecentApp>) {
-    console.log(Array.<UserRecentApp>)
 })
 ```
 <a name="selection.id.user.synthetic"></a>
@@ -12343,18 +11652,6 @@ qrsApi.selection.id(id).user.get(filter, orderby, appendprivileges).then(functio
     * [.get([filter], [appendprivileges])](#selection.id.userdirectory.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
   * [.table](#selection.id.userdirectory.table) : <code>object</code>
     * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.userdirectory.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.template](#selection.id.userdirectory.template) : <code>object</code>
-    * [.count](#selection.id.userdirectory.template.count) : <code>object</code>
-      * [.get([filter])](#selection.id.userdirectory.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-    * [.full](#selection.id.userdirectory.template.full) : <code>object</code>
-      * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
-    * [.synthetic](#selection.id.userdirectory.template.synthetic) : <code>object</code>
-      * [.put(postParams, [filter])](#selection.id.userdirectory.template.synthetic.put) ⇒ <code>Promise</code>
-      * [.get([filter], [appendprivileges])](#selection.id.userdirectory.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-    * [.table](#selection.id.userdirectory.template.table) : <code>object</code>
-      * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.userdirectory.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.delete([filter])](#selection.id.userdirectory.template.delete) ⇒ <code>Promise</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.template.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
   * [.delete([filter])](#selection.id.userdirectory.delete) ⇒ <code>Promise</code>
   * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectory&gt;&gt;</code>
 
@@ -12487,198 +11784,6 @@ This method is generated
 ```javascript
 qrsApi.selection.id(id).userdirectory.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
     console.log(Object)
-})
-```
-<a name="selection.id.userdirectory.template"></a>
-##### userdirectory.template : <code>object</code>
-**Kind**: static namespace of <code>[userdirectory](#selection.id.userdirectory)</code>  
-
-* [.template](#selection.id.userdirectory.template) : <code>object</code>
-  * [.count](#selection.id.userdirectory.template.count) : <code>object</code>
-    * [.get([filter])](#selection.id.userdirectory.template.count.get) ⇒ <code>Promise.&lt;int&gt;</code>
-  * [.full](#selection.id.userdirectory.template.full) : <code>object</code>
-    * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.template.full.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
-  * [.synthetic](#selection.id.userdirectory.template.synthetic) : <code>object</code>
-    * [.put(postParams, [filter])](#selection.id.userdirectory.template.synthetic.put) ⇒ <code>Promise</code>
-    * [.get([filter], [appendprivileges])](#selection.id.userdirectory.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-  * [.table](#selection.id.userdirectory.template.table) : <code>object</code>
-    * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#selection.id.userdirectory.template.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
-  * [.delete([filter])](#selection.id.userdirectory.template.delete) ⇒ <code>Promise</code>
-  * [.get([filter], [orderby], [appendprivileges])](#selection.id.userdirectory.template.get) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
-
-<a name="selection.id.userdirectory.template.count"></a>
-###### template.count : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.userdirectory.template)</code>  
-<a name="selection.id.userdirectory.template.count.get"></a>
-####### count.get([filter]) ⇒ <code>Promise.&lt;int&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/userdirectory/template/count?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[count](#selection.id.userdirectory.template.count)</code>  
-**Returns**: <code>Promise.&lt;int&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).userdirectory.template.count.get(filter).then(function(int) {
-    console.log(int)
-})
-```
-<a name="selection.id.userdirectory.template.full"></a>
-###### template.full : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.userdirectory.template)</code>  
-<a name="selection.id.userdirectory.template.full.get"></a>
-####### full.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/userdirectory/template/full?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[full](#selection.id.userdirectory.template.full)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).userdirectory.template.full.get(filter, orderby, appendprivileges).then(function(Array.<UserDirectoryTemplate>) {
-    console.log(Array.<UserDirectoryTemplate>)
-})
-```
-<a name="selection.id.userdirectory.template.synthetic"></a>
-###### template.synthetic : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.userdirectory.template)</code>  
-
-* [.synthetic](#selection.id.userdirectory.template.synthetic) : <code>object</code>
-  * [.put(postParams, [filter])](#selection.id.userdirectory.template.synthetic.put) ⇒ <code>Promise</code>
-  * [.get([filter], [appendprivileges])](#selection.id.userdirectory.template.synthetic.get) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-
-<a name="selection.id.userdirectory.template.synthetic.put"></a>
-####### synthetic.put(postParams, [filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/userdirectory/template/synthetic?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.userdirectory.template.synthetic)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>SyntheticRootEntity</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).userdirectory.template.synthetic.put(postParams, filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.userdirectory.template.synthetic.get"></a>
-####### synthetic.get([filter], [appendprivileges]) ⇒ <code>Promise.&lt;SyntheticEntity&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/userdirectory/template/synthetic?filter={filter}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[synthetic](#selection.id.userdirectory.template.synthetic)</code>  
-**Returns**: <code>Promise.&lt;SyntheticEntity&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).userdirectory.template.synthetic.get(filter, appendprivileges).then(function(SyntheticEntity) {
-    console.log(SyntheticEntity)
-})
-```
-<a name="selection.id.userdirectory.template.table"></a>
-###### template.table : <code>object</code>
-**Kind**: static namespace of <code>[template](#selection.id.userdirectory.template)</code>  
-<a name="selection.id.userdirectory.template.table.post"></a>
-####### table.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending]) ⇒ <code>Promise.&lt;Object&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/userdirectory/template/table?filter={filter}&skip={skip}&take={take}&sortcolumn={sortcolumn}&orderascending={orderascending}
-
-This method is generated
-
-**Kind**: static method of <code>[table](#selection.id.userdirectory.template.table)</code>  
-**Returns**: <code>Promise.&lt;Object&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| postParams | <code>TableDefinition</code> | the parameters to send as request body to the API endpoint |
-| [filter] | <code>string</code> | the filter parameter |
-| [skip] | <code>string</code> | the skip parameter |
-| [take] | <code>string</code> | the take parameter |
-| [sortcolumn] | <code>string</code> | the sortcolumn parameter |
-| [orderascending] | <code>string</code> | the orderascending parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).userdirectory.template.table.post(postParams, filter, skip, take, sortcolumn, orderascending).then(function(Object) {
-    console.log(Object)
-})
-```
-<a name="selection.id.userdirectory.template.delete"></a>
-###### template.delete([filter]) ⇒ <code>Promise</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/userdirectory/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.userdirectory.template)</code>  
-**Returns**: <code>Promise</code> - a promise resolving without a return value when the request is finished  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).userdirectory.template.delete(filter).then(function() {
-    console.log('done')
-})
-```
-<a name="selection.id.userdirectory.template.get"></a>
-###### template.get([filter], [orderby], [appendprivileges]) ⇒ <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/{id}/userdirectory/template?filter={filter}&orderby={orderby}&privileges={appendprivileges}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.id.userdirectory.template)</code>  
-**Returns**: <code>Promise.&lt;Array.&lt;UserDirectoryTemplate&gt;&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-| [orderby] | <code>string</code> | the orderby parameter |
-| [appendprivileges] | <code>string</code> | the appendprivileges parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.id(id).userdirectory.template.get(filter, orderby, appendprivileges).then(function(Array.<UserDirectoryTemplate>) {
-    console.log(Array.<UserDirectoryTemplate>)
 })
 ```
 <a name="selection.id.userdirectory.delete"></a>
@@ -14117,36 +13222,6 @@ qrsApi.selection.dataconnection.post(filter).then(function(Selection) {
 <a name="selection.engineservice"></a>
 ### selection.engineservice : <code>object</code>
 **Kind**: static namespace of <code>[selection](#selection)</code>  
-
-* [.engineservice](#selection.engineservice) : <code>object</code>
-  * [.template](#selection.engineservice.template) : <code>object</code>
-    * [.post([filter])](#selection.engineservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-  * [.post([filter])](#selection.engineservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-
-<a name="selection.engineservice.template"></a>
-#### engineservice.template : <code>object</code>
-**Kind**: static namespace of <code>[engineservice](#selection.engineservice)</code>  
-<a name="selection.engineservice.template.post"></a>
-##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/engineservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.engineservice.template)</code>  
-**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.engineservice.template.post(filter).then(function(Selection) {
-    console.log(Selection)
-})
-```
 <a name="selection.engineservice.post"></a>
 #### engineservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
@@ -14397,6 +13472,12 @@ qrsApi.selection.full.get(filter, orderby, appendprivileges).then(function(Array
 **Kind**: static namespace of <code>[selection](#selection)</code>  
 
 * [.license](#selection.license) : <code>object</code>
+  * [.applicationaccessgroup](#selection.license.applicationaccessgroup) : <code>object</code>
+    * [.post([filter])](#selection.license.applicationaccessgroup.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
+  * [.applicationaccesstype](#selection.license.applicationaccesstype) : <code>object</code>
+    * [.post([filter])](#selection.license.applicationaccesstype.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
+  * [.applicationaccessusage](#selection.license.applicationaccessusage) : <code>object</code>
+    * [.post([filter])](#selection.license.applicationaccessusage.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.loginaccesstype](#selection.license.loginaccesstype) : <code>object</code>
     * [.post([filter])](#selection.license.loginaccesstype.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
   * [.loginaccessusage](#selection.license.loginaccessusage) : <code>object</code>
@@ -14408,6 +13489,78 @@ qrsApi.selection.full.get(filter, orderby, appendprivileges).then(function(Array
   * [.useraccessusage](#selection.license.useraccessusage) : <code>object</code>
     * [.post([filter])](#selection.license.useraccessusage.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
 
+<a name="selection.license.applicationaccessgroup"></a>
+#### license.applicationaccessgroup : <code>object</code>
+**Kind**: static namespace of <code>[license](#selection.license)</code>  
+<a name="selection.license.applicationaccessgroup.post"></a>
+##### applicationaccessgroup.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/license/applicationaccessgroup?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccessgroup](#selection.license.applicationaccessgroup)</code>  
+**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.license.applicationaccessgroup.post(filter).then(function(Selection) {
+    console.log(Selection)
+})
+```
+<a name="selection.license.applicationaccesstype"></a>
+#### license.applicationaccesstype : <code>object</code>
+**Kind**: static namespace of <code>[license](#selection.license)</code>  
+<a name="selection.license.applicationaccesstype.post"></a>
+##### applicationaccesstype.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/license/applicationaccesstype?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccesstype](#selection.license.applicationaccesstype)</code>  
+**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.license.applicationaccesstype.post(filter).then(function(Selection) {
+    console.log(Selection)
+})
+```
+<a name="selection.license.applicationaccessusage"></a>
+#### license.applicationaccessusage : <code>object</code>
+**Kind**: static namespace of <code>[license](#selection.license)</code>  
+<a name="selection.license.applicationaccessusage.post"></a>
+##### applicationaccessusage.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/license/applicationaccessusage?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[applicationaccessusage](#selection.license.applicationaccessusage)</code>  
+**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.license.applicationaccessusage.post(filter).then(function(Selection) {
+    console.log(Selection)
+})
+```
 <a name="selection.license.loginaccesstype"></a>
 #### license.loginaccesstype : <code>object</code>
 **Kind**: static namespace of <code>[license](#selection.license)</code>  
@@ -14604,36 +13757,6 @@ qrsApi.selection.previewcreateprivilege.post(postParams).then(function(Boolean) 
 <a name="selection.printingservice"></a>
 ### selection.printingservice : <code>object</code>
 **Kind**: static namespace of <code>[selection](#selection)</code>  
-
-* [.printingservice](#selection.printingservice) : <code>object</code>
-  * [.template](#selection.printingservice.template) : <code>object</code>
-    * [.post([filter])](#selection.printingservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-  * [.post([filter])](#selection.printingservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-
-<a name="selection.printingservice.template"></a>
-#### printingservice.template : <code>object</code>
-**Kind**: static namespace of <code>[printingservice](#selection.printingservice)</code>  
-<a name="selection.printingservice.template.post"></a>
-##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/printingservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.printingservice.template)</code>  
-**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.printingservice.template.post(filter).then(function(Selection) {
-    console.log(Selection)
-})
-```
 <a name="selection.printingservice.post"></a>
 #### printingservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
@@ -14658,36 +13781,6 @@ qrsApi.selection.printingservice.post(filter).then(function(Selection) {
 <a name="selection.proxyservice"></a>
 ### selection.proxyservice : <code>object</code>
 **Kind**: static namespace of <code>[selection](#selection)</code>  
-
-* [.proxyservice](#selection.proxyservice) : <code>object</code>
-  * [.template](#selection.proxyservice.template) : <code>object</code>
-    * [.post([filter])](#selection.proxyservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-  * [.post([filter])](#selection.proxyservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-
-<a name="selection.proxyservice.template"></a>
-#### proxyservice.template : <code>object</code>
-**Kind**: static namespace of <code>[proxyservice](#selection.proxyservice)</code>  
-<a name="selection.proxyservice.template.post"></a>
-##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/proxyservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.proxyservice.template)</code>  
-**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.proxyservice.template.post(filter).then(function(Selection) {
-    console.log(Selection)
-})
-```
 <a name="selection.proxyservice.post"></a>
 #### proxyservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
@@ -14706,6 +13799,30 @@ This method is generated
 **Example**  
 ```javascript
 qrsApi.selection.proxyservice.post(filter).then(function(Selection) {
+    console.log(Selection)
+})
+```
+<a name="selection.proxyservicecertificate"></a>
+### selection.proxyservicecertificate : <code>object</code>
+**Kind**: static namespace of <code>[selection](#selection)</code>  
+<a name="selection.proxyservicecertificate.post"></a>
+#### proxyservicecertificate.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/proxyservicecertificate?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[proxyservicecertificate](#selection.proxyservicecertificate)</code>  
+**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.proxyservicecertificate.post(filter).then(function(Selection) {
     console.log(Selection)
 })
 ```
@@ -14760,36 +13877,6 @@ qrsApi.selection.reloadtaskoperational.post(filter).then(function(Selection) {
 <a name="selection.repositoryservice"></a>
 ### selection.repositoryservice : <code>object</code>
 **Kind**: static namespace of <code>[selection](#selection)</code>  
-
-* [.repositoryservice](#selection.repositoryservice) : <code>object</code>
-  * [.template](#selection.repositoryservice.template) : <code>object</code>
-    * [.post([filter])](#selection.repositoryservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-  * [.post([filter])](#selection.repositoryservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-
-<a name="selection.repositoryservice.template"></a>
-#### repositoryservice.template : <code>object</code>
-**Kind**: static namespace of <code>[repositoryservice](#selection.repositoryservice)</code>  
-<a name="selection.repositoryservice.template.post"></a>
-##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/repositoryservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.repositoryservice.template)</code>  
-**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.repositoryservice.template.post(filter).then(function(Selection) {
-    console.log(Selection)
-})
-```
 <a name="selection.repositoryservice.post"></a>
 #### repositoryservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
@@ -14814,36 +13901,6 @@ qrsApi.selection.repositoryservice.post(filter).then(function(Selection) {
 <a name="selection.schedulerservice"></a>
 ### selection.schedulerservice : <code>object</code>
 **Kind**: static namespace of <code>[selection](#selection)</code>  
-
-* [.schedulerservice](#selection.schedulerservice) : <code>object</code>
-  * [.template](#selection.schedulerservice.template) : <code>object</code>
-    * [.post([filter])](#selection.schedulerservice.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-  * [.post([filter])](#selection.schedulerservice.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-
-<a name="selection.schedulerservice.template"></a>
-#### schedulerservice.template : <code>object</code>
-**Kind**: static namespace of <code>[schedulerservice](#selection.schedulerservice)</code>  
-<a name="selection.schedulerservice.template.post"></a>
-##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/schedulerservice/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.schedulerservice.template)</code>  
-**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.schedulerservice.template.post(filter).then(function(Selection) {
-    console.log(Selection)
-})
-```
 <a name="selection.schedulerservice.post"></a>
 #### schedulerservice.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
@@ -15033,6 +14090,30 @@ qrsApi.selection.syncsession.post(filter).then(function(Selection) {
     console.log(Selection)
 })
 ```
+<a name="selection.systeminfo"></a>
+### selection.systeminfo : <code>object</code>
+**Kind**: static namespace of <code>[selection](#selection)</code>  
+<a name="selection.systeminfo.post"></a>
+#### systeminfo.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/selection/systeminfo?filter={filter}
+
+This method is generated
+
+**Kind**: static method of <code>[systeminfo](#selection.systeminfo)</code>  
+**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [filter] | <code>string</code> | the filter parameter |
+
+**Example**  
+```javascript
+qrsApi.selection.systeminfo.post(filter).then(function(Selection) {
+    console.log(Selection)
+})
+```
 <a name="selection.systemrule"></a>
 ### selection.systemrule : <code>object</code>
 **Kind**: static namespace of <code>[selection](#selection)</code>  
@@ -15108,62 +14189,6 @@ qrsApi.selection.tempcontent.post(filter).then(function(Selection) {
 <a name="selection.user"></a>
 ### selection.user : <code>object</code>
 **Kind**: static namespace of <code>[selection](#selection)</code>  
-
-* [.user](#selection.user) : <code>object</code>
-  * [.followingapp](#selection.user.followingapp) : <code>object</code>
-    * [.post([filter])](#selection.user.followingapp.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-  * [.recentapp](#selection.user.recentapp) : <code>object</code>
-    * [.post([filter])](#selection.user.recentapp.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-  * [.post([filter])](#selection.user.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-
-<a name="selection.user.followingapp"></a>
-#### user.followingapp : <code>object</code>
-**Kind**: static namespace of <code>[user](#selection.user)</code>  
-<a name="selection.user.followingapp.post"></a>
-##### followingapp.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/user/followingapp?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[followingapp](#selection.user.followingapp)</code>  
-**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.user.followingapp.post(filter).then(function(Selection) {
-    console.log(Selection)
-})
-```
-<a name="selection.user.recentapp"></a>
-#### user.recentapp : <code>object</code>
-**Kind**: static namespace of <code>[user](#selection.user)</code>  
-<a name="selection.user.recentapp.post"></a>
-##### recentapp.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/user/recentapp?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[recentapp](#selection.user.recentapp)</code>  
-**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.user.recentapp.post(filter).then(function(Selection) {
-    console.log(Selection)
-})
-```
 <a name="selection.user.post"></a>
 #### user.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:
@@ -15188,36 +14213,6 @@ qrsApi.selection.user.post(filter).then(function(Selection) {
 <a name="selection.userdirectory"></a>
 ### selection.userdirectory : <code>object</code>
 **Kind**: static namespace of <code>[selection](#selection)</code>  
-
-* [.userdirectory](#selection.userdirectory) : <code>object</code>
-  * [.template](#selection.userdirectory.template) : <code>object</code>
-    * [.post([filter])](#selection.userdirectory.template.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-  * [.post([filter])](#selection.userdirectory.post) ⇒ <code>Promise.&lt;Selection&gt;</code>
-
-<a name="selection.userdirectory.template"></a>
-#### userdirectory.template : <code>object</code>
-**Kind**: static namespace of <code>[userdirectory](#selection.userdirectory)</code>  
-<a name="selection.userdirectory.template.post"></a>
-##### template.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
-Makes a request on the Qlik Sense QRS API:
-
-/qrs/selection/userdirectory/template?filter={filter}
-
-This method is generated
-
-**Kind**: static method of <code>[template](#selection.userdirectory.template)</code>  
-**Returns**: <code>Promise.&lt;Selection&gt;</code> - a promise resolving to the response to the request  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [filter] | <code>string</code> | the filter parameter |
-
-**Example**  
-```javascript
-qrsApi.selection.userdirectory.template.post(filter).then(function(Selection) {
-    console.log(Selection)
-})
-```
 <a name="selection.userdirectory.post"></a>
 #### userdirectory.post([filter]) ⇒ <code>Promise.&lt;Selection&gt;</code>
 Makes a request on the Qlik Sense QRS API:

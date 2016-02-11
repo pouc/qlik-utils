@@ -18,6 +18,8 @@
     * [.get([filter], [orderby], [appendprivileges])](#systemrule.full.get) ⇒ <code>Promise.&lt;Array.&lt;SystemRule&gt;&gt;</code>
   * [.license](#systemrule.license) : <code>object</code>
     * [.audit](#systemrule.license.audit) : <code>object</code>
+      * [.matrix](#systemrule.license.audit.matrix) : <code>object</code>
+        * [.post(postParams)](#systemrule.license.audit.matrix.post) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
       * [.preview](#systemrule.license.audit.preview) : <code>object</code>
         * [.post(postParams)](#systemrule.license.audit.preview.post) ⇒ <code>Promise.&lt;AuditPreviewResult&gt;</code>
       * [.post(postParams)](#systemrule.license.audit.post) ⇒ <code>Promise.&lt;AuditResult&gt;</code>
@@ -39,6 +41,8 @@
         * [.post(postParams)](#systemrule.security.audit.countresources.post) ⇒ <code>Promise.&lt;int&gt;</code>
       * [.export](#systemrule.security.audit.export) : <code>object</code>
         * [.get()](#systemrule.security.audit.export.get) ⇒ <code>Promise.&lt;Array.&lt;String&gt;&gt;</code>
+      * [.matrix](#systemrule.security.audit.matrix) : <code>object</code>
+        * [.post(postParams)](#systemrule.security.audit.matrix.post) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
       * [.preview](#systemrule.security.audit.preview) : <code>object</code>
         * [.post(postParams)](#systemrule.security.audit.preview.post) ⇒ <code>Promise.&lt;AuditPreviewResult&gt;</code>
       * [.post(postParams)](#systemrule.security.audit.post) ⇒ <code>Promise.&lt;AuditResult&gt;</code>
@@ -52,6 +56,8 @@
       * [.post(postParams, [appendprivileges])](#systemrule.security.useractions.post) ⇒ <code>Promise.&lt;Array.&lt;UserActions&gt;&gt;</code>
   * [.sync](#systemrule.sync) : <code>object</code>
     * [.audit](#systemrule.sync.audit) : <code>object</code>
+      * [.matrix](#systemrule.sync.audit.matrix) : <code>object</code>
+        * [.post(postParams)](#systemrule.sync.audit.matrix.post) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
       * [.preview](#systemrule.sync.audit.preview) : <code>object</code>
         * [.post(postParams)](#systemrule.sync.audit.preview.post) ⇒ <code>Promise.&lt;SyncPreviewResult&gt;</code>
       * [.post(postParams)](#systemrule.sync.audit.post) ⇒ <code>Promise.&lt;SyncAuditResult&gt;</code>
@@ -222,6 +228,8 @@ qrsApi.systemrule.full.get(filter, orderby, appendprivileges).then(function(Arra
 
 * [.license](#systemrule.license) : <code>object</code>
   * [.audit](#systemrule.license.audit) : <code>object</code>
+    * [.matrix](#systemrule.license.audit.matrix) : <code>object</code>
+      * [.post(postParams)](#systemrule.license.audit.matrix.post) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
     * [.preview](#systemrule.license.audit.preview) : <code>object</code>
       * [.post(postParams)](#systemrule.license.audit.preview.post) ⇒ <code>Promise.&lt;AuditPreviewResult&gt;</code>
     * [.post(postParams)](#systemrule.license.audit.post) ⇒ <code>Promise.&lt;AuditResult&gt;</code>
@@ -233,10 +241,36 @@ qrsApi.systemrule.full.get(filter, orderby, appendprivileges).then(function(Arra
 **Kind**: static namespace of <code>[license](#systemrule.license)</code>  
 
 * [.audit](#systemrule.license.audit) : <code>object</code>
+  * [.matrix](#systemrule.license.audit.matrix) : <code>object</code>
+    * [.post(postParams)](#systemrule.license.audit.matrix.post) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
   * [.preview](#systemrule.license.audit.preview) : <code>object</code>
     * [.post(postParams)](#systemrule.license.audit.preview.post) ⇒ <code>Promise.&lt;AuditPreviewResult&gt;</code>
   * [.post(postParams)](#systemrule.license.audit.post) ⇒ <code>Promise.&lt;AuditResult&gt;</code>
 
+<a name="systemrule.license.audit.matrix"></a>
+##### audit.matrix : <code>object</code>
+**Kind**: static namespace of <code>[audit](#systemrule.license.audit)</code>  
+<a name="systemrule.license.audit.matrix.post"></a>
+###### matrix.post(postParams) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/systemrule/license/audit/matrix
+
+This method is manual
+
+**Kind**: static method of <code>[matrix](#systemrule.license.audit.matrix)</code>  
+**Returns**: <code>Promise.&lt;AuditMatrixResult&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>AuditMatrixParameters</code> | the parameters to send as request body to the API endpoint |
+
+**Example**  
+```javascript
+qrsApi.systemrule.license.audit.matrix.post(postParams).then(function(AuditMatrixResult) {
+    console.log(AuditMatrixResult)
+})
+```
 <a name="systemrule.license.audit.preview"></a>
 ##### audit.preview : <code>object</code>
 **Kind**: static namespace of <code>[audit](#systemrule.license.audit)</code>  
@@ -372,6 +406,8 @@ qrsApi.systemrule.previewcreateprivilege.post(postParams).then(function(Boolean)
       * [.post(postParams)](#systemrule.security.audit.countresources.post) ⇒ <code>Promise.&lt;int&gt;</code>
     * [.export](#systemrule.security.audit.export) : <code>object</code>
       * [.get()](#systemrule.security.audit.export.get) ⇒ <code>Promise.&lt;Array.&lt;String&gt;&gt;</code>
+    * [.matrix](#systemrule.security.audit.matrix) : <code>object</code>
+      * [.post(postParams)](#systemrule.security.audit.matrix.post) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
     * [.preview](#systemrule.security.audit.preview) : <code>object</code>
       * [.post(postParams)](#systemrule.security.audit.preview.post) ⇒ <code>Promise.&lt;AuditPreviewResult&gt;</code>
     * [.post(postParams)](#systemrule.security.audit.post) ⇒ <code>Promise.&lt;AuditResult&gt;</code>
@@ -447,6 +483,8 @@ qrsApi.systemrule.security.attributevalues.get(resourcetype, attribute, filter, 
     * [.post(postParams)](#systemrule.security.audit.countresources.post) ⇒ <code>Promise.&lt;int&gt;</code>
   * [.export](#systemrule.security.audit.export) : <code>object</code>
     * [.get()](#systemrule.security.audit.export.get) ⇒ <code>Promise.&lt;Array.&lt;String&gt;&gt;</code>
+  * [.matrix](#systemrule.security.audit.matrix) : <code>object</code>
+    * [.post(postParams)](#systemrule.security.audit.matrix.post) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
   * [.preview](#systemrule.security.audit.preview) : <code>object</code>
     * [.post(postParams)](#systemrule.security.audit.preview.post) ⇒ <code>Promise.&lt;AuditPreviewResult&gt;</code>
   * [.post(postParams)](#systemrule.security.audit.post) ⇒ <code>Promise.&lt;AuditResult&gt;</code>
@@ -516,6 +554,30 @@ This method is manual
 ```javascript
 qrsApi.systemrule.security.audit.export.get().then(function(Array.<String>) {
     console.log(Array.<String>)
+})
+```
+<a name="systemrule.security.audit.matrix"></a>
+##### audit.matrix : <code>object</code>
+**Kind**: static namespace of <code>[audit](#systemrule.security.audit)</code>  
+<a name="systemrule.security.audit.matrix.post"></a>
+###### matrix.post(postParams) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/systemrule/security/audit/matrix
+
+This method is manual
+
+**Kind**: static method of <code>[matrix](#systemrule.security.audit.matrix)</code>  
+**Returns**: <code>Promise.&lt;AuditMatrixResult&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>AuditMatrixParameters</code> | the parameters to send as request body to the API endpoint |
+
+**Example**  
+```javascript
+qrsApi.systemrule.security.audit.matrix.post(postParams).then(function(AuditMatrixResult) {
+    console.log(AuditMatrixResult)
 })
 ```
 <a name="systemrule.security.audit.preview"></a>
@@ -661,6 +723,8 @@ qrsApi.systemrule.security.useractions.post(postParams, appendprivileges).then(f
 
 * [.sync](#systemrule.sync) : <code>object</code>
   * [.audit](#systemrule.sync.audit) : <code>object</code>
+    * [.matrix](#systemrule.sync.audit.matrix) : <code>object</code>
+      * [.post(postParams)](#systemrule.sync.audit.matrix.post) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
     * [.preview](#systemrule.sync.audit.preview) : <code>object</code>
       * [.post(postParams)](#systemrule.sync.audit.preview.post) ⇒ <code>Promise.&lt;SyncPreviewResult&gt;</code>
     * [.post(postParams)](#systemrule.sync.audit.post) ⇒ <code>Promise.&lt;SyncAuditResult&gt;</code>
@@ -674,10 +738,36 @@ qrsApi.systemrule.security.useractions.post(postParams, appendprivileges).then(f
 **Kind**: static namespace of <code>[sync](#systemrule.sync)</code>  
 
 * [.audit](#systemrule.sync.audit) : <code>object</code>
+  * [.matrix](#systemrule.sync.audit.matrix) : <code>object</code>
+    * [.post(postParams)](#systemrule.sync.audit.matrix.post) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
   * [.preview](#systemrule.sync.audit.preview) : <code>object</code>
     * [.post(postParams)](#systemrule.sync.audit.preview.post) ⇒ <code>Promise.&lt;SyncPreviewResult&gt;</code>
   * [.post(postParams)](#systemrule.sync.audit.post) ⇒ <code>Promise.&lt;SyncAuditResult&gt;</code>
 
+<a name="systemrule.sync.audit.matrix"></a>
+##### audit.matrix : <code>object</code>
+**Kind**: static namespace of <code>[audit](#systemrule.sync.audit)</code>  
+<a name="systemrule.sync.audit.matrix.post"></a>
+###### matrix.post(postParams) ⇒ <code>Promise.&lt;AuditMatrixResult&gt;</code>
+Makes a request on the Qlik Sense QRS API:
+
+/qrs/systemrule/sync/audit/matrix
+
+This method is manual
+
+**Kind**: static method of <code>[matrix](#systemrule.sync.audit.matrix)</code>  
+**Returns**: <code>Promise.&lt;AuditMatrixResult&gt;</code> - a promise resolving to the response to the request  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| postParams | <code>AuditMatrixParameters</code> | the parameters to send as request body to the API endpoint |
+
+**Example**  
+```javascript
+qrsApi.systemrule.sync.audit.matrix.post(postParams).then(function(AuditMatrixResult) {
+    console.log(AuditMatrixResult)
+})
+```
 <a name="systemrule.sync.audit.preview"></a>
 ##### audit.preview : <code>object</code>
 **Kind**: static namespace of <code>[audit](#systemrule.sync.audit)</code>  

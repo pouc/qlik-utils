@@ -778,7 +778,7 @@ describe('Qlik', function() {
             task.start();
 
             task.bind(function(task) {
-                console.log(task.val, task.detail);
+                //console.log(task.val, task.detail);
             });
 
             it('should open web socket', function(done) {
@@ -859,7 +859,7 @@ describe('Qlik', function() {
                 task.start();
 
                 task.bind(function(task) {
-                    console.log(task.detail)
+                    //console.log(task.detail)
                     if (task.val == 'redirect') {
                         cbr(task.detail);
                     }
@@ -1192,25 +1192,25 @@ describe('Qlik', function() {
 
         });
 
-        describe('loopAndReduce...', function() {
+        describe('loopAndReload...', function() {
 
             it('should be defined', function() {
-                expect(utils.Qlik.loopAndReduce).to.not.be.undefined;
+                expect(utils.Qlik.loopAndReload).to.not.be.undefined;
             });
 
-            it('should loop and reduce using default name and without publishing', function(done) {
+            it('should loop and reload using default name and without publishing', function(done) {
                 this.timeout(1000000);
 
                 var task = new utils.Core.Task();
                 task.start();
 
                 task.bind(function(task) {
-                    console.log(task.val, task.detail);
+                    //console.log(task.val, task.detail);
                 });
 
                 Q().then(function(pfx) {
 
-                    return utils.Qlik.loopAndReduce(options, {
+                    return utils.Qlik.loopAndReload(options, {
                             loop: {
                                 appId: loopReduceApp,
                                 loopColum: 'Client',
@@ -1218,8 +1218,9 @@ describe('Qlik', function() {
                                 nameColumn: 'AppName',
                                 publishColumn: 'Stream'
                             },
-                            reduce: {
-                                app: templateApp,
+                            reload: {
+                                templateApp: templateApp,
+                                replacesDef: {marker: '%Replace me!%'},
                                 maxParDup: 5,
                                 overwriteApp: true,
                                 keepApp: true

@@ -52,7 +52,7 @@
   * [.full](#app.full) : <code>object</code>
     * [.get([filter], [orderby], [appendprivileges])](#app.full.get) ⇒ <code>Promise.&lt;Array.&lt;App&gt;&gt;</code>
   * [.import](#app.import) : <code>object</code>
-    * [.post(postParams, [name], [keepdata], [replace], [appendprivileges], [excludeconnections])](#app.import.post) ⇒ <code>Promise.&lt;App&gt;</code>
+    * [.post(postParams, [name], [keepdata], [appendprivileges], [excludeconnections])](#app.import.post) ⇒ <code>Promise.&lt;App&gt;</code>
   * [.internal](#app.internal) : <code>object</code>
     * [.id](#app.internal.id) : <code>object</code>
       * [.get([appendprivileges])](#app.internal.id.get) ⇒ <code>Promise.&lt;AppInternal&gt;</code>
@@ -84,7 +84,7 @@
   * [.table](#app.table) : <code>object</code>
     * [.post(postParams, [filter], [skip], [take], [sortcolumn], [orderascending])](#app.table.post) ⇒ <code>Promise.&lt;Object&gt;</code>
   * [.upload](#app.upload) : <code>object</code>
-    * [.post(postParams, [name], [keepdata], [replace], [appendprivileges], [excludeconnections])](#app.upload.post) ⇒ <code>Promise.&lt;App&gt;</code>
+    * [.post(postParams, [name], [keepdata], [appendprivileges], [excludeconnections])](#app.upload.post) ⇒ <code>Promise.&lt;App&gt;</code>
   * [.get([filter], [orderby], [appendprivileges])](#app.get) ⇒ <code>Promise.&lt;Array.&lt;App&gt;&gt;</code>
 
 <a name="app.id"></a>
@@ -701,10 +701,10 @@ qrsApi.app.full.get(filter, orderby, appendprivileges).then(function(Array.<App>
 ### app.import : <code>object</code>
 **Kind**: static namespace of <code>[app](#app)</code>  
 <a name="app.import.post"></a>
-#### import.post(postParams, [name], [keepdata], [replace], [appendprivileges], [excludeconnections]) ⇒ <code>Promise.&lt;App&gt;</code>
+#### import.post(postParams, [name], [keepdata], [appendprivileges], [excludeconnections]) ⇒ <code>Promise.&lt;App&gt;</code>
 Makes a request on the Qlik Sense QRS API:
 
-/qrs/app/import?name={name}&keepdata={keepdata}&replace={replace}&privileges={appendprivileges}&excludeconnections={excludeconnections}
+/qrs/app/import?name={name}&keepdata={keepdata}&privileges={appendprivileges}&excludeconnections={excludeconnections}
 
 This method is manual
 
@@ -716,13 +716,12 @@ This method is manual
 | postParams | <code>String</code> | the parameters to send as request body to the API endpoint |
 | [name] | <code>string</code> | the name parameter |
 | [keepdata] | <code>string</code> | the keepdata parameter |
-| [replace] | <code>string</code> | the replace parameter |
 | [appendprivileges] | <code>string</code> | the appendprivileges parameter |
 | [excludeconnections] | <code>string</code> | the excludeconnections parameter |
 
 **Example**  
 ```javascript
-qrsApi.app.import.post(postParams, name, keepdata, replace, appendprivileges, excludeconnections).then(function(App) {
+qrsApi.app.import.post(postParams, name, keepdata, appendprivileges, excludeconnections).then(function(App) {
     console.log(App)
 })
 ```
@@ -1157,10 +1156,10 @@ qrsApi.app.table.post(postParams, filter, skip, take, sortcolumn, orderascending
 ### app.upload : <code>object</code>
 **Kind**: static namespace of <code>[app](#app)</code>  
 <a name="app.upload.post"></a>
-#### upload.post(postParams, [name], [keepdata], [replace], [appendprivileges], [excludeconnections]) ⇒ <code>Promise.&lt;App&gt;</code>
+#### upload.post(postParams, [name], [keepdata], [appendprivileges], [excludeconnections]) ⇒ <code>Promise.&lt;App&gt;</code>
 Makes a request on the Qlik Sense QRS API:
 
-/qrs/app/upload?name={name}&keepdata={keepdata}&replace={replace}&privileges={appendprivileges}&excludeconnections={excludeconnections}
+/qrs/app/upload?name={name}&keepdata={keepdata}&privileges={appendprivileges}&excludeconnections={excludeconnections}
 
 This method is manual
 
@@ -1172,13 +1171,12 @@ This method is manual
 | postParams | <code>String</code> | the parameters to send as request body to the API endpoint |
 | [name] | <code>string</code> | the name parameter |
 | [keepdata] | <code>string</code> | the keepdata parameter |
-| [replace] | <code>string</code> | the replace parameter |
 | [appendprivileges] | <code>string</code> | the appendprivileges parameter |
 | [excludeconnections] | <code>string</code> | the excludeconnections parameter |
 
 **Example**  
 ```javascript
-qrsApi.app.upload.post(postParams, name, keepdata, replace, appendprivileges, excludeconnections).then(function(App) {
+qrsApi.app.upload.post(postParams, name, keepdata, appendprivileges, excludeconnections).then(function(App) {
     console.log(App)
 })
 ```
