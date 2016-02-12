@@ -884,7 +884,7 @@ describe('Qlik', function() {
 
         });
 
-        describe.only('dynamicAppClone...', function() {
+        describe('dynamicAppClone...', function() {
 
             it('should be defined', function() {
                 expect(utils.Qlik.dynamicAppClone).to.not.be.undefined;
@@ -925,12 +925,12 @@ describe('Qlik', function() {
                         overwriteApp: true,
                         keepApp: true,
                         createReloadTask: true,
-                        customProperties: [{name: 'Test', values: ['test %(replace.value)s']}]
+                        customProperties: [{name: 'Test', values: ['test %(replaceValue)s']}]
                     },
                     task
                 ).then(function() {
                     check(done, function() {
-                        expect(cbr).to.have.been.callCount(2).calledWithMatch(/^[a-f0-9\-]{36}$/);
+                        expect(cbr).to.have.been.callCount(5).calledWithMatch(/^[a-f0-9\-]{36}$/);
                     });
                 }, function(err) {
                     done(err);
