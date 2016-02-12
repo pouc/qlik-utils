@@ -153,7 +153,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('release', 'Release a new version, push it and publish it', function() {
-        grunt.task.run('jscs', 'simplemocha:all', 'mocha_istanbul:coverage', 'jsdoc2md:multipleOutputfiles', 'bump:patch', 'shell:publish', 'coveralls:default');
+        grunt.task.run('jscs', /*'simplemocha:all',*/ 'mocha_istanbul:coverage', 'jsdoc2md:multipleOutputfiles', 'bump:patch', 'shell:publish', 'coveralls:default');
     });
 
 };
