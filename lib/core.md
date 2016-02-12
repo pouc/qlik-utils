@@ -38,6 +38,7 @@ Wrapper for helper functions.
     * [.init()](#Core.Image+init) ⇒ <code>Promise</code>
     * [.store()](#Core.Image+store) ⇒ <code>Promise</code>
   * [.ifNotUndef(a, b, [c])](#Core.ifNotUndef) ⇒ <code>\*</code>
+  * [.ifChildNotUndef(a, a, c, [d])](#Core.ifChildNotUndef) ⇒ <code>\*</code>
   * [.loop(func, param, retry, retryTimeout, task)](#Core.loop)
   * [.setTimeout2Promise(timeout)](#Core.setTimeout2Promise) ⇒ <code>Promise</code>
   * [.copyFile(source, target)](#Core.copyFile) ⇒ <code>Promise</code>
@@ -336,6 +337,22 @@ Two parameters mode If a is undefined, return b else aThree parameters mode I
 
 **Example**  
 Two ways to use ifNotUndef. Either with two parameters (a||b):```javascriptvar myHost = utils.Core.ifNotUndef(options.host, options.hostname);```or with three parameters (a?b:c):```javascriptvar myHost = utils.Core.ifNotUndef(options.host, options.hostname, 'localhost');```
+<a name="Core.ifChildNotUndef"></a>
+### Core.ifChildNotUndef(a, a, c, [d]) ⇒ <code>\*</code>
+Three parameters mode If a[b] is undefined, return c else a[b]Four parameters mode If a[b] is undefined, return d else c
+
+**Kind**: static method of <code>[Core](#Core)</code>  
+**Returns**: <code>\*</code> - a[b] or c or d depending on their undefined status  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| a | <code>\*</code> | the object |
+| a | <code>\*</code> | the children |
+| c | <code>\*</code> | the first value |
+| [d] | <code>\*</code> | the second value |
+
+**Example**  
+Two ways to use ifChildNotUndef. Either with three parameters (a[b]||c):```javascriptvar myHost = utils.Core.ifChildNotUndef(options, ['params', 'host'], 'localhost');```or with four parameters (a[b]?c:d):```javascriptvar myHost = utils.Core.ifChildNotUndef(options, ['params'], options.params.host, 'localhost');```
 <a name="Core.loop"></a>
 ### Core.loop(func, param, retry, retryTimeout, task)
 Loops until func finishes successfully

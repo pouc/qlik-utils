@@ -91,6 +91,48 @@ describe('Core', function() {
 
     });
 
+    describe('ifChildNotUndef...', function() {
+
+        it('should be defined', function() {
+            expect(utils.Core.ifChildNotUndef).to.not.be.undefined;
+        });
+
+        var bla0 = {
+            bla1: {
+                bla2: {
+                    bla3: '^^'
+                }
+            }
+        };
+
+        it('should work with 3 params', function() {
+            expect(utils.Core.ifChildNotUndef(bla0, ['bla1', 'bla2', 'bla3'], 2)).to.equal('^^');
+            expect(utils.Core.ifChildNotUndef(bla0, ['bla1', 'bla3', 'bla4'], 2)).to.equal(2);
+
+            expect(utils.Core.ifChildNotUndef(null, undefined, 2)).to.equal(2);
+            expect(utils.Core.ifChildNotUndef(undefined, ['bla'], 2)).to.equal(2);
+            expect(utils.Core.ifChildNotUndef(utils.toto, 'bli', 2)).to.equal(2);
+        });
+
+        it('should work with 4 params', function() {
+            expect(utils.Core.ifChildNotUndef(bla0, ['bla1', 'bla2', 'bla3'], 2, 3)).to.equal(2);
+            expect(utils.Core.ifChildNotUndef(bla0, undefined, 2, 3)).to.equal(2);
+
+            expect(utils.Core.ifChildNotUndef(null, ['bla1', 'bla2', 'bla3'], 2, 3)).to.equal(3);
+            expect(utils.Core.ifChildNotUndef(undefined, ['bla1', 'bla2', 'bla3'], 2, 3)).to.equal(3);
+            expect(utils.Core.ifChildNotUndef(utils.toto, ['bla1', 'bla2', 'bla3'], 2, 3)).to.equal(3);
+            expect(utils.Core.ifChildNotUndef(bla0, ['bla1', 'bla2', 'bla4'], 2, 3)).to.equal(3);
+            expect(utils.Core.ifChildNotUndef(bla0, ['bla1', 'bla4', 'bla3'], 2, 3)).to.equal(3);
+            expect(utils.Core.ifChildNotUndef(bla0, ['bla4', 'bla2', 'bla3'], 2, 3)).to.equal(3);
+
+            expect(utils.Core.ifChildNotUndef(null, ['bla1', 'bla2', 'bla3'], 2, undefined)).to.be.undefined;
+            expect(utils.Core.ifChildNotUndef(undefined, ['bla1', 'bla2', 'bla3'], 2, undefined)).to.be.undefined;
+            expect(utils.Core.ifChildNotUndef(utils.toto, ['bla1', 'bla2', 'bla3'], 2, undefined)).to.be.undefined;
+            expect(utils.Core.ifChildNotUndef(bla0, ['bla1', 'bla2', 'bla4'], 2, undefined)).to.be.undefined;
+        });
+
+    });
+
     describe('generateXrfkey...', function() {
 
         it('should be defined', function() {
@@ -842,7 +884,7 @@ describe('Qlik', function() {
 
         });
 
-        describe('dynamicAppClone...', function() {
+        describe.only('dynamicAppClone...', function() {
 
             it('should be defined', function() {
                 expect(utils.Qlik.dynamicAppClone).to.not.be.undefined;
@@ -868,7 +910,17 @@ describe('Qlik', function() {
                 utils.Qlik.dynamicAppClone(options, {
                         templateApp: templateApp,
                         maxParDup: 1,
-                        replacesDef: {marker: '%Replace me!%', value: [1, 2, 3, 4, 5, 6]},
+                        replacesDef: [{
+                            replaces: [
+                                {marker: '%Replace me!%', value: [1, 2]},
+                                {marker: '%Replace me2!%', value: [4, 5]}
+                            ]
+                        }, {
+                            replaces: [
+                                {marker: '%Replace me!%', value: 6},
+                                {marker: '%Replace me2!%', value: 7}
+                            ]
+                        }],
                         publishStream: publishStream,
                         overwriteApp: true,
                         keepApp: true,
@@ -878,7 +930,7 @@ describe('Qlik', function() {
                     task
                 ).then(function() {
                     check(done, function() {
-                        expect(cbr).to.have.been.callCount(6).calledWithMatch(/^[a-f0-9\-]{36}$/);
+                        expect(cbr).to.have.been.callCount(2).calledWithMatch(/^[a-f0-9\-]{36}$/);
                     });
                 }, function(err) {
                     done(err);
@@ -1218,9 +1270,11 @@ describe('Qlik', function() {
                                 nameColumn: 'AppName',
                                 publishColumn: 'Stream'
                             },
+                            loopReload: {
+                                loopMarker: '%Replace me!%'
+                            },
                             reload: {
                                 templateApp: templateApp,
-                                replacesDef: {marker: '%Replace me!%'},
                                 maxParDup: 5,
                                 overwriteApp: true,
                                 keepApp: true
