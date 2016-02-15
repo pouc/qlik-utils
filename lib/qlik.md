@@ -214,7 +214,7 @@ Safe function to open a ws session on a Qlik Sense server. This function can reu
 | [task] | <code>Task</code> | a task that will trace the session opening progress |
 
 **Example**  
-Classical mode:```javascriptutils.Qlik.openWebSocket({         restUri: 'https://10.76.224.72',         pfx: pfx,         passPhrase: ''     },     {         UserId: 'qlikservice',         UserDirectory: '2008R2-0',         Attributes: []     }}).then(function(ws) {});```
+Classical mode:```javascriptutils.Qlik.openWebSocket({         restUri: 'https://10.76.224.72',         pfx: pfx,         passPhrase: ''     },     {         ticketParams: {             UserId: 'qlikservice',             UserDirectory: '2008R2-0',             Attributes: []         }     }}).then(function(ws) {});```
 **Example**  
 Reuse mode:```javascriptutils.Qlik.openWebSocket({         restUri: 'https://10.76.224.72',         pfx: pfx,         passPhrase: '',         cookie: 'X-Qlik-Session=12345678-1234-1234-1234-123456789012; Path=/; HttpOnly; Secure'     }}).then(function(ws) {});```
 <a name="Qlik.addToWhiteList"></a>
