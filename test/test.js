@@ -33,6 +33,8 @@ var publishStream = '2b9bfc5e-44a8-48ff-9ff2-f9a848375189';
 var readFile = promise.denodeify(fs.readFile);
 var readdir = promise.denodeify(fs.readdir);
 
+var qrs = utils.Qlik.apis.qrs;
+
 var options = {
     restUri: 'https://' + testQlikSenseIp,
     prefix: testQlikSenseVp,
@@ -41,6 +43,8 @@ var options = {
     UserId: 'qlikservice',
     UserDirectory: 'WIN-OP0IIK2CDFA'
 };
+
+var qrsApi = qrs(options);
 
 function check(done, f) {
     try {
@@ -928,7 +932,13 @@ describe('Qlik', function() {
                         customProperties: [{name: 'Test', values: ['test %(replaceValue)s']}]
                     },
                     task
-                ).then(function() {
+                ).then(function(reply) {
+                    return Q.all(reply.map(function(newApp) {
+                        return qrsApi.app.id(newApp).delete();
+                    })).then(function() {
+                        return reply;
+                    });
+                }).then(function() {
                     check(done, function() {
                         expect(cbr).to.have.been.callCount(5).calledWithMatch(/^[a-f0-9\-]{36}$/);
                     });
@@ -1282,6 +1292,12 @@ describe('Qlik', function() {
                         },
                         task);
 
+                }).then(function(reply) {
+                    return Q.all(reply.map(function(newApp) {
+                        return qrsApi.app.id(newApp).delete();
+                    })).then(function() {
+                        return reply;
+                    });
                 }).then(function(reply) {
                     check(done, function() {
                         reply.forEach(function(item) {
