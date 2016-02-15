@@ -19,6 +19,7 @@
     "cloneextend": "0.0.3",
     "deep-diff": "^0.3.2",
     "extend": "pouc/node-extend",
+    "mathjs": "^2.7.0",
     "mkdirp": "^0.5.1",
     "node-uuid": "^1.4.3",
     "q": "^1.4.1",
