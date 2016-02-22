@@ -248,6 +248,7 @@ Duplicates a template app, updates its script, reloads it and publishes it
 | params.templateApp | <code>string</code> |  | name or id of the template application |
 | [params.maxParDup] | <code>int</code> | <code>1</code> | maximum number of // operations (opened sockets & QRS API queries) |
 | [params.replacesDef] | <code>Array.&lt;(replaceDef\|cloneDef)&gt;</code> &#124; <code>[replaceDef](#replaceDef)</code> &#124; <code>[cloneDef](#cloneDef)</code> |  | definition of script replacement(s) to perform and parameters of the app to generate. If this parameter is null or false, the script is not updated |
+| [params.duplicateApp] | <code>boolean</code> | <code>true</code> | duplicates the template app |
 | [params.reloadApp] | <code>boolean</code> | <code>true</code> | reload the app |
 | [params.keepApp] | <code>boolean</code> | <code>true</code> | keep the app when the operation finished. If false, app will be deleted |
 | [params.overwriteApp] | <code>boolean</code> | <code>true</code> | Overwrite the replace app if it exists. If false, and if replace app exists, nothing will happen |
@@ -371,6 +372,7 @@ Opens a session on the Qlik Sense Hub with the given ticket and returns the sess
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | replaces | <code>[Array.&lt;replaceDef&gt;](#replaceDef)</code> &#124; <code>[replaceDef](#replaceDef)</code> |  | the list of values to be replaced. If this parameter is null or false, the script is not updated |
+| [duplicateApp] | <code>boolean</code> | <code>true</code> | duplicates the template app. Overrides parent duplicateApp if defined |
 | [reloadApp] | <code>boolean</code> | <code>parent value</code> | reload the app. Overrides parent reloadApp if defined |
 | [keepApp] | <code>boolean</code> | <code>parent value</code> | keep the app when the operation finished. If false, app will be deleted. Overrides parent keepApp if defined |
 | [overwriteApp] | <code>boolean</code> | <code>parent value</code> | Overwrite the replace app if it exists. If false, and if replace app exists, nothing will happen. Overrides parent replaceApp if defined |
