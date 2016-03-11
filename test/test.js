@@ -559,6 +559,36 @@ describe('Array', function() {
         expect(utils.Array).to.not.be.undefined;
     });
 
+    describe('intersect...', function() {
+
+        it('should be defined', function() {
+            expect(utils.Array.intersect).to.not.be.undefined;
+        });
+
+        it('should intersect', function() {
+            expect(utils.Array.intersect([1, 2, 3, 4, 5, 6, 7], [1, 3])).to.deep.equal([1, 3]);
+            expect(utils.Array.intersect([1, 2, 3, 4, 5, 6, 7], [10])).to.deep.equal([]);
+            expect(utils.Array.intersect([1, 2, 3, 4, 5, 6, 7], [1, 10, 3, 4])).to.deep.equal([1, 3, 4]);
+        });
+
+    });
+
+    describe('compare...', function() {
+
+        it('should be defined', function() {
+            expect(utils.Array.compare).to.not.be.undefined;
+        });
+
+        it('should intersect', function() {
+            expect(utils.Array.compare([1, 2, 3, 4, 5, 6, 7], [1, 3])).to.equal(false);
+            expect(utils.Array.compare([1, 2, 3, 4, 5, 6, 7], [10])).to.equal(false);
+            expect(utils.Array.compare([1, 2, 3, 4, 5, 6, 7], [1, 10, 3, 4])).to.equal(false);
+            expect(utils.Array.compare([1, 2, 3, 4, 5, 6, 7], [1, 2, 3, 4, 5, 6, 7])).to.equal(true);
+            expect(utils.Array.compare([1, 2, 3, 4, 5, 6, 7], [1, 2, 3, 4, 5, 7, 6])).to.equal(true);
+        });
+
+    });
+
     describe('chunk...', function() {
 
         it('should be defined', function() {
@@ -1266,7 +1296,7 @@ describe('Qlik', function() {
                 task.start();
 
                 task.bind(function(task) {
-                    //console.log(task.val, task.detail);
+                    // console.log(task.val, task.detail);
                 });
 
                 Q().then(function(pfx) {
