@@ -21,12 +21,12 @@
     "extend": "pouc/node-extend",
     "mathjs": "^2.7.0",
     "mkdirp": "^0.5.1",
-    "node-uuid": "^1.4.3",
     "q": "^1.4.1",
     "qsocks": "github:pouc/qsocks",
     "rimraf": "^2.4.2",
     "sprintf-js": "^1.0.3",
     "temp": "^0.8.3",
+    "uuid": "^3.0.0",
     "xregexp": "^3.0.0"
   },
   "devDependencies": {
