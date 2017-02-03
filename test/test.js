@@ -94,7 +94,7 @@ var hooks = {
     }
 }
 
-var hooksConfig = 'real';
+var hooksConfig = 'fake';
 
 describe('default conf...', () => {
     
