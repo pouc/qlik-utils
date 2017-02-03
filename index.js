@@ -1,13 +1,28 @@
+'use strict';
+
+var Rx = require('rxjs/Rx');
+
+var undef = require('ifnotundef');
+var qps = require('qlik-api-qps');
+var Task = require('rxjs-task-subject');
+
 /**
- * [![Coverage Status](https://coveralls.io/repos/pouc/qlik-utils/badge.svg?branch=master&service=github)](https://coveralls.io/github/pouc/qlik-utils?branch=master)
  *
- * A set of utility functions / classes for simplifying the call to Qlik Sense APIs
+ * [![GitHub version](https://badge.fury.io/gh/pouc%2Fqlik-utils.svg)](https://badge.fury.io/gh/pouc%2Fqlik-utils)
+ * [![npm version](https://badge.fury.io/js/qlik-utils.svg)](https://badge.fury.io/js/qlik-utils)
+ * [![NPM monthly downloads](https://img.shields.io/npm/dm/qlik-utils.svg?style=flat)](https://npmjs.org/package/qlik-utils)
+ * [![Build Status](https://travis-ci.org/pouc/qlik-utils.svg?branch=master)](https://travis-ci.org/pouc/qlik-utils)
+ * [![Dependency Status](https://gemnasium.com/badges/github.com/pouc/qlik-utils.svg)](https://gemnasium.com/github.com/pouc/qlik-utils)
+ * [![Coverage Status](https://coveralls.io/repos/github/pouc/qlik-utils/badge.svg?branch=master)](https://coveralls.io/github/pouc/qlik-utils?branch=master)
+ * [![Known Vulnerabilities](https://snyk.io/test/github/pouc/qlik-utils/badge.svg)](https://snyk.io/test/github/pouc/qlik-utils)
+ *
+ * A set of utility functions for simplifying the call to Qlik Sense APIs
  *
  * @module qlik-utils
  * @typicalname utils
  * @author Loic Formont
  *
- * @copyright Copyright (C) 2015 Loic Formont
+ * @copyright Copyright (C) 2017 Loic Formont
  * @license MIT Licensed
  *
  * @example
@@ -15,116 +30,73 @@
  * var utils = require("qlik-utils");
  * ```
  */
-module.exports = {
+module.exports = createUtils();
+module.exports.create = createUtils;
 
-    /**
-     * Wrapper for helper functions for arrays.
-     * {@link lib/array.md|See documentation}
-     *
-     * @namespace
-     */
-    Array: require('./lib/array').Array,
+function createUtils(options) {
+    var promise = undef.child(options, 'promise', global.Promise);
+    var returnObservable = undef.child(options, 'returnObservable', false);
+    
+    return {
+        
+        /**
+         * Generates a ticket on Qlik Sense QRS Api. If the targetId is not correct
+         * then the ticket will redirect to the hub
+         *
+         * @example
+         * ```javascript
+         * utils.getTicket({
+         *          restUri: 'https://10.76.224.72',
+         *          pfx: pfx,
+         *          passPhrase: ''
+         *      },
+         *      {
+         *          UserId: 'qlikservice',
+         *          UserDirectory: '2008R2-0',
+         *          Attributes: []
+         *      }
+         * }).then(function(retVal) {
+         *      console.log(retVal);
+         * });
+         * ```
+         *
+         * @memberOf Qlik
+         *
+         * @param {options}             options     Qlik Sense connection options
+         * @param {ticketParams}        params      the ticket parameters
+         * @returns {Promise.<ticket>}              a promise resolving to the generated ticket
+         */
+        getTicket: function(options, params) {
 
-    /**
-     * Wrapper for helper functions for objects.
-     * {@link lib/object.md|See documentation}
-     *
-     * @namespace
-     */
-    Object: require('./lib/object').Object,
+            // Create connection to qps
+            var qpsApi = qps(options);
 
-    /**
-     * Wrapper for helper functions.
-     * {@link lib/core.md|See documentation}
-     *
-     * @namespace
-     */
-    Core: require('./lib/core').Core,
+            // Returned object
+            var task = new Task();
 
-    /**
-     * Wrapper for helper functions for Qlik Sense.
-     * {@link lib/qlik.md|See documentation}
-     *
-     * @namespace
-     */
-    Qlik: require('./lib/qlik').Qlik
+            // Ticket flow
+            Rx.Observable
+                .from(qpsApi.ticket.post(params)) 
+                .catch((err) => {
+                    if (err.match(/^Specified targetId .* was unknown$/)) {
+                        
+                        // if there was a problem with the target Id, try to generate another ticket by reseting target Id
+                        task.running('warning', `Wrong targetId: '${params.TargetId}', generating a ticket to default location`);
+                        delete params.TargetId;
 
-};
+                        return Rx.Observable.from(module.exports.getTicket(options, params));
+                    } else {
+                        return Rx.Observable.throw(new Error(err));
+                    }
+                })
+                .subscribe(task);
+                
+            if (returnObservable) {
+                return task;
+            } else {
+                return task.toPromise(promise);
+            }
+        }
+    }
+}
 
-/**
- * Deprecated since version 2.0. Use Core.ifNotUndef instead
- * @deprecated
- */
-module.exports.ifnotundef = function(a, b, c) {
-    return module.exports.Core.ifNotUndef.apply(this, arguments);
-};
-
-/**
- * Deprecated since version 2.0. Use Qlik.generateXrfKey instead
- * @deprecated
- */
-module.exports.generateXrfkey = function(size, chars) {
-    return module.exports.Qlik.generateXrfKey.apply(this, arguments);
-};
-
-/**
- * Deprecated since version 2.0. Use Qlik.request instead
- * @deprecated
- */
-module.exports.request = function(options, params) {
-    return module.exports.Qlik.request.apply(this, arguments);
-};
-
-/**
- * Deprecated since version 2.0. Use Qlik.getTicket instead
- * @deprecated
- */
-module.exports.getTicket = function(options, params) {
-    return module.exports.Qlik.getTicket.apply(this, arguments);
-};
-
-/**
- * Deprecated since version 2.0. Use Qlik.openSession instead
- * @deprecated
- */
-module.exports.openSession = function(ticket, hostUri) {
-    return module.exports.Qlik.openSession.apply(this, arguments);
-};
-
-/**
- * Deprecated since version 2.0. Use Qlik.addToWhiteList instead
- * @deprecated
- */
-module.exports.addToWhiteList = function(ip, options) {
-    return module.exports.Qlik.addToWhiteList.apply(this, arguments);
-};
-
-/**
- * Deprecated since version 2.0. Use Core.loop instead
- * @deprecated
- */
-module.exports.loop = function(func, param, retry, retryTimeout, task) {
-    return module.exports.Core.loop.apply(this, arguments);
-};
-
-/**
- * Deprecated since version 2.0. Use Core.setTimeout2Promise instead
- * @deprecated
- */
-module.exports.setTimeout2Promise = function(timeout) {
-    return module.exports.Core.setTimeout2Promise.apply(this, arguments);
-};
-
-/**
- * Deprecated since version 2.0. Use Qlik.dynamicAppClone instead
- * @deprecated
- */
-module.exports.dynamicAppClone = function(options, templateAppId, scriptMarker, scriptReplace, scriptRegex, publishStreamId, task) {
-    options.templateAppId = templateAppId;
-    options.scriptMarker = scriptMarker;
-    options.scriptReplaces = scriptReplaces;
-    options.scriptRegex = scriptRegex;
-    options.publishStreamId = publishStreamId;
-    options.task = task;
-    return module.exports.Qlik.dynamicAppClone.apply(this, arguments);
-};

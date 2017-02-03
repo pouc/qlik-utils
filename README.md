@@ -1,108 +1,37 @@
-<a name="module_qlik-utils"></a>
-## qlik-utils
-[![Coverage Status](https://coveralls.io/repos/pouc/qlik-utils/badge.svg?branch=master&service=github)](https://coveralls.io/github/pouc/qlik-utils?branch=master)A set of utility functions / classes for simplifying the call to Qlik Sense APIs
+<a name="module_my-node-template"></a>
 
-**Author:** Loic Formont  
+## my-node-template
+[![GitHub version](https://badge.fury.io/gh/pouc%2Fmy-node-template.svg)](https://badge.fury.io/gh/pouc%2Fmy-node-template)
+[![npm version](https://badge.fury.io/js/my-node-template.svg)](https://badge.fury.io/js/my-node-template)
+[![NPM monthly downloads](https://img.shields.io/npm/dm/my-node-template.svg?style=flat)](https://npmjs.org/package/my-node-template)
+[![Build Status](https://travis-ci.org/pouc/my-node-template.svg?branch=master)](https://travis-ci.org/pouc/my-node-template)
+[![Dependency Status](https://gemnasium.com/badges/github.com/pouc/my-node-template.svg)](https://gemnasium.com/github.com/pouc/my-node-template)
+[![Coverage Status](https://coveralls.io/repos/github/pouc/my-node-template/badge.svg?branch=master)](https://coveralls.io/github/pouc/my-node-template?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/pouc/my-node-template/badge.svg)](https://snyk.io/test/github/pouc/my-node-template)
+
+A template for all my nodejs projects
+
+**Author:** Lo&iuml;c Formont  
 **License**: MIT Licensed  
-**Copyright**: Copyright (C) 2015 Loic Formont  
 **Example**  
-```javascriptvar utils = require("qlik-utils");```
+```javascript
+var template = require("my-node-template");
+```
+<a name="module_my-node-template.example"></a>
 
-* [qlik-utils](#module_qlik-utils)
-  * [.Array](#module_qlik-utils.Array) : <code>object</code>
-  * [.Object](#module_qlik-utils.Object) : <code>object</code>
-  * [.Core](#module_qlik-utils.Core) : <code>object</code>
-  * [.Qlik](#module_qlik-utils.Qlik) : <code>object</code>
-  * ~~[.ifnotundef()](#module_qlik-utils.ifnotundef)~~
-  * ~~[.generateXrfkey()](#module_qlik-utils.generateXrfkey)~~
-  * ~~[.request()](#module_qlik-utils.request)~~
-  * ~~[.getTicket()](#module_qlik-utils.getTicket)~~
-  * ~~[.openSession()](#module_qlik-utils.openSession)~~
-  * ~~[.addToWhiteList()](#module_qlik-utils.addToWhiteList)~~
-  * ~~[.loop()](#module_qlik-utils.loop)~~
-  * ~~[.setTimeout2Promise()](#module_qlik-utils.setTimeout2Promise)~~
-  * ~~[.dynamicAppClone()](#module_qlik-utils.dynamicAppClone)~~
+### template.example(name) ⇒ <code>\*</code>
+Description of the function
 
-<a name="module_qlik-utils.Array"></a>
-### utils.Array : <code>object</code>
-Wrapper for helper functions for arrays.[See documentation](lib/array.md)
+**Kind**: static method of <code>[my-node-template](#module_my-node-template)</code>  
+**Returns**: <code>\*</code> - a value  
 
-**Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.Object"></a>
-### utils.Object : <code>object</code>
-Wrapper for helper functions for objects.[See documentation](lib/object.md)
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>type</code> | the first parameter |
 
-**Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.Core"></a>
-### utils.Core : <code>object</code>
-Wrapper for helper functions.[See documentation](lib/core.md)
+**Example**  
+Example of the function
 
-**Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.Qlik"></a>
-### utils.Qlik : <code>object</code>
-Wrapper for helper functions for Qlik Sense.[See documentation](lib/qlik.md)
-
-**Kind**: static namespace of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.ifnotundef"></a>
-### ~~utils.ifnotundef()~~
-***Deprecated***
-
-Deprecated since version 2.0. Use Core.ifNotUndef instead
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.generateXrfkey"></a>
-### ~~utils.generateXrfkey()~~
-***Deprecated***
-
-Deprecated since version 2.0. Use Qlik.generateXrfKey instead
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.request"></a>
-### ~~utils.request()~~
-***Deprecated***
-
-Deprecated since version 2.0. Use Qlik.request instead
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.getTicket"></a>
-### ~~utils.getTicket()~~
-***Deprecated***
-
-Deprecated since version 2.0. Use Qlik.getTicket instead
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.openSession"></a>
-### ~~utils.openSession()~~
-***Deprecated***
-
-Deprecated since version 2.0. Use Qlik.openSession instead
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.addToWhiteList"></a>
-### ~~utils.addToWhiteList()~~
-***Deprecated***
-
-Deprecated since version 2.0. Use Qlik.addToWhiteList instead
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.loop"></a>
-### ~~utils.loop()~~
-***Deprecated***
-
-Deprecated since version 2.0. Use Core.loop instead
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.setTimeout2Promise"></a>
-### ~~utils.setTimeout2Promise()~~
-***Deprecated***
-
-Deprecated since version 2.0. Use Core.setTimeout2Promise instead
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
-<a name="module_qlik-utils.dynamicAppClone"></a>
-### ~~utils.dynamicAppClone()~~
-***Deprecated***
-
-Deprecated since version 2.0. Use Qlik.dynamicAppClone instead
-
-**Kind**: static method of <code>[qlik-utils](#module_qlik-utils)</code>  
+```javascript
+var code = of.the.function;
+```
