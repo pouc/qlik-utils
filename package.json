@@ -15,8 +15,9 @@
   "bugs": "https://github.com/pouc/qlik-utils/issues",
   "dependencies": {
     "ifnotundef": "^1.1.3",
-    "qlik-api-qps": "^1.1.4",
-    "qlik-fake-proxy": "^1.1.25",
+    "q": "^1.4.1",
+    "qlik-api-qps": "^1.1.10",
+    "qlik-api-qrs": "^1.1.7",
     "rxjs": "^5.1.0",
     "rxjs-task-subject": "^1.1.9"
   },
@@ -25,7 +26,9 @@
     "chai-as-promised": "^6.0.0",
     "chai-string": "^1.3.0",
     "chai-things": "^0.2.0",
-    "coveralls": "^2.11.15",
+    "coveralls": "^2.11.16",
+    "delay": "^1.3.1",
+    "enigma.js": "^1.0.1",
     "grunt": "^1.0.1",
     "grunt-bump": "^0.8.0",
     "grunt-coveralls": "^1.0.1",
@@ -38,10 +41,12 @@
     "mocha": "^3.2.0",
     "mocha-lcov-reporter": "^1.2.0",
     "q": "^1.4.1",
-    "qlik-fake-proxy": "^1.1.21",
+    "qlik-fake-proxy": "^1.1.26",
     "rxjs-task-subject": "^1.1.10",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
-    "sinon-chai-in-order": "^0.1.0"
+    "sinon-chai-in-order": "^0.1.0",
+    "util": "^0.10.3",
+    "ws": "^2.0.2"
   }
 }

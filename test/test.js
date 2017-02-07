@@ -2,6 +2,10 @@ var fs = require('fs');
 var promise = require('q');
 var chai = require('chai');
 var sinon = require('sinon');
+var ws = require('ws');
+
+var util = require('util');
+var delay = require('delay');
 
 chai.use(require('chai-as-promised'));
 chai.use(require('sinon-chai'));
@@ -15,6 +19,9 @@ var exports = require('../index.js');
 
 var Task = require('rxjs-task-subject');
 var proxy = require('qlik-fake-proxy');
+
+var enigma = require('enigma.js');
+var qixSchema = require('../node_modules/enigma.js/schemas/qix/3.1/schema.json');
 
 var readFile = promise.denodeify(fs.readFile);
 
@@ -52,8 +59,10 @@ var hooks = {
                     hooks.params.server = reply[0];
                     hooks.params.options = {
                         qpsRestUri: `https://localhost:${reply[0].address().port}/qps`,
-                        UserDirectory: 'qlik',
-                        UserId: 'lft',
+                        qrsRestUri: `https://localhost:${reply[0].address().port}/qrs`,
+                        headers: {
+                            'X-Qlik-User': `UserDirectory=qlik;UserId=lft`,
+                        },
                         key: reply[1],
                         cert: reply[2],
                         ca: reply[3]
@@ -79,8 +88,10 @@ var hooks = {
                 check(done, function() {
                     hooks.params.options = {
                         qpsRestUri: 'https://localhost:4243/qps',
-                        UserDirectory: 'DESKTOP-GRJ2NM5',
-                        UserId: 'QLIKADMIN',
+                        qrsRestUri: 'https://localhost:4242/qrs',
+                        headers: {
+                            'X-Qlik-User': `UserDirectory=DESKTOP-GRJ2NM5;UserId=qlikadmin`,
+                        },
                         key: reply[0],
                         cert: reply[1],
                         ca: reply[2]
@@ -94,33 +105,33 @@ var hooks = {
     }
 }
 
-var hooksConfig = 'fake';
+var hooksConfig = 'real';
 
 describe('default conf...', () => {
     
     var utils = exports;
+    
+    beforeEach(hooks[hooksConfig].before);
+    afterEach(hooks[hooksConfig].after);
     
     describe('getTicket...', () => {
 
         it('should be defined', function() {
             expect(utils.getTicket).to.not.be.undefined;
         });
-    
-        beforeEach(hooks[hooksConfig].before);
-        afterEach(hooks[hooksConfig].after);
 
         it('should get ticket', function() {
             return utils.getTicket(hooks.params.options, {
-                UserId: hooks.params.options.UserId,
-                UserDirectory: hooks.params.options.UserDirectory,
+                UserId: 'lft',
+                UserDirectory: 'qlik',
                 Attributes: []
             }).should.eventually.have.property('Ticket').to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16);
         });
 
         it('should get ticket with fake targetId', function() {
             return utils.getTicket(hooks.params.options, {
-                UserId: hooks.params.options.UserId,
-                UserDirectory: hooks.params.options.UserDirectory,
+                UserId: 'lft',
+                UserDirectory: 'qlik',
                 TargetId: 'this is fake',
                 Attributes: []
             }).should.eventually.have.property('Ticket').to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16);
@@ -128,19 +139,147 @@ describe('default conf...', () => {
         
         it('should not get ticket if no UserId', function() {
             return utils.getTicket(hooks.params.options, {
-                UserDirectory: hooks.params.options.UserDirectory,
+                UserDirectory: 'qlik',
                 Attributes: []
             }).should.eventually.be.rejectedWith('Required property &#39;UserId&#39; not found in JSON');
         });
         
         it('should not get ticket if no UserDirectory', function() {
             return utils.getTicket(hooks.params.options, {
-                UserId: hooks.params.options.UserId,
+                UserId: 'lft',
                 Attributes: []
             }).should.eventually.be.rejectedWith('Required property &#39;UserDirectory&#39; not found in JSON');
         });
 
     });
+    
+    describe('addToWhiteList...', () => {
+        
+        function randomInt(low, high) {
+            return Math.floor(Math.random() * (high - low) + low);
+        }
+
+        it('should be defined', () => {
+            expect(utils.addToWhiteList).to.not.be.undefined;
+        });
+
+        it('should add to whitelist', function(done) {
+            this.timeout(15000);
+
+            var randomIp = util.format('10.0.%s.%s', randomInt(0, 254), randomInt(0, 254));
+
+            utils.addToWhiteList(hooks.params.options, {
+                ip: randomIp
+            }).then(function(reply) {
+                reply.should.all.have.property('websocketCrossOriginWhiteList');
+                reply.forEach(function(item) {
+                    if (typeof item.websocketCrossOriginWhiteList !== 'undefined') {
+                        item.websocketCrossOriginWhiteList.should.include(randomIp);
+                    }
+                });
+
+                // Wait for proxy to restart before continuing tests ...
+                return delay(5000);
+            }).should.notify(done);
+        });
+        
+        it('should add to whitelist with index filter', function(done) {
+            this.timeout(15000);
+
+            var randomIp = util.format('10.0.%s.%s', randomInt(0, 254), randomInt(0, 254));
+
+            utils.addToWhiteList(hooks.params.options, {
+                ip: randomIp,
+                vp: 0
+            }).then(function(reply) {
+                reply.should.all.have.property('websocketCrossOriginWhiteList');
+                reply.forEach(function(item) {
+                    if (typeof item.websocketCrossOriginWhiteList !== 'undefined') {
+                        item.websocketCrossOriginWhiteList.should.include(randomIp);
+                    }
+                });
+
+                // Wait for proxy to restart before continuing tests ...
+                return delay(5000);
+            }).should.notify(done);
+        });
+        
+        it('should add to whitelist with prefix filter', function(done) {
+            this.timeout(15000);
+
+            var randomIp = util.format('10.0.%s.%s', randomInt(0, 254), randomInt(0, 254));
+
+            utils.addToWhiteList(hooks.params.options, {
+                ip: randomIp,
+                vp: '/'
+            }).then(function(reply) {
+                reply.should.all.have.property('websocketCrossOriginWhiteList');
+                reply.forEach(function(item) {
+                    if (typeof item.websocketCrossOriginWhiteList !== 'undefined') {
+                        item.websocketCrossOriginWhiteList.should.include(randomIp);
+                    }
+                });
+
+                // Wait for proxy to restart before continuing tests ...
+                return delay(5000);
+            }).should.notify(done);
+        });
+
+    });
+    
+    describe('mixins...', () => {
+        
+        it('should be defined', function() {
+            expect(utils.mixins).to.not.be.undefined;
+        });
+        
+        it('enigma should accept mixin', function() {
+
+            const config = {
+                schema: qixSchema,
+                host: 'https://localhost',
+                session: {
+                    route: 'app/engineData',
+                    host: 'localhost',
+                    port: 4747,
+                    unsecure: false
+                },
+                mixins: [utils.mixins.Doc],
+                listeners: {
+                    "notification:OnAuthenticationInformation": ( authInfo ) => {
+                        console.log( authInfo );
+                }},
+                createSocket(url) {
+                    return new ws(url, {
+                        ca: [hooks.params.options.ca],
+                        key: hooks.params.options.key,
+                        cert: hooks.params.options.cert,
+                        headers: hooks.params.options.headers,
+                    });
+                },
+            };
+            
+            return enigma.getService('qix', config).then((qix) => {
+
+                return qix.global.getDocList().then((docList) => {
+                    return promise.all(
+                        docList.slice(0, 5).map((doc) => {
+                            return qix.global.openDoc(doc.qDocId).then(app => {
+                                return app.getSheets();
+                            });
+                        })
+                    );
+                });
+
+            }).should.eventually.be.a('array');
+
+        });
+
+        
+        
+    })
+    
+    
     
 });
 
@@ -148,21 +287,21 @@ describe('Observable...', () => {
     
     var utils = exports.create({returnObservable: true});
     
+    beforeEach(hooks[hooksConfig].before);
+    afterEach(hooks[hooksConfig].after);
+    
     describe('getTicket...', () => {
 
         it('should be defined', function() {
             expect(utils.getTicket).to.not.be.undefined;
         });
 
-        beforeEach(hooks[hooksConfig].before);
-        afterEach(hooks[hooksConfig].after);
-
         it('should get ticket', function(done) {
             var cb = sinon.spy();
             
             var ticket = utils.getTicket(hooks.params.options, {
-                UserId: hooks.params.options.UserId,
-                UserDirectory: hooks.params.options.UserDirectory,
+                UserId: 'lft',
+                UserDirectory: 'qlik',
                 Attributes: []
             });
             
@@ -184,8 +323,8 @@ describe('Observable...', () => {
             var cb = sinon.spy();
             
             var ticket = utils.getTicket(hooks.params.options, {
-                UserId: hooks.params.options.UserId,
-                UserDirectory: hooks.params.options.UserDirectory,
+                UserId: 'lft',
+                UserDirectory: 'qlik',
                 TargetId: 'this is fake',
                 Attributes: []
             });
@@ -205,8 +344,8 @@ describe('Observable...', () => {
                         expect(cb.getCall(1).args[0]).to.be.an.instanceof(Task.TaskSubjectInfo);
                         expect(cb.getCall(1).args[0]).to.have.property('status').to.equal('running');
                         
-                        expect(cb.getCall(1).args[0]).to.have.property('val').to.have.property('UserId').to.equalIgnoreCase(hooks.params.options.UserId);
-                        expect(cb.getCall(1).args[0]).to.have.property('val').to.have.property('UserDirectory').to.equalIgnoreCase(hooks.params.options.UserDirectory);
+                        expect(cb.getCall(1).args[0]).to.have.property('val').to.have.property('UserId').to.equalIgnoreCase('lft');
+                        expect(cb.getCall(1).args[0]).to.have.property('val').to.have.property('UserDirectory').to.equalIgnoreCase('qlik');
                         expect(cb.getCall(1).args[0]).to.have.property('val').to.have.property('Ticket').to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16);
 
                         expect(ticket.info.val).to.have.property('Ticket').to.match(/^[\-_\.a-zA-Z0-9]*$/).to.have.length(16);
@@ -220,7 +359,7 @@ describe('Observable...', () => {
             var cb = sinon.spy();
             
             var ticket = utils.getTicket(hooks.params.options, {
-                UserDirectory: hooks.params.options.UserDirectory,
+                UserDirectory: 'qlik',
                 Attributes: []
             });
             
@@ -247,7 +386,7 @@ describe('Observable...', () => {
             var cb = sinon.spy();
             
             var ticket = utils.getTicket(hooks.params.options, {
-                UserId: hooks.params.options.UserId,
+                UserId: 'lft',
                 Attributes: []
             });
             
