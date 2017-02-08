@@ -2,6 +2,8 @@
 
 var Rx = require('rxjs/Rx');
 var promise = require('q');
+var mapObj = require('map-obj');
+var values = require('object.values');
 
 var undef = require('ifnotundef');
 
@@ -43,7 +45,7 @@ function createUtils(utilsOptions) {
     var extPromise = undef.if(utilsOptions.promise, promise.promise);
     var returnObservable = undef.if(utilsOptions.returnObservable, false);
     
-    return {
+    var retVal = {
         
         /**
          * Generates a ticket on Qlik Sense QRS Api. If the targetId is not correct
@@ -70,7 +72,7 @@ function createUtils(utilsOptions) {
          *
          * @param {options}             options     Qlik Sense connection options
          * @param {ticketParams}        params      the ticket parameters
-         * @returns {Promise.<ticket>}              a promise resolving to the generated ticket
+         * @returns {Task.<ticket>}                 a Task resolving to the generated ticket
          */
         getTicket: function(options, params) {
 
@@ -228,10 +230,9 @@ function createUtils(utilsOptions) {
         mixins: {
             Doc: {
                 types: ['Doc'],
-                init: (args) => {
-
-                },
+                init: (args) => {},
                 extend: {
+
                     getDimensions: function() {
                         return this.createSessionObject({
                             qDimensionListDef: {
@@ -252,7 +253,7 @@ function createUtils(utilsOptions) {
                             return listLayout.qDimensionList.qItems;
                         });
                     },
-                    
+
                     getMeasures: function() {
                         return this.createSessionObject({
                             qMeasureListDef: {
@@ -272,7 +273,7 @@ function createUtils(utilsOptions) {
                             return listLayout.qMeasureList.qItems;
                         });
                     },
-                    
+
                     getSheets: function() {
                         return this.createSessionObject({
                             "qInfo": {
@@ -295,11 +296,359 @@ function createUtils(utilsOptions) {
                         }).then((listLayout) => {
                             return listLayout.qAppObjectList.qItems;
                         });
+                    },
+                    
+                    /**
+                     * Exports a cube
+                     *
+                     * @param cubeDef the cube definition
+                     * @returns {Task.<Array.<Page>>} a task resolving to the cube pages
+                     */
+                    exportCube: function(cubeDef) {
+                        
+                        var app = this;
+                        var task = new Task();
+
+                        promise().then(function() {
+
+                            // Start
+
+                            task.running('info', 'Starting!');
+
+                        }).then(function(reply) {
+
+                            // Create cube
+
+                            return app.createSessionObject({
+                                qHyperCubeDef: cubeDef,
+                                qInfo: {
+                                    qType: 'mashup'
+                                }
+                            }).then(function(reply) {
+                                task.running('info', 'Cube generated');
+                                return reply;
+                            })
+
+                        }).then(function(sessionObject) {
+
+                            // Get cube layout
+
+                            return promise.all([
+                                sessionObject,
+                                sessionObject.getLayout().then(function(reply) {
+                                    task.running('info', 'Got cube layout');
+                                    return reply;
+                                })
+                            ])
+
+                        }).then(function([sessionObject, cubeLayout]) {
+
+                            // Get cube pages
+
+                            var columns = cubeLayout.qHyperCube.qSize.qcx;
+                            var totalheight = cubeLayout.qHyperCube.qSize.qcy;
+                            var pageheight = Math.floor(10000 / columns);
+                            var numberOfPages = Math.ceil(totalheight / pageheight);
+
+                            var pages = Array.apply(null, new Array(numberOfPages)).map(function(data, index) {
+
+                                return sessionObject.getHyperCubeData(
+                                    '/qHyperCubeDef',
+                                    [{
+                                        qTop: (pageheight * index),
+                                        qLeft: 0,
+                                        qWidth: columns,
+                                        qHeight: pageheight
+                                    }]
+                                ).then((page) => {
+                                    task.running('page', page);
+                                    return page;
+                                });
+
+                            }, this);
+
+                            return promise.all(pages).then(function(pages) {
+                                return promise.all([
+                                    sessionObject,
+                                    cubeLayout,
+                                    pages
+                                ]);
+                            });
+
+                        }).then(function([sessionObject, cubeLayout, pages]) {
+
+                            pages = [].concat.apply([], pages.map(function(item) {
+                                return item[0].qMatrix;
+                            }));
+
+                            task.done(pages);
+                            return pages;
+
+                        }).fail(function(err) {
+
+                            task.failed(err);
+                            return promise.reject(err);
+
+                        });
+                        
+                        if (returnObservable) {
+                            return task;
+                        } else {
+                            return task.toPromise(extPromise);
+                        }
+
+                    },
+
+                    /**
+                     * Exports a set of dimensions and measures + applies filters
+                     *
+                     * @param options
+                     * @param params
+                     * @param task
+                     * @returns {Task.<Array.<Row>>} a task resolving to the cube rows
+                     */
+                    export: function(dimensions, measures, filters) {
+                        
+                        var app = this;
+                        var task = new Task();
+
+                        promise().then(function() {
+
+                            // Start
+
+                            task.running('info', 'Starting export!');
+
+                        }).then(function() {
+
+                            // Get app dimension & measure list
+
+                            return promise.all([
+                                app.getDimensions().then(function(dims) {
+                                    var dimensionMap = values(mapObj(undef.if(dimensions, {}), function(dimCode, dim) {
+                                        return [dimCode, {
+                                            dimensionCode: dimCode,
+                                            dimensionName: dim.name,
+                                            dimension: dim,
+                                            qlikDimension: ((dim.dimensionType == 'MASTER' || dim.dimensionType == 'AUTO') ?
+                                                dims.filter(function(masterDim) {
+                                                    return masterDim.qMeta.title == dim.name;
+                                                }).map(function(item) {
+                                                    return {
+                                                        qLabel: dim.name,
+                                                        qLibraryId: item.qInfo.qId,
+                                                        qNullSuppression: true
+                                                    };
+                                                }) : []).concat((dim.dimensionType == 'FIELD' || dim.dimensionType == 'AUTO') ? [{
+                                                qDef: {
+                                                    qFieldDefs: [dim.name]
+                                                },
+                                                qNullSuppression: true
+                                            }] : []).concat((dim.dimensionType == 'IGNORE') ? [{
+                                                qDef: {
+                                                    qFieldDefs: ['=null()']
+                                                },
+                                                qNullSuppression: false
+                                            }] : [])
+                                        }];
+                                    }));
+
+                                    dimensionMap = undef.if(dimensionMap, []);
+
+                                    var dimensionNotFound = dimensionMap.filter(function(item) {
+                                        return item.qlikDimension.length == 0;
+                                    });
+
+                                    if (dimensionNotFound.length != 0) {
+                                        task.running('dim-not-found', dimensionNotFound);
+                                        return promise.reject('Dimension(s) not found!');
+                                    } else {
+                                        return dimensionMap;
+                                    }
+
+                                }),
+                                app.getMeasures().then(function(meas) {
+                                    var measureMap = values(mapObj(undef.if(measures, {}), function(meaCode, mea) {
+                                        return [meaCode, {
+                                            measureCode: meaCode,
+                                            measureName: mea.name,
+                                            measure: mea,
+                                            qlikMeasure: ((mea.measureType == 'MASTER' || mea.measureType == 'AUTO') ?
+                                                meas.filter(function(masterMea) {
+                                                    return masterMea.qMeta.title == mea.name;
+                                                }).map(function(item) {
+                                                    return {
+                                                        qLabel: mea.name,
+                                                        qLibraryId: item.qInfo.qId
+                                                    };
+                                                }) : []).concat((mea.measureType == 'FIELD' || mea.measureType == 'AUTO') ? [{
+                                                qDef: {
+                                                    qDef: mea.formula,
+                                                    qLabel: mea.name
+                                                }
+                                            }] : []).concat((mea.measureType == 'IGNORE') ? [{
+                                                qDef: {
+                                                    qDef: '=null()'
+                                                }
+                                            }] : [])
+                                        }];
+                                    }));
+
+                                    measureMap = undef.if(measureMap, []);
+
+                                    var measureNotFound = measureMap.filter(function(item) {
+                                        return item.qlikMeasure.length == 0;
+                                    });
+
+                                    if (measureNotFound.length != 0) {
+                                        task.running('mea-not-found', measureNotFound);
+                                        return promise.reject('Measure(s) not found!');
+                                    } else {
+                                        return measureMap;
+                                    }
+
+                                })
+                            ]);
+
+                        }).then(function([dimensionMap, measureMap]) {
+
+                            // Create cube
+
+                            task.running('info', 'Got measures & dimensions from app');
+
+                            var cubeDef = {
+                                qInitialDataFetch: [{qHeight: 0, qWidth: 0}]
+                            };
+
+                            if (dimensionMap.length > 0) {
+                                cubeDef.qDimensions = dimensionMap.map(function(item) {
+                                    return item.qlikDimension[0];
+                                });
+                            }
+
+                            if (measureMap.length > 0) {
+                                cubeDef.qMeasures = measureMap.map(function(item) {
+                                    return item.qlikMeasure[0];
+                                });
+                            }
+
+                            var next = promise();
+                            if (typeof filters !== 'undefined') {
+
+                                next = next.then(function() {
+                                    return app.clearAll();
+                                }).then(function() {
+                                    var step = promise.resolve([]);
+                                    filters.filter(function(item) {
+                                        return item.filters.length != 0;
+                                    }).map(function(filter, index) {
+                                        function promiseFactory() {
+                                            return promise().then(function() {
+                                                return app.getField(filter.field);
+                                            }).then(function(field) {
+                                                return field.selectValues(
+                                                    filter.filters.map(function(item) {
+                                                        return {qText: item};
+                                                    }),
+                                                    false,
+                                                    false
+                                                );
+                                            }).then(function() {
+                                                return app.createObject({
+                                                    qInfo: {
+                                                        qId: 'LB' + index,
+                                                        qType: 'ListObject'
+                                                    },
+                                                    qListObjectDef: {
+                                                        qStateName: '$',
+                                                        qLibraryId: '',
+                                                        qDef: {
+                                                            qFieldDefs: [
+                                                                filter.field
+                                                            ],
+                                                            qSortCriterias: [
+                                                                {
+                                                                    qSortByLoadOrder: 1
+                                                                }
+                                                            ]
+                                                        },
+                                                        qInitialDataFetch: [
+                                                            {
+                                                                qTop: 0,
+                                                                qLeft: 0,
+                                                                qHeight: 5,
+                                                                qWidth: 1
+                                                            }
+                                                        ]
+                                                    }
+                                                });
+                                            }).then(function(object) {
+                                                return promise.all([
+                                                    object,
+                                                    object.getLayout()
+                                                ]);
+                                            });
+                                        }
+
+                                        step = step.then(function(objects) {
+                                            return promiseFactory().then(function(reply) {
+                                                objects.push(reply[0]);
+                                                return objects;
+                                            });
+                                        });
+                                    });
+
+                                    return step.then(function(objects) {
+                                        return promise.all(objects.map(function(object) {
+                                            return object.getLayout().then(function(layout) {
+                                                return layout.qListObject.qDimensionInfo.qStateCounts.qSelected != 0;
+                                            });
+                                        })).then(function(states) {
+                                            if (!states.every(function(state) { return state; })) {
+                                                return promise.reject('Not possible to apply desired filters');
+                                            }
+                                        });
+                                    }).fail(function(err) {
+                                        task.running('warning', err);
+                                    });
+                                });
+                            }
+
+                            return next.then(function() {
+                                return Rx.Observable.from(app.exportCube(cubeDef)).toPromise(promise.promise);
+                            });
+
+                        }).then(function(reply) {
+
+                            // Call callback function
+
+                            var pages = reply.map(function(row) {
+                                return row.map(function(cell) {
+                                    return cell.qNum !== 'NaN' ? Math.round(cell.qNum, 5) : (cell.qIsNull ? null : cell.qText);
+                                });
+                            });
+
+                            task.done(pages);
+                            return pages;
+
+                        }).fail(function(err) {
+
+                            task.failed(err);
+                            return promise.reject(err);
+
+                        });
+                        
+                        if (returnObservable) {
+                            return task;
+                        } else {
+                            return task.toPromise(extPromise);
+                        }
                     }
                 }
             }
         }
 
     }
+    
+    return retVal;
 }
 
