@@ -108,7 +108,7 @@ var hooks = {
     }
 }
 
-var hooksConfig = 'fake';
+var hooksConfig = 'real';
 
 describe('default conf...', () => {
     
@@ -297,7 +297,7 @@ describe('Observable...', () => {
     
     beforeEach(hooks[hooksConfig].before);
     afterEach(hooks[hooksConfig].after);
-    
+
     describe('getTicket...', () => {
 
         it('should be defined', function() {
@@ -424,147 +424,390 @@ describe('Observable...', () => {
             expect(utils.mixins).to.not.be.undefined;
         });
         
-        it('exportCube', function() {
+        describe('Global...', () => {
             
-            var config = {
-                schema: qixSchema,
-                host: 'https://localhost',
-                session: {
-                    route: 'app/engineData',
-                    host: 'localhost',
-                    port: hooks.params.options.wsPort,
-                    unsecure: false,
-                    disableCache: true
-                },
-                mixins: [utils.mixins.Doc],
-                listeners: {
-                    "notification:OnAuthenticationInformation": ( authInfo ) => {
-                        console.log( authInfo );
-                }},
-                createSocket(url) {
-                    var sock = new ws(url, {
-                        ca: [hooks.params.options.ca],
-                        key: hooks.params.options.key,
-                        cert: hooks.params.options.cert,
-                        headers: hooks.params.options.headers,
-                        rejectUnauthorized: false
-                    });
-                    return sock;
-                },
-            };
+            it('should be defined', function() {
+                expect(utils.mixins.Global).to.not.be.undefined;
+            });
 
-            return enigma.getService('qix', config).then((qix) => {
-                return qix.global.getDocList().then((docList) => {
-                    return promise.all(
-                        docList.slice(0, 5).map((doc) => {
-                            return qix.global.openDoc(doc.qDocId).then(app => {
-                                return app.exportCube({
-                                    "qStateName":"$",
-                                    "qDimensions":[{
-                                        "qLibraryId":"",
-                                        "qNullSuppression":false,
-                                        "qDef":{
-                                            "qGrouping":"N",
-                                            "qFieldDefs":["$Table"],
-                                            "qFieldLabels":[""]
-                                        }
-                                    }],
-                                    "qMeasures":[{
-                                        "qLibraryId":"",
-                                        "qDef":{
-                                            "qLabel":"",
-                                            "qDescription":"",
-                                            "qTags":["tags"],
-                                            "qGrouping":"N",
-                                            "qDef":"=Count($Field)"
-                                        }
-                                    }],
-                                    "qInitialDataFetch":[{
-                                        "qTop":0,
-                                        "qLeft":0,
-                                        "qHeight":0,
-                                        "qWidth":0
-                                    }]
-                                }).toPromise();
+            describe('odag', function () {
+                
+                it('should authorize simple config 1', function () {
+                    this.timeout(30000);
+                    
+                    var qrsApi = qrs(hooks.params.options);
+
+                    var config = {
+                        schema: qixSchema,
+                        host: 'https://localhost',
+                        session: {
+                            route: 'app/engineData',
+                            host: 'localhost',
+                            port: hooks.params.options.wsPort,
+                            unsecure: false,
+                            disableCache: true
+                        },
+                        mixins: [utils.mixins.Global],
+                        listeners: {
+                            "notification:OnAuthenticationInformation": ( authInfo ) => {
+                                console.log( authInfo );
+                        }},
+                        createSocket(url) {
+                            var sock = new ws(url, {
+                                ca: [hooks.params.options.ca],
+                                key: hooks.params.options.key,
+                                cert: hooks.params.options.cert,
+                                headers: hooks.params.options.headers,
+                                rejectUnauthorized: false
                             });
-                        })
-                    );
+                            return sock;
+                        },
+                    };
+                    
+                    return enigma.getService('qix', config).then((qix) => {
+                        return qix.global.odag(hooks.params.options, {
+                                templateApp: 'a356af1d-0a20-44e0-a152-ade3e56b16b9',
+                                replacesDef: { marker: '%Replace me!%', value: 1 },
+                                publishStream: '96a06770-0c77-49ce-a95e-6d846bd41ec8'
+                            }).toPromise();
+                    }).then((apps) => {
+                        return promise.all(
+                            apps.map((app) => {
+                                return qrsApi.app.id(app).delete();
+                            })
+                        )
+                    }).then(console.log, console.log);
                 });
+                /*
+                it('should authorize simple config 2', function () {
+                    this.timeout(30000);
+                    
+                    var qrsApi = qrs(hooks.params.options);
 
-            }).then((counts) => {
-                return promise.all([
-                    expect(counts).to.be.a('array'),
-                    expect(counts[0]).to.be.a('array'),
-                    expect(counts[0][0]).to.be.a('array'),
-                    expect(counts[0][0][0]).to.be.a('object'),
-                    expect(counts[0][0][0]).to.have.property('qText'),
-                    expect(counts[0][0][0]).to.have.property('qNum'),
-                    expect(counts[0][0][0]).to.have.property('qElemNumber'),
-                    expect(counts[0][0][0]).to.have.property('qState')
-                ])
-            })
+                    var config = {
+                        schema: qixSchema,
+                        host: 'https://localhost',
+                        session: {
+                            route: 'app/engineData',
+                            host: 'localhost',
+                            port: hooks.params.options.wsPort,
+                            unsecure: false,
+                            disableCache: true
+                        },
+                        mixins: [utils.mixins.Global],
+                        listeners: {
+                            "notification:OnAuthenticationInformation": ( authInfo ) => {
+                                console.log( authInfo );
+                        }},
+                        createSocket(url) {
+                            var sock = new ws(url, {
+                                ca: [hooks.params.options.ca],
+                                key: hooks.params.options.key,
+                                cert: hooks.params.options.cert,
+                                headers: hooks.params.options.headers,
+                                rejectUnauthorized: false
+                            });
+                            return sock;
+                        },
+                    };
+                    
+                    return enigma.getService('qix', config).then((qix) => {
+                        return qix.global.odag(hooks.params.options, {
+                            templateApp: 'a356af1d-0a20-44e0-a152-ade3e56b16b9',
+                            replacesDef: [
+                                { marker: '%Replace me1!%', value: 1 },
+                                { marker: '%Replace me2!%', value: 2 }
+                            ]
+                        }).toPromise();
+                    }).then((apps) => {
+                        return promise.all(
+                            apps.map((app) => {
+                                return qrsApi.app.id(app).delete();
+                            })
+                        )
+                    });
+                });
+                
+                /*
+                it('should authorize advanced config', function () {
+                    this.timeout(30000);
+                    
+                    var qrsApi = qrs(hooks.params.options);
 
+                    var config = {
+                        schema: qixSchema,
+                        host: 'https://localhost',
+                        session: {
+                            route: 'app/engineData',
+                            host: 'localhost',
+                            port: hooks.params.options.wsPort,
+                            unsecure: false,
+                            disableCache: true
+                        },
+                        mixins: [utils.mixins.Global],
+                        listeners: {
+                            "notification:OnAuthenticationInformation": ( authInfo ) => {
+                                console.log( authInfo );
+                        }},
+                        createSocket(url) {
+                            var sock = new ws(url, {
+                                ca: [hooks.params.options.ca],
+                                key: hooks.params.options.key,
+                                cert: hooks.params.options.cert,
+                                headers: hooks.params.options.headers,
+                                rejectUnauthorized: false
+                            });
+                            return sock;
+                        },
+                    };
+                    
+                    return enigma.getService('qix', config).then((qix) => {
+                        return qix.global.odag(hooks.params.options, {
+                            templateApp: 'a356af1d-0a20-44e0-a152-ade3e56b16b9',
+                            maxParDup: 1,
+                            replacesDef: [{
+                                replaces: [
+                                    {marker: '%Replace me!%', value: 0},
+                                    {marker: '%Replace me2!%', value: 0}
+                                ],
+                                replaceApp: 'WTF App',
+                                reloadApp: false,
+                                keepApp: true
+                            }, {
+                                replaces: [
+                                    {marker: '%Replace me!%', value: [1, 2]},
+                                    {marker: '%Replace me2!%', value: [4, 5]}
+                                ]
+                            }, {
+                                replaces: [
+                                    {marker: '%Replace me!%', value: 6},
+                                    {marker: '%Replace me2!%', value: 7}
+                                ]
+                            }],
+                            publishStream: '96a06770-0c77-49ce-a95e-6d846bd41ec8',
+                            overwriteApp: true,
+                            keepApp: true,
+                            createReloadTask: true,
+                            customProperties: [{name: 'Test', values: ['test %(replaceValue)s']}]
+                        }).toPromise();
+                    }).then((apps) => {
+                        return promise.all(
+                            apps.map((app) => {
+                                return qrsApi.app.id(app).delete();
+                            })
+                        )
+                    });
+
+                });
+                */
+      
+            });
+        
         });
         
-        it('export', function() {
+        describe('Doc...', () => {
+        
+            it('should be defined', function() {
+                expect(utils.mixins.Doc).to.not.be.undefined;
+            });
             
-            var config = {
-                schema: qixSchema,
-                host: 'https://localhost',
-                session: {
-                    route: 'app/engineData',
-                    host: 'localhost',
-                    port: hooks.params.options.wsPort,
-                    unsecure: false,
-                    disableCache: true
-                },
-                mixins: [utils.mixins.Doc],
-                listeners: {
-                    "notification:OnAuthenticationInformation": ( authInfo ) => {
-                        console.log( authInfo );
-                }},
-                createSocket(url) {
-                    var sock = new ws(url, {
-                        ca: [hooks.params.options.ca],
-                        key: hooks.params.options.key,
-                        cert: hooks.params.options.cert,
-                        headers: hooks.params.options.headers,
-                        rejectUnauthorized: false
-                    });
-                    return sock;
-                },
-            };
+            it('qrs', function() {
+                this.timeout(30000);
+                
+                var config = {
+                    schema: qixSchema,
+                    host: 'https://localhost',
+                    session: {
+                        route: 'app/engineData',
+                        host: 'localhost',
+                        port: hooks.params.options.wsPort,
+                        unsecure: false,
+                        disableCache: true
+                    },
+                    mixins: [utils.mixins.Doc],
+                    listeners: {
+                        "notification:OnAuthenticationInformation": ( authInfo ) => {
+                            console.log( authInfo );
+                    }},
+                    createSocket(url) {
+                        var sock = new ws(url, {
+                            ca: [hooks.params.options.ca],
+                            key: hooks.params.options.key,
+                            cert: hooks.params.options.cert,
+                            headers: hooks.params.options.headers,
+                            rejectUnauthorized: false
+                        });
+                        return sock;
+                    },
+                };
 
-            return enigma.getService('qix', config).then((qix) => {
-                return qix.global.getDocList().then((docList) => {
-                    return promise.all(
-                        docList.slice(0, 5).map((doc) => {
-                            return qix.global.openDoc(doc.qDocId).then(app => {
-                                return app.export({
-                                    d1: {name: '$Table', dimensionType: 'FIELD'},
-                                    d2: {name: '$Field', dimensionType: 'AUTO'},
-                                    d3: {name: 'Mouarf', dimensionType: 'IGNORE'}
-                                }, {
-                                    m1: {name: 'M1', measureType: 'FIELD', formula: '=COUNT(DISTINCT $Field)'},
-                                    m2: {name: 'M2', measureType: 'AUTO', formula: '=COUNT($Field)'},
-                                    m3: {name: 'M3', measureType: 'IGNORE', formula: '=1'}
-                                }, [{
-                                    field: '$Table',
-                                    filters: ['Calendar']
-                                }]).toPromise();
-                            });
-                        })
-                    );
+                return enigma.getService('qix', config).then((qix) => {
+                    return qix.global.getDocList().then((docList) => {
+                        return promise.all(
+                            docList.slice(0, 5).map((doc) => {
+                                return qix.global.openDoc(doc.qDocId).then(/* waiting for mixin init to complete */ delay(1000)).then(app => {
+                                    return app.qrs(hooks.params.options).get();
+                                });
+                            })
+                        );
+                    });
+
+                }).then((apps) => {
+                    return promise.all([
+                        expect(apps).to.be.a('array'),
+                        expect(apps[0]).to.be.a('object'),
+                        expect(apps[0]).to.have.property('id'),
+                        expect(apps[0]).to.have.property('stream')
+                    ])
+                });
+                
+                
+            })
+            
+            it('exportCube', function() {
+                
+                var config = {
+                    schema: qixSchema,
+                    host: 'https://localhost',
+                    session: {
+                        route: 'app/engineData',
+                        host: 'localhost',
+                        port: hooks.params.options.wsPort,
+                        unsecure: false,
+                        disableCache: true
+                    },
+                    mixins: [utils.mixins.Doc],
+                    listeners: {
+                        "notification:OnAuthenticationInformation": ( authInfo ) => {
+                            console.log( authInfo );
+                    }},
+                    createSocket(url) {
+                        var sock = new ws(url, {
+                            ca: [hooks.params.options.ca],
+                            key: hooks.params.options.key,
+                            cert: hooks.params.options.cert,
+                            headers: hooks.params.options.headers,
+                            rejectUnauthorized: false
+                        });
+                        return sock;
+                    },
+                };
+
+                return enigma.getService('qix', config).then((qix) => {
+                    return qix.global.getDocList().then((docList) => {
+                        return promise.all(
+                            docList.slice(0, 5).map((doc) => {
+                                return qix.global.openDoc(doc.qDocId).then(app => {
+                                    return app.exportCube({
+                                        "qStateName":"$",
+                                        "qDimensions":[{
+                                            "qLibraryId":"",
+                                            "qNullSuppression":false,
+                                            "qDef":{
+                                                "qGrouping":"N",
+                                                "qFieldDefs":["$Table"],
+                                                "qFieldLabels":[""]
+                                            }
+                                        }],
+                                        "qMeasures":[{
+                                            "qLibraryId":"",
+                                            "qDef":{
+                                                "qLabel":"",
+                                                "qDescription":"",
+                                                "qTags":["tags"],
+                                                "qGrouping":"N",
+                                                "qDef":"=Count($Field)"
+                                            }
+                                        }],
+                                        "qInitialDataFetch":[{
+                                            "qTop":0,
+                                            "qLeft":0,
+                                            "qHeight":0,
+                                            "qWidth":0
+                                        }]
+                                    }).toPromise();
+                                });
+                            })
+                        );
+                    });
+
+                }).then((counts) => {
+                    return promise.all([
+                        expect(counts).to.be.a('array'),
+                        expect(counts[0]).to.be.a('array'),
+                        expect(counts[0][0]).to.be.a('array'),
+                        expect(counts[0][0][0]).to.be.a('object'),
+                        expect(counts[0][0][0]).to.have.property('qText'),
+                        expect(counts[0][0][0]).to.have.property('qNum'),
+                        expect(counts[0][0][0]).to.have.property('qElemNumber'),
+                        expect(counts[0][0][0]).to.have.property('qState')
+                    ])
+                })
+
+            });
+            
+            it('export', function() {
+                
+                var config = {
+                    schema: qixSchema,
+                    host: 'https://localhost',
+                    session: {
+                        route: 'app/engineData',
+                        host: 'localhost',
+                        port: hooks.params.options.wsPort,
+                        unsecure: false,
+                        disableCache: true
+                    },
+                    mixins: [utils.mixins.Doc],
+                    listeners: {
+                        "notification:OnAuthenticationInformation": ( authInfo ) => {
+                            console.log( authInfo );
+                    }},
+                    createSocket(url) {
+                        var sock = new ws(url, {
+                            ca: [hooks.params.options.ca],
+                            key: hooks.params.options.key,
+                            cert: hooks.params.options.cert,
+                            headers: hooks.params.options.headers,
+                            rejectUnauthorized: false
+                        });
+                        return sock;
+                    },
+                };
+
+                return enigma.getService('qix', config).then((qix) => {
+                    return qix.global.getDocList().then((docList) => {
+                        return promise.all(
+                            docList.slice(0, 5).map((doc) => {
+                                return qix.global.openDoc(doc.qDocId).then(/* waiting for mixin init to complete */ delay(1000)).then(app => {
+                                    return app.export({
+                                        d1: {name: '$Table', dimensionType: 'FIELD'},
+                                        d2: {name: '$Field', dimensionType: 'AUTO'},
+                                        d3: {name: 'Mouarf', dimensionType: 'IGNORE'}
+                                    }, {
+                                        m1: {name: 'M1', measureType: 'FIELD', formula: '=COUNT(DISTINCT $Field)'},
+                                        m2: {name: 'M2', measureType: 'AUTO', formula: '=COUNT($Field)'},
+                                        m3: {name: 'M3', measureType: 'IGNORE', formula: '=1'}
+                                    }, [{
+                                        field: '$Table',
+                                        filters: ['Calendar']
+                                    }]).toPromise();
+                                });
+                            })
+                        );
+                    });
+
+                }).then((fields) => {
+                    return promise.all([
+                        expect(fields).to.be.a('array'),
+                        expect(fields[0]).to.be.a('array'),
+                        expect(fields[0][0]).to.be.a('array').to.have.lengthOf(6)
+                    ])
                 });
 
-            }).then((fields) => {
-                return promise.all([
-                    expect(fields).to.be.a('array'),
-                    expect(fields[0]).to.be.a('array'),
-                    expect(fields[0][0]).to.be.a('array').to.have.lengthOf(6)
-                ])
-            })
-
+            });
+            
+            
         });
         
     });
