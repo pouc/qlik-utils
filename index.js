@@ -846,8 +846,6 @@ function createUtils(utilsOptions) {
         var global = this;
         var task = new Task();
         
-        task.bind(console.log)
-        
         var templateApp = params.templateApp;
 
         if (typeof templateApp == 'undefined') {
@@ -1446,7 +1444,14 @@ function createUtils(utilsOptions) {
 
                                                 }
                                             } else {
-                                                return promise.reject({id: newApp.clonedApp.id, msg: 'Application not reloaded'});
+                                                
+                                                return clonedApp.doSave().then(function() {
+
+                                                    return promise.reject({id: newApp.clonedApp.id, msg: 'Application not reloaded'});
+
+                                                });
+                                                
+                                                
                                             }
                                         });
 
@@ -1629,6 +1634,53 @@ function createUtils(utilsOptions) {
         } else {
             return task.toPromise(extPromise);
         }
+
+    }
+    
+    function loopAndReloadMixin(options, params) {
+        
+        var global = this;
+        var task = new Task();
+
+        var loopColumn = params.loop.loopColumn;
+        var reduceColumn = params.loop.reduceColumn;
+        var nameColumn = params.loop.nameColumn;
+        var publishColumn = params.loop.publishColumn;
+
+        var dimensions = {
+            loopColumn: {name: loopColumn, dimensionType: undef.if(loopColumn, 'AUTO', 'IGNORE')},
+            reduceColumn: {name: reduceColumn, dimensionType: undef.if(reduceColumn, 'AUTO', 'IGNORE')},
+            nameColumn: {name: nameColumn, dimensionType: undef.if(nameColumn, 'AUTO', 'IGNORE')},
+            publishColumn: {name: publishColumn, dimensionType: undef.if(publishColumn, 'AUTO', 'IGNORE')}
+        };
+
+        var retVal = global.openDoc(params.loop.appId).then((app) => {
+            task.running('Doc opened');
+            return Rx.Observable.from(app.export(dimensions)).toPromise(promise.promise);
+            
+        }).then(function(reply) {
+            task.running('Export done');
+            
+            var dynamicCloneParams = extend(true, {}, params.reload, {
+                maxParDup: undef.child(params, ['reload', 'maxParDup'], 5),
+                replacesDef: reply.map(function(item) {
+                    return {
+                        replaces: undef.child(params, ['loopReload', 'addReplaces'], []).concat(
+                            [{
+                                marker: undef.child(params, ['loopReload', 'loopMarker'], '%Replace me!%'),
+                                value: undef.if(reduceColumn, item[1], undefined)
+                            }]
+                        ),
+                        targetApp: undef.if(nameColumn, item[2], undefined),
+                        publishStream: undef.if(publishColumn, item[3], undefined)
+                    };
+                }),
+                overwriteApp: undef.child(params, ['reload', 'overwriteApp'], false)
+            });
+
+        });
+        
+        return Rx.Observable.from(global.odag(options, dynamicCloneParams)).toPromise(promise.promise);
 
     }
     

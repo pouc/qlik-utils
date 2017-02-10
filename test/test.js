@@ -94,6 +94,7 @@ var hooks = {
                         headers: {
                             'X-Qlik-User': `UserDirectory=DESKTOP-GRJ2NM5;UserId=qlikadmin`,
                         },
+                        timeout: 60000,
                         wsPort: 4747,
                         key: reply[0],
                         cert: reply[1],
@@ -238,6 +239,7 @@ describe('default conf...', () => {
         });
 
         it('enigma should accept mixin', function() {
+            this.timeout(30000);
             
             var config = {
                 schema: qixSchema,
@@ -304,6 +306,7 @@ describe('Observable...', () => {
             expect(utils.getTicket).to.not.be.undefined;
         });
 
+        
         it('should get ticket', function(done) {
             var cb = sinon.spy();
             
@@ -325,7 +328,7 @@ describe('Observable...', () => {
             );
 
         });
-
+        
         it('should get ticket with fake targetId', function(done) {
 
             var cb = sinon.spy();
@@ -415,9 +418,10 @@ describe('Observable...', () => {
             );
             
         });
+        
 
     });
-    
+
     describe('mixins...', () => {
         
         it('should be defined', function() {
@@ -432,13 +436,14 @@ describe('Observable...', () => {
 
             describe('odag', function () {
                 
-                it('should authorize simple config 1', function () {
+                it('should authorize simple config 1', function (done) {
                     this.timeout(30000);
                     
                     var qrsApi = qrs(hooks.params.options);
 
                     var config = {
                         schema: qixSchema,
+                        Promise: promise.promise,
                         host: 'https://localhost',
                         session: {
                             route: 'app/engineData',
@@ -464,78 +469,44 @@ describe('Observable...', () => {
                         },
                     };
                     
-                    return enigma.getService('qix', config).then((qix) => {
-                        return qix.global.odag(hooks.params.options, {
-                                templateApp: 'a356af1d-0a20-44e0-a152-ade3e56b16b9',
-                                replacesDef: { marker: '%Replace me!%', value: 1 },
-                                publishStream: '96a06770-0c77-49ce-a95e-6d846bd41ec8'
-                            }).toPromise();
-                    }).then((apps) => {
-                        return promise.all(
-                            apps.map((app) => {
-                                return qrsApi.app.id(app).delete();
-                            })
-                        )
-                    }).then(console.log, console.log);
-                });
-                /*
-                it('should authorize simple config 2', function () {
-                    this.timeout(30000);
-                    
-                    var qrsApi = qrs(hooks.params.options);
-
-                    var config = {
-                        schema: qixSchema,
-                        host: 'https://localhost',
-                        session: {
-                            route: 'app/engineData',
-                            host: 'localhost',
-                            port: hooks.params.options.wsPort,
-                            unsecure: false,
-                            disableCache: true
-                        },
-                        mixins: [utils.mixins.Global],
-                        listeners: {
-                            "notification:OnAuthenticationInformation": ( authInfo ) => {
-                                console.log( authInfo );
-                        }},
-                        createSocket(url) {
-                            var sock = new ws(url, {
-                                ca: [hooks.params.options.ca],
-                                key: hooks.params.options.key,
-                                cert: hooks.params.options.cert,
-                                headers: hooks.params.options.headers,
-                                rejectUnauthorized: false
-                            });
-                            return sock;
-                        },
-                    };
-                    
-                    return enigma.getService('qix', config).then((qix) => {
-                        return qix.global.odag(hooks.params.options, {
+                    enigma.getService('qix', config).then((qix) => {
+                        var odag = qix.global.odag(hooks.params.options, {
                             templateApp: 'a356af1d-0a20-44e0-a152-ade3e56b16b9',
-                            replacesDef: [
-                                { marker: '%Replace me1!%', value: 1 },
-                                { marker: '%Replace me2!%', value: 2 }
-                            ]
-                        }).toPromise();
-                    }).then((apps) => {
-                        return promise.all(
-                            apps.map((app) => {
-                                return qrsApi.app.id(app).delete();
-                            })
-                        )
-                    });
+                            replacesDef: { marker: '%Replace me!%', value: 1 },
+                            publishStream: '96a06770-0c77-49ce-a95e-6d846bd41ec8'
+                        });
+                        
+                        var toDelete;
+                        odag.subscribe(
+                            (val) => {
+                                if (val.status === 'done') {
+                                    toDelete = val.val;
+                                }
+                            },
+                            (err) => done(err),
+                            () => {
+                                promise.all(
+                                    toDelete.map((app) => {
+                                        return qrsApi.app.id(app).delete()
+                                    })
+                                )
+                                .then(() => done())
+                                .fail((err) => done(err));
+                            }
+                        );
+
+                    }).fail(done);
+
                 });
                 
-                /*
-                it('should authorize advanced config', function () {
-                    this.timeout(30000);
+                it('should fail when script syntax error', function (done) {
+                    this.timeout(60000);
                     
                     var qrsApi = qrs(hooks.params.options);
 
                     var config = {
                         schema: qixSchema,
+                        Promise: promise.promise,
                         host: 'https://localhost',
                         session: {
                             route: 'app/engineData',
@@ -561,8 +532,137 @@ describe('Observable...', () => {
                         },
                     };
                     
-                    return enigma.getService('qix', config).then((qix) => {
-                        return qix.global.odag(hooks.params.options, {
+                    enigma.getService('qix', config).then((qix) => {
+                        var odag = qix.global.odag(hooks.params.options, {
+                            templateApp: 'a356af1d-0a20-44e0-a152-ade3e56b16b9',
+                            replacesDef: { marker: '%Replace me!%', value: 1, fullRow: true },
+                            publishStream: '96a06770-0c77-49ce-a95e-6d846bd41ec8'
+                        });
+                        
+                        odag.subscribe(
+                            (val) => { },
+                            (err) => {
+                                if (err.status === 'failed' && err.val.msg === 'Application not reloaded') {
+                                    qrsApi.app.id(err.val.id).delete()
+                                        .then(() => done())
+                                        .fail((err) => {
+                                            done(err)
+                                        });
+                                        
+                                } else {
+                                    done(err);
+                                }
+                                
+                            },
+                            () => { done('Error'); }
+                        );
+
+                    }).fail(done);
+
+                });
+                
+                it('should authorize simple config 2', function (done) {
+                    this.timeout(30000);
+                    
+                    var qrsApi = qrs(hooks.params.options);
+
+                    var config = {
+                        schema: qixSchema,
+                        Promise: promise.promise,
+                        host: 'https://localhost',
+                        session: {
+                            route: 'app/engineData',
+                            host: 'localhost',
+                            port: hooks.params.options.wsPort,
+                            unsecure: false,
+                            disableCache: true
+                        },
+                        mixins: [utils.mixins.Global],
+                        listeners: {
+                            "notification:OnAuthenticationInformation": ( authInfo ) => {
+                                console.log( authInfo );
+                        }},
+                        createSocket(url) {
+                            var sock = new ws(url, {
+                                ca: [hooks.params.options.ca],
+                                key: hooks.params.options.key,
+                                cert: hooks.params.options.cert,
+                                headers: hooks.params.options.headers,
+                                rejectUnauthorized: false
+                            });
+                            return sock;
+                        },
+                    };
+                    
+                    enigma.getService('qix', config).then((qix) => {
+
+                        var odag = qix.global.odag(hooks.params.options, {
+                            templateApp: 'a356af1d-0a20-44e0-a152-ade3e56b16b9',
+                            replacesDef: [
+                                { marker: '%Replace me!%', value: 1 },
+                                { marker: '%Replace me!%', value: 2 }
+                            ]
+                        });
+                        
+                        var toDelete;
+                        odag.subscribe(
+                            (val) => {
+                                if (val.status === 'done') {
+                                    toDelete = val.val;
+                                }
+                            },
+                            (err) => done(err),
+                            () => {
+                                promise.all(
+                                    toDelete.map((app) => {
+                                        return qrsApi.app.id(app).delete()
+                                    })
+                                )
+                                .then(() => done())
+                                .fail((err) => done(err));
+                            }
+                        );
+
+                    }).fail(done);
+                    
+                });
+                
+                it('should authorize advanced config', function (done) {
+                    this.timeout(30000);
+                    
+                    var qrsApi = qrs(hooks.params.options);
+
+                    var config = {
+                        schema: qixSchema,
+                        Promise: promise.promise,
+                        host: 'https://localhost',
+                        session: {
+                            route: 'app/engineData',
+                            host: 'localhost',
+                            port: hooks.params.options.wsPort,
+                            unsecure: false,
+                            disableCache: true
+                        },
+                        mixins: [utils.mixins.Global],
+                        listeners: {
+                            "notification:OnAuthenticationInformation": ( authInfo ) => {
+                                console.log( authInfo );
+                        }},
+                        createSocket(url) {
+                            var sock = new ws(url, {
+                                ca: [hooks.params.options.ca],
+                                key: hooks.params.options.key,
+                                cert: hooks.params.options.cert,
+                                headers: hooks.params.options.headers,
+                                rejectUnauthorized: false
+                            });
+                            return sock;
+                        },
+                    };
+                    
+                    enigma.getService('qix', config).then((qix) => {
+
+                        var odag = qix.global.odag(hooks.params.options, {
                             templateApp: 'a356af1d-0a20-44e0-a152-ade3e56b16b9',
                             maxParDup: 1,
                             replacesDef: [{
@@ -572,7 +672,8 @@ describe('Observable...', () => {
                                 ],
                                 replaceApp: 'WTF App',
                                 reloadApp: false,
-                                keepApp: true
+                                keepApp: true,
+                                fullRow: false
                             }, {
                                 replaces: [
                                     {marker: '%Replace me!%', value: [1, 2]},
@@ -589,22 +690,36 @@ describe('Observable...', () => {
                             keepApp: true,
                             createReloadTask: true,
                             customProperties: [{name: 'Test', values: ['test %(replaceValue)s']}]
-                        }).toPromise();
-                    }).then((apps) => {
-                        return promise.all(
-                            apps.map((app) => {
-                                return qrsApi.app.id(app).delete();
-                            })
-                        )
-                    });
+                        });
+
+                        var toDelete;
+                        odag.subscribe(
+                            (val) => {
+                                if (val.status === 'done') {
+                                    toDelete = val.val;
+                                }
+                            },
+                            (err) => done(err),
+                            () => {
+                                promise.all(
+                                    toDelete.map((app) => {
+                                        return qrsApi.app.id(app).delete()
+                                    })
+                                )
+                                .then(() => done())
+                                .fail((err) => done(err));
+                            }
+                        );
+
+                    }).fail(done);
 
                 });
-                */
+                
       
             });
         
         });
-        
+       
         describe('Doc...', () => {
         
             it('should be defined', function() {
@@ -645,7 +760,10 @@ describe('Observable...', () => {
                     return qix.global.getDocList().then((docList) => {
                         return promise.all(
                             docList.slice(0, 5).map((doc) => {
-                                return qix.global.openDoc(doc.qDocId).then(/* waiting for mixin init to complete */ delay(1000)).then(app => {
+                                return qix.global.openDoc(doc.qDocId).then(
+                                    // waiting for mixin init to complete
+                                    delay(1000)
+                                ).then(app => {
                                     return app.qrs(hooks.params.options).get();
                                 });
                             })
@@ -779,7 +897,10 @@ describe('Observable...', () => {
                     return qix.global.getDocList().then((docList) => {
                         return promise.all(
                             docList.slice(0, 5).map((doc) => {
-                                return qix.global.openDoc(doc.qDocId).then(/* waiting for mixin init to complete */ delay(1000)).then(app => {
+                                return qix.global.openDoc(doc.qDocId).then(
+                                    //waiting for mixin init to complete
+                                    delay(1000)
+                                ).then(app => {
                                     return app.export({
                                         d1: {name: '$Table', dimensionType: 'FIELD'},
                                         d2: {name: '$Field', dimensionType: 'AUTO'},
@@ -809,6 +930,7 @@ describe('Observable...', () => {
             
             
         });
+        
         
     });
 })
