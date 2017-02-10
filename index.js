@@ -235,7 +235,8 @@ function createUtils(utilsOptions) {
                 init: function(args) {},
                 extend: {
 
-                    odag: odagMixin
+                    odag: odagMixin,
+                    loopAndReload: loopAndReloadMixin
 
                 }
             },
