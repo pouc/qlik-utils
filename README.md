@@ -1,6 +1,6 @@
 <a name="qlik-utils"></a>
 
-## my-node-template
+## qlik-utils
 [![GitHub version](https://badge.fury.io/gh/pouc%2Fmy-node-template.svg)](https://badge.fury.io/gh/pouc%2Fmy-node-template)
 [![npm version](https://badge.fury.io/js/my-node-template.svg)](https://badge.fury.io/js/my-node-template)
 [![NPM monthly downloads](https://img.shields.io/npm/dm/my-node-template.svg?style=flat)](https://npmjs.org/package/my-node-template)
