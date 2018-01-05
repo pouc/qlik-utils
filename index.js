@@ -659,7 +659,7 @@ function createUtils(utilsOptions) {
 
             var pages = reply.map(function(row) {
                 return row.map(function(cell) {
-                    return cell.qNum !== 'NaN' ? Math.round(cell.qNum, 5) : (cell.qIsNull ? null : cell.qText);
+                    return cell;
                 });
             });
 
