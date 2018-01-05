@@ -1,4 +1,4 @@
-<a name="module_my-node-template"></a>
+<a name="qlik-utils"></a>
 
 ## my-node-template
 [![GitHub version](https://badge.fury.io/gh/pouc%2Fmy-node-template.svg)](https://badge.fury.io/gh/pouc%2Fmy-node-template)
@@ -9,7 +9,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/pouc/my-node-template/badge.svg?branch=master)](https://coveralls.io/github/pouc/my-node-template?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/github/pouc/my-node-template/badge.svg)](https://snyk.io/test/github/pouc/my-node-template)
 
-A template for all my nodejs projects
+A set of utilities to deal with Qlik Sense APIs
+
+Version 3 is compatible with enigma.js v2
+
+Not compatible with version 2
 
 **Author:** Lo&iuml;c Formont  
 **License**: MIT Licensed  
